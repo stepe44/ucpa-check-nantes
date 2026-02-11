@@ -18,9 +18,15 @@ URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
     """Envoie une notification via Green-API"""
-    payload = {"chatId": WHATSAPP_ID, "message": message}
+    # On prépare le dictionnaire (JSON) exactement comme dans votre curl
+    payload = {
+        "chatId": WHATSAPP_ID, 
+        "message": message
+    }
     headers = {'Content-Type': 'application/json'}
+    
     try:
+        # Cette ligne fait la même chose que votre commande curl
         response = requests.post(GREEN_API_URL, json=payload, headers=headers)
         print(f"✅ WhatsApp Response: {response.status_code}")
     except Exception as e:
@@ -152,3 +158,4 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
