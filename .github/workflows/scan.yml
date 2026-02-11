@@ -1,0 +1,42 @@
+name: UCPA WhatsApp Scanner
+
+on:
+  schedule:
+    # '0' = minute 0
+    # '5-21' = de 5h à 21h UTC (soit 6h à 22h à Paris en hiver)
+    # '*' = tous les jours, mois, etc.
+    - cron: '0 5-21 * * *'
+  workflow_dispatch: # Garde cette option pour pouvoir tester manuellement
+
+jobs:
+  run-scanner:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Version à jour
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests selenium webdriver-manager
+
+      - name: Run script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
+          WHATSAPP_ID: ${{ secrets.WHATSAPP_ID }}
+        run: python ucpa-python.py
+
+      - name: Save memory
+        run: |
+          git config --global user.name 'Bot UCPA'
+          git config --global user.email 'bot@ucpa.com'
+          git add memoire_ucpa.json
+          git commit -m "Update schedule memory" || exit 0
+          git push
