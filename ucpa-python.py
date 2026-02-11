@@ -14,6 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')
+# URL Jina pour un formatage Markdown propre via Selenium
 URL_CIBLE = 'https://r.jina.ai/https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
@@ -27,8 +28,8 @@ def send_whatsapp(message):
         print(f"❌ Erreur WhatsApp: {e}")
 
 def get_dynamic_content(url):
-    """Charge la page avec Selenium"""
-    print(f"🌐 Ouverture de la page : {url}")
+    """Charge la page avec Selenium pour interpréter le JS"""
+    print(f"🌐 Ouverture de la page (Selenium) : {url}")
     options = Options()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -38,24 +39,25 @@ def get_dynamic_content(url):
     driver = webdriver.Chrome(options=options)
     try:
         driver.get(url)
+        # Attente que le corps de la page soit présent
         wait = WebDriverWait(driver, 30)
         wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        # Petit délai supplémentaire pour laisser le JS de Jina/UCPA finir le rendu
+        time.sleep(5)
         
-        print("⏳ Attente du rendu dynamique (détection de 'dim.')...")
-        raw_text = ""
-        for i in range(10):
-            raw_text = driver.find_element(By.TAG_NAME, "body").text
-            if "dim." in raw_text.lower():
-                print(f"✅ JavaScript validé : Planning complet détecté (tour {i+1}).")
-                return raw_text
-            time.sleep(3)
+        # Récupération du texte brut interprété par Selenium
+        raw_text = driver.find_element(By.TAG_NAME, "body").text
         
-        print("⚠️ ERREUR : Le mot 'dim.' n'a pas été trouvé.")
+        # --- LOG COMPLET DU SCRAPING (Pour debug GitHub) ---
+        print("\n" + "="*50)
+        print("📝 RETOUR COMPLET DU SCRAPING (BODY TEXT) :")
+        print(raw_text)
+        print("="*50 + "\n")
+        
         return raw_text
     except Exception as e:
-        print(f"⚠️ Erreur Selenium critique : {e}")
+        print(f"⚠️ Erreur Selenium : {e}")
         return ""
     finally:
         driver.quit()
@@ -67,7 +69,6 @@ def get_gemini_data(prompt, content):
         print("❌ Clé API manquante.")
         return []
 
-    # Correction du modèle : gemini-2.0-flash
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
     payload = {"contents": [{"parts": [{"text": prompt}, {"text": content}]}]}
     
@@ -79,11 +80,11 @@ def get_gemini_data(prompt, content):
             print(f"❌ Erreur API Gemini : {resp_json}")
             return []
             
-        raw_text = resp_json['candidates'][0]['content']['parts'][0]['text']
-        # Nettoyage pour ne garder que le JSON
-        clean_json = re.search(r'\[.*\]', raw_text, re.DOTALL)
-        if clean_json:
-            return json.loads(clean_json.group(0))
+        raw_ai_text = resp_json['candidates'][0]['content']['parts'][0]['text']
+        # Nettoyage pour extraire le bloc JSON [ ... ]
+        json_match = re.search(r'\[.*\]', raw_ai_text, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group(0))
         return []
     except Exception as e:
         print(f"💥 Erreur parsing Gemini : {e}")
@@ -95,41 +96,36 @@ def run_scan():
     print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---")
 
     full_text = get_dynamic_content(URL_CIBLE)
-    if not full_text: 
-        print("❌ Texte vide, arrêt.")
+    if not full_text or len(full_text) < 500:
+        print("❌ Contenu insuffisant récupéré. Vérifie les logs Selenium.")
         return
 
-    # --- NOUVELLE REGEX POUR LE PLANNING ---
-    # On cherche du premier "XX lun." jusqu'au dernier "XX dim."
-    # Elle ignore les balises {{#items}} en amont et en aval.
-    match = re.search(r"(\d{2}\s+lun\.)[\s\S]+(\d{2}\s+dim\.)[\s\S]+?(?=\n\s*\n|{{|$)", full_text)
+    # --- REGEX POUR TROUVER LE PLANNING ---
+    # On cherche du premier "lun." jusqu'au dernier "dim." de la semaine
+    # Cette regex est robuste face aux balises {{ }} présentes dans ton extraction
+    match = re.search(r"(\d{2}\s+lun\.)[\s\S]+(\d{2}\s+dim\.)", full_text)
     
     if match:
         content_to_analyze = match.group(0)
-        print("📋 --- TEXTE EXTRAIT POUR GEMINI ---")
-        print(content_to_analyze) 
-        print("-------------------------------------")
+        print(f"🎯 Planning isolé (de {match.group(1)} à {match.group(2)})")
     else:
-        print("⚠️ Regex non matchée, envoi d'un échantillon par défaut.")
+        print("⚠️ Regex non matchée, envoi d'un large extrait par sécurité.")
         content_to_analyze = full_text[:15000]
 
     prompt = f"""
-    Nous sommes le {date_log}. 
-    Analyse ce planning UCPA (Nantes). 
-    Pour chaque cours, extrait : 
-    - nom (ex: "Hyrox", "Pilates")
-    - jour (ex: "lundi")
-    - date (ex: "09/02")
-    - horaire (ex: "07h30 - 08h15")
-    - statut (LIBRE ou COMPLET). 
-    Note : "X places restantes" signifie LIBRE. "Complet" signifie COMPLET.
-    Réponds UNIQUEMENT par un tableau JSON.
+    Nous sommes le {date_log}. Analyse ce planning UCPA.
+    Extrais les cours en JSON : nom, jour, date, horaire, statut (COMPLET ou LIBRE).
+    Règles :
+    - "X places restantes" ou "[RÉSERVER]" -> statut: "LIBRE"
+    - "Complet" -> statut: "COMPLET"
+    - "date" au format DD/MM
+    Réponds UNIQUEMENT en JSON (liste d'objets).
     """
 
     tous_les_cours = get_gemini_data(prompt, content_to_analyze)
-    print(f"📊 {len(tous_les_cours)} cours extraits par l'IA.")
+    print(f"📊 {len(tous_les_cours)} cours extraits.")
 
-    # --- GESTION DE LA MÉMOIRE ---
+    # --- MÉMOIRE ET COMPARAISON ---
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
@@ -140,30 +136,28 @@ def run_scan():
     alertes = []
     for actuel in tous_les_cours:
         if actuel.get('statut') == "LIBRE":
-            # On vérifie si ce cours précis était complet lors du scan précédent
+            # On vérifie si ce cours était noté complet auparavant
             etait_complet = any(
                 a['nom'] == actuel['nom'] and 
                 a['horaire'] == actuel['horaire'] and 
-                (a.get('date') == actuel.get('date') or a.get('jour') == actuel.get('jour'))
+                a['date'] == actuel['date'] 
                 for a in anciens_complets
             )
-            if etait_complet: 
+            if etait_complet:
                 alertes.append(actuel)
 
     if alertes:
-        print(f"🚨 {len(alertes)} NOUVELLE(S) PLACE(S) LIBRE(S) !")
         for c in alertes:
-            message = f"🚨 PLACE LIBRE : {c['nom']}\n📅 {c['jour']} {c.get('date', '')} à {c['horaire']}\n🔗 {URL_CIBLE}"
-            send_whatsapp(message)
-    else:
-        print("😴 Aucune libération de place détectée.")
+            msg = f"🚨 PLACE LIBRE : {c['nom']}\n📅 {c['jour']} {c['date']} à {c['horaire']}\n🔗 https://www.ucpa.com/sport-station/nantes/fitness"
+            send_whatsapp(msg)
+            print(f"📢 Notification envoyée pour {c['nom']}")
 
-    # Sauvegarde des cours qui sont COMPLETs maintenant pour le prochain scan
+    # Sauvegarde du nouvel état "Complet"
     nouveaux_complets = [c for c in tous_les_cours if c.get('statut') == "COMPLET"]
     with open(memo_file, 'w') as f:
         json.dump(nouveaux_complets, f)
     
-    print(f"🏁 Scan terminé. {len(nouveaux_complets)} cours complets sauvegardés.")
+    print(f"🏁 Fin du scan. {len(nouveaux_complets)} cours complets en mémoire.")
 
 if __name__ == "__main__":
     run_scan()
