@@ -12,7 +12,7 @@ from selenium.webdriver.common.by import By
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')
-URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
+URL_CIBLE = 'https://r.jina.ai/https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
     payload = {"chatId": WHATSAPP_ID, "message": message}
@@ -36,16 +36,35 @@ def get_clean_content(url):
         time.sleep(12)
         raw_text = driver.find_element(By.TAG_NAME, "body").text
         
+        # --- LOG DU TEXTE BRUT ---
+        print(f"\n📄 TEXTE BRUT EXTRAIT ({len(raw_text)} caractères) :")
+        print("=" * 80)
+        print(raw_text[:2000])  # Afficher les 2000 premiers caractères
+        print("=" * 80)
+        print(f"... ({len(raw_text) - 2000} caractères restants)\n")
+        
         # --- AUDIT & NETTOYAGE DU TEXTE ---
         match = re.search(r"(\d{2}\s+lun\.)[\s\S]+(\d{2}\s+dim\.)[\s\S]+?(?=\n\s*\n|{{|$)", raw_text)
         
         if match:
             clean_block = match.group(0)
             clean_block = re.sub(r"\{\{.*?\}\}", "", clean_block)
+            print(f"✅ Planning détecté via Regex ({len(clean_block)} caractères)")
+            print(f"\n📋 PLANNING NETTOYÉ :")
+            print("=" * 80)
+            print(clean_block[:1500])
+            print("=" * 80)
+            print(f"... ({len(clean_block) - 1500} caractères restants)\n")
             return clean_block
         else:
             print("⚠️ Format de planning non détecté via Regex, envoi du texte brut élagué.")
-            return raw_text[:15000]
+            truncated = raw_text[:15000]
+            print(f"\n📋 TEXTE ENVOYÉ À GEMINI ({len(truncated)} caractères) :")
+            print("=" * 80)
+            print(truncated[:1500])
+            print("=" * 80)
+            print(f"... ({len(truncated) - 1500} caractères restants)\n")
+            return truncated
     except Exception as e:
         print(f"❌ Erreur Selenium : {e}")
         return ""
