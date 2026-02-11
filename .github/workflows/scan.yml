@@ -41,3 +41,14 @@ jobs:
             git commit -m "Update memory [skip ci]" || echo "No changes"
             git push
           fi
+
+       - name: 📂 Upload Logs & Debug HTML
+        if: always()  # S'exécute même en cas d'erreur
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-audit-ucpa
+          path: |
+            execution.log
+            debug_page.html
+            memoire_ucpa.json
+          retention-days: 5
