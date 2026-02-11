@@ -41,9 +41,9 @@ jobs:
             git commit -m "Update memory [skip ci]" || echo "No changes"
             git push
           fi
-
-       - name: 📂 Upload Logs & Debug HTML
-        if: always()  # S'exécute même en cas d'erreur
+      # 6. Sauvegarde les logs et le HTML pour debug (visible dans l'onglet Actions)
+      - name: Upload Logs & Debug Info
+        if: always() # S'exécute même si le script a planté
         uses: actions/upload-artifact@v4
         with:
           name: logs-audit-ucpa
@@ -52,3 +52,5 @@ jobs:
             debug_page.html
             memoire_ucpa.json
           retention-days: 5
+
+          
