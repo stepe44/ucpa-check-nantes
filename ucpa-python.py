@@ -17,7 +17,6 @@ WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
-    """Envoie une notification via Green-API"""
     payload = {"chatId": WHATSAPP_ID, "message": message}
     headers = {'Content-Type': 'application/json'}
     try:
@@ -27,7 +26,6 @@ def send_whatsapp(message):
         print(f"❌ Erreur WhatsApp: {e}")
 
 def get_dynamic_content(url):
-    """Charge la page avec Selenium et affiche le résultat dans les logs"""
     print(f"🌐 Ouverture de la page : {url}")
     options = Options()
     options.add_argument("--headless")
@@ -39,22 +37,30 @@ def get_dynamic_content(url):
     try:
         driver.get(url)
         wait = WebDriverWait(driver, 30)
-        wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        wait.until(EC.presence_of_element_located((By.TAG_NAME, "body"))) [cite: 3]
         
-        print("⏳ Attente du rendu JavaScript (10s)...")
-        time.sleep(10) 
+        # --- EXÉCUTION DE JAVASCRIPT PERSONNALISÉ ---
+        # Exemple : Forcer le défilement vers le bas pour déclencher le lazy-loading
+        print("⚙️ Exécution du code JS personnalisé...")
+        custom_js = """
+        window.scrollTo(0, document.body.scrollHeight);
+        console.log('JS personnalisé exécuté : Page scrollée');
+        """
+        driver.execute_script(custom_js)
         
-        # Récupération du texte brut
-        raw_text = driver.find_element(By.TAG_NAME, "body").text
+        # Attente de la détection du planning complet (dimanche)
+        js_succes = False
+        raw_text = ""
+        for i in range(10):
+            raw_text = driver.find_element(By.TAG_NAME, "body").text
+            if "dim." in raw_text.lower():
+                print(f"✅ Planning chargé : 'dim.' trouvé au tour {i+1}.")
+                js_succes = True
+                break
+            time.sleep(3)
         
-        # --- LOG VISUEL ---
-        print("📝 --- APERÇU DU CONTENU RÉCUPÉRÉ ---")
-        if raw_text:
-            print(raw_text[:800] + "...") 
-            print(f"📊 Taille totale : {len(raw_text)} caractères")
-        else:
-            print("⚠️ Le texte récupéré est vide !")
-        print("---------------------------------------")
+        if not js_succes:
+            send_whatsapp("⚠️ UCPA-ALERT : Échec du chargement dynamique (mot 'dim.' absent).")
         
         return raw_text
     except Exception as e:
@@ -64,101 +70,59 @@ def get_dynamic_content(url):
         driver.quit()
 
 def get_gemini_data(prompt, content):
-    """Analyse les données via Gemini 1.5 Flash"""
-    print("🤖 Analyse par l'IA Gemini...")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
-    
-    payload = {
-        "contents": [{"parts": [{"text": prompt}, {"text": content}]}]
-    }
-    
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}" [cite: 20]
+    payload = {"contents": [{"parts": [{"text": prompt}, {"text": content}]}]} [cite: 21]
     try:
-        resp = requests.post(url, json=payload)
+        resp = requests.post(url, json=payload) [cite: 22]
         resp_json = resp.json()
-        
-        if 'candidates' not in resp_json:
-            print(f"❌ Erreur API Gemini : {resp_json}")
-            return []
-            
-        raw_text = resp_json['candidates'][0]['content']['parts'][0]['text']
-        # Nettoyage du bloc de code JSON
-        clean_json = raw_text.replace("```json", "").replace("```", "").strip()
-        return json.loads(clean_json)
+        raw_text = resp_json['candidates'][0]['content']['parts'][0]['text'] [cite: 22]
+        clean_json = raw_text.replace("```json", "").replace("```", "").strip() [cite: 22]
+        return json.loads(clean_json) [cite: 23]
     except Exception as e:
-        print(f"💥 Erreur parsing Gemini : {e}")
+        print(f"❌ Erreur Gemini : {e}")
         return []
 
 def run_scan():
-    maintenant = datetime.now()
-    date_log = maintenant.strftime("%d/%m/%Y %H:%M")
-    print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---")
+    maintenant = datetime.now() [cite: 2]
+    date_log = maintenant.strftime("%d/%m/%Y %H:%M") [cite: 2]
+    print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---") [cite: 3]
 
-    # 1. Scraping et Nettoyage REGEX
     full_text = get_dynamic_content(URL_CIBLE)
-    
-    if not full_text:
-        print("❌ Abandon : Aucun contenu récupéré.")
-        return
+    if not full_text: return
 
-    # Isoler le planning avec la REGEX fournie
-    match = re.search(r"(\d{2}\s+lun\.)([\s\S]+?)(?=\s+HORAIRES|$)", full_text)
-    
-    if match:
-        content_to_analyze = match.group(0)
-        print("✅ REGEX : Bloc planning isolé avec succès.")
-        print(f"📝 Extrait envoyé à l'IA : {content_to_analyze[:200]}...")
-    else:
-        content_to_analyze = full_text[:15000]
-        print("⚠️ REGEX : Non trouvée, envoi du texte brut tronqué.")
+    # Nettoyage par Regex 
+    match = re.search(r"(\d{2}\s+lun\.)([\s\S]+?)(?=\s+HORAIRES|$)", full_text) [cite: 18]
+    content_to_analyze = match.group(0) if match else full_text[:15000]
 
-    # 2. Prompt Gemini
-    prompt = f"""Nous sommes le {date_log}. Analyse ce planning UCPA.
-    Extraie TOUS les cours : Nom, Jour, Date (JJ/MM), Horaire (HH:mm) et Statut (COMPLET ou LIBRE).
-    Ignore les cours passés.
-    Réponds UNIQUEMENT en JSON : [{{"nom":"...","jour":"...","date":"...","horaire":"...","statut":"..."}}]"""
+    prompt = f"Analyse ce planning UCPA du {date_log}. Extrais les cours en JSON : nom, jour, date, horaire, statut (COMPLET ou LIBRE)." [cite: 8, 9, 10]
 
-    # 3. Analyse
     tous_les_cours = get_gemini_data(prompt, content_to_analyze)
 
-    # 4. Comparaison Mémoire
+    # Gestion de la mémoire et alertes [cite: 11, 12, 13]
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
         with open(memo_file, 'r') as f:
-            try:
-                anciens_complets = json.load(f)
-            except:
-                anciens_complets = []
+            try: anciens_complets = json.load(f)
+            except: anciens_complets = []
 
     alertes = []
-    print(f"🔎 Analyse de {len(tous_les_cours)} cours détectés...")
-    
     for actuel in tous_les_cours:
         if actuel.get('statut') == "LIBRE":
-            etait_complet = any(
-                a['nom'] == actuel['nom'] and 
-                a['horaire'] == actuel['horaire'] and 
-                a['date'] == actuel['date'] 
-                for a in anciens_complets
-            )
-            if etait_complet:
-                alertes.append(actuel)
+            etait_complet = any(a['nom'] == actuel['nom'] and a['horaire'] == actuel['horaire'] and a['date'] == actuel['date'] for a in anciens_complets) [cite: 12]
+            if etait_complet: alertes.append(actuel) [cite: 12]
 
-    # 5. Notifications
     if alertes:
         for c in alertes:
-            message = f"🚨 PLACE LIBRE : {c['nom']}\n📅 {c['jour']} {c['date']} à {c['horaire']}\n🔗 {URL_CIBLE}"
-            send_whatsapp(message)
-            print(f"📢 ALERTE : {c['nom']} {c['date']} {c['horaire']}")
-    else:
-        print("😴 Aucune nouvelle place disponible.")
+            msg = f"🚨 PLACE LIBRE : {c['nom']} le {c['jour']} {c['date']} à {c['horaire']}" [cite: 13]
+            send_whatsapp(msg) [cite: 13]
 
-    # 6. Sauvegarde
-    nouveaux_complets = [c for c in tous_les_cours if c.get('statut') == "COMPLET"]
+    # Sauvegarde [cite: 14, 15]
+    nouveaux_complets = [c for c in tous_les_cours if c.get('statut') == "COMPLET"] [cite: 14]
     with open(memo_file, 'w') as f:
-        json.dump(nouveaux_complets, f)
+        json.dump(nouveaux_complets, f) [cite: 15]
     
-    print(f"🏁 Fin du scan. Mémoire : {len(nouveaux_complets)} cours complets sauvegardés.")
+    print(f"🏁 Scan terminé ({len(nouveaux_complets)} cours complets).")
 
 if __name__ == "__main__":
     run_scan()
