@@ -17,6 +17,7 @@ WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
+    """Envoie une notification via Green-API"""
     payload = {"chatId": WHATSAPP_ID, "message": message}
     headers = {'Content-Type': 'application/json'}
     try:
@@ -26,6 +27,7 @@ def send_whatsapp(message):
         print(f"❌ Erreur WhatsApp: {e}")
 
 def get_dynamic_content(url):
+    """Charge la page, exécute du JS et vérifie le chargement complet"""
     print(f"🌐 Ouverture de la page : {url}")
     options = Options()
     options.add_argument("--headless")
@@ -37,20 +39,18 @@ def get_dynamic_content(url):
     try:
         driver.get(url)
         wait = WebDriverWait(driver, 30)
-        wait.until(EC.presence_of_element_located((By.TAG_NAME, "body"))) [cite: 3]
+        wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         
-        # --- EXÉCUTION DE JAVASCRIPT PERSONNALISÉ ---
-        # Exemple : Forcer le défilement vers le bas pour déclencher le lazy-loading
+        # --- EXÉCUTION DE JS PERSONNALISÉ ---
+        # On peut forcer un scroll ou cliquer sur des éléments si nécessaire
         print("⚙️ Exécution du code JS personnalisé...")
-        custom_js = """
-        window.scrollTo(0, document.body.scrollHeight);
-        console.log('JS personnalisé exécuté : Page scrollée');
-        """
-        driver.execute_script(custom_js)
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         
-        # Attente de la détection du planning complet (dimanche)
+        print("⏳ Attente du chargement complet (détection de 'dim.')...")
         js_succes = False
         raw_text = ""
+        
+        # Tentative de détection du planning complet sur 30 secondes
         for i in range(10):
             raw_text = driver.find_element(By.TAG_NAME, "body").text
             if "dim." in raw_text.lower():
@@ -60,69 +60,95 @@ def get_dynamic_content(url):
             time.sleep(3)
         
         if not js_succes:
-            send_whatsapp("⚠️ UCPA-ALERT : Échec du chargement dynamique (mot 'dim.' absent).")
+            print("⚠️ ERREUR : Le mot 'dim.' est absent.")
+            send_whatsapp("⚠️ UCPA-ALERT : Le planning n'a pas chargé complètement (mot 'dim.' absent).")
+            
+        print("📝 --- APERÇU DU CONTENU ---")
+        print(raw_text[:500] + "...")
+        print("---------------------------")
         
         return raw_text
     except Exception as e:
-        print(f"⚠️ Erreur Selenium : {e}")
+        print(f"⚠️ Erreur Selenium critique : {e}")
         return ""
     finally:
         driver.quit()
 
 def get_gemini_data(prompt, content):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}" [cite: 20]
-    payload = {"contents": [{"parts": [{"text": prompt}, {"text": content}]}]} [cite: 21]
+    """Analyse les données via l'API Gemini 1.5 Flash"""
+    print("🤖 Analyse par l'IA Gemini...")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    payload = {"contents": [{"parts": [{"text": prompt}, {"text": content}]}]}
+    
     try:
-        resp = requests.post(url, json=payload) [cite: 22]
+        resp = requests.post(url, json=payload)
         resp_json = resp.json()
-        raw_text = resp_json['candidates'][0]['content']['parts'][0]['text'] [cite: 22]
-        clean_json = raw_text.replace("```json", "").replace("```", "").strip() [cite: 22]
-        return json.loads(clean_json) [cite: 23]
+        if 'candidates' not in resp_json:
+            print(f"❌ Erreur Gemini : {resp_json}")
+            return []
+        raw_text = resp_json['candidates'][0]['content']['parts'][0]['text']
+        clean_json = raw_text.replace("```json", "").replace("```", "").strip()
+        return json.loads(clean_json)
     except Exception as e:
-        print(f"❌ Erreur Gemini : {e}")
+        print(f"💥 Erreur parsing Gemini : {e}")
         return []
 
 def run_scan():
-    maintenant = datetime.now() [cite: 2]
-    date_log = maintenant.strftime("%d/%m/%Y %H:%M") [cite: 2]
-    print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---") [cite: 3]
+    maintenant = datetime.now()
+    date_log = maintenant.strftime("%d/%m/%Y %H:%M")
+    print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---")
 
     full_text = get_dynamic_content(URL_CIBLE)
-    if not full_text: return
+    if not full_text:
+        return
 
-    # Nettoyage par Regex 
-    match = re.search(r"(\d{2}\s+lun\.)([\s\S]+?)(?=\s+HORAIRES|$)", full_text) [cite: 18]
+    # Nettoyage par Regex pour isoler le bloc planning
+    match = re.search(r"(\d{2}\s+lun\.)([\s\S]+?)(?=\s+HORAIRES|$)", full_text)
     content_to_analyze = match.group(0) if match else full_text[:15000]
 
-    prompt = f"Analyse ce planning UCPA du {date_log}. Extrais les cours en JSON : nom, jour, date, horaire, statut (COMPLET ou LIBRE)." [cite: 8, 9, 10]
+    prompt = f"""Nous sommes le {date_log}. Analyse ce planning UCPA.
+    Extraie TOUS les cours : Nom, Jour, Date (JJ/MM), Horaire (HH:mm) et Statut (COMPLET ou LIBRE).
+    Ignore les cours passés.
+    Réponds UNIQUEMENT en JSON : [{{"nom":"...","jour":"...","date":"...","horaire":"...","statut":"..."}}]"""
 
     tous_les_cours = get_gemini_data(prompt, content_to_analyze)
 
-    # Gestion de la mémoire et alertes [cite: 11, 12, 13]
+    # Gestion de la mémoire
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
         with open(memo_file, 'r') as f:
-            try: anciens_complets = json.load(f)
-            except: anciens_complets = []
+            try:
+                anciens_complets = json.load(f)
+            except:
+                anciens_complets = []
 
+    # Détection des places libérées
     alertes = []
     for actuel in tous_les_cours:
         if actuel.get('statut') == "LIBRE":
-            etait_complet = any(a['nom'] == actuel['nom'] and a['horaire'] == actuel['horaire'] and a['date'] == actuel['date'] for a in anciens_complets) [cite: 12]
-            if etait_complet: alertes.append(actuel) [cite: 12]
+            etait_complet = any(
+                a['nom'] == actuel['nom'] and 
+                a['horaire'] == actuel['horaire'] and 
+                a['date'] == actuel['date'] 
+                for a in anciens_complets
+            )
+            if etait_complet:
+                alertes.append(actuel)
 
+    # Envoi des alertes
     if alertes:
         for c in alertes:
-            msg = f"🚨 PLACE LIBRE : {c['nom']} le {c['jour']} {c['date']} à {c['horaire']}" [cite: 13]
-            send_whatsapp(msg) [cite: 13]
+            message = f"🚨 PLACE LIBRE : {c['nom']}\n📅 {c['jour']} {c['date']} à {c['horaire']}\n🔗 {URL_CIBLE}"
+            send_whatsapp(message)
+            print(f"📢 ALERTE : {c['nom']} libéré !")
 
-    # Sauvegarde [cite: 14, 15]
-    nouveaux_complets = [c for c in tous_les_cours if c.get('statut') == "COMPLET"] [cite: 14]
+    # Mise à jour mémoire (sauvegarde uniquement des cours complets)
+    nouveaux_complets = [c for c in tous_les_cours if c.get('statut') == "COMPLET"]
     with open(memo_file, 'w') as f:
-        json.dump(nouveaux_complets, f) [cite: 15]
+        json.dump(nouveaux_complets, f)
     
-    print(f"🏁 Scan terminé ({len(nouveaux_complets)} cours complets).")
+    print(f"🏁 Scan terminé. Mémoire mise à jour : {len(nouveaux_complets)} cours complets.")
 
 if __name__ == "__main__":
     run_scan()
