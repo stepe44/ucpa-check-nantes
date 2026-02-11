@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 GREEN_API_URL = os.getenv('GREEN_API_URL') # Ton URL complète : https://7105.api.greenapi.com/...
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')     # ex: 33663612004@c.us
-URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness' [cite: 1]
+URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
     """Envoie une notification via Green-API"""
@@ -113,4 +113,5 @@ def run_scan():
         json.dump(nouveaux_complets, f)
 
 if __name__ == "__main__":
+
     run_scan()
