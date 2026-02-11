@@ -49,31 +49,63 @@ def get_clean_content(url):
             '''
         })
         
-        print(f"🔗 Chargement de la page...")
+        print(f"🔗 Chargement de la page : {url}")
         driver.get(url)
+        
+        print(f"📊 Informations initiales :")
+        print(f"   - URL actuelle : {driver.current_url}")
+        print(f"   - Titre de la page : {driver.title}")
+        
         print(f"⏳ Attente du chargement JavaScript (20 secondes)...")
-        time.sleep(20)  # Augmenter le délai
+        time.sleep(20)
+        
+        # --- LOG DU CODE SOURCE HTML COMPLET ---
+        page_source = driver.page_source
+        print(f"\n🔍 CODE SOURCE HTML ({len(page_source)} caractères) :")
+        print("=" * 100)
+        print(page_source[:3000])  # Premiers 3000 caractères
+        print("=" * 100)
+        print(f"... ({len(page_source) - 3000} caractères restants)")
         
         # Vérifier le statut de la page
-        page_source = driver.page_source
         if "403" in page_source or "Forbidden" in page_source:
-            print("❌ Accès bloqué (403). Le site détecte le bot.")
-            print("💡 Suggestions :")
-            print("   - Utilise un proxy")
-            print("   - Lance le script depuis un autre serveur")
-            print("   - Vérifie si l'UCPA a changé sa protection")
+            print("\n❌ ERREUR : Accès bloqué (403 Forbidden)")
+            print("💡 Le site détecte le bot et bloque l'accès")
             return ""
         
+        if "cloudflare" in page_source.lower():
+            print("\n⚠️ ATTENTION : Protection Cloudflare détectée")
+        
+        # Extraction du texte visible
         raw_text = driver.find_element(By.TAG_NAME, "body").text
         
         # --- LOG DU TEXTE BRUT ---
-        print(f"\n📄 TEXTE BRUT EXTRAIT ({len(raw_text)} caractères) :")
-        print("=" * 80)
-        print(raw_text[:2000])  # Afficher les 2000 premiers caractères
-        print("=" * 80)
-        print(f"... ({len(raw_text) - 2000} caractères restants)\n")
+        print(f"\n📄 TEXTE VISIBLE EXTRAIT ({len(raw_text)} caractères) :")
+        print("=" * 100)
+        print(raw_text[:3000])  # Afficher les 3000 premiers caractères
+        print("=" * 100)
+        print(f"... ({len(raw_text) - 3000} caractères restants)\n")
+        
+        # Recherche de patterns spécifiques pour debug
+        print(f"🔎 RECHERCHE DE PATTERNS :")
+        patterns_debug = [
+            (r"\d{2}\s+lun\.", "Date avec 'lun.'"),
+            (r"\d{2}\s+dim\.", "Date avec 'dim.'"),
+            (r"Hyrox|Yoga|Pilates|RPM|Bodypump", "Noms de cours"),
+            (r"\d{1,2}h\d{2}", "Horaires (format XXhXX)"),
+            (r"places? restantes?", "Places restantes"),
+            (r"Complet", "Cours complet"),
+        ]
+        
+        for pattern, description in patterns_debug:
+            matches = re.findall(pattern, raw_text, re.IGNORECASE)
+            if matches:
+                print(f"   ✅ {description} : {len(matches)} trouvé(s) - Exemples: {matches[:3]}")
+            else:
+                print(f"   ❌ {description} : AUCUN")
         
         # --- AUDIT & NETTOYAGE DU TEXTE ---
+        print(f"\n🧹 TENTATIVE DE NETTOYAGE AVEC REGEX...")
         match = re.search(r"(\d{2}\s+lun\.)[\s\S]+(\d{2}\s+dim\.)[\s\S]+?(?=\n\s*\n|{{|$)", raw_text)
         
         if match:
@@ -81,25 +113,29 @@ def get_clean_content(url):
             clean_block = re.sub(r"\{\{.*?\}\}", "", clean_block)
             print(f"✅ Planning détecté via Regex ({len(clean_block)} caractères)")
             print(f"\n📋 PLANNING NETTOYÉ :")
-            print("=" * 80)
-            print(clean_block[:1500])
-            print("=" * 80)
-            print(f"... ({len(clean_block) - 1500} caractères restants)\n")
+            print("=" * 100)
+            print(clean_block[:2000])
+            print("=" * 100)
+            print(f"... ({len(clean_block) - 2000} caractères restants)\n")
             return clean_block
         else:
-            print("⚠️ Format de planning non détecté via Regex, envoi du texte brut élagué.")
+            print("⚠️ Format de planning non détecté via Regex")
             truncated = raw_text[:15000]
             print(f"\n📋 TEXTE ENVOYÉ À GEMINI ({len(truncated)} caractères) :")
-            print("=" * 80)
-            print(truncated[:1500])
-            print("=" * 80)
-            print(f"... ({len(truncated) - 1500} caractères restants)\n")
+            print("=" * 100)
+            print(truncated[:2000])
+            print("=" * 100)
+            print(f"... ({len(truncated) - 2000} caractères restants)\n")
             return truncated
     except Exception as e:
         print(f"❌ Erreur Selenium : {e}")
+        import traceback
+        print(f"📋 TRACEBACK COMPLET :")
+        traceback.print_exc()
         return ""
     finally:
         driver.quit()
+        print(f"✅ Navigateur fermé")
 
 def analyze_with_gemini(content):
     if not GEMINI_API_KEY: 
