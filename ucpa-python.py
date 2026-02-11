@@ -33,16 +33,14 @@ def get_clean_content(url):
     driver = webdriver.Chrome(options=options)
     try:
         driver.get(url)
-        time.sleep(12) # Attente du rendu JS
+        time.sleep(12)
         raw_text = driver.find_element(By.TAG_NAME, "body").text
         
         # --- AUDIT & NETTOYAGE DU TEXTE ---
-        # 1. On cherche le début du planning (ex: 09 lun.) et la fin (15 dim. + les cours suivants)
         match = re.search(r"(\d{2}\s+lun\.)[\s\S]+(\d{2}\s+dim\.)[\s\S]+?(?=\n\s*\n|{{|$)", raw_text)
         
         if match:
             clean_block = match.group(0)
-            # 2. On supprime les balises Mustache résiduelles pour aider l'IA
             clean_block = re.sub(r"\{\{.*?\}\}", "", clean_block)
             return clean_block
         else:
@@ -55,7 +53,10 @@ def get_clean_content(url):
         driver.quit()
 
 def analyze_with_gemini(content):
-    if not GEMINI_API_KEY: return []
+    if not GEMINI_API_KEY: 
+        print("⚠️ Clé API Gemini manquante")
+        return []
+    
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
     
     prompt = f"""
@@ -69,6 +70,8 @@ def analyze_with_gemini(content):
     - "places" : le texte exact (ex: '6 places restantes' ou 'Complet')
     - "statut" : 'COMPLET' si c'est marqué 'Complet', sinon 'LIBRE'.
     
+    Réponds UNIQUEMENT avec le tableau JSON, sans texte avant ou après.
+    
     Planning à analyser :
     {content}
     """
@@ -76,10 +79,28 @@ def analyze_with_gemini(content):
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     try:
         resp = requests.post(url, json=payload, timeout=30)
+        resp.raise_for_status()
         text_resp = resp.json()['candidates'][0]['content']['parts'][0]['text']
+        
+        # Debug : afficher la réponse brute
+        print(f"\n🔍 Réponse Gemini (premiers 500 caractères) :\n{text_resp[:500]}\n")
+        
         json_match = re.search(r'\[.*\]', text_resp, re.DOTALL)
-        return json.loads(json_match.group(0)) if json_match else []
-    except Exception:
+        if json_match:
+            cours = json.loads(json_match.group(0))
+            # Valider chaque cours
+            cours_valides = []
+            for c in cours:
+                if all(key in c for key in ['nom', 'jour', 'date', 'horaire', 'places', 'statut']):
+                    cours_valides.append(c)
+                else:
+                    print(f"⚠️ Cours ignoré (données manquantes) : {c}")
+            return cours_valides
+        else:
+            print("⚠️ Aucun JSON trouvé dans la réponse Gemini")
+            return []
+    except Exception as e:
+        print(f"❌ Erreur Gemini : {e}")
         return []
 
 def run_scan():
@@ -91,6 +112,10 @@ def run_scan():
         return
 
     tous_les_cours = analyze_with_gemini(clean_text)
+    
+    if not tous_les_cours:
+        print("⚠️ Aucun cours détecté. Vérifiez la réponse de Gemini ci-dessus.")
+        return
     
     # --- AFFICHAGE LOGS SIMPLIFIÉS ---
     print(f"\n📋 LISTE DES COURS :")
@@ -106,13 +131,14 @@ def run_scan():
     anciens_complets = []
     if os.path.exists(memo_file):
         with open(memo_file, 'r', encoding='utf-8') as f:
-            try: anciens_complets = json.load(f)
-            except: anciens_complets = []
+            try: 
+                anciens_complets = json.load(f)
+            except: 
+                anciens_complets = []
 
     alertes = []
     for actuel in tous_les_cours:
         if actuel['statut'] == "LIBRE":
-            # On cherche si ce cours précis (nom + date + heure) était complet avant
             etait_complet = any(
                 a['nom'] == actuel['nom'] and 
                 a['date'] == actuel['date'] and 
@@ -128,7 +154,7 @@ def run_scan():
             msg = f"🚨 LIBRE : {c['nom']}\n📅 {c['jour']} {c['date']} à {c['horaire']}\n🎟 {c['places']}\n🔗 {URL_CIBLE}"
             send_whatsapp(msg)
     
-    # Mise à jour de la mémoire avec les cours actuellement complets
+    # Mise à jour de la mémoire
     nouveaux_complets = [c for c in tous_les_cours if c['statut'] == "COMPLET"]
     with open(memo_file, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
