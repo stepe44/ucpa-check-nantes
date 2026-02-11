@@ -2,20 +2,22 @@ name: UCPA WhatsApp Scanner
 
 on:
   schedule:
-    # '0' = minute 0
-    # '5-21' = de 5h à 21h UTC (soit 6h à 22h à Paris en hiver)
-    # '*' = tous les jours, mois, etc.
-    - cron: '0 5-21 * * *'
-  workflow_dispatch: # Garde cette option pour pouvoir tester manuellement
+    # S'exécute toutes les 15 minutes de 6h à 22h (Heure Paris / 5h-21h UTC)
+    - cron: '*/35 5-21 * * *'
+  workflow_dispatch: # Permet de lancer manuellement pour tester
 
 jobs:
   run-scanner:
     runs-on: ubuntu-latest
+    # CRUCIAL : Lie le job à l'environnement créé sur GitHub
+    environment: GEMINI_API_KEY 
+    
     permissions:
-      contents: write
+      contents: write # Autorise l'écriture pour sauvegarder le fichier mémoire
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Version à jour
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,6 +30,7 @@ jobs:
 
       - name: Run script
         env:
+          # Ces noms doivent correspondre EXACTEMENT à tes secrets dans l'env 'ucpa-python'
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
           WHATSAPP_ID: ${{ secrets.WHATSAPP_ID }}
@@ -37,6 +40,11 @@ jobs:
         run: |
           git config --global user.name 'Bot UCPA'
           git config --global user.email 'bot@ucpa.com'
-          git add memoire_ucpa.json
-          git commit -m "Update schedule memory" || exit 0
-          git push
+          # On vérifie si le fichier existe avant de tenter le commit
+          if [ -f memoire_ucpa.json ]; then
+            git add memoire_ucpa.json
+            git commit -m "Update schedule memory [skip ci]" || echo "No changes to commit"
+            git push
+          else
+            echo "Fichier mémoire non trouvé, rien à sauvegarder."
+          fi
