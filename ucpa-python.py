@@ -12,7 +12,7 @@ from selenium.webdriver.common.by import By
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')
-URL_CIBLE = 'https://r.jina.ai/https://www.ucpa.com/sport-station/nantes/fitness'
+URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
     payload = {"chatId": WHATSAPP_ID, "message": message}
@@ -25,15 +25,45 @@ def send_whatsapp(message):
 def get_clean_content(url):
     print(f"🌐 Connexion à l'UCPA et audit du texte...")
     options = Options()
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")  # Mode headless amélioré
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+    
+    # Masquer les signes d'automatisation
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
     
     driver = webdriver.Chrome(options=options)
     try:
+        # Script pour masquer l'automatisation
+        driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
+            'source': '''
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined
+                });
+            '''
+        })
+        
+        print(f"🔗 Chargement de la page...")
         driver.get(url)
-        time.sleep(12)
+        print(f"⏳ Attente du chargement JavaScript (20 secondes)...")
+        time.sleep(20)  # Augmenter le délai
+        
+        # Vérifier le statut de la page
+        page_source = driver.page_source
+        if "403" in page_source or "Forbidden" in page_source:
+            print("❌ Accès bloqué (403). Le site détecte le bot.")
+            print("💡 Suggestions :")
+            print("   - Utilise un proxy")
+            print("   - Lance le script depuis un autre serveur")
+            print("   - Vérifie si l'UCPA a changé sa protection")
+            return ""
+        
         raw_text = driver.find_element(By.TAG_NAME, "body").text
         
         # --- LOG DU TEXTE BRUT ---
