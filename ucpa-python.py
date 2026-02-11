@@ -17,6 +17,7 @@ WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
 def send_whatsapp(message):
+    """Envoie une notification via Green-API"""
     payload = {"chatId": WHATSAPP_ID, "message": message}
     headers = {'Content-Type': 'application/json'}
     try:
@@ -26,6 +27,7 @@ def send_whatsapp(message):
         print(f"❌ Erreur WhatsApp: {e}")
 
 def get_dynamic_content(url):
+    """Charge la page avec Selenium et extrait le texte brut"""
     print(f"🌐 Ouverture de la page : {url}")
     options = Options()
     options.add_argument("--headless")
@@ -37,14 +39,14 @@ def get_dynamic_content(url):
     try:
         driver.get(url)
         wait = WebDriverWait(driver, 30)
+        # Attend que le conteneur principal ou le body soit là
         wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         
-        print("⏳ Attente du chargement des scripts UCPA (10s)...")
+        print("⏳ Attente du rendu JavaScript (10s)...")
         time.sleep(10) 
         
-        # Récupération du texte visible uniquement pour plus de clarté
-        page_text = driver.find_element(By.TAG_NAME, "body").text
-        return page_text
+        # Extraction du texte visible uniquement
+        return driver.find_element(By.TAG_NAME, "body").text
     except Exception as e:
         print(f"⚠️ Erreur Selenium : {e}")
         return ""
@@ -52,7 +54,8 @@ def get_dynamic_content(url):
         driver.quit()
 
 def get_gemini_data(prompt, content):
-    print("🤖 Envoi des données à l'IA Gemini...")
+    """Analyse les données via l'API Gemini"""
+    print("🤖 Analyse par l'IA Gemini...")
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
     
     payload = {
@@ -64,54 +67,57 @@ def get_gemini_data(prompt, content):
         resp_json = resp.json()
         
         if 'candidates' not in resp_json:
-            print(f"❌ Erreur API Gemini (Pas de candidats). Réponse reçue : {resp_json}")
+            print(f"❌ Erreur Gemini (Pas de candidates). Réponse : {resp_json}")
             return []
             
         raw_text = resp_json['candidates'][0]['content']['parts'][0]['text']
+        # Nettoyage du bloc de code JSON
         clean_json = raw_text.replace("```json", "").replace("```", "").strip()
         return json.loads(clean_json)
     except Exception as e:
-        print(f"💥 Erreur lors de l'analyse Gemini : {e}")
+        print(f"💥 Erreur lors du parsing Gemini : {e}")
         return []
 
 def run_scan():
     maintenant = datetime.now()
     date_log = maintenant.strftime("%d/%m/%Y %H:%M")
-    print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---") [cite: 2, 3]
+    print(f"🚀 --- DÉBUT DU SCAN : {date_log} ---")
 
-    # 1. Scraping et Nettoyage par REGEX
-    raw_text = get_dynamic_content(URL_CIBLE)
+    # 1. Scraping et Nettoyage REGEX
+    full_text = get_dynamic_content(URL_CIBLE)
     
-    # Utilisation de la REGEX pour isoler le planning 
-    # On cherche de "lun." jusqu'à "HORAIRES"
-    match = re.search(r"(\d{2}\s+lun\.)([\s\S]+?)(?=\s+HORAIRES|$)", raw_text)
+    # Application de la regex pour isoler le planning
+    match = re.search(r"(\d{2}\s+lun\.)([\s\S]+?)(?=\s+HORAIRES|$)", full_text)
     
     if match:
         content_to_analyze = match.group(0)
-        print(f"✅ Planning extrait avec succès ({len(content_to_analyze)} caractères).")
+        print(f"✅ Zone de planning isolée ({len(content_to_analyze)} caractères).")
     else:
-        content_to_analyze = raw_text[:20000] # Fallback si regex échoue
-        print("⚠️ Regex non trouvée, envoi du texte brut tronqué.") [cite: 7]
+        # Si la regex échoue, on envoie les 20000 premiers caractères par défaut
+        content_to_analyze = full_text[:20000]
+        print("⚠️ Regex non trouvée, envoi du texte brut tronqué.")
 
-    # 2. Analyse Gemini [cite: 9]
+    # 2. Préparation du Prompt
     prompt = f"""Nous sommes le {date_log}. Analyse ce planning UCPA.
     Extraie TOUS les cours : Nom, Jour, Date (JJ/MM), Horaire (HH:mm) et Statut (COMPLET ou LIBRE).
     Ignore les cours passés.
-    Réponds UNIQUEMENT en JSON : [{{"nom":"...","jour":"...","date":"...","horaire":"...","statut":"..."}}]""" [cite: 10]
+    Réponds UNIQUEMENT en JSON sous cette forme : [{{"nom":"...","jour":"...","date":"...","horaire":"...","statut":"..."}}]"""
 
+    # 3. Appel Gemini
     tous_les_cours = get_gemini_data(prompt, content_to_analyze)
 
-    # 3. Comparaison Mémoire [cite: 11]
+    # 4. Comparaison Mémoire (Fichier local sur GitHub)
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
         with open(memo_file, 'r') as f:
             try:
                 anciens_complets = json.load(f)
-            except: anciens_complets = []
+            except:
+                anciens_complets = []
 
-    alertes = [] [cite: 12]
-    print(f"🔎 Analyse de {len(tous_les_cours)} cours...")
+    alertes = []
+    print(f"🔎 Analyse de {len(tous_les_cours)} cours trouvés.")
     
     for actuel in tous_les_cours:
         if actuel.get('statut') == "LIBRE":
@@ -124,21 +130,21 @@ def run_scan():
             if etait_complet:
                 alertes.append(actuel)
 
-    # 4. Notifications WhatsApp [cite: 13]
+    # 5. Envoi Alertes WhatsApp
     if alertes:
         for c in alertes:
             msg = f"🚨 PLACE LIBRE : {c['nom']}\n📅 {c['jour']} {c['date']} à {c['horaire']}\n🔗 {URL_CIBLE}"
             send_whatsapp(msg)
-            print(f"📢 ALERTE : {c['nom']} libéré !")
+            print(f"📢 ALERTE envoyée pour : {c['nom']} {c['date']}")
     else:
-        print("😴 Aucune nouvelle place libérée.")
+        print("😴 Pas de nouvelles places libérées.")
 
-    # 5. Sauvegarde [cite: 14, 15]
+    # 6. Sauvegarde pour le prochain tour
     nouveaux_complets = [c for c in tous_les_cours if c.get('statut') == "COMPLET"]
     with open(memo_file, 'w') as f:
         json.dump(nouveaux_complets, f)
     
-    print(f"🏁 Fin du scan. Mémoire mise à jour ({len(nouveaux_complets)} cours complets).")
+    print(f"🏁 Fin du scan. Mémoire mise à jour : {len(nouveaux_complets)} cours complets.")
 
 if __name__ == "__main__":
     run_scan()
