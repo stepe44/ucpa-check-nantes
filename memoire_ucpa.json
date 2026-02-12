@@ -1,130 +1,98 @@
 [
     {
         "nom": "Pilates",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "12h15",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Cross Training Intensity",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "13h00",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "TRX",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "16h45",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "CAF",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "17h30",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Cross Training Intensity",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "17h30",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "RPM",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "18h30",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Cross Training Intensity",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "19h15",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Body Combat",
-        "jour": "VEN.",
         "date": "13/02",
         "horaire": "19h15",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Cross Training Intensity",
-        "jour": "SAM.",
         "date": "14/02",
         "horaire": "09h45",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Yoga Vinyasa",
-        "jour": "SAM.",
         "date": "14/02",
         "horaire": "09h45",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "CAF",
-        "jour": "SAM.",
         "date": "14/02",
         "horaire": "10h30",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "RPM",
-        "jour": "SAM.",
         "date": "14/02",
         "horaire": "11h30",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Body Pump",
-        "jour": "DIM.",
         "date": "15/02",
         "horaire": "09h45",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Cross Training Intensity",
-        "jour": "DIM.",
         "date": "15/02",
         "horaire": "10h45",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Yoga Vinyasa",
-        "jour": "DIM.",
         "date": "15/02",
         "horaire": "11h30",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     },
     {
         "nom": "Stretching",
-        "jour": "DIM.",
         "date": "15/02",
         "horaire": "11h45",
-        "statut": "COMPLET",
-        "places": "0"
+        "statut": "COMPLET"
     }
 ]
