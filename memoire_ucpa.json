@@ -1,19 +1,11 @@
 [
     {
-        "nom": "RPM",
-        "jour": "LUN.",
-        "date": "09/02",
-        "horaire": "12h15",
-        "statut": "COMPLET",
-        "places": "0"
-    },
-    {
         "nom": "Cross Training Intensity",
         "jour": "LUN.",
         "date": "09/02",
         "horaire": "12h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Body Sculpt",
@@ -21,7 +13,7 @@
         "date": "09/02",
         "horaire": "13h00",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Body Attack",
@@ -29,7 +21,7 @@
         "date": "09/02",
         "horaire": "18h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Abdos-Fessiers",
@@ -37,7 +29,7 @@
         "date": "09/02",
         "horaire": "18h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Biking",
@@ -45,7 +37,7 @@
         "date": "09/02",
         "horaire": "18h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Yoga Yin",
@@ -53,7 +45,7 @@
         "date": "09/02",
         "horaire": "19h00",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Hiit",
@@ -61,7 +53,7 @@
         "date": "09/02",
         "horaire": "19h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Body Pump",
@@ -69,7 +61,7 @@
         "date": "09/02",
         "horaire": "20h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Pilates",
@@ -77,7 +69,7 @@
         "date": "13/02",
         "horaire": "12h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Cross Training Intensity",
@@ -85,7 +77,7 @@
         "date": "13/02",
         "horaire": "13h00",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "TRX",
@@ -93,7 +85,7 @@
         "date": "13/02",
         "horaire": "16h45",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "CAF",
@@ -101,7 +93,7 @@
         "date": "13/02",
         "horaire": "17h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Cross Training Intensity",
@@ -109,7 +101,7 @@
         "date": "13/02",
         "horaire": "17h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "RPM",
@@ -117,7 +109,7 @@
         "date": "13/02",
         "horaire": "18h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Cross Training Intensity",
@@ -125,7 +117,7 @@
         "date": "13/02",
         "horaire": "19h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Body Combat",
@@ -133,7 +125,7 @@
         "date": "13/02",
         "horaire": "19h15",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Cross Training Intensity",
@@ -141,7 +133,7 @@
         "date": "14/02",
         "horaire": "09h45",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Yoga Vinyasa",
@@ -149,7 +141,7 @@
         "date": "14/02",
         "horaire": "09h45",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "CAF",
@@ -157,7 +149,7 @@
         "date": "14/02",
         "horaire": "10h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "RPM",
@@ -165,7 +157,7 @@
         "date": "14/02",
         "horaire": "11h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Body Pump",
@@ -173,7 +165,7 @@
         "date": "15/02",
         "horaire": "09h45",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Cross Training Intensity",
@@ -181,7 +173,7 @@
         "date": "15/02",
         "horaire": "10h45",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Yoga Vinyasa",
@@ -189,7 +181,7 @@
         "date": "15/02",
         "horaire": "11h30",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     },
     {
         "nom": "Stretching",
@@ -197,6 +189,6 @@
         "date": "15/02",
         "horaire": "11h45",
         "statut": "COMPLET",
-        "places": "0"
+        "places": null
     }
 ]
