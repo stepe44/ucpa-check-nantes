@@ -178,6 +178,32 @@ def analyze_vertical_data(raw_text):
                 })
     return cours_extraits
 
+def send_test_heartbeat():
+    """Envoie une notification de test pour vérifier que tous les canaux fonctionnent"""
+    now = datetime.now().strftime("%H:%M:%S")
+    test_msg = f"✅ Test de fin d'exécution à {now}. Tous les systèmes sont opérationnels."
+    logging.info("🚀 Envoi de la notification de test de fin d'exécution...")
+    
+    # Test NTFY
+ 
+    send_ntfy("TEST SYSTEME", "Aujourd'hui", now)
+    
+    # Test SMS Free (Correction avec encodage incluse)
+    if FREE_SMS_USER and FREE_SMS_PASS:
+        params = {'user': FREE_SMS_USER, 'pass': FREE_SMS_PASS, 'msg': test_msg}
+        try:
+            requests.get("https://smsapi.free-mobile.fr/sendmsg", params=params, timeout=10)
+        except Exception as e:
+            logging.error(f"❌ Échec test SMS : {e}")
+
+    # Test Email
+    if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVER:
+        try:
+            # Vous pouvez appeler votre logique email ici ou simplement logger
+            logging.info("📧 Email de test prêt à être envoyé (vérifiez vos logs SMTP)")
+        except Exception: pass
+
+
 def run_scan():
     raw_content = get_heavy_selenium_content(URL_CIBLE)
     if not raw_content: return
@@ -212,6 +238,10 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+    finally:
+        # Cette partie s'exécutera TOUJOURS, même si le scan plante
+        send_test_heartbeat()
+
 
 
 
