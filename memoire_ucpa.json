@@ -20,6 +20,12 @@
     {
         "nom": "Body Sculpt",
         "date": "12/02",
+        "horaire": "13h00",
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "12/02",
         "horaire": "17h30",
         "statut": "COMPLET"
     },
@@ -57,6 +63,12 @@
         "nom": "Pilates",
         "date": "13/02",
         "horaire": "12h15",
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "13/02",
+        "horaire": "13h00",
         "statut": "COMPLET"
     },
     {
