@@ -19,37 +19,39 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 MEMO_FILE = 'memoire_ucpa.json'
 
-# Récupération des Secrets GitHub
+# --- RÉCUPÉRATION DES SETTINGS (GitHub Secrets/Vars) ---
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
 EMAIL_RECEIVER = os.getenv('EMAIL_RECEIVER')
 
+# Lecture de la liste de filtrage depuis les paramètres
+raw_filter = os.getenv('COURS_SURVEILLES', '')
+if raw_filter:
+    # On transforme "Yoga, Biking" en ["yoga", "biking"]
+    COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()]
+else:
+    COURS_SURVEILLES = []
+
 def send_alerts(course_name, date, time_slot):
-    """Déclenche les alertes configurées (WhatsApp et/ou Email)"""
-    
-    # 1. ALERTE WHATSAPP
+    """Envoie les alertes WhatsApp et Email"""
+    # WhatsApp
     if GREEN_API_URL and WHATSAPP_ID:
         msg_wa = f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course_name}*\n📅 {date} à {time_slot}\n🔗 {URL_CIBLE}"
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_ID, "message": msg_wa}, timeout=10)
-            logging.info(f"📱 WhatsApp envoyé pour {course_name}")
-        except Exception as e:
-            logging.error(f"❌ Erreur WhatsApp : {e}")
+        except Exception: pass
 
-    # 2. ALERTE EMAIL (Gratuit via SMTP Gmail)
+    # Email
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVER:
         msg_mail = MIMEMultipart()
-        msg_mail['From'] = EMAIL_SENDER
+        msg_mail['From'] = f"UCPA Bot <{EMAIL_SENDER}>"
         msg_mail['To'] = EMAIL_RECEIVER
         msg_mail['Subject'] = f"🚨 Place Libérée : {course_name}"
-        
-        body = f"Une place est disponible !\n\nCours : {course_name}\nDate : {date}\nHeure : {time_slot}\n\nLien : {URL_CIBLE}"
+        body = f"Une place est disponible !\n\nCours : {course_name}\nDate : {date}\nHeure : {time_slot}\nLien : {URL_CIBLE}"
         msg_mail.attach(MIMEText(body, 'plain'))
-
         try:
-            # Connexion au serveur SMTP de Gmail (Port 587 avec TLS)
             with smtplib.SMTP("smtp.gmail.com", 587) as server:
                 server.starttls()
                 server.login(EMAIL_SENDER, EMAIL_PASSWORD)
@@ -59,7 +61,6 @@ def send_alerts(course_name, date, time_slot):
             logging.error(f"❌ Erreur Email : {e}")
 
 def get_heavy_selenium_content(url):
-    logging.info(f"🌐 Lancement du moteur blindé pour : {url}")
     options = Options()
     options.add_argument("--headless=new") 
     options.add_argument("--no-sandbox")
@@ -81,15 +82,7 @@ def get_heavy_selenium_content(url):
             driver.execute_script(f"window.scrollTo(0, {i});")
             time.sleep(0.5)
         
-        driver.execute_script("window.scrollTo(0, 0);")
-
-        try:
-            WebDriverWait(driver, 20).until(lambda d: 
-                "complet" in d.find_element(By.TAG_NAME, "body").text.lower() or 
-                "réserver" in d.find_element(By.TAG_NAME, "body").text.lower()
-            )
-        except: pass
-        
+        WebDriverWait(driver, 25).until(lambda d: "complet" in d.find_element(By.TAG_NAME, "body").text.lower() or "réserver" in d.find_element(By.TAG_NAME, "body").text.lower())
         return driver.find_element(By.TAG_NAME, "body").text
     except Exception as e:
         logging.error(f"❌ Crash Selenium : {e}")
@@ -117,6 +110,12 @@ def analyze_vertical_data(raw_text):
         if re.match(r"\d{1,2}h\d{2}\s*-\s*\d{1,2}h\d{2}", ligne):
             if current_day_num:
                 nom_cours = lines[i-1]
+                
+                # --- LOGIQUE DE FILTRAGE DYNAMIQUE ---
+                if COURS_SURVEILLES:
+                    if not any(mot in nom_cours.lower() for mot in COURS_SURVEILLES):
+                        continue
+
                 statut_brut = ""
                 if i + 1 < len(lines):
                     if "RÉSERVER" in lines[i+1].upper():
@@ -152,29 +151,22 @@ def run_scan():
 
     nouveaux_complets = []
     
-    print(f"\n--- SCAN COMPLET (WHATSAPP + EMAIL) ---")
-    print(f"{'ETAT':<5} | {'DATE':<6} | {'HEURE':<8} | {'COURS'}")
-    print("-" * 65)
-
+    print(f"\n--- SURVEILLANCE ({'FILTRÉE' if COURS_SURVEILLES else 'TOTALE'}) ---")
     for c in cours_actuels:
         id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
-        
         if c['statut'] == "COMPLET":
             nouveaux_complets.append(c)
-            print(f"🔴    | {c['date']:<6} | {c['horaire']:<8} | {c['nom']}")
+            print(f"🔴 | {c['date']} | {c['horaire']} | {c['nom']}")
         else:
             etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets)
-            
             if etait_complet:
                 send_alerts(c['nom'], c['date'], c['horaire'])
-                print(f"🚨    | {c['date']:<6} | {c['horaire']:<8} | {c['nom']} (ALERTÉ !)")
+                print(f"🚨 | {c['date']} | {c['horaire']} | {c['nom']} (ALERTÉ !)")
             else:
-                print(f"🟢    | {c['date']:<6} | {c['horaire']:<8} | {c['nom']}")
+                print(f"🟢 | {c['date']} | {c['horaire']} | {c['nom']}")
 
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
-    
-    logging.info(f"🏁 Scan terminé. {len(nouveaux_complets)} cours complets en mémoire.")
 
 if __name__ == "__main__":
     run_scan()
