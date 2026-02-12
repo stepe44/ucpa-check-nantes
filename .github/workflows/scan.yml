@@ -30,6 +30,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
           WHATSAPP_ID: ${{ vars.WHATSAPP_ID }}
+          WHATSAPP_CHAT_ID: ${{ vars.WHATSAPP_CHAT_ID }}
           COURS_SURVEILLES: ${{ vars.COURS_SURVEILLES }} # <-- Utilise 'vars' si c'est une variable, 'secrets' si c'est un secret          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ vars.EMAIL_PASSWORD }}
           EMAIL_RECEIVER: ${{ vars.EMAIL_RECEIVER }}
