@@ -34,6 +34,8 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          FREE_SMS_USER: ${{ secrets.FREE_SMS_USER }} # <--- ICI
+          FREE_SMS_PASS: ${{ secrets.FREE_SMS_PASS }} # <--- ICI
                   
         run: python ucpa-python.py
 
