@@ -8,6 +8,8 @@ from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # --- CONFIGURATION LOGGING ---
 # Enregistre les logs dans un fichier ET dans la console
@@ -39,7 +41,9 @@ def send_whatsapp(message):
         logging.error(f"❌ Erreur envoi WhatsApp: {e}")
 
 def get_heavy_selenium_content(url):
-    """Lance un navigateur Chrome avec des paramètres anti-détection."""
+    """
+    Lance un navigateur, force le scroll et attend le chargement effectif des données JS.
+    """
     logging.info(f"🌐 Lancement du navigateur blindé pour : {url}")
     
     options = Options()
@@ -52,35 +56,49 @@ def get_heavy_selenium_content(url):
     options.add_argument("--window-size=1920,1080")
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
     
-    # Masquer les indicateurs d'automatisation
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
     
     driver = webdriver.Chrome(options=options)
     
     try:
-        # Script CDP pour écraser navigator.webdriver (Anti-bot niveau 2)
+        # Masquer navigator.webdriver
         driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
-            'source': '''
-                Object.defineProperty(navigator, 'webdriver', {
-                    get: () => undefined
-                });
-            '''
+            'source': "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"
         })
         
         driver.get(url)
-        logging.info("⏳ Attente du chargement JS (15s)...")
-        time.sleep(15) 
+        logging.info("⏳ Page chargée. Début du traitement JS...")
+
+        # 1. SCROLL PROGRESSIF (Crucial pour déclencher le chargement des données)
+        # On descend par pas de 500 pixels
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        for i in range(0, last_height, 500):
+            driver.execute_script(f"window.scrollTo(0, {i});")
+            time.sleep(0.5) # Petite pause pour laisser le temps au contenu d'apparaître
         
+        # Remonter en haut (parfois nécessaire pour voir le début du planning)
+        driver.execute_script("window.scrollTo(0, 0);")
+
+        # 2. ATTENTE INTELLIGENTE (Smart Wait)
+        # On attend jusqu'à 20 secondes qu'un indice de "vraie donnée" apparaisse.
+        # Ici on cherche le mot "restantes" (pour "places restantes") ou un format d'heure "00"
+        # OU l'absence des balises moustaches.
+        try:
+            logging.info("⏳ Attente de l'injection des données dans le tableau...")
+            WebDriverWait(driver, 20).until(
+                lambda d: "restantes" in d.find_element(By.TAG_NAME, "body").text.lower() or 
+                          "complet" in d.find_element(By.TAG_NAME, "body").text.lower()
+            )
+            logging.info("✅ Données détectées (mots clés 'restantes' ou 'complet' trouvés).")
+        except Exception:
+            logging.warning("⚠️ Timeout : Les données dynamiques semblent ne pas s'être chargées. On tente quand même l'extraction.")
+
+        # 3. Sauvegarde HTML pour debug
         page_source = driver.page_source
-        
-        # --- DIAGNOSTIC RAPIDE ---
         if "403" in page_source or "Forbidden" in page_source:
             logging.critical("❌ ERREUR : Accès bloqué (403 Forbidden).")
-        if "cloudflare" in page_source.lower():
-            logging.warning("⚠️ ATTENTION : Protection Cloudflare détectée.")
-
-        # Sauvegarde du HTML pour debug (Artifacts GitHub)
+        
         with open("debug_page.html", "w", encoding="utf-8") as f:
             f.write(page_source)
             
@@ -93,7 +111,7 @@ def get_heavy_selenium_content(url):
     finally:
         driver.quit()
         logging.info("✅ Navigateur fermé.")
-
+        
 def clean_and_extract_schedule(raw_text):
     """
     Nettoyage basé sur les balises techniques du site (Mustache/Template).
@@ -273,4 +291,5 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
 
