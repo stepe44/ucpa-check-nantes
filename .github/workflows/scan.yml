@@ -28,11 +28,10 @@ jobs:
       - name: Setup Mudslide Session
         run: |
           npm install -g mudslide
-          # On crée le dossier spécifique au système Linux pour Mudslide
-          mkdir -p /home/runner/.local/share/mudslide
-          # On écrit le secret dans le fichier correct (me.json)
-          echo '${{ secrets.MUDSLIDE_CACHE }}' > /home/runner/.local/share/mudslide/me.json    
-
+          # Création du chemin EXACT attendu par Mudslide sur Ubuntu
+          mkdir -p /home/runner/.local/share/mudslide/Data
+          # On écrit le contenu de creds.json (votre secret MUDSLIDE_CACHE)
+          echo '${{ secrets.MUDSLIDE_CACHE }}' > /home/runner/.local/share/mudslide/Data/creds.json
   
       - name: Run script
         env:
