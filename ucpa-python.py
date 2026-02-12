@@ -95,30 +95,57 @@ def get_heavy_selenium_content(url):
         logging.info("✅ Navigateur fermé.")
 
 def clean_and_extract_schedule(raw_text):
-    """Extrait la partie pertinente du texte pour l'envoyer à Gemini."""
+    """
+    Nettoyage basé sur les balises techniques du site (Mustache/Template).
+    C'est beaucoup plus précis pour isoler le planning.
+    """
     if not raw_text: return ""
-    
-    # Cherche le premier jour de la semaine (Lundi XX, Mar XX, etc.)
-    pattern = r"(?i)(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\.?\s+\d{0,2}"
-    match = re.search(pattern, raw_text)
-    
-    if match:
-        start = match.start()
-        # On garde le texte à partir du jour trouvé + 15 000 caractères max
-        clean = raw_text[start : start + 15000]
-        
-        logging.info(f"✅ Planning repéré commençant par '{match.group(0)}'.")
-        
-        # --- APERÇU POUR DEBUG ---
-        logging.info("🔍 --- DÉBUT DU TEXTE ENVOYÉ À L'IA (500 car.) ---")
-        logging.info(clean[:500].replace('\n', ' ')) # Affichage compact
-        logging.info("---------------------------------------------------")
-        
-        return clean
-    else:
-        logging.warning("⚠️ Pas de jour détecté explicitement via Regex.")
-        # On renvoie quand même le début du texte au cas où
-        return raw_text[:15000]
+
+    logging.info("🧹 Tentative de découpage via les balises techniques...")
+
+    # LISTE DES MARQUEURS (Du plus pertinent au moins pertinent)
+    # On coupe le texte dès qu'on trouve un de ces marqueurs et on garde la suite.
+    marqueurs = [
+        "{{/columns}} {{/columnsToShow}}",
+        "{{/isGroupAndPastDay}}",
+        "{{/hasSessions}} {{^hasSessions}}"
+    ]
+
+    clean_text = ""
+    trouve = False
+
+    for marqueur in marqueurs:
+        if marqueur in raw_text:
+            # On coupe le texte en deux : [Avant le marqueur, Après le marqueur]
+            parts = raw_text.split(marqueur)
+            # On prend la dernière partie (le contenu du planning)
+            clean_text = parts[-1] 
+            logging.info(f"✅ Marqueur trouvé : '{marqueur}'. Découpage effectué.")
+            trouve = True
+            break # On arrête de chercher, on a trouvé le bon endroit
+
+    # Si aucun marqueur technique n'est trouvé, on utilise l'ancienne méthode (Regex Jours)
+    if not trouve:
+        logging.warning("⚠️ Aucun marqueur technique trouvé. Passage en mode secours (Regex Jours).")
+        pattern = r"(?i)(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\.?\s+\d{0,2}"
+        match = re.search(pattern, raw_text)
+        if match:
+            start = match.start()
+            clean_text = raw_text[start:]
+        else:
+            clean_text = raw_text # On garde tout par désespoir
+
+    # Limite de taille pour Gemini (15 000 caractères suffisent largement pour une semaine)
+    final_text = clean_text[:15000]
+
+    # --- APERÇU POUR DEBUG ---
+    logging.info("🔍 --- DÉBUT DU TEXTE ENVOYÉ À L'IA (500 car.) ---")
+    # On remplace les sauts de ligne par des espaces pour ne pas pourrir le log
+    preview = final_text[:500].replace('\n', ' ') 
+    logging.info(preview)
+    logging.info("---------------------------------------------------")
+
+    return final_text
 
 def analyze_with_gemini(content):
     """Interroge Gemini pour transformer le texte en JSON."""
@@ -246,3 +273,4 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
