@@ -24,7 +24,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests selenium webdriver-manager
-
+      
+      - name: Setup Mudslide Session
+        run: |
+          npm install -g mudslide
+          mkdir -p ~/.mudslide
+          echo '${{ secrets.MUDSLIDE_JSON }}' > ~/.mudslide/me.json
+  
       - name: Run script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
