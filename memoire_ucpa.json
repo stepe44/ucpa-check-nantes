@@ -1,14 +1,14 @@
 [
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Body Attack",
         "date": "12/02",
-        "horaire": "18h30",
+        "horaire": "18h15",
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Yin",
+        "nom": "Abdos-Fessiers",
         "date": "12/02",
-        "horaire": "19h00",
+        "horaire": "18h30",
         "statut": "COMPLET"
     },
     {
@@ -54,13 +54,19 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Combat",
+        "date": "13/02",
+        "horaire": "19h15",
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
         "date": "14/02",
         "horaire": "09h45",
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Cross Training Intensity",
         "date": "14/02",
         "horaire": "09h45",
         "statut": "COMPLET"
@@ -81,12 +87,6 @@
         "nom": "Body Pump",
         "date": "15/02",
         "horaire": "09h45",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Yin",
-        "date": "15/02",
-        "horaire": "10h30",
         "statut": "COMPLET"
     },
     {
