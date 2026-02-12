@@ -53,17 +53,28 @@ def get_schedule_data(url):
     
     try:
         driver.get(url)
-        wait = WebDriverWait(driver, 15)
-        wait.until(EC.presence_of_element_located((By.CLASS_NAME, "p-program-list")))
+        
+        # --- AMÉLIORATION : ATTENTE ET SCROLL ---
+        # On attend que le mot "Réserver" ou "COMPLET" apparaisse dans le texte de la page
+        wait = WebDriverWait(driver, 25)
+        wait.until(lambda d: "Réserver" in d.page_source or "COMPLET" in d.page_source)
+        
+        # Petit scroll pour déclencher le lazy loading si besoin
+        driver.execute_script("window.scrollTo(0, 1000);")
+        time.sleep(2)
         
         full_text = driver.find_element(By.TAG_NAME, "body").text
         
-        # Le Regex capture maintenant le JOUR (Group 1)
+        # Regex pour les blocs de jours
         date_pattern = r"(LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s(\d{1,2})\s([^\n\s]+)"
         blocks = re.split(date_pattern, full_text, flags=re.IGNORECASE)
         
+        if len(blocks) <= 1:
+            logging.warning("⚠️ La structure du texte n'a pas permis de découper les jours. Vérifiez le format.")
+            return []
+
         for i in range(1, len(blocks), 4):
-            jour_nom = blocks[i].capitalize() # Ex: "Lundi"
+            jour_nom = blocks[i].capitalize()
             jour_num = blocks[i+1].zfill(2)
             mois_nom = blocks[i+2].lower().strip()
             mois_num = MOIS_MAP.get(mois_nom, "01")
@@ -71,6 +82,9 @@ def get_schedule_data(url):
             date_formattee = f"{jour_num}/{mois_num}"
             contenu_jour = blocks[i+3]
             
+            # Regex plus flexible pour les cours
+            # On capture (Horaire) (Nom) et (Statut)
+            # Supporte : "18:30 - 19:15 NOM DU COURS COMPLET" ou "18:30\nNOM\nRéserver"
             cours_patterns = re.findall(r"(\d{1,2}[:h]\d{2}).*?\n(.*?)\n.*?(COMPLET|places restantes|Réserver|S'inscrire)", contenu_jour, re.DOTALL)
             
             for horaire, nom, statut_raw in cours_patterns:
@@ -78,7 +92,7 @@ def get_schedule_data(url):
                 
                 cours_extraits.append({
                     "nom": nom.strip(),
-                    "jour": jour_nom, # Nouveau champ ajouté
+                    "jour": jour_nom,
                     "date": date_formattee,
                     "horaire": horaire.replace(':', 'h'),
                     "statut": statut
@@ -95,7 +109,9 @@ def run_scan():
     logging.info("🚀 --- DÉBUT DE L'AUDIT ---")
     
     cours = get_schedule_data(URL_CIBLE)
-    if not cours: return
+    if not cours: 
+        logging.error("❌ Aucun cours n'a pu être extrait. Vérifiez l'URL ou la connexion.")
+        return
 
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
@@ -118,7 +134,7 @@ def run_scan():
         h_raw = c['horaire']
         statut = c['statut']
 
-        # Logique de filtrage des dates passées
+        # Filtrage
         try:
             parts = d_raw.split('/')
             date_objet = datetime(maintenant.year, int(parts[1]), int(parts[0])).date()
@@ -130,7 +146,6 @@ def run_scan():
             icon = "🔴"
         else:
             icon = "🟢"
-            # Détection de libération
             etait_complet = any(
                 a.get('nom','').strip().lower() == nom.lower() and 
                 a.get('date') == d_raw and 
@@ -145,7 +160,6 @@ def run_scan():
 
     if alertes:
         for c in alertes:
-            # Formatage du message avec le jour inclus
             msg = f"🚨 LIBRE : {c.get('nom')}\n📅 {c.get('jour')} {c.get('date')} à {c.get('horaire')}"
             send_whatsapp(msg)
 
