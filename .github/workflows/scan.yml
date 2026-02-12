@@ -25,9 +25,11 @@ jobs:
         run: |
           pip install requests selenium webdriver-manager
       
-      - name: Setup Mudslide Session
+      - name: Install Mudslide
+        run: npm install -g mudslide
+
+      - name: Restore Mudslide Session
         run: |
-          npm install -g mudslide
           mkdir -p ~/.mudslide
           echo '${{ secrets.MUDSLIDE_CACHE }}' > ~/.mudslide/me.json
   
