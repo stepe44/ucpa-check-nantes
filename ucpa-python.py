@@ -42,7 +42,7 @@ def send_ntfy(course_name, date, time_slot):
     
     payload = f"Une place s'est libérée pour {course_name} le {date} à {time_slot} !"
     headers = {
-        "Title": "🚨 ALERTE UCPA NANTES",
+        "Title": "ALERTE UCPA NANTES",
         "Priority": "5",          # Priorité maximale (fait vibrer/sonner)
         "Tags": "beer,gym,bell",  # Émojis sur la notification
         "Click": URL_CIBLE        # Lien cliquable sur le téléphone
@@ -212,5 +212,6 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
 
 
