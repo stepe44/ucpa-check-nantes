@@ -123,15 +123,23 @@ def analyze_vertical_data(raw_text):
     return cours_extraits
 
 def send_test_heartbeat():
-    """Notification de fin d'exécution envoyée à chaque fois"""
+    """Notification de fin d'exécution envoyée systématiquement"""
     now = datetime.now().strftime("%H:%M:%S")
     msg = f"✅ Fin de scan UCPA à {now}. Status: OK."
+    CACHE_PATH = "/home/runner/.local/share/mudslide"
+    
     logging.info("🚀 Envoi du Heartbeat de test...")
-    # Test Mudslide
-    subprocess.run(['mudslide', 'send', WHATSAPP_GROUP_ID, msg])
-    # Test ntfy
+    try:
+        subprocess.run([
+            'mudslide', 
+            '--cache', CACHE_PATH, 
+            'send', WHATSAPP_GROUP_ID, msg
+        ], check=True)
+    except Exception as e:
+        logging.error(f"❌ Erreur Heartbeat Mudslide : {e}")
+    
     send_ntfy("SYSTÈME", "Aujourd'hui", now)
-
+    
 def run_scan():
     raw_content = get_heavy_selenium_content(URL_CIBLE)
     if not raw_content: return
@@ -159,3 +167,4 @@ if __name__ == "__main__":
     finally:
         send_test_heartbeat()
         
+
