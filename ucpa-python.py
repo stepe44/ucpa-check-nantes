@@ -28,27 +28,29 @@ EMAIL_RECEIVER = os.getenv('EMAIL_RECEIVER')
 FREE_SMS_USER = os.getenv('FREE_SMS_USER')
 FREE_SMS_PASS = os.getenv('FREE_SMS_PASS')
 
-# Lecture de la liste de filtrage depuis les paramètres
+# Lecture de la liste de filtrage
 raw_filter = os.getenv('COURS_SURVEILLES', '')
 if raw_filter:
-    # On transforme "Yoga, Biking" en ["yoga", "biking"]
     COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()]
 else:
     COURS_SURVEILLES = []
 
 def send_alerts(course_name, date, time_slot):
-    """Envoie les alertes WhatsApp et Email"""
-    # WhatsApp
+    """Envoie les alertes WhatsApp, SMS et Email"""
+    alert_text = f"PLACE LIBRE : {course_name} le {date} à {time_slot}"
+    
+    # 1. WhatsApp
     if GREEN_API_URL and WHATSAPP_ID:
         msg_wa = f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course_name}*\n📅 {date} à {time_slot}\n🔗 {URL_CIBLE}"
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_ID, "message": msg_wa}, timeout=10)
-        except Exception: pass
+        except Exception: 
+            pass
 
-if FREE_SMS_USER and FREE_SMS_PASS:
+    # 2. SMS Free Mobile
+    if FREE_SMS_USER and FREE_SMS_PASS:
         # Note : Les caractères spéciaux doivent être encodés pour l'URL
-        sms_msg = f"UCPA : {alert_text}"
-        url_free = f"https://smsapi.free-mobile.fr/sendmsg?user={FREE_SMS_USER}&pass={FREE_SMS_PASS}&msg={sms_msg}"
+        url_free = f"https://smsapi.free-mobile.fr/sendmsg?user={FREE_SMS_USER}&pass={FREE_SMS_PASS}&msg=UCPA : {alert_text}"
         try:
             resp = requests.get(url_free, timeout=10)
             if resp.status_code == 200:
@@ -58,7 +60,7 @@ if FREE_SMS_USER and FREE_SMS_PASS:
         except Exception as e:
             logging.error(f"❌ Erreur SMS : {e}")
     
-    # Email
+    # 3. Email
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVER:
         msg_mail = MIMEMultipart()
         msg_mail['From'] = f"UCPA Bot <{EMAIL_SENDER}>"
@@ -185,4 +187,3 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
-
