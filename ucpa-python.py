@@ -232,61 +232,75 @@ def run_scan():
         logging.warning("🚫 Aucun cours extrait par l'IA. Fin du scan.")
         return
 
-    # 4. Chargement de la mémoire (Anciens cours complets)
+# --- 4. FILTRAGE ET COMPARAISON ---
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
         with open(memo_file, 'r', encoding='utf-8') as f:
-            try: anciens_complets = json.load(f)
+            try:
+                anciens_complets = json.load(f)
             except: pass
 
-    nouveaux_complets = []
+    # Obtenir la date du jour pour filtrer le passé
+    maintenant = datetime.now()
+    annee_actuelle = maintenant.year
+
+    nouveaux_complets_a_sauver = []
     alertes = []
 
     logging.info(f"\n📋 {len(cours)} COURS ANALYSÉS :")
-    print(f"{'STATUT':<8} | {'DATE':<6} | {'HEURE':<10} | {'COURS'}")
-    print("-" * 50)
-
+    
     for c in cours:
-        # Sécurisation des données (éviter NoneType error)
         nom = c.get('nom') or "Inconnu"
-        date = c.get('date') or "??"
+        date_str = c.get('date') or "??" # Format "DD/MM"
         heure = c.get('horaire') or "??"
         statut = c.get('statut') or "INCONNU"
-        places = c.get('places') or "" # Important pour l'affichage
-        
-        icon = "🔴" if statut == "COMPLET" else "🟢"
-        print(f"{icon} {statut:<8} | {date:<6} | {heure:<10} | {nom}")
 
-        # Logique de détection
+        # --- LOGIQUE DE FILTRAGE DES DATES PASSÉES ---
+        try:
+            # On reconstitue une date complète pour comparer
+            # Attention : Gemini renvoie DD/MM, on ajoute l'année en cours
+            date_objet = datetime.strptime(f"{date_str}/{annee_actuelle}", "%d/%m/%Y")
+            
+            # Si le cours est déjà passé (avant aujourd'hui, même heure/jour négligé ici pour sécurité)
+            if date_objet.date() < maintenant.date():
+                continue # On ignore ce cours, il est dans le passé
+        except Exception as e:
+            logging.warning(f"⚠️ Date invalide pour {nom} ({date_str}): {e}")
+            continue
+
+        # --- LOGIQUE DE DÉTECTION ---
         if statut == "COMPLET":
-            nouveaux_complets.append(c)
+            nouveaux_complets_a_sauver.append(c)
+            icon = "🔴"
         elif statut == "LIBRE":
-            # On vérifie si ce cours précis était complet avant
+            icon = "🟢"
+            # On vérifie si ce cours précis était dans la mémoire des complets
             etait_complet = any(
-                a.get('nom') == nom and a.get('date') == date and a.get('horaire') == heure
+                a.get('nom') == nom and a.get('date') == date_str and a.get('horaire') == heure
                 for a in anciens_complets
             )
             if etait_complet:
                 alertes.append(c)
 
-    # 5. Envoi des alertes
+        print(f"{icon} {statut:<8} | {date_str:<6} | {heure:<10} | {nom}")
+
+    # --- 5. ENVOI DES ALERTES ---
     if alertes:
         logging.info(f"🚨 {len(alertes)} PLACE(S) LIBÉRÉE(S) !")
         for c in alertes:
             msg = f"🚨 LIBRE : {c.get('nom')}\n📅 {c.get('date')} à {c.get('horaire')}\n🔗 {URL_CIBLE}"
             send_whatsapp(msg)
-    else:
-        logging.info("✅ Aucun changement 'Complet' -> 'Libre' détecté.")
-    
-    # 6. Mise à jour de la mémoire
+
+    # --- 6. MISE À JOUR DE LA MÉMOIRE (Seulement les cours futurs et complets) ---
     with open(memo_file, 'w', encoding='utf-8') as f:
-        json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+        json.dump(nouveaux_complets_a_sauver, f, indent=4, ensure_ascii=False)
     
-    logging.info("🏁 Fin du scan.")
+    logging.info("🏁 Fin du scan (Mémoire nettoyée des cours passés).")
 
 if __name__ == "__main__":
     run_scan()
+
 
 
 
