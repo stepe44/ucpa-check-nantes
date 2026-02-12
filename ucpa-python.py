@@ -119,87 +119,23 @@ def run_scan():
     logging.info("🚀 --- DÉBUT DE L'AUDIT (MOTEUR REGEX) ---")
     raw = get_heavy_selenium_content(URL_CIBLE)
     
+    # --- AJOUT : CAPTURE DU LOG COMPLET POUR ANALYSE ---
+    if raw:
+        with open("debug_raw_content.txt", "w", encoding="utf-8") as f:
+            f.write(f"--- CAPTURE DU {datetime.now()} ---\n")
+            f.write(raw)
+        logging.info("💾 Contenu brut sauvegardé dans 'debug_raw_content.txt' pour analyse.")
+    # --------------------------------------------------
+
     if not raw or "####" not in raw:
         logging.warning("⚠️ Données UCPA non détectées dans le texte brut.")
-        return
+        # On ne s'arrête pas forcément ici pour permettre l'analyse du fichier debug
+        if not raw: return
 
     cours = analyze_with_regex(raw)
     
+    # ... reste du code identique ...
     if not cours:
         logging.warning("⚠️ Aucun cours trouvé après analyse Regex.")
         return
 
-    memo_file = 'memoire_ucpa.json'
-    anciens_complets = []
-    if os.path.exists(memo_file):
-        with open(memo_file, 'r', encoding='utf-8') as f:
-            try: 
-                anciens_complets = json.load(f)
-            except: 
-                pass
-
-    maintenant = datetime.now()
-    aujourdhui_date = maintenant.date()
-    heure_limite = maintenant - timedelta(minutes=30)
-
-    nouveaux_complets = []
-    alertes = []
-
-    print(f"\n{'STATUT':<8} | {'DATE':<6} | {'HEURE':<10} | {'COURS'}")
-    print("-" * 70)
-
-    for c in cours:
-        nom = c['nom']
-        d_raw = c['date']
-        h_raw = c['horaire']
-        statut = c['statut']
-
-        try:
-            parts = d_raw.split('/')
-            # On suppose l'année actuelle
-            date_objet = datetime(maintenant.year, int(parts[1]), int(parts[0])).date()
-            
-            h_clean = h_raw.lower().replace('h', ':').strip()
-            hh, mm = map(int, h_clean.split(':'))
-            datetime_cours = datetime(maintenant.year, int(parts[1]), int(parts[0]), hh, mm)
-
-            # Filtres temporels
-            if date_objet < aujourdhui_date: continue
-            if date_objet == aujourdhui_date and datetime_cours < heure_limite: continue
-        except Exception as e:
-            logging.debug(f"Erreur parsing {nom}: {e}")
-            continue
-
-        if statut == "COMPLET":
-            nouveaux_complets.append(c)
-            icon = "🔴"
-        else:
-            icon = "🟢"
-            # Détection de libération
-            etait_complet = any(
-                a.get('nom','').strip().lower() == nom.lower() and 
-                a.get('date') == d_raw and 
-                a.get('horaire') == h_raw
-                for a in anciens_complets
-            )
-            if etait_complet:
-                alertes.append(c)
-                icon = "🚨"
-
-        print(f"{icon} {statut:<8} | {d_raw:<6} | {h_raw:<10} | {nom}")
-
-    # Envoi des alertes WhatsApp
-    if alertes:
-        for c in alertes:
-            msg = f"🚨 LIBRE : {c['nom']}\n📅 {c['date']} à {c['horaire']}\n🔗 {URL_CIBLE}"
-            send_whatsapp(msg)
-            logging.info(f"📱 Alerte envoyée pour {c['nom']}")
-
-    # Sauvegarde de la mémoire (uniquement les complets)
-    with open(memo_file, 'w', encoding='utf-8') as f:
-        json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
-    
-    logging.info(f"🏁 Scan fini. {len(cours)} cours analysés, {len(nouveaux_complets)} complets.")
-
-if __name__ == "__main__":
-    run_scan()
