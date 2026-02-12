@@ -30,6 +30,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
           WHATSAPP_ID: ${{ secrets.WHATSAPP_ID }}
+          COURS_CIBLES: ${{ vars.COURS_CIBLES }}
         run: python ucpa-python.py
 
       - name: Save memory
