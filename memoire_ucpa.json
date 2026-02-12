@@ -36,6 +36,12 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "12/02",
+        "horaire": "18h15",
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "12/02",
         "horaire": "18h30",
@@ -48,27 +54,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
-        "date": "12/02",
-        "horaire": "19h15",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "12/02",
-        "horaire": "20h15",
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "13/02",
         "horaire": "12h15",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "13/02",
-        "horaire": "13h00",
         "statut": "COMPLET"
     },
     {
@@ -90,19 +78,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "13/02",
-        "horaire": "18h30",
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
-        "date": "13/02",
-        "horaire": "19h15",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Combat",
         "date": "13/02",
         "horaire": "19h15",
         "statut": "COMPLET"
