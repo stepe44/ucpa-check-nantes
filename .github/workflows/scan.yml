@@ -31,6 +31,11 @@ jobs:
           GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
           WHATSAPP_ID: ${{ secrets.WHATSAPP_ID }}
           COURS_CIBLES: ${{ vars.COURS_CIBLES }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+                  
         run: python ucpa-python.py
 
       - name: Save memory
