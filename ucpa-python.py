@@ -1,3 +1,4 @@
+
 import os
 import json
 import time
@@ -27,7 +28,6 @@ GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
-COURS_CIBLES = os.getenv('COURS_CIBLES', '') # Par défaut vide = tout accepter
 
 def send_whatsapp(message):
     """Envoie une notification WhatsApp via GreenAPI."""
@@ -214,36 +214,25 @@ def analyze_with_gemini(content):
             time.sleep(5)
             
     return []
-# Ajoute cette ligne tout en haut avec les autres variables
-COURS_CIBLES = os.getenv('COURS_CIBLES', '') # Par défaut vide = tout accepter
 
 def run_scan():
     logging.info("🚀 --- DÉBUT DE L'AUDIT ---")
     
-    # 1. Préparation des filtres
-    if COURS_CIBLES:
-        # On nettoie la liste : "Hyrox, Yoga" -> ['hyrox', 'yoga']
-        mots_cles = [m.strip().lower() for m in COURS_CIBLES.split(',')]
-        logging.info(f"🎯 Filtre actif. Je ne cherche que : {mots_cles}")
-    else:
-        mots_cles = []
-        logging.info("📢 Pas de filtre : Je surveille TOUS les cours.")
-
-    # 2. Scraping
+    # 1. Scraping
     raw = get_heavy_selenium_content(URL_CIBLE)
     if not raw: return
 
-    # 3. Nettoyage
+    # 2. Nettoyage
     clean = clean_and_extract_schedule(raw)
 
-    # 4. Analyse IA
+    # 3. Analyse IA
     cours = analyze_with_gemini(clean)
     
     if not cours:
         logging.warning("🚫 Aucun cours extrait par l'IA. Fin du scan.")
         return
 
-    # 5. Chargement mémoire
+    # 4. Chargement de la mémoire (Anciens cours complets)
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
@@ -254,33 +243,26 @@ def run_scan():
     nouveaux_complets = []
     alertes = []
 
-    logging.info(f"\n📋 ANALYSE DES COURS :")
-    print(f"{'ACTION':<8} | {'STATUT':<8} | {'JOUR':<10} | {'HEURE':<8} | {'COURS'}")
-    print("-" * 60)
+    logging.info(f"\n📋 {len(cours)} COURS ANALYSÉS :")
+    print(f"{'STATUT':<8} | {'DATE':<6} | {'HEURE':<10} | {'COURS'}")
+    print("-" * 50)
 
     for c in cours:
-        nom = c.get('nom', 'Inconnu')
-        date = c.get('date', '??')
-        heure = c.get('horaire', '??')
-        statut = c.get('statut', 'INCONNU')
+        # Sécurisation des données (éviter NoneType error)
+        nom = c.get('nom') or "Inconnu"
+        date = c.get('date') or "??"
+        heure = c.get('horaire') or "??"
+        statut = c.get('statut') or "INCONNU"
+        places = c.get('places') or "" # Important pour l'affichage
         
-        # --- FILTRAGE ---
-        # Si une liste de cibles existe, on vérifie si le nom correspond
-        if mots_cles:
-            is_match = any(mot in nom.lower() for mot in mots_cles)
-            if not is_match:
-                # On ignore ce cours (on ne l'affiche même pas ou en gris)
-                # print(f"⚪ IGNORÉ   | {statut:<8} | {date:<10} | {heure:<8} | {nom}")
-                continue 
-
-        # Si on arrive ici, c'est que le cours nous intéresse
         icon = "🔴" if statut == "COMPLET" else "🟢"
-        print(f"{icon} SUIVI   | {statut:<8} | {date:<10} | {heure:<8} | {nom}")
+        print(f"{icon} {statut:<8} | {date:<6} | {heure:<10} | {nom}")
 
         # Logique de détection
         if statut == "COMPLET":
             nouveaux_complets.append(c)
         elif statut == "LIBRE":
+            # On vérifie si ce cours précis était complet avant
             etait_complet = any(
                 a.get('nom') == nom and a.get('date') == date and a.get('horaire') == heure
                 for a in anciens_complets
@@ -288,19 +270,23 @@ def run_scan():
             if etait_complet:
                 alertes.append(c)
 
-    # 6. Envoi des alertes
+    # 5. Envoi des alertes
     if alertes:
-        logging.info(f"🚨 {len(alertes)} PLACE(S) CIBLÉE(S) LIBÉRÉE(S) !")
+        logging.info(f"🚨 {len(alertes)} PLACE(S) LIBÉRÉE(S) !")
         for c in alertes:
             msg = f"🚨 LIBRE : {c.get('nom')}\n📅 {c.get('date')} à {c.get('horaire')}\n🔗 {URL_CIBLE}"
             send_whatsapp(msg)
     else:
-        logging.info("✅ Aucun changement intéressant détecté.")
+        logging.info("✅ Aucun changement 'Complet' -> 'Libre' détecté.")
     
-    # 7. Mise à jour de la mémoire
-    # Note : On sauvegarde TOUS les complets détectés (même ceux ignorés) 
-    # ou seulement ceux suivis ? Mieux vaut sauvegarder ceux filtrés pour éviter des faux positifs si on change le filtre.
+    # 6. Mise à jour de la mémoire
     with open(memo_file, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
     
     logging.info("🏁 Fin du scan.")
+
+if __name__ == "__main__":
+    run_scan()
+
+
+
