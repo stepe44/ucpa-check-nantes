@@ -114,57 +114,52 @@ def get_heavy_selenium_content(url):
         
 def clean_and_extract_schedule(raw_text):
     """
-    Nettoyage basé sur les balises techniques du site (Mustache/Template).
-    C'est beaucoup plus précis pour isoler le planning.
+    Nettoyage basé sur la phrase clé indiquée par l'utilisateur.
+    Tout ce qui se trouve après cette phrase est considéré comme étant le planning.
     """
     if not raw_text: return ""
 
-    logging.info("🧹 Tentative de découpage via les balises techniques...")
+    # La phrase exacte que tu as repérée
+    phrase_amorce = "Si vous êtes titulaire d'une carte ou de l'abonnement, rendez-vous dans votre espace personnel pour réserver votre séance."
 
-    # LISTE DES MARQUEURS (Du plus pertinent au moins pertinent)
-    # On coupe le texte dès qu'on trouve un de ces marqueurs et on garde la suite.
-    marqueurs = [
-        "{{/columns}} {{/columnsToShow}}",
-        "{{/isGroupAndPastDay}}",
-        "{{/hasSessions}} {{^hasSessions}}"
-    ]
+    logging.info(f"🧹 Recherche de la phrase d'amorce dans le texte...")
 
     clean_text = ""
-    trouve = False
 
-    for marqueur in marqueurs:
-        if marqueur in raw_text:
-            # On coupe le texte en deux : [Avant le marqueur, Après le marqueur]
-            parts = raw_text.split(marqueur)
-            # On prend la dernière partie (le contenu du planning)
-            clean_text = parts[-1] 
-            logging.info(f"✅ Marqueur trouvé : '{marqueur}'. Découpage effectué.")
-            trouve = True
-            break # On arrête de chercher, on a trouvé le bon endroit
-
-    # Si aucun marqueur technique n'est trouvé, on utilise l'ancienne méthode (Regex Jours)
-    if not trouve:
-        logging.warning("⚠️ Aucun marqueur technique trouvé. Passage en mode secours (Regex Jours).")
-        pattern = r"(?i)(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\.?\s+\d{0,2}"
-        match = re.search(pattern, raw_text)
-        if match:
-            start = match.start()
-            clean_text = raw_text[start:]
+    # 1. Méthode principale : On cherche la phrase exacte
+    if phrase_amorce in raw_text:
+        # On coupe le texte en deux et on garde la partie APRES (index [1])
+        parts = raw_text.split(phrase_amorce)
+        if len(parts) > 1:
+            clean_text = parts[1]
+            logging.info("✅ Phrase d'amorce trouvée ! Extraction du contenu suivant.")
         else:
-            clean_text = raw_text # On garde tout par désespoir
+            clean_text = raw_text
+    else:
+        # 2. Méthode de secours (au cas où ils changent un mot dans la phrase)
+        # On cherche juste "rendez-vous dans votre espace personnel"
+        logging.warning("⚠️ Phrase exacte non trouvée. Essai avec un fragment plus court...")
+        fragment_court = "rendez-vous dans votre espace personnel"
+        
+        if fragment_court in raw_text:
+            parts = raw_text.split(fragment_court)
+            clean_text = parts[-1]
+            logging.info("✅ Fragment court trouvé. Extraction effectuée.")
+        else:
+            logging.error("❌ Aucune phrase d'amorce trouvée. On envoie le texte brut (risque de bruit).")
+            clean_text = raw_text
 
-    # Limite de taille pour Gemini (15 000 caractères suffisent largement pour une semaine)
+    # On limite la taille pour Gemini (15 000 caractères suffisent pour une semaine)
     final_text = clean_text[:15000]
 
     # --- APERÇU POUR DEBUG ---
     logging.info("🔍 --- DÉBUT DU TEXTE ENVOYÉ À L'IA (500 car.) ---")
-    # On remplace les sauts de ligne par des espaces pour ne pas pourrir le log
-    preview = final_text[:500].replace('\n', ' ') 
+    # On nettoie les sauts de ligne multiples pour l'affichage log
+    preview = re.sub(r'\n+', ' ', final_text[:500])
     logging.info(preview)
     logging.info("---------------------------------------------------")
 
     return final_text
-
 def analyze_with_gemini(content):
     """Interroge Gemini pour transformer le texte en JSON."""
     if not GEMINI_API_KEY:
@@ -291,5 +286,6 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
 
 
