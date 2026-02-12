@@ -24,14 +24,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests selenium webdriver-manager
-      
-      - name: Install Mudslide
-        run: npm install -g mudslide
-
-      - name: Restore Mudslide Session
+     
+      - name: Setup Mudslide Session
         run: |
-          mkdir -p ~/.mudslide
-          echo '${{ secrets.MUDSLIDE_CACHE }}' > ~/.mudslide/me.json
+          npm install -g mudslide
+          # On crée le dossier spécifique au système Linux pour Mudslide
+          mkdir -p /home/runner/.local/share/mudslide
+          # On écrit le secret dans le fichier correct (me.json)
+          echo '${{ secrets.MUDSLIDE_CACHE }}' > /home/runner/.local/share/mudslide/me.json    
+
   
       - name: Run script
         env:
