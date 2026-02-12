@@ -5,104 +5,130 @@ import re
 import requests
 import logging
 from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 
 # --- CONFIGURATION LOGGING ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
+GREEN_API_URL = os.getenv('GREEN_API_URL')
+WHATSAPP_ID = os.getenv('WHATSAPP_ID')
+MEMO_FILE = 'memoire_ucpa.json'
 
-def get_heavy_selenium_content(url):
-    logging.info(f"🌐 Lancement du moteur furtif pour : {url}")
-    options = Options()
-    options.add_argument("--headless=new") 
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-blink-features=AutomationControlled") 
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    
-    driver = webdriver.Chrome(options=options)
-    try:
-        # Masquage de la propriété webdriver
-        driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
-            'source': "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"
-        })
-        
-        driver.get(url)
-        
-        # Scroll progressif pour déclencher le chargement des cours
-        last_height = driver.execute_script("return document.body.scrollHeight")
-        for i in range(0, last_height, 500):
-            driver.execute_script(f"window.scrollTo(0, {i});")
-            time.sleep(0.5)
-        
-        driver.execute_script("window.scrollTo(0, 0);")
-
-        # Attente du rendu métier (max 20s)
-        try:
-            WebDriverWait(driver, 20).until(lambda d: 
-                "restantes" in d.find_element(By.TAG_NAME, "body").text.lower() or 
-                "complet" in d.find_element(By.TAG_NAME, "body").text.lower()
-            )
-        except: 
-            logging.warning("⚠️ Timeout atteint, tentative d'extraction malgré tout.")
-        
-        return driver.find_element(By.TAG_NAME, "body").text
-    except Exception as e:
-        logging.error(f"❌ Crash Selenium : {e}")
-        return ""
-    finally:
-        driver.quit()
-
-def analyze_logic(raw_text):
-    # Sauvegarde du dump pour analyse sur GitHub Artifacts
-    with open("debug_raw_content.txt", "w", encoding="utf-8") as f:
-        f.write(raw_text)
-    
+def analyze_vertical_data(raw_text):
+    """Analyse les données structurées verticalement (Jour > Nom > Heure > Statut)"""
+    lines = [l.strip() for l in raw_text.split('\n') if l.strip()]
     cours_extraits = []
+    
+    current_day_num = None
+    jours_semaine = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
     maintenant = datetime.now()
-    
-    # 1. Split par date (ex: 12 jeu.)
-    pattern_date = r"(\d{2})\s+(lun\.|mar\.|mer\.|jeu\.|ven\.|sam\.|dim\.)"
-    # 2. Capture du cours (Heure #### Nom Statut)
-    pattern_cours = r"(\d{1,2}h\d{2})\s+-\s+\d{1,2}h\d{2}\s+####\s+([^ \n].+?)\s{2,}(.+)"
 
-    sections = re.split(pattern_date, raw_text)
-    
-    for i in range(1, len(sections), 3):
-        jour = sections[i]
-        mois = maintenant.month
-        # Correction mois suivant
-        if int(jour) < maintenant.day and maintenant.day > 25:
-            mois = (maintenant.month % 12) + 1
-            
-        date_str = f"{jour}/{str(mois).zfill(2)}"
-        content = sections[i+2]
-        
-        for m in re.finditer(pattern_cours, content):
-            statut_info = m.group(3).lower()
-            cours_extraits.append({
-                "date": date_str,
-                "horaire": m.group(1),
-                "nom": m.group(2).strip(),
-                "statut": "COMPLET" if "complet" in statut_info else "LIBRE"
-            })
+    # On parcourt les lignes
+    for i in range(len(lines)):
+        ligne = lines[i]
+
+        # 1. Détection du jour (ex: "jeudi" suivi de "12")
+        if ligne.lower() in jours_semaine:
+            if i + 1 < len(lines) and lines[i+1].isdigit():
+                current_day_num = lines[i+1].zfill(2)
+                continue
+
+        # 2. Détection d'un créneau horaire (ex: "17h30 - 18h15")
+        if re.match(r"\d{1,2}h\d{2}\s*-\s*\d{1,2}h\d{2}", ligne):
+            if current_day_num:
+                # Le nom du cours est TOUJOURS la ligne juste AVANT l'heure
+                nom_cours = lines[i-1]
+                
+                # Le statut est la ligne juste APRÈS l'heure
+                # Mais attention, si c'est "RÉSERVER", le statut est encore la ligne d'après
+                statut_brut = ""
+                if i + 1 < len(lines):
+                    if lines[i+1] == "RÉSERVER":
+                        statut_brut = lines[i+2] if i + 2 < len(lines) else ""
+                    else:
+                        statut_brut = lines[i+1]
+
+                statut = "COMPLET" if "complet" in statut_brut.lower() else "LIBRE"
+                
+                # Construction de la date
+                mois = maintenant.month
+                if int(current_day_num) < maintenant.day and maintenant.day > 25:
+                    mois = (maintenant.month % 12) + 1
+                
+                cours_extraits.append({
+                    "nom": nom_cours,
+                    "date": f"{current_day_num}/{str(mois).zfill(2)}",
+                    "horaire": ligne.split('-')[0].strip(),
+                    "statut": statut
+                })
+
     return cours_extraits
 
 def run_scan():
-    raw = get_heavy_selenium_content(URL_CIBLE)
-    if not raw: return
+    # --- 1. RÉCUPÉRATION (Utilise ton moteur blindé Selenium ici) ---
+    # Pour l'exemple, on suppose que 'raw_content' est le texte que tu m'as donné
+    # raw_content = get_heavy_selenium_content(URL_CIBLE) 
+    # ... (code selenium) ...
     
-    cours = analyze_logic(raw)
-    logging.info(f"✅ {len(cours)} cours trouvés.")
+    # Simulation du contenu pour le test
+    from __main__ import raw_content_variable # ou appel direct
     
-    # Sauvegarde JSON pour comparaison
-    with open("data_extracted.json", "w", encoding="utf-8") as f:
-        json.dump(cours, f, indent=4, ensure_ascii=False)
+    cours_actuels = analyze_vertical_data(raw_content_variable)
+    logging.info(f"🔎 {len(cours_actuels)} cours identifiés.")
+
+    # --- 2. CHARGEMENT MÉMOIRE ---
+    anciens_complets = []
+    if os.path.exists(MEMO_FILE):
+        try:
+            with open(MEMO_FILE, 'r', encoding='utf-8') as f:
+                anciens_complets = json.load(f)
+        except: pass
+
+    # --- 3. COMPARAISON ET ALERTES ---
+    nouveaux_complets = []
+    alertes_liberation = []
+
+    print(f"\n{'ETAT':<5} | {'DATE':<6} | {'HEURE':<8} | {'COURS'}")
+    print("-" * 60)
+
+    for c in cours_actuels:
+        # Identifiant unique pour comparer
+        id_cours = f"{c['nom']}|{c['date']}|{c['horaire']}"
+        
+        if c['statut'] == "COMPLET":
+            nouveaux_complets.append(c)
+            print(f"🔴    | {c['date']:<6} | {c['horaire']:<8} | {c['nom']}")
+        else:
+            # Si LIBRE, on regarde s'il était dans la liste des COMPLET avant
+            etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_cours 
+                                for a in anciens_complets)
+            
+            if etait_complet:
+                alertes_liberation.append(c)
+                print(f"🚨    | {c['date']:<6} | {c['horaire']:<8} | {c['nom']} --> LIBRE !")
+            else:
+                print(f"🟢    | {c['date']:<6} | {c['horaire']:<8} | {c['nom']}")
+
+    # --- 4. ENVOI DES ALERTES WHATSAPP ---
+    if alertes_liberation and GREEN_API_URL and WHATSAPP_ID:
+        for a in alertes_liberation:
+            message = (f"🚨 *PLACE LIBÉRÉE !*\n\n"
+                       f"🏋️ *Cours :* {a['nom']}\n"
+                       f"📅 *Date :* {a['date']}\n"
+                       f"🕒 *Heure :* {a['horaire']}\n"
+                       f"🔗 _Vite :_ {URL_CIBLE}")
+            
+            try:
+                requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_ID, "message": message}, timeout=10)
+                logging.info(f"📱 Alerte envoyée pour {a['nom']}")
+            except Exception as e:
+                logging.error(f"❌ Erreur envoi WhatsApp : {e}")
+
+    # --- 5. MISE À JOUR DE LA MÉMOIRE ---
+    with open(MEMO_FILE, 'w', encoding='utf-8') as f:
+        json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+    
+    logging.info(f"💾 Mémoire mise à jour avec {len(nouveaux_complets)} cours complets.")
 
 if __name__ == "__main__":
     run_scan()
