@@ -76,7 +76,6 @@ def get_heavy_selenium_content(url):
 
         # 2. ATTENTE INTELLIGENTE (Origine)
         try:
-            logging.info("⏳ Attente de l'injection des données dans le tableau...")
             WebDriverWait(driver, 20).until(
                 lambda d: "restantes" in d.find_element(By.TAG_NAME, "body").text.lower() or 
                           "complet" in d.find_element(By.TAG_NAME, "body").text.lower()
@@ -85,10 +84,6 @@ def get_heavy_selenium_content(url):
         except Exception:
             logging.warning("⚠️ Timeout : Extraction tentée malgré tout.")
 
-        page_source = driver.page_source
-        with open("debug_page.html", "w", encoding="utf-8") as f:
-            f.write(page_source)
-            
         return driver.find_element(By.TAG_NAME, "body").text
 
     except Exception as e:
@@ -96,7 +91,6 @@ def get_heavy_selenium_content(url):
         return ""
     finally:
         driver.quit()
-        logging.info("✅ Navigateur fermé.")
 
 def clean_and_extract_schedule(raw_text):
     """Nettoyage basé sur la phrase d'amorce d'origine."""
@@ -117,22 +111,15 @@ def analyze_with_gemini(content):
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
     
     prompt = f"""
-    Analyse ce texte de planning sportif.
-    Extrais un tableau JSON strict.
-    Chaque objet : {{ "nom": "...", "jour": "...", "date": "DD/MM", "horaire": "HHhMM", "statut": "LIBRE" ou "COMPLET", "places": "..." }}
-    Règles :
-    1. Si "Complet" ou "0 place", statut = "COMPLET".
-    2. Si "X places restantes", statut = "LIBRE".
-    
+    Analyse ce texte de planning sportif. Extrais un tableau JSON strict.
+    Chaque objet : {{ "nom": "...", "date": "DD/MM", "horaire": "HHhMM", "statut": "LIBRE" ou "COMPLET" }}
     Texte :
     {content}
     """
     
-    payload = {"contents": [{"parts": [{"text": prompt}]}]}
-    
     for attempt in range(3):
         try:
-            resp = requests.post(url, json=payload, timeout=30)
+            resp = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
             if resp.status_code == 429:
                 time.sleep((attempt + 1) * 15)
                 continue
@@ -168,7 +155,8 @@ def run_scan():
     # --- LOGIQUE DE TEMPS ---
     maintenant = datetime.now()
     annee_actuelle = maintenant.year
-    limite_retrait = maintenant - timedelta(minutes=30) # Marge de 30 min
+    # On autorise les cours qui ont commencé il y a moins de 30 min (marge de sécurité)
+    limite_retrait = maintenant - timedelta(minutes=30)
 
     nouveaux_complets = []
     alertes = []
@@ -177,30 +165,36 @@ def run_scan():
     print("-" * 60)
 
     for c in cours:
-        nom = c.get('nom') or "Inconnu"
+        nom = (c.get('nom') or "Inconnu").strip()
         date_str = c.get('date') or ""
         heure_str = c.get('horaire') or ""
         statut = c.get('statut') or "INCONNU"
 
-        # --- FILTRAGE DES COURS PASSÉS (avec marge 30 min) ---
+        # --- FILTRAGE PRÉCIS DATE + HEURE ---
         try:
+            # On nettoie l'heure pour le format datetime (18h30 -> 18:30)
             h_clean = heure_str.lower().replace('h', ':')
             date_cours = datetime.strptime(f"{date_str}/{annee_actuelle} {h_clean}", "%d/%m/%Y %H:%M")
             
+            # Si le cours est fini depuis plus de 30 min, on le dégage
             if date_cours < limite_retrait:
-                continue # Ignore les cours passés
+                continue
         except:
-            continue
+            # Si erreur de parsing, on garde le cours par défaut pour ne pas rater d'alerte
+            pass
 
-        # --- DÉTECTION ---
+        # --- TRAITEMENT MÉMOIRE ET ALERTES ---
         if statut == "COMPLET":
+            # Le cours est complet ET futur (ou récent) : on l'ajoute à la mémoire
             nouveaux_complets.append(c)
             icon = "🔴"
         else:
             icon = "🟢"
-            # Changement de statut de Complet -> Libre
+            # Si statut LIBRE, on vérifie s'il était COMPLET dans la mémoire
             etait_complet = any(
-                a.get('nom') == nom and a.get('date') == date_str and a.get('horaire') == heure_str
+                a.get('nom','').strip().lower() == nom.lower() and 
+                a.get('date') == date_str and 
+                a.get('horaire') == heure_str
                 for a in anciens_complets
             )
             if etait_complet:
@@ -208,18 +202,18 @@ def run_scan():
 
         print(f"{icon} {statut:<8} | {date_str:<6} | {heure_str:<10} | {nom}")
 
-    # 5. Alertes
+    # 5. Envoi des alertes
     if alertes:
         logging.info(f"🚨 {len(alertes)} PLACE(S) LIBÉRÉE(S) !")
         for c in alertes:
             msg = f"🚨 LIBRE : {c.get('nom')}\n📅 {c.get('date')} à {c.get('horaire')}\n🔗 {URL_CIBLE}"
             send_whatsapp(msg)
     
-    # 6. Mise à jour mémoire (nettoyée du passé)
+    # 6. Mise à jour mémoire (Écrase avec les cours complets d'aujourd'hui et du futur)
     with open(memo_file, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
     
-    logging.info("🏁 Fin du scan.")
+    logging.info(f"🏁 Fin du scan. Mémoire : {len(nouveaux_complets)} cours complets sauvegardés.")
 
 if __name__ == "__main__":
     run_scan()
