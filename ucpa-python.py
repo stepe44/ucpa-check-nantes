@@ -1,11 +1,10 @@
-
 import os
 import json
 import time
 import re
 import requests
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -13,7 +12,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # --- CONFIGURATION LOGGING ---
-# Enregistre les logs dans un fichier ET dans la console
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -42,9 +40,7 @@ def send_whatsapp(message):
         logging.error(f"❌ Erreur envoi WhatsApp: {e}")
 
 def get_heavy_selenium_content(url):
-    """
-    Lance un navigateur, force le scroll et attend le chargement effectif des données JS.
-    """
+    """Version d'origine avec scroll complet et anti-détection."""
     logging.info(f"🌐 Lancement du navigateur blindé pour : {url}")
     
     options = Options()
@@ -63,7 +59,6 @@ def get_heavy_selenium_content(url):
     driver = webdriver.Chrome(options=options)
     
     try:
-        # Masquer navigator.webdriver
         driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
             'source': "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"
         })
@@ -71,40 +66,30 @@ def get_heavy_selenium_content(url):
         driver.get(url)
         logging.info("⏳ Page chargée. Début du traitement JS...")
 
-        # 1. SCROLL PROGRESSIF (Crucial pour déclencher le chargement des données)
-        # On descend par pas de 500 pixels
+        # 1. SCROLL PROGRESSIF (Origine)
         last_height = driver.execute_script("return document.body.scrollHeight")
         for i in range(0, last_height, 500):
             driver.execute_script(f"window.scrollTo(0, {i});")
-            time.sleep(0.5) # Petite pause pour laisser le temps au contenu d'apparaître
+            time.sleep(0.5)
         
-        # Remonter en haut (parfois nécessaire pour voir le début du planning)
         driver.execute_script("window.scrollTo(0, 0);")
 
-        # 2. ATTENTE INTELLIGENTE (Smart Wait)
-        # On attend jusqu'à 20 secondes qu'un indice de "vraie donnée" apparaisse.
-        # Ici on cherche le mot "restantes" (pour "places restantes") ou un format d'heure "00"
-        # OU l'absence des balises moustaches.
+        # 2. ATTENTE INTELLIGENTE (Origine)
         try:
             logging.info("⏳ Attente de l'injection des données dans le tableau...")
             WebDriverWait(driver, 20).until(
                 lambda d: "restantes" in d.find_element(By.TAG_NAME, "body").text.lower() or 
                           "complet" in d.find_element(By.TAG_NAME, "body").text.lower()
             )
-            logging.info("✅ Données détectées (mots clés 'restantes' ou 'complet' trouvés).")
+            logging.info("✅ Données détectées.")
         except Exception:
-            logging.warning("⚠️ Timeout : Les données dynamiques semblent ne pas s'être chargées. On tente quand même l'extraction.")
+            logging.warning("⚠️ Timeout : Extraction tentée malgré tout.")
 
-        # 3. Sauvegarde HTML pour debug
         page_source = driver.page_source
-        if "403" in page_source or "Forbidden" in page_source:
-            logging.critical("❌ ERREUR : Accès bloqué (403 Forbidden).")
-        
         with open("debug_page.html", "w", encoding="utf-8") as f:
             f.write(page_source)
             
-        raw_text = driver.find_element(By.TAG_NAME, "body").text
-        return raw_text
+        return driver.find_element(By.TAG_NAME, "body").text
 
     except Exception as e:
         logging.error(f"❌ Crash Selenium : {e}")
@@ -112,71 +97,32 @@ def get_heavy_selenium_content(url):
     finally:
         driver.quit()
         logging.info("✅ Navigateur fermé.")
-        
+
 def clean_and_extract_schedule(raw_text):
-    """
-    Nettoyage basé sur la phrase clé indiquée par l'utilisateur.
-    Tout ce qui se trouve après cette phrase est considéré comme étant le planning.
-    """
+    """Nettoyage basé sur la phrase d'amorce d'origine."""
     if not raw_text: return ""
-
-    # La phrase exacte que tu as repérée
     phrase_amorce = "Si vous êtes titulaire d'une carte ou de l'abonnement, rendez-vous dans votre espace personnel pour réserver votre séance."
-
-    logging.info(f"🧹 Recherche de la phrase d'amorce dans le texte...")
-
-    clean_text = ""
-
-    # 1. Méthode principale : On cherche la phrase exacte
+    
     if phrase_amorce in raw_text:
-        # On coupe le texte en deux et on garde la partie APRES (index [1])
-        parts = raw_text.split(phrase_amorce)
-        if len(parts) > 1:
-            clean_text = parts[1]
-            logging.info("✅ Phrase d'amorce trouvée ! Extraction du contenu suivant.")
-        else:
-            clean_text = raw_text
+        clean_text = raw_text.split(phrase_amorce)[1]
     else:
-        # 2. Méthode de secours (au cas où ils changent un mot dans la phrase)
-        # On cherche juste "rendez-vous dans votre espace personnel"
-        logging.warning("⚠️ Phrase exacte non trouvée. Essai avec un fragment plus court...")
         fragment_court = "rendez-vous dans votre espace personnel"
-        
-        if fragment_court in raw_text:
-            parts = raw_text.split(fragment_court)
-            clean_text = parts[-1]
-            logging.info("✅ Fragment court trouvé. Extraction effectuée.")
-        else:
-            logging.error("❌ Aucune phrase d'amorce trouvée. On envoie le texte brut (risque de bruit).")
-            clean_text = raw_text
+        clean_text = raw_text.split(fragment_court)[-1] if fragment_court in raw_text else raw_text
 
-    # On limite la taille pour Gemini (15 000 caractères suffisent pour une semaine)
-    final_text = clean_text[:15000]
+    return clean_text[:15000]
 
-    # --- APERÇU POUR DEBUG ---
-    logging.info("🔍 --- DÉBUT DU TEXTE ENVOYÉ À L'IA (500 car.) ---")
-    # On nettoie les sauts de ligne multiples pour l'affichage log
-    preview = re.sub(r'\n+', ' ', final_text[:500])
-    logging.info(preview)
-    logging.info("---------------------------------------------------")
-
-    return final_text
 def analyze_with_gemini(content):
-    """Interroge Gemini pour transformer le texte en JSON."""
-    if not GEMINI_API_KEY:
-        logging.error("⚠️ Clé API Gemini manquante")
-        return []
-
+    """Analyse Gemini avec système de retry d'origine."""
+    if not GEMINI_API_KEY: return []
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
     
     prompt = f"""
     Analyse ce texte de planning sportif.
     Extrais un tableau JSON strict.
-    Chaque objet doit avoir : {{ "nom": "...", "jour": "...", "date": "DD/MM", "horaire": "HHhMM", "statut": "LIBRE" ou "COMPLET", "places": "..." }}
+    Chaque objet : {{ "nom": "...", "jour": "...", "date": "DD/MM", "horaire": "HHhMM", "statut": "LIBRE" ou "COMPLET", "places": "..." }}
     Règles :
-    1. Si tu vois "Complet" ou "0 place", statut = "COMPLET".
-    2. Si tu vois "X places restantes", statut = "LIBRE".
-    3. Ignore le texte inutile (menus, footer).
+    1. Si "Complet" ou "0 place", statut = "COMPLET".
+    2. Si "X places restantes", statut = "LIBRE".
     
     Texte :
     {content}
@@ -184,123 +130,96 @@ def analyze_with_gemini(content):
     
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
-    # --- SYSTÈME DE RETRY (Anti Erreur 429) ---
-    max_retries = 3
-    for attempt in range(max_retries):
+    for attempt in range(3):
         try:
             resp = requests.post(url, json=payload, timeout=30)
-            
-            # Gestion du Quota dépassé
             if resp.status_code == 429:
-                wait_time = (attempt + 1) * 15 # Attente progressive : 15s, 30s...
-                logging.warning(f"⚠️ Quota Gemini (429). Pause de {wait_time}s avant nouvel essai...")
-                time.sleep(wait_time)
+                time.sleep((attempt + 1) * 15)
                 continue
-            
-            resp.raise_for_status() # Lève une erreur pour les codes 400, 500...
-            
+            resp.raise_for_status()
             text_resp = resp.json()['candidates'][0]['content']['parts'][0]['text']
-            
-            # Extraction du JSON dans la réponse (parfois Gemini met du texte autour)
             json_match = re.search(r'\[.*\]', text_resp, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(0))
-            else:
-                logging.error("⚠️ Pas de JSON trouvé dans la réponse Gemini.")
-                return []
-                
+            return json.loads(json_match.group(0)) if json_match else []
         except Exception as e:
             logging.error(f"❌ Erreur Gemini (Essai {attempt+1}): {e}")
             time.sleep(5)
-            
     return []
 
 def run_scan():
     logging.info("🚀 --- DÉBUT DE L'AUDIT ---")
     
-    # 1. Scraping
     raw = get_heavy_selenium_content(URL_CIBLE)
     if not raw: return
 
-    # 2. Nettoyage
     clean = clean_and_extract_schedule(raw)
-
-    # 3. Analyse IA
     cours = analyze_with_gemini(clean)
     
     if not cours:
-        logging.warning("🚫 Aucun cours extrait par l'IA. Fin du scan.")
+        logging.warning("🚫 Aucun cours extrait.")
         return
 
-# --- 4. FILTRAGE ET COMPARAISON ---
     memo_file = 'memoire_ucpa.json'
     anciens_complets = []
     if os.path.exists(memo_file):
         with open(memo_file, 'r', encoding='utf-8') as f:
-            try:
-                anciens_complets = json.load(f)
+            try: anciens_complets = json.load(f)
             except: pass
 
-    # Obtenir la date du jour pour filtrer le passé
+    # --- LOGIQUE DE TEMPS ---
     maintenant = datetime.now()
     annee_actuelle = maintenant.year
+    limite_retrait = maintenant - timedelta(minutes=30) # Marge de 30 min
 
-    nouveaux_complets_a_sauver = []
+    nouveaux_complets = []
     alertes = []
 
-    logging.info(f"\n📋 {len(cours)} COURS ANALYSÉS :")
-    
+    print(f"\n{'STATUT':<8} | {'DATE':<6} | {'HEURE':<10} | {'COURS'}")
+    print("-" * 60)
+
     for c in cours:
         nom = c.get('nom') or "Inconnu"
-        date_str = c.get('date') or "??" # Format "DD/MM"
-        heure = c.get('horaire') or "??"
+        date_str = c.get('date') or ""
+        heure_str = c.get('horaire') or ""
         statut = c.get('statut') or "INCONNU"
 
-        # --- LOGIQUE DE FILTRAGE DES DATES PASSÉES ---
+        # --- FILTRAGE DES COURS PASSÉS (avec marge 30 min) ---
         try:
-            # On reconstitue une date complète pour comparer
-            # Attention : Gemini renvoie DD/MM, on ajoute l'année en cours
-            date_objet = datetime.strptime(f"{date_str}/{annee_actuelle}", "%d/%m/%Y")
+            h_clean = heure_str.lower().replace('h', ':')
+            date_cours = datetime.strptime(f"{date_str}/{annee_actuelle} {h_clean}", "%d/%m/%Y %H:%M")
             
-            # Si le cours est déjà passé (avant aujourd'hui, même heure/jour négligé ici pour sécurité)
-            if date_objet.date() < maintenant.date():
-                continue # On ignore ce cours, il est dans le passé
-        except Exception as e:
-            logging.warning(f"⚠️ Date invalide pour {nom} ({date_str}): {e}")
+            if date_cours < limite_retrait:
+                continue # Ignore les cours passés
+        except:
             continue
 
-        # --- LOGIQUE DE DÉTECTION ---
+        # --- DÉTECTION ---
         if statut == "COMPLET":
-            nouveaux_complets_a_sauver.append(c)
+            nouveaux_complets.append(c)
             icon = "🔴"
-        elif statut == "LIBRE":
+        else:
             icon = "🟢"
-            # On vérifie si ce cours précis était dans la mémoire des complets
+            # Changement de statut de Complet -> Libre
             etait_complet = any(
-                a.get('nom') == nom and a.get('date') == date_str and a.get('horaire') == heure
+                a.get('nom') == nom and a.get('date') == date_str and a.get('horaire') == heure_str
                 for a in anciens_complets
             )
             if etait_complet:
                 alertes.append(c)
 
-        print(f"{icon} {statut:<8} | {date_str:<6} | {heure:<10} | {nom}")
+        print(f"{icon} {statut:<8} | {date_str:<6} | {heure_str:<10} | {nom}")
 
-    # --- 5. ENVOI DES ALERTES ---
+    # 5. Alertes
     if alertes:
         logging.info(f"🚨 {len(alertes)} PLACE(S) LIBÉRÉE(S) !")
         for c in alertes:
             msg = f"🚨 LIBRE : {c.get('nom')}\n📅 {c.get('date')} à {c.get('horaire')}\n🔗 {URL_CIBLE}"
             send_whatsapp(msg)
-
-    # --- 6. MISE À JOUR DE LA MÉMOIRE (Seulement les cours futurs et complets) ---
-    with open(memo_file, 'w', encoding='utf-8') as f:
-        json.dump(nouveaux_complets_a_sauver, f, indent=4, ensure_ascii=False)
     
-    logging.info("🏁 Fin du scan (Mémoire nettoyée des cours passés).")
+    # 6. Mise à jour mémoire (nettoyée du passé)
+    with open(memo_file, 'w', encoding='utf-8') as f:
+        json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+    
+    logging.info("🏁 Fin du scan.")
 
 if __name__ == "__main__":
     run_scan()
-
-
-
-
