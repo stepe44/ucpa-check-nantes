@@ -237,11 +237,11 @@ def run_scan():
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
-    run_scan()
+    try:
+        run_scan()
+    except Exception as e:
+        logging.error(f"❌ Erreur critique lors de l'exécution : {e}")
     finally:
-        # Cette partie s'exécutera TOUJOURS, même si le scan plante
+        # Ce bloc s'exécutera maintenant correctement, que le scan réussisse ou échoue
         send_test_heartbeat()
-
-
-
 
