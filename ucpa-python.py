@@ -35,18 +35,43 @@ if raw_filter:
 else:
     COURS_SURVEILLES = []
 
+def send_ntfy(course_name, date, time_slot):
+    """Envoie une notification push urgente via ntfy"""
+    topic = "ucpa-nantes-notif-beer-stephane"
+    url = f"https://ntfy.sh/{topic}"
+    
+    payload = f"Une place s'est libérée pour {course_name} le {date} à {time_slot} !"
+    headers = {
+        "Title": "🚨 ALERTE UCPA NANTES",
+        "Priority": "5",          # Priorité maximale (fait vibrer/sonner)
+        "Tags": "beer,gym,bell",  # Émojis sur la notification
+        "Click": URL_CIBLE        # Lien cliquable sur le téléphone
+    }
+    
+    try:
+        response = requests.post(url, data=payload.encode('utf-8'), headers=headers, timeout=10)
+        if response.status_code == 200:
+            logging.info(f"🔔 Notification ntfy envoyée pour {course_name}")
+        else:
+            logging.error(f"❌ Erreur ntfy (Code {response.status_code})")
+    except Exception as e:
+        logging.error(f"❌ Erreur ntfy : {e}")
+
+
 def send_alerts(course_name, date, time_slot):
     """Envoie les alertes WhatsApp, SMS et Email"""
     alert_text = f"PLACE LIBRE : {course_name} le {date} à {time_slot}"
     
     # 1. WhatsApp
     if GREEN_API_URL and WHATSAPP_ID:
-        msg_wa = f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course_name}*\n📅 {date} à {time_slot}\n🔗 {URL_CIBLE}"
+        msg_wa = f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course_name}*\n📅 {date} à {time_slot}\n"
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_ID, "message": msg_wa}, timeout=10)
         except Exception: 
             pass
 
+send_ntfy({course_name},{date},{time_slot})
+    
     # 2. SMS Free Mobile
     if FREE_SMS_USER and FREE_SMS_PASS:
         # Note : Les caractères spéciaux doivent être encodés pour l'URL
@@ -187,3 +212,4 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
