@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Pilates",
+        "date": "13/02",
+        "horaire": "12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "13/02",
         "horaire": "13h00",
@@ -38,6 +45,13 @@
         "nom": "RPM",
         "date": "13/02",
         "horaire": "18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "13/02",
+        "horaire": "19h15",
         "places": 0,
         "statut": "COMPLET"
     },
