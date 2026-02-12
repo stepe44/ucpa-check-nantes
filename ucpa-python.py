@@ -20,7 +20,7 @@ MEMO_FILE = 'memoire_ucpa.json'
 
 # --- RÉCUPÉRATION DES SECRETS ---
 GREEN_API_URL = os.getenv('GREEN_API_URL')
-WHATSAPP_CHAT_ID = "33678723278-1540128478@g.us"
+WHATSAPP_CHAT_ID = "120363425102471283@g.us"
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
 EMAIL_RECEIVER = os.getenv('EMAIL_RECEIVER')
@@ -160,3 +160,4 @@ if __name__ == "__main__":
     finally:
         now = datetime.now().strftime("%H:%M:%S")
         send_whatsapp(f"✅ Scan terminé à {now}")
+
