@@ -25,6 +25,8 @@ WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
 EMAIL_RECEIVER = os.getenv('EMAIL_RECEIVER')
+FREE_SMS_USER = os.getenv('FREE_SMS_USER')
+FREE_SMS_PASS = os.getenv('FREE_SMS_PASS')
 
 # Lecture de la liste de filtrage depuis les paramètres
 raw_filter = os.getenv('COURS_SURVEILLES', '')
@@ -43,6 +45,19 @@ def send_alerts(course_name, date, time_slot):
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_ID, "message": msg_wa}, timeout=10)
         except Exception: pass
 
+if FREE_SMS_USER and FREE_SMS_PASS:
+        # Note : Les caractères spéciaux doivent être encodés pour l'URL
+        sms_msg = f"UCPA : {alert_text}"
+        url_free = f"https://smsapi.free-mobile.fr/sendmsg?user={FREE_SMS_USER}&pass={FREE_SMS_PASS}&msg={sms_msg}"
+        try:
+            resp = requests.get(url_free, timeout=10)
+            if resp.status_code == 200:
+                logging.info(f"📲 SMS Free envoyé pour {course_name}")
+            else:
+                logging.error(f"❌ Erreur SMS Free (Code {resp.status_code})")
+        except Exception as e:
+            logging.error(f"❌ Erreur SMS : {e}")
+    
     # Email
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVER:
         msg_mail = MIMEMultipart()
@@ -170,3 +185,4 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
