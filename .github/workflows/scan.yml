@@ -29,7 +29,7 @@ jobs:
         run: |
           npm install -g mudslide
           mkdir -p ~/.mudslide
-          echo '${{ secrets.MUDSLIDE_JSON }}' > ~/.mudslide/me.json
+          echo '${{ secrets.MUDSLIDE_CACHE }}' > ~/.mudslide/me.json
   
       - name: Run script
         env:
@@ -39,6 +39,7 @@ jobs:
           COURS_SURVEILLES: ${{ vars.COURS_SURVEILLES }} # <-- Utilise 'vars' si c'est une variable, 'secrets' si c'est un secret          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           FREE_SMS_USER: ${{ secrets.FREE_SMS_USER }} # <--- ICI
           FREE_SMS_PASS: ${{ secrets.FREE_SMS_PASS }} # <--- ICI
