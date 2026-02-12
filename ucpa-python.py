@@ -21,7 +21,7 @@ logging.basicConfig(
     ]
 )
 
-# --- CONFIGURATION ---
+# --- VARIABLES D'ENVIRONNEMENT ---
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
@@ -40,77 +40,81 @@ def send_whatsapp(message):
     except Exception as e:
         logging.error(f"❌ Erreur envoi WhatsApp: {e}")
 
-def get_schedule_data(url):
-    logging.info(f"🌐 Analyse du site : {url}")
+# --- ÉTAPE 1 : RÉCUPÉRATION DU TEXTE (TA FONCTION D'ORIGINE) ---
+def get_heavy_selenium_content(url):
+    logging.info(f"🌐 Lancement du navigateur blindé pour : {url}")
     options = Options()
-    options.add_argument("--headless=new")
+    options.add_argument("--headless=new") 
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36")
-    
+    options.add_argument("--disable-blink-features=AutomationControlled") 
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
     driver = webdriver.Chrome(options=options)
-    cours_extraits = []
-    
     try:
+        driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {'source': "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"})
         driver.get(url)
-        
-        # --- AMÉLIORATION : ATTENTE ET SCROLL ---
-        # On attend que le mot "Réserver" ou "COMPLET" apparaisse dans le texte de la page
-        wait = WebDriverWait(driver, 25)
-        wait.until(lambda d: "Réserver" in d.page_source or "COMPLET" in d.page_source)
-        
-        # Petit scroll pour déclencher le lazy loading si besoin
-        driver.execute_script("window.scrollTo(0, 1000);")
-        time.sleep(2)
-        
-        full_text = driver.find_element(By.TAG_NAME, "body").text
-        
-        # Regex pour les blocs de jours
-        date_pattern = r"(LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s(\d{1,2})\s([^\n\s]+)"
-        blocks = re.split(date_pattern, full_text, flags=re.IGNORECASE)
-        
-        if len(blocks) <= 1:
-            logging.warning("⚠️ La structure du texte n'a pas permis de découper les jours. Vérifiez le format.")
-            return []
-
-        for i in range(1, len(blocks), 4):
-            jour_nom = blocks[i].capitalize()
-            jour_num = blocks[i+1].zfill(2)
-            mois_nom = blocks[i+2].lower().strip()
-            mois_num = MOIS_MAP.get(mois_nom, "01")
-            
-            date_formattee = f"{jour_num}/{mois_num}"
-            contenu_jour = blocks[i+3]
-            
-            # Regex plus flexible pour les cours
-            # On capture (Horaire) (Nom) et (Statut)
-            # Supporte : "18:30 - 19:15 NOM DU COURS COMPLET" ou "18:30\nNOM\nRéserver"
-            cours_patterns = re.findall(r"(\d{1,2}[:h]\d{2}).*?\n(.*?)\n.*?(COMPLET|places restantes|Réserver|S'inscrire)", contenu_jour, re.DOTALL)
-            
-            for horaire, nom, statut_raw in cours_patterns:
-                statut = "COMPLET" if "COMPLET" in statut_raw.upper() else "LIBRE"
-                
-                cours_extraits.append({
-                    "nom": nom.strip(),
-                    "jour": jour_nom,
-                    "date": date_formattee,
-                    "horaire": horaire.replace(':', 'h'),
-                    "statut": statut
-                })
-                
+        # Scroll progressif
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        for i in range(0, last_height, 500):
+            driver.execute_script(f"window.scrollTo(0, {i});")
+            time.sleep(0.5)
+        driver.execute_script("window.scrollTo(0, 0);")
+        try:
+            WebDriverWait(driver, 20).until(lambda d: "restantes" in d.find_element(By.TAG_NAME, "body").text.lower() or "complet" in d.find_element(By.TAG_NAME, "body").text.lower())
+        except: pass
+        return driver.find_element(By.TAG_NAME, "body").text
     except Exception as e:
-        logging.error(f"❌ Erreur Selenium : {e}")
+        logging.error(f"❌ Crash Selenium : {e}")
+        return ""
     finally:
         driver.quit()
+
+def clean_and_extract_schedule(raw_text):
+    phrase = "Si vous êtes titulaire d'une carte ou de l'abonnement, rendez-vous dans votre espace personnel pour réserver votre séance."
+    return raw_text.split(phrase)[1][:20000] if phrase in raw_text else raw_text[:20000]
+
+# --- ÉTAPE 2 : PARSING PYTHON (REMPLACE GEMINI) ---
+def parse_schedule_python(text):
+    cours_extraits = []
+    # Détection des jours
+    date_pattern = r"(LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s(\d{1,2})\s([^\n\s]+)"
+    blocks = re.split(date_pattern, text, flags=re.IGNORECASE)
     
+    for i in range(1, len(blocks), 4):
+        jour_nom = blocks[i].capitalize()
+        jour_num = blocks[i+1].zfill(2)
+        mois_nom = blocks[i+2].lower().strip()
+        mois_num = MOIS_MAP.get(mois_nom, "01")
+        date_formattee = f"{jour_num}/{mois_num}"
+        contenu_jour = blocks[i+3]
+        
+        # Capture : Horaire, Nom (entre horaire et statut), Statut
+        # On cherche un horaire type 10:00 ou 10h00
+        cours_patterns = re.findall(r"(\d{1,2}[:h]\d{2}).*?\n(.*?)\n.*?(COMPLET|places restantes|Réserver|S'inscrire)", contenu_jour, re.DOTALL)
+        
+        for horaire, nom, statut_raw in cours_patterns:
+            statut = "COMPLET" if "COMPLET" in statut_raw.upper() else "LIBRE"
+            cours_extraits.append({
+                "nom": nom.strip(),
+                "jour": jour_nom,
+                "date": date_formattee,
+                "horaire": horaire.replace(':', 'h'),
+                "statut": statut
+            })
     return cours_extraits
 
+# --- ÉTAPE 3 : COMPARAISON ET AUDIT ---
 def run_scan():
     logging.info("🚀 --- DÉBUT DE L'AUDIT ---")
+    raw = get_heavy_selenium_content(URL_CIBLE)
+    clean = clean_and_extract_schedule(raw)
     
-    cours = get_schedule_data(URL_CIBLE)
+    # On parse le texte avec la logique Python
+    cours = parse_schedule_python(clean)
+    
     if not cours: 
-        logging.error("❌ Aucun cours n'a pu être extrait. Vérifiez l'URL ou la connexion.")
+        logging.warning("⚠️ Aucun cours trouvé après parsing.")
         return
 
     memo_file = 'memoire_ucpa.json'
@@ -134,7 +138,7 @@ def run_scan():
         h_raw = c['horaire']
         statut = c['statut']
 
-        # Filtrage
+        # Filtrage dates passées
         try:
             parts = d_raw.split('/')
             date_objet = datetime(maintenant.year, int(parts[1]), int(parts[0])).date()
@@ -146,6 +150,7 @@ def run_scan():
             icon = "🔴"
         else:
             icon = "🟢"
+            # Comparaison avec la mémoire pour détecter une libération
             etait_complet = any(
                 a.get('nom','').strip().lower() == nom.lower() and 
                 a.get('date') == d_raw and 
@@ -158,11 +163,13 @@ def run_scan():
 
         print(f"{icon} {statut:<8} | {jour:<10} | {d_raw:<6} | {h_raw:<10} | {nom}")
 
+    # Envoi WhatsApp (Sans lien, avec Jour)
     if alertes:
         for c in alertes:
             msg = f"🚨 LIBRE : {c.get('nom')}\n📅 {c.get('jour')} {c.get('date')} à {c.get('horaire')}"
             send_whatsapp(msg)
 
+    # Mise à jour de la mémoire
     with open(memo_file, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
     
