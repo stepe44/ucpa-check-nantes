@@ -2,7 +2,7 @@ name: UCPA WhatsApp Scanner
 
 on:
   schedule:
-    - cron: '*/35 6-22 * * *' # Toutes les 20 min de 6h à 22h (Paris)
+    - cron: '*/35 5-22 * * *' # Toutes les 20 min de 6h à 22h (Paris)
   workflow_dispatch:
 
 jobs:
