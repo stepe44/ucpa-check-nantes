@@ -1,20 +1,8 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "12/02",
-        "horaire": "18h30",
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "13/02",
         "horaire": "12h15",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "13/02",
-        "horaire": "13h00",
         "statut": "COMPLET"
     },
     {
@@ -30,33 +18,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "13/02",
-        "horaire": "17h30",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Jam",
-        "date": "13/02",
-        "horaire": "18h15",
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "13/02",
         "horaire": "18h30",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "14/02",
-        "horaire": "09h45",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "14/02",
-        "horaire": "09h45",
         "statut": "COMPLET"
     },
     {
@@ -75,18 +39,6 @@
         "nom": "Body Pump",
         "date": "15/02",
         "horaire": "09h45",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "15/02",
-        "horaire": "10h45",
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "15/02",
-        "horaire": "11h30",
         "statut": "COMPLET"
     },
     {
