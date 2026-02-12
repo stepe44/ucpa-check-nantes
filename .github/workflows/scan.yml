@@ -39,12 +39,12 @@ jobs:
           GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
           WHATSAPP_ID: ${{ secrets.WHATSAPP_ID }}
           COURS_SURVEILLES: ${{ vars.COURS_SURVEILLES }} # <-- Utilise 'vars' si c'est une variable, 'secrets' si c'est un secret          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
-          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          FREE_SMS_USER: ${{ secrets.FREE_SMS_USER }} # <--- ICI
-          FREE_SMS_PASS: ${{ secrets.FREE_SMS_PASS }} # <--- ICI
+          EMAIL_PASSWORD: ${{ vars.EMAIL_PASSWORD }}
+          EMAIL_RECEIVER: ${{ vars.EMAIL_RECEIVER }}
+          EMAIL_SENDER: ${{ vars.EMAIL_SENDER }}
+          SMTP_SERVER: ${{ vars.SMTP_SERVER }}
+          FREE_SMS_USER: ${{ vars.FREE_SMS_USER }} # <--- ICI
+          FREE_SMS_PASS: ${{ vars.FREE_SMS_PASS }} # <--- ICI
                   
         run: python ucpa-python.py
 
