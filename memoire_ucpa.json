@@ -91,6 +91,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Yin",
+        "date": "15/02",
+        "horaire": "10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "15/02",
         "horaire": "10h45",
