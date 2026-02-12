@@ -20,122 +20,95 @@ logging.basicConfig(
     ]
 )
 
-# --- VARIABLES D'ENVIRONNEMENT ---
-GREEN_API_URL = os.getenv('GREEN_API_URL')
-WHATSAPP_ID = os.getenv('WHATSAPP_ID')
 URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 
-def send_whatsapp(message):
-    if not GREEN_API_URL or not WHATSAPP_ID: return
-    payload = {"chatId": WHATSAPP_ID, "message": message}
-    try:
-        requests.post(GREEN_API_URL, json=payload, headers={'Content-Type': 'application/json'}, timeout=10)
-    except Exception as e:
-        logging.error(f"❌ Erreur envoi WhatsApp: {e}")
-
 def get_heavy_selenium_content(url):
-    logging.info(f"🌐 Lancement du navigateur pour : {url}")
+    logging.info(f"🌐 Ouverture de Chrome pour : {url}")
     options = Options()
     options.add_argument("--headless=new") 
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-blink-features=AutomationControlled") 
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
     
     driver = webdriver.Chrome(options=options)
     try:
-        driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {'source': "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"})
         driver.get(url)
+        time.sleep(5)  # Pause forcée pour le rendu JS initial
         
-        # Scroll progressif pour forcer le chargement du JS UCPA
-        last_height = driver.execute_script("return document.body.scrollHeight")
-        for i in range(0, last_height, 500):
-            driver.execute_script(f"window.scrollTo(0, {i});")
-            time.sleep(0.4)
+        # Scroll pour déclencher le chargement lazy-load
+        driver.execute_script("window.scrollTo(0, 1500);")
+        time.sleep(3)
+        
+        # On récupère le texte visible
+        raw_text = driver.find_element(By.TAG_NAME, "body").text
+        
+        if not raw_text or len(raw_text) < 100:
+            logging.warning("⚠️ Le texte extrait semble vide. Tentative de récupération du HTML source.")
+            return driver.page_source # Si le texte échoue, on renvoie le HTML
             
-        # Attente que les données de créneaux soient visibles
-        try:
-            WebDriverWait(driver, 15).until(
-                lambda d: "####" in d.find_element(By.TAG_NAME, "body").text
-            )
-        except:
-            pass
-            
-        return driver.find_element(By.TAG_NAME, "body").text
+        return raw_text
     except Exception as e:
-        logging.error(f"❌ Crash Selenium : {e}")
+        logging.error(f"❌ Erreur Selenium : {e}")
         return ""
     finally:
         driver.quit()
 
 def analyze_with_regex(raw_text):
-    """
-    Analyse le texte brut UCPA par blocs de jours.
-    Extrait le nom du cours via les marqueurs '####' et l'heure via le pattern '*'
-    """
+    # Affiche un extrait du texte reçu pour debug dans la console
+    print("\n" + "="*50)
+    print("--- APERÇU DU TEXTE EXTRAIT (1000 premiers caractères) ---")
+    print(raw_text[:1000])
+    print("="*50 + "\n")
+
     cours_extraits = []
     maintenant = datetime.now()
     
-    # Étape 1 : Découper par jour (ex: "09 lun.", "10 mar.")
-    # On cherche 2 chiffres suivis d'un jour abrégé
+    # Pattern pour les blocs jours (ex: "12 jeu.")
     pattern_date = r"(\d{2})\s+(lun\.|mar\.|mer\.|jeu\.|ven\.|sam\.|dim\.)"
-    
-    # Étape 2 : Pattern pour capturer un cours
-    # Groupe 1: Heure | Groupe 2: Nom du cours | Groupe 3: Statut/Reste
+    # Pattern pour les lignes de cours
     pattern_cours = r"\*\s+(\d{1,2}h\d{2})\s+-\s+\d{1,2}h\d{2}\s+####\s+([^ ].+?)\s{2,}(.+)"
 
     sections = re.split(pattern_date, raw_text)
     
-    # Re-split donne une liste : [texte_avant, "09", "lun.", texte_apres, "10", "mar.", ...]
+    if len(sections) < 2:
+        print("❌ La Regex de date n'a trouvé aucune correspondance.")
+        return []
+
     for i in range(1, len(sections), 3):
         jour_num = sections[i]
-        
-        # Logique simple de gestion de mois (si jour extrait < jour actuel, on passe probablement au mois suivant)
-        mois_objet = maintenant.month
-        if int(jour_num) < maintenant.day and maintenant.day > 20:
-            mois_objet = (maintenant.month % 12) + 1
-        
-        date_str = f"{jour_num}/{str(mois_objet).zfill(2)}"
+        date_str = f"{jour_num}/{str(maintenant.month).zfill(2)}"
         contenu_du_jour = sections[i+2]
         
         matches = re.finditer(pattern_cours, contenu_du_jour)
         for m in matches:
-            horaire = m.group(1).replace(' ', '')
-            nom = m.group(2).strip()
-            indicateur_statut = m.group(3).lower()
-            
-            statut = "COMPLET" if "complet" in indicateur_statut else "LIBRE"
-            
             cours_extraits.append({
-                "nom": nom,
+                "nom": m.group(2).strip(),
                 "date": date_str,
-                "horaire": horaire,
-                "statut": statut
+                "horaire": m.group(1),
+                "statut": "COMPLET" if "complet" in m.group(3).lower() else "LIBRE"
             })
             
     return cours_extraits
 
 def run_scan():
-    logging.info("🚀 --- DÉBUT DE L'AUDIT (MOTEUR REGEX) ---")
     raw = get_heavy_selenium_content(URL_CIBLE)
     
-    # --- AJOUT : CAPTURE DU LOG COMPLET POUR ANALYSE ---
-    if raw:
-        with open("debug_raw_content.txt", "w", encoding="utf-8") as f:
-            f.write(f"--- CAPTURE DU {datetime.now()} ---\n")
+    # Sauvegarde forcée dans le dossier courant
+    try:
+        with open("debug_page.txt", "w", encoding="utf-8") as f:
             f.write(raw)
-        logging.info("💾 Contenu brut sauvegardé dans 'debug_raw_content.txt' pour analyse.")
-    # --------------------------------------------------
-
-    if not raw or "####" not in raw:
-        logging.warning("⚠️ Données UCPA non détectées dans le texte brut.")
-        # On ne s'arrête pas forcément ici pour permettre l'analyse du fichier debug
-        if not raw: return
+        print(f"✅ Fichier 'debug_page.txt' créé avec succès ({len(raw)} caractères).")
+    except Exception as e:
+        print(f"❌ Impossible de créer le fichier debug : {e}")
 
     cours = analyze_with_regex(raw)
     
-    # ... reste du code identique ...
     if not cours:
-        logging.warning("⚠️ Aucun cours trouvé après analyse Regex.")
-        return
+        print("⚠️ Aucun cours trouvé. Vérifiez 'debug_page.txt' pour voir la structure réelle.")
+    else:
+        print(f"✅ {len(cours)} cours extraits avec succès.")
+        for c in cours[:5]: # Affiche les 5 premiers pour test
+            print(f"   - {c['date']} {c['horaire']} : {c['nom']} ({c['statut']})")
 
+if __name__ == "__main__":
+    run_scan()
