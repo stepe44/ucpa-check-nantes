@@ -25,14 +25,6 @@ jobs:
         run: |
           pip install requests selenium webdriver-manager
      
-      - name: Setup Mudslide Session
-        run: |
-          npm install -g mudslide
-          # Création du chemin EXACT attendu par Mudslide sur Ubuntu
-          mkdir -p /home/runner/.local/share/mudslide/Data
-          # On écrit le contenu de creds.json (votre secret MUDSLIDE_CACHE)
-          echo '${{ secrets.MUDSLIDE_CACHE }}' > /home/runner/.local/share/mudslide/Data/creds.json
-  
       - name: Run script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
