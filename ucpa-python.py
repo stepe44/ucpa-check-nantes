@@ -70,7 +70,7 @@ def send_alerts(course_name, date, time_slot):
         except Exception: 
             pass
 
-send_ntfy({course_name},{date},{time_slot})
+    send_ntfy(course_name, date, time_slot)    
     
     # 2. SMS Free Mobile
     if FREE_SMS_USER and FREE_SMS_PASS:
@@ -212,4 +212,5 @@ def run_scan():
 
 if __name__ == "__main__":
     run_scan()
+
 
