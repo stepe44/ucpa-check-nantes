@@ -63,6 +63,6 @@ jobs:
             memoire_ucpa.json
             debug_page.html
             memoire_ucpa.json
-          retention-days: 5
+          retention-days: 2
 
           
