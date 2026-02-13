@@ -136,30 +136,60 @@ def analyze_with_regex(raw_text):
             })
     return cours_extraits
 
+# ... (garder le début du code identique jusqu'à run_scan)
+
 def run_scan():
+    logging.info(f"🔍 Démarrage du scan sur : {URL_CIBLE}")
     raw_content = get_rendered_content(URL_CIBLE)
     cours_actuels = analyze_with_regex(raw_content)
     
-    if not cours_actuels: return
+    if not cours_actuels:
+        logging.warning("⚠️ Aucun cours extrait. Vérifiez le sélecteur ou le délai de chargement.")
+        return
+
+    # --- AJOUT : LOG DES COURS EXTRAITS ---
+    logging.info(f"📊 {len(cours_actuels)} cours détectés (après filtres éventuels) :")
+    print("-" * 60)
+    print(f"{'STATUT':<10} | {'DATE':<8} | {'HEURE':<8} | {'COURS':<20}")
+    print("-" * 60)
+    for c in cours_actuels:
+        places_str = f"{c['places']} pl." if c['places'] > 0 else "COMPLET"
+        print(f"{places_str:<10} | {c['date']:<8} | {c['horaire']:<8} | {c['nom']:<20}")
+    print("-" * 60)
+    # --------------------------------------
 
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
-        with open(MEMO_FILE, 'r', encoding='utf-8') as f:
-            anciens_complets = json.load(f)
+        try:
+            with open(MEMO_FILE, 'r', encoding='utf-8') as f:
+                anciens_complets = json.load(f)
+        except Exception:
+            anciens_complets = []
 
     nouveaux_complets = [c for c in cours_actuels if c['statut'] == "COMPLET"]
     
+    # Détection des changements (Complet -> Libre)
+    nb_alertes = 0
     for c in cours_actuels:
         if c['statut'] == "LIBRE":
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
+            # Si le cours était dans la liste "complet" du dernier scan, on alerte
             if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
+                logging.info(f"🚀 ALERTE : Une place s'est libérée pour {c['nom']} !")
                 send_alerts(c['nom'], c['date'], c['horaire'], c['places'])
+                nb_alertes += 1
 
+    if nb_alertes == 0:
+        logging.info("😴 Aucune nouvelle place libérée par rapport au dernier scan.")
+
+    # Sauvegarde de l'état actuel pour le prochain passage
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+    logging.info(f"💾 Mémoire mise à jour ({len(nouveaux_complets)} cours complets sauvegardés).")
 
 if __name__ == "__main__":
     try:
         run_scan()
     except Exception as e:
         logging.error(f"Erreur run: {e}")
+
