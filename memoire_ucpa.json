@@ -84,6 +84,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "15/02",
+        "horaire": "11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Stretching",
         "date": "15/02",
         "horaire": "11h45",
