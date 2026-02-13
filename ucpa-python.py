@@ -23,7 +23,6 @@ GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_CHAT_ID = os.getenv('WHATSAPP_CHAT_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
-# On récupère la chaîne brute et on la transforme en liste
 EMAIL_RECEIVERS_RAW = os.getenv('EMAIL_RECEIVER', '')
 EMAIL_RECEIVERS = [r.strip() for r in EMAIL_RECEIVERS_RAW.split(',') if r.strip()]
 
@@ -32,6 +31,36 @@ FREE_SMS_PASS = os.getenv('FREE_SMS_PASS')
 
 raw_filter = os.getenv('COURS_SURVEILLES', '')
 COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
+
+# --- FONCTIONS UTILITAIRES ---
+
+def formater_date_relative(date_str):
+    """
+    Transforme '15/02' en 'Aujourd'hui (Vendredi) 15/02', 
+    'Demain (Samedi) 16/02' ou 'Dimanche 17/02'.
+    """
+    jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    maintenant = datetime.now()
+    
+    try:
+        # On extrait jour et mois du format 'JJ/MM'
+        jour, mois = map(int, date_str.split('/'))
+        # On crée un objet date pour l'année en cours
+        date_objet = datetime(maintenant.year, mois, jour)
+        
+        # Calcul de la différence de jours
+        diff = (date_objet.date() - maintenant.date()).days
+        nom_jour = jours_semaine[date_objet.weekday()]
+        
+        if diff == 0:
+            return f"Aujourd'hui ({nom_jour}) {date_str}"
+        elif diff == 1:
+            return f"Demain ({nom_jour}) {date_str}"
+        else:
+            return f"{nom_jour} {date_str}"
+    except Exception as e:
+        logging.error(f"Erreur formatage date : {e}")
+        return date_str
 
 # --- FONCTIONS DE NOTIFICATION ---
 
@@ -50,23 +79,23 @@ def send_alerts(course_name, date, time_slot, places):
     info_places = f"({places} places!)" if places > 0 else ""
     msg_body = f"Cours : {course_name}\nDate : {date}\nHeure : {time_slot}\nLien : {URL_CIBLE}"
     
-    # 1. WhatsApp
+    # 1. WhatsApp (Formaté avec Markdown)
     send_whatsapp(f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course_name}*\n📅 {date} à {time_slot}\n🔥 {info_places}\n🔗 {URL_CIBLE}")
     
-    # 2. EMAIL (Multi-destinataires)
+    # 2. EMAIL
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
             msg_mail = MIMEMultipart()
             msg_mail['From'] = f"UCPA Bot <{EMAIL_SENDER}>"
             msg_mail['To'] = ", ".join(EMAIL_RECEIVERS)
-            msg_mail['Subject'] = f"🚨 Place Libérée : {course_name}"
+            msg_mail['Subject'] = f"🚨 Place Libérée : {course_name} ({date})"
             msg_mail.attach(MIMEText(msg_body, 'plain'))
             
             with smtplib.SMTP("smtp.gmail.com", 587) as server:
                 server.starttls()
                 server.login(EMAIL_SENDER, EMAIL_PASSWORD)
                 server.send_message(msg_mail)
-            logging.info(f"📧 Email envoyé à {len(EMAIL_RECEIVERS)} destinataires")
+            logging.info(f"📧 Email envoyé pour {course_name}")
         except Exception as e:
             logging.error(f"❌ Erreur Email : {e}")
 
@@ -81,7 +110,7 @@ def send_alerts(course_name, date, time_slot, places):
 # --- SCRAPING ET ANALYSE ---
 
 def get_rendered_content(url):
-    """Scraping avec rendu JavaScript et User-Agent"""
+    """Scraping avec rendu JavaScript via Selenium"""
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
@@ -92,9 +121,7 @@ def get_rendered_content(url):
     driver = webdriver.Chrome(options=options)
     try:
         driver.get(url)
-        time.sleep(10) # Attente chargement planning
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight / 2);")
-        time.sleep(2)
+        time.sleep(10) # Attente du chargement du planning
         return driver.find_element(By.TAG_NAME, "body").text
     except Exception as e:
         logging.error(f"❌ Erreur Selenium : {e}")
@@ -103,7 +130,7 @@ def get_rendered_content(url):
         driver.quit()
 
 def analyze_with_regex(raw_text):
-    """Analyse par bloc de date"""
+    """Analyse le texte brut pour extraire les cours"""
     if not raw_text: return []
     cours_extraits = []
     maintenant = datetime.now()
@@ -115,6 +142,7 @@ def analyze_with_regex(raw_text):
         header_jour = sections[i].strip()
         contenu_jour = sections[i+1]
         jour_num = header_jour.split(' ')[0]
+        
         mois = maintenant.month
         if int(jour_num) < maintenant.day and maintenant.day > 20:
             mois = (maintenant.month % 12) + 1
@@ -136,28 +164,16 @@ def analyze_with_regex(raw_text):
             })
     return cours_extraits
 
-# ... (garder le début du code identique jusqu'à run_scan)
-
 def run_scan():
     logging.info(f"🔍 Démarrage du scan sur : {URL_CIBLE}")
     raw_content = get_rendered_content(URL_CIBLE)
     cours_actuels = analyze_with_regex(raw_content)
     
     if not cours_actuels:
-        logging.warning("⚠️ Aucun cours extrait. Vérifiez le sélecteur ou le délai de chargement.")
+        logging.warning("⚠️ Aucun cours extrait.")
         return
 
-    # --- AJOUT : LOG DES COURS EXTRAITS ---
-    logging.info(f"📊 {len(cours_actuels)} cours détectés (après filtres éventuels) :")
-    print("-" * 60)
-    print(f"{'STATUT':<10} | {'DATE':<8} | {'HEURE':<8} | {'COURS':<20}")
-    print("-" * 60)
-    for c in cours_actuels:
-        places_str = f"{c['places']} pl." if c['places'] > 0 else "COMPLET"
-        print(f"{places_str:<10} | {c['date']:<8} | {c['horaire']:<8} | {c['nom']:<20}")
-    print("-" * 60)
-    # --------------------------------------
-
+    # Chargement de la mémoire
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
@@ -168,28 +184,25 @@ def run_scan():
 
     nouveaux_complets = [c for c in cours_actuels if c['statut'] == "COMPLET"]
     
-    # Détection des changements (Complet -> Libre)
-    nb_alertes = 0
+    # Détection des changements et alertes
     for c in cours_actuels:
         if c['statut'] == "LIBRE":
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
-            # Si le cours était dans la liste "complet" du dernier scan, on alerte
+            # Alerte si le cours était COMPLET au scan précédent
             if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
-                logging.info(f"🚀 ALERTE : Une place s'est libérée pour {c['nom']} !")
-                send_alerts(c['nom'], c['date'], c['horaire'], c['places'])
-                nb_alertes += 1
+                logging.info(f"🚀 ALERTE : Place libérée pour {c['nom']} !")
+                
+                # Enrichissement de la date pour le message
+                date_affichage = formater_date_relative(c['date'])
+                send_alerts(c['nom'], date_affichage, c['horaire'], c['places'])
 
-    if nb_alertes == 0:
-        logging.info("😴 Aucune nouvelle place libérée par rapport au dernier scan.")
-
-    # Sauvegarde de l'état actuel pour le prochain passage
+    # Mise à jour de la mémoire
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
-    logging.info(f"💾 Mémoire mise à jour ({len(nouveaux_complets)} cours complets sauvegardés).")
+    logging.info(f"💾 Mémoire mise à jour ({len(nouveaux_complets)} cours complets).")
 
 if __name__ == "__main__":
     try:
         run_scan()
     except Exception as e:
-        logging.error(f"Erreur run: {e}")
-
+        logging.error(f"Erreur critique : {e}")
