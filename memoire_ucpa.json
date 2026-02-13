@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "13/02",
-        "horaire": "17h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "13/02",
         "horaire": "18h30",
@@ -45,13 +38,6 @@
         "nom": "Body Pump",
         "date": "15/02",
         "horaire": "09h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Yin",
-        "date": "15/02",
-        "horaire": "10h30",
         "places": 0,
         "statut": "COMPLET"
     },
