@@ -35,6 +35,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "14/02",
+        "horaire": "09h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "14/02",
         "horaire": "10h30",
