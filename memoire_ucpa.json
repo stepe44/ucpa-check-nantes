@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "13/02",
+        "horaire": "18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "13/02",
         "horaire": "19h15",
