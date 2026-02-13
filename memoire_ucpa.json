@@ -21,6 +21,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "13/02",
+        "horaire": "17h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "13/02",
         "horaire": "17h30",
