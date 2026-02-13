@@ -1,19 +1,5 @@
 [
     {
-        "nom": "TRX",
-        "date": "13/02",
-        "horaire": "16h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "13/02",
-        "horaire": "17h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "13/02",
         "horaire": "17h30",
@@ -29,13 +15,6 @@
     },
     {
         "nom": "Cross Training Intensity",
-        "date": "13/02",
-        "horaire": "19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "14/02",
         "horaire": "09h45",
         "places": 0,
@@ -45,13 +24,6 @@
         "nom": "CAF",
         "date": "14/02",
         "horaire": "10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "14/02",
-        "horaire": "11h30",
         "places": 0,
         "statut": "COMPLET"
     },
