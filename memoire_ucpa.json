@@ -175,6 +175,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "19/02",
+        "horaire": "12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "19/02",
         "horaire": "12h15",
@@ -182,9 +189,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "STEP Débutant",
         "date": "19/02",
-        "horaire": "12h15",
+        "horaire": "17h30",
         "places": 0,
         "statut": "COMPLET"
     },
