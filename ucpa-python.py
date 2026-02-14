@@ -122,6 +122,9 @@ def get_rendered_content(url):
     try:
         driver.get(url)
         time.sleep(10) # Attente du chargement du planning
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight / 2);")
+        time.sleep(2) # Temps pour que le texte apparaisse après le scroll
+        
         return driver.find_element(By.TAG_NAME, "body").text
     except Exception as e:
         logging.error(f"❌ Erreur Selenium : {e}")
@@ -206,3 +209,4 @@ if __name__ == "__main__":
         run_scan()
     except Exception as e:
         logging.error(f"Erreur critique : {e}")
+
