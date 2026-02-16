@@ -35,6 +35,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "16/02",
+        "horaire": "19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "16/02",
         "horaire": "19h15",
@@ -43,13 +50,6 @@
     },
     {
         "nom": "Yoga Fit",
-        "date": "16/02",
-        "horaire": "20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
         "date": "16/02",
         "horaire": "20h00",
         "places": 0,
@@ -259,9 +259,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
+        "nom": "Body Pump",
         "date": "19/02",
-        "horaire": "19h15",
+        "horaire": "20h15",
         "places": 0,
         "statut": "COMPLET"
     },
