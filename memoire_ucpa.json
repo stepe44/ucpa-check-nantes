@@ -1,8 +1,15 @@
 [
     {
-        "nom": "Body Pump",
+        "nom": "Cross Training Intensity",
         "date": "16/02",
-        "horaire": "17h30",
+        "horaire": "18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "16/02",
+        "horaire": "19h00",
         "places": 0,
         "statut": "COMPLET"
     },
