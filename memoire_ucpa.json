@@ -1,33 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "16/02",
-        "horaire": "12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "16/02",
-        "horaire": "12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF Express",
-        "date": "16/02",
-        "horaire": "12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "16/02",
-        "horaire": "12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "16/02",
         "horaire": "13h00",
@@ -36,13 +8,6 @@
     },
     {
         "nom": "Body Pump",
-        "date": "16/02",
-        "horaire": "17h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
         "date": "16/02",
         "horaire": "17h30",
         "places": 0,
@@ -70,27 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "16/02",
-        "horaire": "19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "16/02",
-        "horaire": "19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "16/02",
-        "horaire": "19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Fit",
         "date": "16/02",
         "horaire": "20h00",
@@ -105,14 +49,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "17/02",
         "horaire": "12h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Biking",
         "date": "17/02",
         "horaire": "12h15",
         "places": 0,
@@ -189,13 +133,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "18/02",
-        "horaire": "07h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "18/02",
         "horaire": "12h15",
@@ -241,13 +178,6 @@
         "nom": "Pilates",
         "date": "18/02",
         "horaire": "20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "19/02",
-        "horaire": "12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -311,6 +241,13 @@
         "nom": "Pilates",
         "date": "20/02",
         "horaire": "12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "20/02",
+        "horaire": "13h00",
         "places": 0,
         "statut": "COMPLET"
     },
