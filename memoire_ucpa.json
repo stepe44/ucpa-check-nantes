@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Fit",
-        "date": "16/02",
-        "horaire": "20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "21/02",
         "horaire": "09h45",
