@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Yoga Fit",
         "date": "16/02",
-        "horaire": "18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "16/02",
-        "horaire": "19h00",
+        "horaire": "20h00",
         "places": 0,
         "statut": "COMPLET"
     },
