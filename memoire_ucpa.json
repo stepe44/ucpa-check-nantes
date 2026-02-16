@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Cross Training Intensity",
+        "date": "18/02",
+        "horaire": "07h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "21/02",
         "horaire": "09h45",
