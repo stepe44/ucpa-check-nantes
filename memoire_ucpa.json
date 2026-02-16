@@ -35,23 +35,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "16/02",
-        "horaire": "19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "16/02",
         "horaire": "19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Fit",
-        "date": "16/02",
-        "horaire": "20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -161,16 +147,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Découverte plateau",
         "date": "18/02",
-        "horaire": "12h15",
+        "horaire": "10h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Biking",
         "date": "18/02",
-        "horaire": "12h30",
+        "horaire": "12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -255,13 +241,6 @@
         "nom": "Découverte plateau",
         "date": "19/02",
         "horaire": "19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "19/02",
-        "horaire": "20h15",
         "places": 0,
         "statut": "COMPLET"
     },
