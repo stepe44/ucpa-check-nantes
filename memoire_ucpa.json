@@ -105,14 +105,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Biking",
         "date": "17/02",
         "horaire": "12h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "17/02",
         "horaire": "12h15",
         "places": 0,
@@ -164,6 +164,13 @@
         "nom": "RPM",
         "date": "17/02",
         "horaire": "19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "17/02",
+        "horaire": "19h30",
         "places": 0,
         "statut": "COMPLET"
     },
