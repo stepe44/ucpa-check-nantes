@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "16/02",
+        "horaire": "12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF Express",
         "date": "16/02",
         "horaire": "12h30",
@@ -21,7 +28,21 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "16/02",
+        "horaire": "13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
+        "date": "16/02",
+        "horaire": "17h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hiit",
         "date": "16/02",
         "horaire": "17h30",
         "places": 0,
@@ -77,13 +98,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "17/02",
-        "horaire": "07h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "17/02",
         "horaire": "08h15",
@@ -119,13 +133,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "17/02",
-        "horaire": "17h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "17/02",
         "horaire": "17h45",
@@ -147,9 +154,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "17/02",
+        "horaire": "19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "17/02",
         "horaire": "19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "17/02",
+        "horaire": "19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -192,13 +213,6 @@
         "nom": "Hyrox",
         "date": "18/02",
         "horaire": "13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "18/02",
-        "horaire": "19h00",
         "places": 0,
         "statut": "COMPLET"
     },
