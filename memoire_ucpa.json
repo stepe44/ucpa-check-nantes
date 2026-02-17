@@ -1,8 +1,15 @@
 [
     {
-        "nom": "Body Sculpt",
+        "nom": "Pilates",
         "date": "17/02",
-        "horaire": "13h00",
+        "horaire": "17h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "17/02",
+        "horaire": "17h30",
         "places": 0,
         "statut": "COMPLET"
     },
