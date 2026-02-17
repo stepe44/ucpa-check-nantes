@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Pilates",
+        "nom": "Body Jam",
         "date": "17/02",
-        "horaire": "17h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "17/02",
-        "horaire": "17h30",
+        "horaire": "18h30",
         "places": 0,
         "statut": "COMPLET"
     },
