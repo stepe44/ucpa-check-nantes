@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "18/02",
-        "horaire": "12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "21/02",
         "horaire": "09h45",
