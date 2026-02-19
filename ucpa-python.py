@@ -13,7 +13,6 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 URL_UCPA = 'https://www.ucpa.com/sport-station/nantes/fitness'
-# Jina Reader effectue le rendu JS dynamique pour nous
 URL_CIBLE = f'https://r.jina.ai/{URL_UCPA}'
 MEMO_FILE = 'memoire_ucpa.json'
 
@@ -27,10 +26,9 @@ EMAIL_RECEIVERS = [r.strip() for r in os.getenv('EMAIL_RECEIVER', '').split(',')
 raw_filter = os.getenv('COURS_SURVEILLES', '')
 COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
 
-# --- FONCTIONS DE NOTIFICATION ---
+# --- NOTIFICATIONS ---
 
 def send_alerts(course):
-    """Envoie une alerte sur WhatsApp et Email"""
     msg = (f"🚨 *PLACE LIBRE !*\n\n"
            f"🏋️ *{course['nom']}*\n"
            f"📅 {course['date']}\n"
@@ -41,8 +39,7 @@ def send_alerts(course):
     if GREEN_API_URL:
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg}, timeout=10)
-        except Exception as e:
-            logging.error(f"Erreur WhatsApp : {e}")
+        except Exception: pass
         
     if EMAIL_SENDER and EMAIL_PASSWORD:
         try:
@@ -53,27 +50,29 @@ def send_alerts(course):
                 s.starttls()
                 s.login(EMAIL_SENDER, EMAIL_PASSWORD)
                 s.sendmail(EMAIL_SENDER, EMAIL_RECEIVERS, m.as_string())
-        except Exception as e:
-            logging.error(f"Erreur Email : {e}")
+        except Exception: pass
 
-# --- MOTEUR D'EXTRACTION LIGNE PAR LIGNE ---
+# --- MOTEUR D'EXTRACTION CORRIGÉ ---
 
 def extract_courses_from_markdown(markdown_text):
-    """Analyse le Markdown ligne par ligne pour ne rien rater"""
+    """Analyse le Markdown avec une Regex flexible sur le singulier/pluriel"""
     found_courses = []
     maintenant = datetime.now()
     current_date = None
     
-    # Pattern pour détecter un jour (ex: "20 ven.")
+    # Détection du jour (ex: "20 ven.")
     day_header_pattern = re.compile(r"^(\d{2})\s+(?:lun\.|mar\.|mer\.|jeu\.|ven\.|sam\.|dim\.)", re.IGNORECASE)
-    # Pattern pour détecter un cours (ex: "19h15 - 20h00 #### Nom")
-    course_pattern = re.compile(r"(\d{2}h\d{2}\s*-\s*\d{2}h\d{2})\s*####\s*(.*)")
+    
+    # Regex de cours : gère "place restante" (singulier) et "places restantes" (pluriel)
+    # On capture l'horaire, puis tout le reste de la ligne
+    course_pattern = re.compile(r"(\d{2}h\d{2}\s*-\s*\d{2}h\d{2})\s*#+\s*(.*)", re.IGNORECASE)
 
     for line in markdown_text.split('\n'):
-        line = line.strip().lstrip('* ').strip()
+        # Nettoyage de la ligne (retrait des puces markdown et espaces)
+        clean_line = line.strip().lstrip('* ').strip()
         
-        # 1. On cherche si la ligne définit un nouveau jour
-        day_match = day_header_pattern.match(line)
+        # 1. Changement de jour
+        day_match = day_header_pattern.match(clean_line)
         if day_match:
             jour_num = day_match.group(1)
             m_val = maintenant.month
@@ -82,19 +81,21 @@ def extract_courses_from_markdown(markdown_text):
             current_date = f"{jour_num}/{str(m_val).zfill(2)}"
             continue
 
-        # 2. Si on est dans un jour, on cherche les lignes de cours
-        if current_date and '####' in line:
-            course_match = course_pattern.search(line)
+        # 2. Extraction du cours
+        if current_date and '#' in clean_line:
+            course_match = course_pattern.search(clean_line)
             if course_match:
                 horaire = course_match.group(1).strip()
                 nom_brut = course_match.group(2).strip()
                 
-                # Places restantes ou Complet
-                p_match = re.search(r"(\d+)\s*places? restantes", nom_brut)
+                # Extraction des places avec gestion optionnelle du 's'
+                p_match = re.search(r"(\d+)\s*places?\s*restantes?", nom_brut, re.IGNORECASE)
                 p_val = int(p_match.group(1)) if p_match else 0
                 
-                # Nettoyage du nom (retrait du statut et des liens Markdown)
-                nom_clean = re.sub(r"(\d+)\s*places? restantes|Complet|\[RÉSERVER\].*", "", nom_brut).strip()
+                # Nettoyage du nom pour enlever les résidus de statut et liens
+                nom_clean = re.sub(r"(\d+)\s*places?\s*restantes?|Complet|\[RÉSERVER\].*", "", nom_brut, flags=re.IGNORECASE).strip()
+                
+                # Détermination du statut
                 statut = "LIBRE" if p_val > 0 else "COMPLET" if "Complet" in nom_brut else None
                 
                 if statut:
@@ -108,29 +109,31 @@ def extract_courses_from_markdown(markdown_text):
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
-    logging.info(f"🌐 Récupération du planning via Jina Reader...")
+    logging.info(f"🌐 Récupération via Jina Reader...")
     try:
-        response = requests.get(URL_CIBLE, timeout=30)
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get(URL_CIBLE, headers=headers, timeout=30)
         response.raise_for_status()
         raw_markdown = response.text
     except Exception as e:
         logging.error(f"❌ Erreur réseau : {e}")
         return
 
-    # --- ARTIFACT DEBUG : Contenu brut pour analyse ---
+    # DEBUG ARTIFACT
     print("\n" + "="*30 + " DEBUG SOURCE START " + "="*30)
-    print(raw_markdown)
+    # On n'affiche qu'un extrait pour le log si trop long
+    print(raw_markdown[:10000]) 
     print("="*31 + " DEBUG SOURCE END " + "="*31 + "\n")
 
     tous_les_cours = extract_courses_from_markdown(raw_markdown)
     
     if not tous_les_cours:
-        logging.warning("⚠️ Aucun cours extrait du Markdown.")
+        logging.warning("⚠️ Aucun cours extrait.")
         return
 
     tous_les_cours.sort(key=lambda x: (x['date'], x['horaire']))
 
-    # --- AFFICHAGE DU TABLEAU DE BORD ---
+    # TABLEAU DE LOG
     header = f"{'DATE':<6} | {'HEURE':<15} | {'STATUT':<8} | {'PL.':<3} | {'SUIVI':<5} | {'NOM'}"
     sep = "-" * 105
     print(f"\n{header}\n{sep}")
@@ -144,37 +147,30 @@ def run():
         if c['statut'] == "COMPLET": stats_jour[c['date']]["complets"] += 1
         
         print(f"{c['date']:<6} | {c['horaire']:<15} | {c['statut']:<8} | {c['places']:<3} | {'[X]' if est_suivi else '[ ]':<5} | {c['nom']}")
-        if est_suivi:
-            cours_suivis_actuels.append(c)
+        if est_suivi: cours_suivis_actuels.append(c)
 
     print(f"{sep}\n")
     for j, s in sorted(stats_jour.items()):
         logging.info(f"📊 {j} : {s['total']} cours détectés | {s['complets']} complets")
 
-    # --- GESTION ALERTES ET MÉMOIRE ---
+    # MÉMOIRE ET ALERTES
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
-            with open(MEMO_FILE, 'r', encoding='utf-8') as f:
-                anciens_complets = json.load(f)
-        except:
-            pass
+            with open(MEMO_FILE, 'r', encoding='utf-8') as f: anciens_complets = json.load(f)
+        except: pass
 
     for c in cours_suivis_actuels:
         if c['statut'] == "LIBRE":
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
-            # On alerte si le cours était COMPLET lors du scan précédent
             if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
                 logging.info(f"🚀 ALERTE : Place libérée pour {c['nom']} !")
                 send_alerts(c)
 
-    # Mise à jour du fichier mémoire (on ne stocke que les complets suivis)
+    # Sauvegarde
     nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
-    try:
-        run()
-    except Exception as e:
-        logging.error(f"Erreur critique : {e}")
+    run()
