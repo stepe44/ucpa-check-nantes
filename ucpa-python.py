@@ -22,7 +22,7 @@ URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 MEMO_FILE = 'memoire_ucpa.json'
 
 # --- RÉCUPÉRATION DES SECRETS ---
-# GREEN_API_URL = os.getenv('GREEN_API_URL')
+GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_CHAT_ID = os.getenv('WHATSAPP_CHAT_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
@@ -31,6 +31,7 @@ EMAIL_RECEIVERS = [r.strip() for r in EMAIL_RECEIVERS_RAW.split(',') if r.strip(
 FREE_SMS_USER = os.getenv('FREE_SMS_USER')
 FREE_SMS_PASS = os.getenv('FREE_SMS_PASS')
 
+# Filtre de cours (ex: "yoga,pilates")
 raw_filter = os.getenv('COURS_SURVEILLES', '')
 COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
 
@@ -47,21 +48,26 @@ def formater_date_relative(date_str):
         if diff == 0: return f"Aujourd'hui ({nom_jour}) {date_str}"
         elif diff == 1: return f"Demain ({nom_jour}) {date_str}"
         else: return f"{nom_jour} {date_str}"
-    except Exception: return date_str
+    except: return date_str
 
 # --- NOTIFICATIONS ---
 
 def send_whatsapp(message):
     if not GREEN_API_URL: return
     payload = {"chatId": WHATSAPP_CHAT_ID, "message": message}
-    try: requests.post(GREEN_API_URL, json=payload, headers={'Content-Type': 'application/json'}, timeout=10)
-    except Exception as e: logging.error(f"❌ Erreur WhatsApp : {e}")
+    try:
+        requests.post(GREEN_API_URL, json=payload, headers={'Content-Type': 'application/json'}, timeout=10)
+    except Exception as e:
+        logging.error(f"❌ Erreur WhatsApp : {e}")
 
 def send_alerts(course_name, date, time_slot, places):
     info_places = f"({places} places!)" if places > 0 else ""
     msg_body = f"Cours : {course_name}\nDate : {date}\nHeure : {time_slot}\nLien : {URL_CIBLE}"
+    
+    # WhatsApp
     send_whatsapp(f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course_name}*\n📅 {date} à {time_slot}\n🔥 {info_places}\n🔗 {URL_CIBLE}")
     
+    # Email
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
             msg_mail = MIMEMultipart()
@@ -75,133 +81,160 @@ def send_alerts(course_name, date, time_slot, places):
                 server.send_message(msg_mail)
         except Exception as e: logging.error(f"❌ Erreur Email : {e}")
 
-# --- SCRAPING ---
+# --- MOTEUR DE SCRAPING ---
 
-def get_rendered_content(url):
-    options = Options()
-    options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("window-size=1920,3000")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
-    
-    driver = webdriver.Chrome(options=options)
-    try:
-        logging.info("🌐 Connexion à l'UCPA...")
-        driver.get(url)
-        wait = WebDriverWait(driver, 15)
-        wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        
-        # Scroll progressif pour forcer le chargement de tout le tableau
-        last_height = driver.execute_script("return document.body.scrollHeight")
-        for i in range(0, last_height, 800):
-            driver.execute_script(f"window.scrollTo(0, {i});")
-            time.sleep(0.6)
-        
-        time.sleep(2)
-        return driver.find_element(By.TAG_NAME, "body").text
-    except Exception as e:
-        logging.error(f"❌ Erreur Selenium : {e}")
-        return ""
-    finally:
-        driver.quit()
-
-def analyze_all_courses(raw_text):
-    """Extrait absolument TOUS les cours présents sur la page"""
-    if not raw_text: return []
-    cours_liste = []
+def analyze_text_segment(text):
+    """Analyse le texte pour extraire les cours avec une regex robuste"""
+    cours_extraits = []
     maintenant = datetime.now()
     
+    # Découpage par bloc de jour
     start_pattern = r"(\d{2}\s+(?:LUN\.|MAR\.|MER\.|JEU\.|VEN\.|SAM\.|DIM\.))"
-    sections = re.split(start_pattern, raw_text)
+    sections = re.split(start_pattern, text)
     
     for i in range(1, len(sections), 2):
         header_jour = sections[i].strip()
         contenu_jour = sections[i+1]
         jour_num = header_jour.split(' ')[0]
+        
         mois = maintenant.month
         if int(jour_num) < maintenant.day and maintenant.day > 20:
             mois = (maintenant.month % 12) + 1
         date_str = f"{jour_num}/{str(mois).zfill(2)}"
 
-        pattern_cours = r"(\d{2}h\d{2}\s*-\s*\d{2}h\d{2})\n(.+?)\n(?:(\d+)\s*places? restantes|Complet)"
+        # Regex flexible pour gérer "RÉSERVER" ou les variations de sauts de ligne
+        pattern_cours = r"(\d{2}h\d{2}\s*-\s*\d{2}h\d{2})\n(.+?)\n(?:RÉSERVER\n)?(?:(\d+)\s*places? restantes|Complet)"
+        
         for m in re.finditer(pattern_cours, contenu_jour):
             horaire = m.group(1).split('-')[0].strip()
             nom = m.group(2).strip()
             places = m.group(3)
             
-            cours_liste.append({
+            cours_extraits.append({
                 "nom": nom, 
                 "date": date_str, 
                 "horaire": horaire,
                 "places": int(places) if places else 0,
                 "statut": "LIBRE" if places else "COMPLET"
             })
-    return cours_liste
+    return cours_extraits
+
+def get_full_schedule(url):
+    """Scraping cumulatif avec scroll progressif pour ne manquer aucun cours"""
+    options = Options()
+    options.add_argument("--headless=new")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("window-size=1920,1080")
+    
+    driver = webdriver.Chrome(options=options)
+    all_data = {} # Dictionnaire pour dédoublonner via une clé unique
+    
+    try:
+        logging.info(f"🌐 Ouverture du planning : {url}")
+        driver.get(url)
+        time.sleep(8) # Attente du chargement initial
+        
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        current_pos = 0
+        step = 700 # Pixel par scroll
+        
+        while current_pos < last_height:
+            # Capture du texte à la position actuelle
+            text_now = driver.find_element(By.TAG_NAME, "body").text
+            found = analyze_text_segment(text_now)
+            
+            # Stockage avec clé unique (Date+Heure+Nom) pour éviter les doublons du scroll
+            for c in found:
+                key = f"{c['date']}|{c['horaire']}|{c['nom']}"
+                all_data[key] = c
+            
+            # Scroll
+            current_pos += step
+            driver.execute_script(f"window.scrollTo(0, {current_pos});")
+            time.sleep(1.2)
+            last_height = driver.execute_script("return document.body.scrollHeight")
+            
+        return list(all_data.values())
+    except Exception as e:
+        logging.error(f"❌ Erreur Selenium : {e}")
+        return []
+    finally:
+        driver.quit()
+
+# --- EXECUTION PRINCIPALE ---
 
 def run_scan():
-    raw_content = get_rendered_content(URL_CIBLE)
-    tous_les_cours = analyze_all_courses(raw_content)
+    tous_les_cours = get_full_schedule(URL_CIBLE)
     
     if not tous_les_cours:
-        logging.warning("⚠️ Aucun cours détecté. Vérifiez le rendu de la page.")
+        logging.warning("⚠️ Aucun cours n'a pu être extrait.")
         return
 
-    # --- GÉNÉRATION DU TABLEAU DE LOG ---
-    header = f"{'DATE':<8} | {'HEURE':<7} | {'STATUT':<8} | {'PLACES':<4} | {'SUIVI':<5} | {'NOM DU COURS'}"
-    separator = "-" * 90
+    # Tri pour le tableau
+    tous_les_cours.sort(key=lambda x: (x['date'], x['horaire']))
+
+    # --- LOG DU TABLEAU COMPLET ---
+    header = f"{'DATE':<6} | {'HEURE':<7} | {'STATUT':<8} | {'PL.':<3} | {'SUIVI':<5} | {'NOM'}"
+    separator = "-" * 85
+    table_lines = ["", separator, header, separator]
     
-    table_lines = [header, separator]
-    
-    cours_a_surveiller = []
     stats_jour = defaultdict(lambda: {"total": 0, "complets": 0})
+    cours_suivis_actuels = []
 
     for c in tous_les_cours:
+        # Vérification si le cours est dans la liste surveillée
         est_suivi = any(mot in c['nom'].lower() for mot in COURS_SURVEILLES) if COURS_SURVEILLES else True
-        suivi_str = "OUI" if est_suivi else "non"
+        suivi_str = "[X]" if est_suivi else "[ ]"
         
-        # Stats pour le résumé
+        # Stats
         stats_jour[c['date']]["total"] += 1
         if c['statut'] == "COMPLET":
             stats_jour[c['date']]["complets"] += 1
         
-        # Ajout à la ligne du tableau
-        line = f"{c['date']:<8} | {c['horaire']:<7} | {c['statut']:<8} | {c['places']:<6} | {suivi_str:<5} | {c['nom']}"
+        # Ligne du tableau
+        line = f"{c['date']:<6} | {c['horaire']:<7} | {c['statut']:<8} | {c['places']:<3} | {suivi_str:<5} | {c['nom']}"
         table_lines.append(line)
         
-        # On ne garde pour la suite que les cours suivis
         if est_suivi:
-            cours_a_surveiller.append(c)
+            cours_suivis_actuels.append(c)
 
-    # Affichage du grand tableau
-    logging.info("\n" + "\n".join(table_lines) + "\n")
+    table_lines.append(separator)
+    logging.info("\n".join(table_lines))
 
-    # Petit résumé par jour
-    logging.info("=== 📈 RÉSUMÉ QUOTIDIEN ===")
-    for jour, s in sorted(stats_jour.items()):
-        logging.info(f"📅 {jour} : {s['total']} cours détectés ({s['complets']} complets)")
-    logging.info("===========================")
+    # --- LOG DU RÉSUMÉ PAR JOUR ---
+    logging.info("=== 📊 RÉSUMÉ PAR JOUR ===")
+    for jour in sorted(stats_jour.keys()):
+        s = stats_jour[jour]
+        logging.info(f"📅 {jour} : {s['total']} cours détectés | {s['complets']} cours complets")
+    logging.info("==========================")
 
-    # --- LOGIQUE D'ALERTE (Mémoire) ---
+    # --- GESTION DE LA MÉMOIRE (ALERTES) ---
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
             with open(MEMO_FILE, 'r', encoding='utf-8') as f:
                 anciens_complets = json.load(f)
-        except: anciens_complets = []
+        except: pass
 
-    nouveaux_complets = [c for c in cours_a_surveiller if c['statut'] == "COMPLET"]
+    # On ne garde en mémoire que les cours COMPLET qui font partie de la liste SUIVIE
+    nouveaux_complets_suivis = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
     
-    for c in cours_a_surveiller:
+    for c in cours_suivis_actuels:
         if c['statut'] == "LIBRE":
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
+            # Si le cours était COMPLET dans la mémoire précédente
             if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
-                logging.info(f"🚀 ALERTE : Place libérée pour {c['nom']} !")
-                send_alerts(c['nom'], formater_date_relative(c['date']), c['horaire'], c['places'])
+                logging.info(f"🚀 ALERTE : Place libérée pour {c['nom']} le {c['date']} !")
+                date_txt = formater_date_relative(c['date'])
+                send_alerts(c['nom'], date_txt, c['horaire'], c['places'])
 
+    # Sauvegarde
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
-        json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+        json.dump(nouveaux_complets_suivis, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
-    try: run_scan()
-    except Exception as e: logging.error(f"Erreur critique : {e}")
+    try:
+        run_scan()
+    except Exception as e:
+        logging.error(f"Erreur critique lors de l'exécution : {e}")
