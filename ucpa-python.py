@@ -22,7 +22,7 @@ URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
 MEMO_FILE = 'memoire_ucpa.json'
 
 # --- RÉCUPÉRATION DES SECRETS (Inchangé) ---
-GREEN_API_URL = os.getenv('GREEN_API_URL')
+# GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_CHAT_ID = os.getenv('WHATSAPP_CHAT_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
@@ -202,3 +202,4 @@ def run_scan():
 if __name__ == "__main__":
     try: run_scan()
     except Exception as e: logging.error(f"Erreur critique : {e}")
+
