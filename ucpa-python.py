@@ -1,6 +1,5 @@
 import os
 import json
-import time
 import re
 import requests
 import logging
@@ -9,41 +8,35 @@ from collections import defaultdict
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 
 # --- CONFIGURATION ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-URL_CIBLE = 'https://www.ucpa.com/sport-station/nantes/fitness'
+# L'URL Jina se charge de l'interprétation JS dynamique du tableau pour nous
+URL_UCPA = 'https://www.ucpa.com/sport-station/nantes/fitness'
+URL_CIBLE = f'https://r.jina.ai/{URL_UCPA}'
 MEMO_FILE = 'memoire_ucpa.json'
 
-raw_filter = os.getenv('COURS_SURVEILLES', '')
-COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
-
+# --- RÉCUPÉRATION DES SECRETS ---
 # GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_CHAT_ID = os.getenv('WHATSAPP_CHAT_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
 EMAIL_RECEIVERS = [r.strip() for r in os.getenv('EMAIL_RECEIVER', '').split(',') if r.strip()]
 
-# --- OUTILS ---
+raw_filter = os.getenv('COURS_SURVEILLES', '')
+COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
 
-def formater_date_relative(date_str):
-    jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-    try:
-        j, m = map(int, date_str.split('/'))
-        date_obj = datetime(datetime.now().year, m, j)
-        return f"{jours[date_obj.weekday()]} {date_str}"
-    except: return date_str
+# --- FONCTIONS UTILITAIRES ---
 
 def send_alerts(course):
-    date_txt = formater_date_relative(course['date'])
-    msg = f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course['nom']}*\n📅 {date_txt}\n⏰ {course['horaire']}\n🔥 {course['places']} places!\n🔗 {URL_CIBLE}"
+    """Notification WhatsApp et Email"""
+    msg = f"🚨 *PLACE LIBRE !*\n\n🏋️ *{course['nom']}*\n📅 {course['date']}\n⏰ {course['horaire']}\n🔥 {course['places']} places!\n🔗 {URL_UCPA}"
+    
     if GREEN_API_URL:
         try: requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg}, timeout=10)
         except: pass
+        
     if EMAIL_SENDER and EMAIL_PASSWORD:
         try:
             m = MIMEMultipart()
@@ -55,121 +48,110 @@ def send_alerts(course):
                 s.sendmail(EMAIL_SENDER, EMAIL_RECEIVERS, m.as_string())
         except: pass
 
-# --- NOUVEAU MOTEUR DE CAPTURE PAR COLONNE ---
+# --- MOTEUR D'EXTRACTION ---
 
-def parse_day_text(date_str, text):
-    """Analyse le texte spécifique à une seule journée"""
-    results = []
-    # On découpe par bloc d'heure
-    blocs = re.split(r"(\d{2}h\d{2}\s*-\s*\d{2}h\d{2})", text)
-    for i in range(1, len(blocs), 2):
-        horaire = blocs[i].strip()
-        contenu = blocs[i+1].strip()
-        lignes = [l.strip() for l in contenu.split('\n') if l.strip()]
-        if not lignes: continue
-        
-        nom = lignes[0]
-        p_match = re.search(r"(\d+)\s*places? restantes", contenu)
-        est_complet = "Complet" in contenu
-        
-        p_val = int(p_match.group(1)) if p_match else 0
-        statut = "LIBRE" if p_val > 0 else "COMPLET" if est_complet else None
-        
-        if statut:
-            results.append({
-                "nom": nom, "date": date_str, "horaire": horaire,
-                "places": p_val, "statut": statut
-            })
-    return results
-
-def get_data():
-    opts = Options()
-    opts.add_argument("--headless=new")
-    opts.add_argument("window-size=1920,3000") # Très haut pour tout voir
-    dr = webdriver.Chrome(options=opts)
+def parse_markdown_content(text):
+    """Analyse le Markdown rendu par Jina pour extraire 100% des cours"""
+    found_courses = []
+    maintenant = datetime.now()
     
-    catalog = {}
-    try:
-        logging.info("🌐 Navigation vers l'UCPA...")
-        dr.get(URL_CIBLE)
-        time.sleep(15) # Attente rendu JS
+    # Séparation par blocs de jours (ex: "20 ven.")
+    # On cherche un chiffre suivi d'un jour de la semaine en minuscule
+    sections = re.split(r"(\d{2}\s+(?:lun\.|mar\.|mer\.|jeu\.|ven\.|sam\.|dim\.))", text, flags=re.IGNORECASE)
+    
+    for i in range(1, len(sections), 2):
+        jour_brut = sections[i].strip().split(' ')[0]
+        bloc_contenu = sections[i+1]
         
-        # 1. Identifier les colonnes de jours par les headers (LUN., MAR., etc.)
-        # On cherche les éléments qui contiennent la date (ex: "20 VEN.")
-        headers = dr.find_elements(By.XPATH, "//div[contains(text(), 'LUN.') or contains(text(), 'MAR.') or contains(text(), 'MER.') or contains(text(), 'JEU.') or contains(text(), 'VEN.') or contains(text(), 'SAM.') or contains(text(), 'DIM.')]")
+        # Calcul du mois (gestion fin de mois)
+        m_val = maintenant.month
+        if int(jour_brut) < maintenant.day and maintenant.day > 20:
+            m_val = (m_val % 12) + 1
+        date_cle = f"{jour_brut}/{str(m_val).zfill(2)}"
+
+        # Regex adaptée au Markdown de Jina Reader
+        # Format attendu : 19h15 - 20h00 #### Nom du cours (places ou Complet)
+        pattern = r"(\d{2}h\d{2}\s*-\s*\d{2}h\d{2})\s*####\s*(.*?)\s*(?:(\d+)\s*places? restantes|Complet)"
         
-        for h in headers:
-            try:
-                txt_h = h.text
-                match_date = re.search(r"(\d{2})", txt_h)
-                if not match_date: continue
-                
-                jour_num = match_date.group(1)
-                m_val = datetime.now().month
-                if int(jour_num) < datetime.now().day and datetime.now().day > 20: m_val = (m_val % 12) + 1
-                date_cle = f"{jour_num}/{str(m_val).zfill(2)}"
-                
-                # On remonte au parent qui contient toute la colonne du jour
-                # Souvent c'est un div qui contient le header et tous les cours dessous
-                colonne = h.find_element(By.XPATH, "./ancestor::div[contains(@class, 'column') or contains(@class, 'day')] | ./parent::div")
-                
-                # On extrait le texte UNIQUEMENT de cette colonne
-                txt_colonne = colonne.text
-                logging.info(f"🔎 Analyse de la colonne du {date_cle}...")
-                
-                for c in parse_day_text(date_cle, txt_colonne):
-                    catalog[f"{c['date']}|{c['horaire']}|{c['nom']}"] = c
-            except: continue
+        for m in re.finditer(pattern, bloc_contenu):
+            horaire = m.group(1).strip()
+            nom = m.group(2).strip()
+            places = m.group(3)
             
-        return list(catalog.values())
-    finally: dr.quit()
+            found_courses.append({
+                "nom": nom, "date": date_cle, "horaire": horaire,
+                "places": int(places) if places else 0,
+                "statut": "LIBRE" if places else "COMPLET"
+            })
+    return found_courses
 
-# --- LOGIQUE DE SCAN ---
+# --- LOGIQUE PRINCIPALE ---
 
-def run():
-    cours = get_data()
-    if not cours:
-        logging.warning("⚠️ Aucun cours trouvé. Tentative avec méthode de secours...")
-        # Ici on pourrait ajouter un fallback si les colonnes ne sont pas trouvées
+def run_scan():
+    logging.info(f"🌐 Chargement du tableau (Rendu JS via Jina)...")
+    try:
+        # On force un User-Agent pour éviter d'être bloqué par Jina
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+        response = requests.get(URL_CIBLE, headers=headers, timeout=30)
+        response.raise_for_status()
+        content = response.text
+    except Exception as e:
+        logging.error(f"❌ Erreur lors de la récupération via Jina : {e}")
         return
 
-    cours.sort(key=lambda x: (x['date'], x['horaire']))
+    tous_les_cours = parse_markdown_content(content)
+    if not tous_les_cours:
+        logging.warning("⚠️ Aucun cours extrait. Vérifiez l'URL Jina.")
+        return
 
-    print(f"\n{'DATE':<6} | {'HEURE':<15} | {'STATUT':<8} | {'PL.':<3} | {'SUIVI':<5} | {'NOM'}")
-    print("-" * 100)
+    # Tri chronologique pour le log
+    tous_les_cours.sort(key=lambda x: (x['date'], x['horaire']))
+
+    # --- AFFICHAGE DU TABLEAU DE LOG ---
+    header = f"{'DATE':<6} | {'HEURE':<15} | {'STATUT':<8} | {'PL.':<3} | {'SUIVI':<5} | {'NOM'}"
+    sep = "-" * 100
+    print(f"\n{sep}\n{header}\n{sep}")
     
-    stats = defaultdict(lambda: {"total": 0, "complet": 0})
-    a_surveiller = []
+    stats_jour = defaultdict(lambda: {"total": 0, "complets": 0})
+    cours_a_surveiller = []
 
-    for c in cours:
+    for c in tous_les_cours:
         est_suivi = any(m in c['nom'].lower() for m in COURS_SURVEILLES) if COURS_SURVEILLES else True
-        stats[c['date']]["total"] += 1
-        if c['statut'] == "COMPLET": stats[c['date']]["complet"] += 1
-        
+        stats_jour[c['date']]["total"] += 1
+        if c['statut'] == "COMPLET":
+            stats_jour[c['date']]["complets"] += 1
+            
         print(f"{c['date']:<6} | {c['horaire']:<15} | {c['statut']:<8} | {c['places']:<3} | {'[X]' if est_suivi else '[ ]':<5} | {c['nom']}")
-        if est_suivi: a_surveiller.append(c)
+        if est_suivi:
+            cours_a_surveiller.append(c)
 
-    print("-" * 100)
-    for d, s in sorted(stats.items()):
-        logging.info(f"📊 {d} : {s['total']} cours détectés | {s['complet']} complets")
+    print(f"{sep}\n")
+    
+    # --- LOG DES STATS PAR JOUR ---
+    for j, s in sorted(stats_jour.items()):
+        logging.info(f"📊 {j} : {s['total']} cours détectés | {s['complets']} complets")
+    logging.info("========================================")
 
-    # Comparaison mémoire
-    anciens = []
+    # --- COMPARAISON MÉMOIRE ET ALERTES ---
+    anciens_complets = []
     if os.path.exists(MEMO_FILE):
-        try: anciens = json.load(open(MEMO_FILE, 'r', encoding='utf-8'))
+        try:
+            with open(MEMO_FILE, 'r', encoding='utf-8') as f:
+                anciens_complets = json.load(f)
         except: pass
 
-    for c in a_surveiller:
+    for c in cours_a_surveiller:
         if c['statut'] == "LIBRE":
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
-            if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens):
-                logging.info(f"🔥 PLACE LIBÉRÉE : {c['nom']} !")
+            # On alerte si le cours était dans la liste des "COMPLET" au scan précédent
+            if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
+                logging.info(f"🚀 PLACE LIBÉRÉE : {c['nom']} le {c['date']} !")
                 send_alerts(c)
 
-    # Sauvegarde des complets
-    nouveaux_complets = [c for c in a_surveiller if c['statut'] == "COMPLET"]
+    # Sauvegarde des cours complets pour le prochain passage
+    nouveaux_complets = [c for c in cours_a_surveiller if c['statut'] == "COMPLET"]
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
-    run()
+    run_scan()
