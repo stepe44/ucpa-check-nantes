@@ -28,7 +28,7 @@ raw_filter = os.getenv('COURS_SURVEILLES', '')
 COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
 
 # --- FONCTIONS DE NOTIFICATION ---
-
+              
 def send_alerts(course):
     """Envoie une alerte sur WhatsApp et Email"""
     msg = (f"🚨 *PLACE LIBRE !*\n\n"
@@ -104,6 +104,36 @@ def extract_courses_from_markdown(markdown_text):
                     
     return found_courses
 
+
+def formater_date_relative(date_str):
+    """
+    Transforme '15/02' en 'Aujourd'hui (Vendredi) 15/02', 
+    'Demain (Samedi) 16/02' ou 'Dimanche 17/02'.
+    """
+    jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    maintenant = datetime.now()
+    
+    try:
+        # On extrait jour et mois du format 'JJ/MM'
+        jour, mois = map(int, date_str.split('/'))
+        # On crée un objet date pour l'année en cours
+        date_objet = datetime(maintenant.year, mois, jour)
+        
+        # Calcul de la différence de jours
+        diff = (date_objet.date() - maintenant.date()).days
+        nom_jour = jours_semaine[date_objet.weekday()]
+        
+        if diff == 0:
+            return f"Aujourd'hui ({nom_jour}) {date_str}"
+        elif diff == 1:
+            return f"Demain ({nom_jour}) {date_str}"
+        else:
+            return f"{nom_jour} {date_str}"
+    except Exception as e:
+        logging.error(f"Erreur formatage date : {e}")
+        return date_str
+
+
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
@@ -159,7 +189,9 @@ def run():
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
             if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
                 logging.info(f"🚀 ALERTE : Place libérée pour {c['nom']} !")
-                send_alerts(c)
+                # Enrichissement de la date pour le message
+                date_affichage = formater_date_relative(c['date'])
+                send_alerts(c['nom'], date_affichage, c['horaire'], c['places'])
 
     # Mise à jour du fichier mémoire (uniquement les cours complets surveillés)
     nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
@@ -171,3 +203,4 @@ if __name__ == "__main__":
         run()
     except Exception as e:
         logging.error(f"Erreur critique : {e}")
+
