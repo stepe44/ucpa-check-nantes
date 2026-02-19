@@ -1,13 +1,20 @@
 [
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Attack",
+        "date": "19/02",
+        "horaire": "18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "21/02",
         "horaire": "09h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Yoga Vinyasa",
         "date": "21/02",
         "horaire": "09h45",
         "places": 0,
