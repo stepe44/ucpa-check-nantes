@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "20/02",
-        "horaire": "17h30 - 18h15",
+        "nom": "Yoga Vinyasa",
+        "date": "21/02",
+        "horaire": "09h45 - 10h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Cross Training Intensity",
         "date": "21/02",
-        "horaire": "09h45 - 10h45",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
