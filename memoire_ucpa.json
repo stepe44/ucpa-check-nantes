@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "21/02",
-        "horaire": "09h45 - 10h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "21/02",
         "horaire": "11h30 - 12h15",
