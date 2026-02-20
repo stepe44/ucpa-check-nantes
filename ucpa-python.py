@@ -137,9 +137,14 @@ def extract_courses_from_markdown(markdown_text):
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
-    logging.info("🌐 Scan du planning UCPA...")
+    logging.info("🌐 Scan du planning UCPA (Bypass Cache)...")
     try:
-        response = requests.get(URL_CIBLE, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+        # AJOUT DU HEADER X-No-Cache ICI
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "X-No-Cache": "true"
+        }
+        response = requests.get(URL_CIBLE, headers=headers, timeout=30)
         response.raise_for_status()
         tous_les_cours = extract_courses_from_markdown(response.text)
     except Exception as e:
@@ -150,7 +155,6 @@ def run():
         logging.warning("⚠️ Aucun cours trouvé.")
         return
 
-    # Filtrage et Dashboard
     cours_suivis_actuels = []
     print(f"\n{'DATE':<6} | {'HEURE':<15} | {'STATUT':<8} | {'NOM'}")
     print("-" * 80)
@@ -161,7 +165,6 @@ def run():
         if est_suivi:
             cours_suivis_actuels.append(c)
 
-    # Gestion Mémoire et Alertes
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
@@ -173,7 +176,6 @@ def run():
     for c in cours_suivis_actuels:
         if c['statut'] == "LIBRE":
             id_c = f"{c['nom']}|{c['date']}|{c['horaire']}"
-            # Une alerte si le cours était marqué COMPLET au dernier scan
             if any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_c for a in anciens_complets):
                 nouvelles_places.append(c)
 
@@ -181,7 +183,6 @@ def run():
         logging.info(f"🚀 {len(nouvelles_places)} nouvelle(s) place(s) détectée(s) !")
         send_final_notification(nouvelles_places)
 
-    # Sauvegarde des cours complets pour le prochain scan
     nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
