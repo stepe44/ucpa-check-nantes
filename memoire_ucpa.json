@@ -1,5 +1,12 @@
 [
     {
+        "nom": "TRX",
+        "date": "20/02",
+        "horaire": "16h45 - 17h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "20/02",
         "horaire": "17h30 - 18h15",
@@ -17,6 +24,13 @@
         "nom": "Cross Training Intensity",
         "date": "21/02",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "21/02",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
