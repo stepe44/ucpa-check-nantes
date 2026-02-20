@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "20/02",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "20/02",
         "horaire": "13h00 - 13h45",
@@ -21,20 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "20/02",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "21/02",
-        "horaire": "09h45 - 10h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "21/02",
         "horaire": "09h45 - 10h30",
@@ -42,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Yoga Vinyasa",
         "date": "21/02",
-        "horaire": "10h30 - 11h15",
+        "horaire": "09h45 - 10h45",
         "places": 0,
         "statut": "COMPLET"
     },
