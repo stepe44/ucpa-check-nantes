@@ -1,29 +1,8 @@
 [
     {
-        "nom": "CAF",
-        "date": "23/02",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "24/02",
         "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "24/02",
-        "horaire": "08h00 - 09h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "24/02",
-        "horaire": "09h15 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -56,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "24/02",
-        "horaire": "17h30 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "24/02",
         "horaire": "17h45 - 18h30",
@@ -73,13 +45,6 @@
         "nom": "Hiit",
         "date": "24/02",
         "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Jam",
-        "date": "24/02",
-        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -150,13 +115,6 @@
         "nom": "Abdos-Fessiers",
         "date": "25/02",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "25/02",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
