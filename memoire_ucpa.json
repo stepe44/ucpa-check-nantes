@@ -1,5 +1,12 @@
 [
     {
+        "nom": "CAF Express",
+        "date": "23/02",
+        "horaire": "12h15 - 12h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "23/02",
         "horaire": "12h15 - 13h00",
@@ -10,13 +17,6 @@
         "nom": "Cross Training Intensity",
         "date": "23/02",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "23/02",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -77,6 +77,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Combat",
+        "date": "24/02",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "24/02",
         "horaire": "17h30 - 18h15",
@@ -94,6 +101,13 @@
         "nom": "Cross Training Intensity",
         "date": "24/02",
         "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hiit",
+        "date": "24/02",
+        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -217,13 +231,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "26/02",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Yin",
         "date": "26/02",
         "horaire": "19h00 - 20h00",
@@ -234,13 +241,6 @@
         "nom": "Hiit",
         "date": "26/02",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "26/02",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
