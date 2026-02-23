@@ -35,6 +35,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "24/02",
+        "horaire": "09h15 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "24/02",
         "horaire": "12h15 - 13h00",
@@ -199,6 +206,13 @@
         "nom": "Hiit",
         "date": "26/02",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "26/02",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
