@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "24/02",
+        "horaire": "08h00 - 09h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "24/02",
         "horaire": "09h15 - 10h00",
@@ -122,6 +129,13 @@
         "nom": "Body Pump",
         "date": "25/02",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "25/02",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
