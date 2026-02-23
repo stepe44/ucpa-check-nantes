@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "CAF",
         "date": "23/02",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "23/02",
-        "horaire": "19h15 - 20h00",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -147,6 +140,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "25/02",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "25/02",
         "horaire": "19h15 - 20h00",
@@ -199,13 +199,6 @@
         "nom": "Abdos-Fessiers",
         "date": "26/02",
         "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "26/02",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
