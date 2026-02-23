@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "23/02",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "23/02",
-        "horaire": "17h30 - 18h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "23/02",
         "horaire": "18h30 - 19h15",
@@ -24,6 +10,13 @@
         "nom": "RPM",
         "date": "23/02",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "24/02",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -66,6 +59,13 @@
         "nom": "Pilates",
         "date": "24/02",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "24/02",
+        "horaire": "17h30 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -199,6 +199,13 @@
         "nom": "Abdos-Fessiers",
         "date": "26/02",
         "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "26/02",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
