@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "23/02",
-        "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "23/02",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF Express",
-        "date": "23/02",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "23/02",
         "horaire": "12h15 - 13h00",
@@ -31,13 +10,6 @@
         "nom": "Yoga Vinyasa",
         "date": "23/02",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "23/02",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -70,13 +42,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
-        "date": "23/02",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "23/02",
         "horaire": "19h15 - 20h00",
@@ -87,6 +52,13 @@
         "nom": "CAF",
         "date": "23/02",
         "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "24/02",
+        "horaire": "08h00 - 09h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -133,6 +105,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "24/02",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "24/02",
         "horaire": "19h15 - 20h00",
@@ -143,6 +122,13 @@
         "nom": "Body Sculpt",
         "date": "24/02",
         "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "25/02",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -217,6 +203,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "26/02",
+        "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Yin",
+        "date": "26/02",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hiit",
         "date": "26/02",
         "horaire": "19h15 - 20h00",
@@ -262,6 +262,13 @@
         "nom": "CAF",
         "date": "28/02",
         "horaire": "10h30 - 11h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "28/02",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
