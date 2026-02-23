@@ -49,10 +49,16 @@ jobs:
         run: |
           git config --global user.name 'Bot UCPA'
           git config --global user.email 'bot@ucpa.com'
-          if [ -f memoire_ucpa.json ]; then
-            git add memoire_ucpa.json
-            git commit -m "Update memory [skip ci]" || echo "No changes"
+          
+          # Ajout des deux fichiers de mémoire
+          git add memoire_ucpa.json notifs_envoyees.json 2>/dev/null || true
+          
+          # On commit seulement s'il y a des changements
+          if ! git diff --cached --quiet; then
+            git commit -m "Update memory & history [skip ci]"
             git push
+          else
+            echo "Aucun changement à sauvegarder."
           fi
       # 6. Sauvegarde les logs et le HTML pour debug (visible dans l'onglet Actions)
       
