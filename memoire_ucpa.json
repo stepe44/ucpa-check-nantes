@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Sculpt",
-        "date": "24/02",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "25/02",
         "horaire": "12h15 - 13h00",
@@ -28,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "25/02",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hiit",
         "date": "25/02",
         "horaire": "18h00 - 18h45",
@@ -52,13 +38,6 @@
         "nom": "Abdos-Fessiers",
         "date": "25/02",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "25/02",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -150,6 +129,13 @@
         "nom": "Cross Training Intensity",
         "date": "27/02",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "27/02",
+        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
