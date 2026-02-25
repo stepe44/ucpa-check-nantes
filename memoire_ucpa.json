@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Biking",
+        "date": "25/02",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "25/02",
         "horaire": "12h30 - 13h30",
@@ -36,13 +43,6 @@
     },
     {
         "nom": "Cross Training Intensity",
-        "date": "25/02",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Swiss Ball",
         "date": "25/02",
         "horaire": "19h00 - 19h45",
         "places": 0,
