@@ -56,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "25/02",
+        "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "25/02",
         "horaire": "20h15 - 21h00",
