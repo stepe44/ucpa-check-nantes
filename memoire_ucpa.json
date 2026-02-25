@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "25/02",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "25/02",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "25/02",
         "horaire": "20h15 - 21h00",
@@ -77,13 +63,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Yin",
-        "date": "26/02",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hiit",
         "date": "26/02",
         "horaire": "19h15 - 20h00",
@@ -94,6 +73,13 @@
         "nom": "Body Pump",
         "date": "26/02",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "27/02",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -157,6 +143,13 @@
         "nom": "Yoga Vinyasa",
         "date": "01/03",
         "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Stretching",
+        "date": "01/03",
+        "horaire": "11h45 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     }
