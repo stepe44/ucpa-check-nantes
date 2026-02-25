@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "26/02",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "26/02",
         "horaire": "17h30 - 18h15",
@@ -63,6 +70,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "27/02",
+        "horaire": "08h00 - 08h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "27/02",
         "horaire": "12h15 - 13h00",
@@ -73,6 +87,13 @@
         "nom": "Cross Training Intensity",
         "date": "27/02",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "TRX",
+        "date": "27/02",
+        "horaire": "16h45 - 17h30",
         "places": 0,
         "statut": "COMPLET"
     },
