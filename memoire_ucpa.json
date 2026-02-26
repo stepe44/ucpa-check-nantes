@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "26/02",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Attack",
         "date": "26/02",
         "horaire": "18h15 - 19h00",
@@ -59,13 +52,6 @@
         "nom": "Body Pump",
         "date": "26/02",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "27/02",
-        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
