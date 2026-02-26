@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "26/02",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "27/02",
         "horaire": "12h15 - 13h00",
