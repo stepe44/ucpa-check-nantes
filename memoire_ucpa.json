@@ -56,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "02/03",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "02/03",
         "horaire": "19h00 - 19h45",
@@ -262,13 +269,6 @@
         "nom": "Yoga",
         "date": "07/03",
         "horaire": "14h00 - 16h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "08/03",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
