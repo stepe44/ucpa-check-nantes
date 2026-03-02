@@ -98,13 +98,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
-        "date": "04/03",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "04/03",
         "horaire": "20h15 - 21h00",
@@ -112,14 +105,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Cross Training Intensity",
         "date": "05/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "05/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -136,13 +129,6 @@
         "nom": "Body Attack",
         "date": "05/03",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "05/03",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
