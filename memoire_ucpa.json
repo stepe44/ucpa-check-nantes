@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF Express",
+        "date": "02/03",
+        "horaire": "12h15 - 12h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "02/03",
         "horaire": "12h30 - 13h30",
@@ -49,14 +56,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "02/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "02/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
