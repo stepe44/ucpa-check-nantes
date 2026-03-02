@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "02/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "02/03",
         "horaire": "18h30 - 19h15",
@@ -56,6 +49,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Jam",
+        "date": "03/03",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
+        "date": "03/03",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "03/03",
         "horaire": "19h00 - 19h45",
@@ -99,6 +106,13 @@
     },
     {
         "nom": "Cross Training Intensity",
+        "date": "04/03",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
         "date": "04/03",
         "horaire": "19h00 - 19h45",
         "places": 0,
