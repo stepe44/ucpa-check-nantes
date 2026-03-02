@@ -1,8 +1,22 @@
 [
     {
+        "nom": "Body Pump",
+        "date": "02/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "02/03",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "02/03",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -17,6 +31,20 @@
         "nom": "RPM",
         "date": "02/03",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "02/03",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "02/03",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
