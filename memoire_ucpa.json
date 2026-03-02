@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "03/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "03/03",
         "horaire": "17h45 - 18h30",
@@ -35,9 +42,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "RPM",
         "date": "03/03",
-        "horaire": "19h00 - 19h45",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
