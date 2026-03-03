@@ -28,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "03/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "03/03",
         "horaire": "19h30 - 20h15",
@@ -56,6 +49,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "04/03",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "04/03",
         "horaire": "17h30 - 18h15",
@@ -64,6 +64,13 @@
     },
     {
         "nom": "Cross Training Intensity",
+        "date": "04/03",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
         "date": "04/03",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -112,16 +119,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Abdos-Fessiers",
         "date": "05/03",
-        "horaire": "18h30 - 19h15",
+        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Biking",
         "date": "05/03",
-        "horaire": "18h30 - 19h00",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
