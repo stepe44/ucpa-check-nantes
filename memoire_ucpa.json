@@ -7,7 +7,21 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "04/03",
+        "horaire": "09h00 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
+        "date": "04/03",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "04/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
