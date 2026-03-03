@@ -1,21 +1,4 @@
 {
-    "2026-02-23": [
-        "Body Combat|24/02|12h15 - 13h00",
-        "Hiit|24/02|18h30 - 19h00",
-        "Cross Training Intensity|23/02|18h30 - 19h15",
-        "Yoga Vinyasa|24/02|08h00 - 09h00",
-        "Biking|25/02|12h15 - 13h00",
-        "Cross Training Intensity|25/02|19h00 - 19h45",
-        "Yoga Vinyasa|24/02|17h30 - 18h30",
-        "Cross Training Intensity|25/02|07h30 - 08h15",
-        "Biking|26/02|18h30 - 19h15",
-        "CAF|24/02|09h15 - 10h00",
-        "Body Jam|24/02|18h30 - 19h30",
-        "Pilates|25/02|20h15 - 21h00",
-        "Cross Training Intensity|24/02|07h30 - 08h15",
-        "CAF|24/02|19h45 - 20h30",
-        "Hiit|25/02|18h00 - 18h45"
-    ],
     "2026-02-24": [
         "Abdos-Fessiers|26/02|18h30 - 19h00",
         "Biking|24/02|12h15 - 13h00",
@@ -133,5 +116,9 @@
         "Body Sculpt|03/03|19h30 - 20h15",
         "Abdos-Fessiers|04/03|19h15 - 20h00",
         "Biking|05/03|18h30 - 19h15"
+    ],
+    "2026-03-03": [
+        "Hyrox|04/03|13h00 - 13h45",
+        "Yoga Vinyasa|07/03|09h45 - 10h45"
     ]
 }
