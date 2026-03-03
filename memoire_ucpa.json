@@ -21,9 +21,30 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "04/03",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "04/03",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "04/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "04/03",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -122,6 +143,13 @@
         "nom": "Cross Training Intensity",
         "date": "06/03",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "06/03",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
