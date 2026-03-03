@@ -42,13 +42,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "04/03",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "04/03",
         "horaire": "19h00 - 19h45",
@@ -105,16 +98,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Abdos-Fessiers",
         "date": "05/03",
-        "horaire": "18h30 - 19h15",
+        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Biking",
         "date": "05/03",
-        "horaire": "18h30 - 19h00",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
