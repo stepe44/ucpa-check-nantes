@@ -126,16 +126,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Biking",
         "date": "05/03",
-        "horaire": "18h30 - 19h00",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Abdos-Fessiers",
         "date": "05/03",
-        "horaire": "18h30 - 19h15",
+        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -185,6 +185,13 @@
         "nom": "RPM",
         "date": "06/03",
         "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "07/03",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
