@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "03/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Jam",
         "date": "03/03",
         "horaire": "18h30 - 19h30",
@@ -21,9 +14,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "RPM",
         "date": "03/03",
-        "horaire": "18h45 - 19h30",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -31,13 +24,6 @@
         "nom": "Body Sculpt",
         "date": "03/03",
         "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "04/03",
-        "horaire": "09h00 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -122,13 +108,6 @@
         "nom": "Body Attack",
         "date": "05/03",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "05/03",
-        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
