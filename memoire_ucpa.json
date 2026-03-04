@@ -1,12 +1,5 @@
 [
     {
-        "nom": "CAF Express",
-        "date": "05/03",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "05/03",
         "horaire": "12h15 - 13h00",
@@ -42,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Yin",
-        "date": "05/03",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "06/03",
         "horaire": "12h15 - 13h00",
@@ -77,16 +63,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "CAF",
         "date": "07/03",
-        "horaire": "09h45 - 10h45",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "RPM",
         "date": "07/03",
-        "horaire": "10h30 - 11h15",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
