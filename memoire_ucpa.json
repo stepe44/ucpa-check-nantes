@@ -1,5 +1,12 @@
 [
     {
+        "nom": "RPM",
+        "date": "05/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "05/03",
         "horaire": "12h15 - 13h00",
@@ -21,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "05/03",
+        "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "05/03",
         "horaire": "18h30 - 19h15",
@@ -28,9 +42,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "05/03",
-        "horaire": "18h30 - 19h00",
+        "nom": "Hyrox",
+        "date": "06/03",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
