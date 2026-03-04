@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Cross Training Intensity",
+        "date": "04/03",
+        "horaire": "07h30 - 08h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "04/03",
         "horaire": "12h30 - 13h30",
@@ -94,6 +101,13 @@
         "nom": "Body Pump",
         "date": "05/03",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "06/03",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
