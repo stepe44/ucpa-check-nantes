@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Body Sculpt",
+        "date": "04/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "04/03",
         "horaire": "19h15 - 20h00",
@@ -10,6 +17,13 @@
         "nom": "Pilates",
         "date": "04/03",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF Express",
+        "date": "05/03",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -28,13 +42,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
-        "date": "05/03",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "05/03",
         "horaire": "12h30 - 13h30",
@@ -49,16 +56,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Abdos-Fessiers",
         "date": "05/03",
-        "horaire": "18h30 - 19h15",
+        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Biking",
         "date": "05/03",
-        "horaire": "18h30 - 19h00",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
