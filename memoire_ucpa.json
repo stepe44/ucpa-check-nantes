@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "05/03",
-        "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Attack",
         "date": "05/03",
         "horaire": "18h15 - 19h00",
@@ -84,13 +77,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "06/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "07/03",
         "horaire": "10h30 - 11h15",
@@ -136,13 +122,6 @@
         "nom": "Yoga Vinyasa",
         "date": "08/03",
         "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Stretching",
-        "date": "08/03",
-        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     }
