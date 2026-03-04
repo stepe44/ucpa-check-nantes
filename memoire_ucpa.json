@@ -49,6 +49,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF Express",
+        "date": "05/03",
+        "horaire": "12h15 - 12h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "05/03",
         "horaire": "12h15 - 13h00",
