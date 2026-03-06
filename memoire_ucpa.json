@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Hyrox",
+        "date": "06/03",
+        "horaire": "08h00 - 08h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Attack",
         "date": "06/03",
         "horaire": "12h15 - 13h00",
