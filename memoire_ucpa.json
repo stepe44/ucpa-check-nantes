@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Body Attack",
-        "date": "06/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "06/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "06/03",
         "horaire": "13h00 - 13h45",
@@ -31,6 +17,13 @@
         "nom": "Cross Training Intensity",
         "date": "06/03",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "07/03",
+        "horaire": "09h45 - 10h45",
         "places": 0,
         "statut": "COMPLET"
     },
