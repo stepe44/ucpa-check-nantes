@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "07/03",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "07/03",
         "horaire": "10h30 - 11h15",
@@ -29,13 +22,6 @@
     },
     {
         "nom": "RPM",
-        "date": "07/03",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
         "date": "07/03",
         "horaire": "11h30 - 12h15",
         "places": 0,
