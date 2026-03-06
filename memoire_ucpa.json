@@ -21,6 +21,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Yin",
+        "date": "07/03",
+        "horaire": "11h00 - 12h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "07/03",
         "horaire": "11h30 - 12h15",
