@@ -1,11 +1,4 @@
 {
-    "2026-02-27": [
-        "Cross Training Intensity|27/02|13h00 - 13h45",
-        "TRX|27/02|16h45 - 17h30",
-        "Body Jam|27/02|18h15 - 19h15",
-        "Yoga Vinyasa|28/02|09h45 - 10h45",
-        "Cross Training Intensity|28/02|09h45 - 10h30"
-    ],
     "2026-02-28": [
         "Cross Training Intensity|28/02|09h45 - 10h30",
         "RPM|28/02|11h30 - 12h15",
@@ -125,5 +118,8 @@
         "Yoga Yin|07/03|11h00 - 12h00",
         "Cross Training Intensity|07/03|09h45 - 10h30",
         "Body Sculpt|07/03|11h30 - 12h15"
+    ],
+    "2026-03-07": [
+        "RPM|07/03|11h30 - 12h15"
     ]
 }
