@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga",
-        "date": "07/03",
-        "horaire": "14h00 - 16h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "08/03",
         "horaire": "09h45 - 10h30",
@@ -17,13 +10,6 @@
         "nom": "Cross Training Intensity",
         "date": "08/03",
         "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Stretching",
-        "date": "08/03",
-        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
