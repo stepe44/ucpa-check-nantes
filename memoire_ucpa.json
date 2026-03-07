@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "07/03",
+        "horaire": "09h45 - 10h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "07/03",
         "horaire": "11h30 - 12h15",
