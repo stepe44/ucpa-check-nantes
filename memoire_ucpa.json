@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "10/03",
-        "horaire": "18h00 - 18h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Jam",
         "date": "10/03",
         "horaire": "18h30 - 19h30",
@@ -56,6 +49,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "11/03",
+        "horaire": "09h00 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "11/03",
         "horaire": "12h30 - 13h30",
@@ -73,13 +73,6 @@
         "nom": "Hiit",
         "date": "11/03",
         "horaire": "18h00 - 18h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "11/03",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -122,6 +115,13 @@
         "nom": "Yoga Vinyasa",
         "date": "12/03",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "12/03",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
