@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "10/03",
-        "horaire": "08h15 - 09h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "10/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "10/03",
         "horaire": "17h30 - 18h30",
@@ -42,9 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Hyrox",
         "date": "10/03",
-        "horaire": "18h45 - 19h30",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -59,13 +45,6 @@
         "nom": "Cross Training Intensity",
         "date": "11/03",
         "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "11/03",
-        "horaire": "09h00 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
