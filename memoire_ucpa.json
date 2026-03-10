@@ -1,13 +1,13 @@
 [
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "10/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Biking",
         "date": "10/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -64,6 +64,13 @@
     },
     {
         "nom": "Yoga Vinyasa",
+        "date": "11/03",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "11/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
