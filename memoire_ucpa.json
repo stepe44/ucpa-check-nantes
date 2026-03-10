@@ -1,13 +1,13 @@
 [
     {
-        "nom": "CAF",
+        "nom": "Biking",
         "date": "10/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "10/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -59,6 +59,13 @@
         "nom": "Body Sculpt",
         "date": "10/03",
         "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "10/03",
+        "horaire": "19h45 - 20h30",
         "places": 0,
         "statut": "COMPLET"
     },
