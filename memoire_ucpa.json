@@ -1,13 +1,13 @@
 [
     {
-        "nom": "CAF",
+        "nom": "Biking",
         "date": "10/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "10/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -31,6 +31,13 @@
         "nom": "Swiss Ball",
         "date": "10/03",
         "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "10/03",
+        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -87,13 +94,6 @@
         "nom": "Pilates",
         "date": "11/03",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Découverte plateau",
-        "date": "12/03",
-        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
