@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "10/03",
-        "horaire": "18h00 - 18h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Jam",
         "date": "10/03",
         "horaire": "18h30 - 19h30",
@@ -63,23 +56,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "11/03",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "11/03",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "11/03",
-        "horaire": "18h00 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -108,6 +87,13 @@
         "nom": "Pilates",
         "date": "11/03",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Découverte plateau",
+        "date": "12/03",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
