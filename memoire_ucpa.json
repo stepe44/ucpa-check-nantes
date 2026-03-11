@@ -1,22 +1,8 @@
 [
     {
-        "nom": "Hiit",
-        "date": "11/03",
-        "horaire": "18h00 - 18h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "11/03",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "12/03",
-        "horaire": "08h30 - 09h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -56,9 +42,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "Body Attack",
         "date": "12/03",
-        "horaire": "17h30 - 18h15",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
