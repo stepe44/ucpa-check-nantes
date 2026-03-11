@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "11/03",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "11/03",
         "horaire": "12h30 - 13h30",
@@ -14,14 +7,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Hiit",
+        "date": "11/03",
+        "horaire": "18h00 - 18h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "11/03",
         "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Swiss Ball",
         "date": "11/03",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -63,14 +63,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "Body Sculpt",
         "date": "12/03",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "Hyrox",
         "date": "12/03",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -143,6 +143,13 @@
         "nom": "Cross Training Intensity",
         "date": "13/03",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "13/03",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
