@@ -56,6 +56,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "12/03",
+        "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "13/03",
+        "horaire": "08h00 - 08h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "13/03",
         "horaire": "12h15 - 13h00",
@@ -108,6 +122,13 @@
         "nom": "Yoga Vinyasa",
         "date": "14/03",
         "horaire": "09h15 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "14/03",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
