@@ -42,13 +42,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "12/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Yin",
         "date": "12/03",
         "horaire": "19h00 - 20h00",
@@ -59,13 +52,6 @@
         "nom": "Body Pump",
         "date": "12/03",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "13/03",
-        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
