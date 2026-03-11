@@ -1,26 +1,4 @@
 {
-    "2026-03-03": [
-        "Hyrox|04/03|13h00 - 13h45",
-        "Yoga Vinyasa|07/03|09h45 - 10h45",
-        "Pilates|03/03|17h30 - 18h15",
-        "Swiss Ball|03/03|18h45 - 19h30",
-        "Body Pump|04/03|12h30 - 13h30",
-        "RPM|03/03|19h15 - 20h00",
-        "CAF|07/03|10h30 - 11h15",
-        "Cross Training Intensity|03/03|17h45 - 18h30",
-        "RPM|06/03|18h30 - 19h15",
-        "Pilates|04/03|09h00 - 10h00",
-        "Abdos-Fessiers|05/03|18h30 - 19h00",
-        "Body Sculpt|03/03|19h30 - 20h15",
-        "Body Sculpt|04/03|17h30 - 18h15",
-        "Body Pump|05/03|20h15 - 21h00",
-        "CAF|06/03|17h30 - 18h15",
-        "Biking|04/03|18h15 - 19h00",
-        "Cross Training Intensity|06/03|13h00 - 13h45",
-        "Cross Training Intensity|06/03|19h15 - 20h00",
-        "Cross Training Intensity|04/03|07h30 - 08h15",
-        "Body Sculpt|04/03|20h00 - 20h45"
-    ],
     "2026-03-04": [
         "Abdos-Fessiers|04/03|19h15 - 20h00",
         "Pilates|06/03|12h15 - 13h00",
@@ -140,6 +118,9 @@
         "RPM|14/03|11h30 - 12h15",
         "Cross Training Intensity|11/03|19h00 - 19h45",
         "Yoga Vinyasa|12/03|12h30 - 13h30",
+        "Body Sculpt|11/03|20h00 - 20h45"
+    ],
+    "2026-03-11": [
         "Body Sculpt|11/03|20h00 - 20h45"
     ]
 }
