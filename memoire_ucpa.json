@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "11/03",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "12/03",
         "horaire": "12h15 - 13h00",
@@ -21,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "12/03",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "STEP Débutant",
         "date": "12/03",
         "horaire": "17h30 - 18h15",
@@ -36,13 +22,6 @@
     },
     {
         "nom": "Body Sculpt",
-        "date": "12/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
         "date": "12/03",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -71,6 +50,13 @@
     },
     {
         "nom": "Pilates",
+        "date": "13/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
         "date": "13/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
