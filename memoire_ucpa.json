@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "11/03",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "11/03",
         "horaire": "12h30 - 13h30",
@@ -24,6 +31,13 @@
         "nom": "Swiss Ball",
         "date": "11/03",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "11/03",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -63,14 +77,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "Body Sculpt",
         "date": "12/03",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "Hyrox",
         "date": "12/03",
         "horaire": "17h30 - 18h15",
         "places": 0,
