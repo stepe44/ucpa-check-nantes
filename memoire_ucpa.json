@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Sculpt",
-        "date": "12/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "12/03",
         "horaire": "18h30 - 19h00",
@@ -22,13 +15,6 @@
     },
     {
         "nom": "Pilates",
-        "date": "13/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
         "date": "13/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
