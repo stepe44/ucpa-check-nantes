@@ -1,20 +1,13 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "12/03",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "12/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
+        "date": "13/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
         "date": "13/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -105,9 +98,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Stretching",
         "date": "15/03",
-        "horaire": "11h30 - 12h30",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     }
