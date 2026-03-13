@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "13/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "13/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "13/03",
         "horaire": "13h00 - 13h45",
@@ -31,13 +17,6 @@
         "nom": "Cross Training Intensity",
         "date": "13/03",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "13/03",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -70,7 +49,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Pump",
         "date": "14/03",
         "horaire": "11h30 - 12h15",
         "places": 0,
@@ -78,8 +57,8 @@
     },
     {
         "nom": "Body Pump",
-        "date": "14/03",
-        "horaire": "11h30 - 12h15",
+        "date": "15/03",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
