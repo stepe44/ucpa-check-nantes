@@ -1,12 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "13/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "14/03",
         "horaire": "09h15 - 10h15",
