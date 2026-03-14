@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "nom": "Stretching",
+        "date": "15/03",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    }
+]
