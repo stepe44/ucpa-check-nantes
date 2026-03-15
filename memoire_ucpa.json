@@ -161,13 +161,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "18/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "18/03",
         "horaire": "12h30 - 13h30",
@@ -283,13 +276,6 @@
         "nom": "CAF",
         "date": "21/03",
         "horaire": "10h30 - 11h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "22/03",
-        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     }
