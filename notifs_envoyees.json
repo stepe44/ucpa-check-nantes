@@ -1,12 +1,4 @@
 {
-    "2026-03-07": [
-        "RPM|07/03|11h30 - 12h15",
-        "Stretching|08/03|11h30 - 12h15",
-        "Body Sculpt|08/03|09h45 - 10h30",
-        "Yoga Yin|08/03|10h30 - 11h30",
-        "Cross Training Intensity|08/03|10h45 - 11h30",
-        "Yoga Vinyasa|08/03|11h30 - 12h30"
-    ],
     "2026-03-08": [
         "Yoga Vinyasa|08/03|11h30 - 12h30",
         "Cross Training Intensity|11/03|19h00 - 19h45"
@@ -129,5 +121,8 @@
         "Yoga Vinyasa|15/03|11h30 - 12h30",
         "Stretching|15/03|11h30 - 12h15",
         "Cross Training Intensity|15/03|10h45 - 11h30"
+    ],
+    "2026-03-15": [
+        "Stretching|15/03|11h30 - 12h15"
     ]
 }
