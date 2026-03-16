@@ -1,8 +1,4 @@
 {
-    "2026-03-08": [
-        "Yoga Vinyasa|08/03|11h30 - 12h30",
-        "Cross Training Intensity|11/03|19h00 - 19h45"
-    ],
     "2026-03-09": [
         "Abdos-Fessiers|12/03|18h30 - 19h00",
         "CAF|14/03|10h30 - 11h15",
@@ -126,5 +122,16 @@
         "Stretching|15/03|11h30 - 12h15",
         "Biking|18/03|12h15 - 13h00",
         "Yoga Vinyasa|22/03|11h30 - 12h30"
+    ],
+    "2026-03-16": [
+        "CAF Express|16/03|12h15 - 12h45",
+        "Body Attack|16/03|19h15 - 20h00",
+        "CAF|16/03|20h00 - 20h45",
+        "Body Jam|17/03|18h30 - 19h30",
+        "Yoga Vinyasa|18/03|12h30 - 13h30",
+        "Body Pump|18/03|12h30 - 13h30",
+        "Abdos-Fessiers|18/03|19h15 - 20h00",
+        "Cross Training Intensity|19/03|12h15 - 13h00",
+        "Yoga Yin|19/03|19h00 - 20h00"
     ]
 }

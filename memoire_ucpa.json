@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
-        "date": "16/03",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "16/03",
         "horaire": "12h30 - 13h30",
@@ -38,6 +31,13 @@
         "nom": "Body Pump",
         "date": "16/03",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hiit",
+        "date": "16/03",
+        "horaire": "17h30 - 18h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -70,20 +70,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
-        "date": "16/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "16/03",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "17/03",
         "horaire": "07h30 - 08h15",
@@ -99,6 +85,13 @@
     },
     {
         "nom": "Biking",
+        "date": "17/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "17/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -126,13 +119,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "17/03",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Swiss Ball",
         "date": "17/03",
         "horaire": "18h45 - 19h30",
@@ -143,6 +129,13 @@
         "nom": "Hyrox",
         "date": "17/03",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "17/03",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -161,16 +154,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Biking",
         "date": "18/03",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "18/03",
-        "horaire": "12h30 - 13h30",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -182,9 +168,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Cross Training Intensity",
         "date": "18/03",
-        "horaire": "19h15 - 20h00",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -203,16 +189,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Yoga Vinyasa",
         "date": "19/03",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Sculpt",
         "date": "19/03",
-        "horaire": "12h30 - 13h30",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -231,9 +217,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Yin",
-        "date": "19/03",
-        "horaire": "19h00 - 20h00",
+        "nom": "Hyrox",
+        "date": "20/03",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -248,6 +234,13 @@
         "nom": "Cross Training Intensity",
         "date": "20/03",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "20/03",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -276,6 +269,34 @@
         "nom": "CAF",
         "date": "21/03",
         "horaire": "10h30 - 11h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "21/03",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "21/03",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "22/03",
+        "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "22/03",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     }
