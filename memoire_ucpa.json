@@ -35,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "17/03",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Swiss Ball",
         "date": "17/03",
         "horaire": "18h45 - 19h30",
@@ -49,9 +42,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Hyrox",
         "date": "17/03",
-        "horaire": "19h15 - 20h00",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -150,13 +143,6 @@
         "nom": "Body Attack",
         "date": "19/03",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "19/03",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
