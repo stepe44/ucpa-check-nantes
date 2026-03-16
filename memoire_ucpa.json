@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hiit",
+        "date": "16/03",
+        "horaire": "17h30 - 18h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "16/03",
         "horaire": "18h15 - 19h15",
@@ -38,20 +45,6 @@
         "nom": "Body Attack",
         "date": "16/03",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "16/03",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "17/03",
-        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -98,6 +91,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Jam",
+        "date": "17/03",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Swiss Ball",
         "date": "17/03",
         "horaire": "18h45 - 19h30",
@@ -129,13 +129,6 @@
         "nom": "Cross Training Intensity",
         "date": "18/03",
         "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "18/03",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -224,16 +217,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Biking",
         "date": "19/03",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Yin",
-        "date": "19/03",
-        "horaire": "19h00 - 20h00",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
