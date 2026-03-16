@@ -1,12 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "16/03",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "16/03",
         "horaire": "17h30 - 18h15",
@@ -45,6 +38,13 @@
         "nom": "Body Attack",
         "date": "16/03",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "16/03",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -196,6 +196,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "19/03",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "19/03",
+        "horaire": "13h00 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "19/03",
         "horaire": "17h30 - 18h15",
@@ -232,6 +246,13 @@
     },
     {
         "nom": "Pilates",
+        "date": "20/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
         "date": "20/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
