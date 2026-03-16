@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "16/03",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "16/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Fit",
         "date": "16/03",
         "horaire": "20h00 - 21h00",
@@ -63,6 +49,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Swiss Ball",
+        "date": "17/03",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "17/03",
         "horaire": "19h00 - 19h45",
@@ -105,21 +98,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "18/03",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
-        "date": "18/03",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Swiss Ball",
         "date": "18/03",
         "horaire": "19h00 - 19h45",
         "places": 0,
