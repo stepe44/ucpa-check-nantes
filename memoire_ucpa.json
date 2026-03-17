@@ -70,13 +70,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "18/03",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "18/03",
         "horaire": "19h00 - 19h45",
@@ -154,6 +147,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "19/03",
+        "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "20/03",
         "horaire": "12h15 - 13h00",
@@ -227,6 +227,13 @@
         "nom": "Body Pump",
         "date": "22/03",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "22/03",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
