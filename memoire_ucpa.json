@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "17/03",
-        "horaire": "17h30 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "17/03",
         "horaire": "17h45 - 18h30",
@@ -129,13 +122,6 @@
         "nom": "Yoga Vinyasa",
         "date": "19/03",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "19/03",
-        "horaire": "13h00 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
