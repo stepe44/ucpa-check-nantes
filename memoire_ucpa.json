@@ -21,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Swiss Ball",
         "date": "17/03",
-        "horaire": "18h00 - 18h45",
+        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -63,13 +63,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "18/03",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hyrox",
         "date": "18/03",
         "horaire": "13h00 - 13h45",
@@ -98,13 +91,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "19/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "19/03",
         "horaire": "12h15 - 13h00",
@@ -115,6 +101,13 @@
         "nom": "Yoga Vinyasa",
         "date": "19/03",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "19/03",
+        "horaire": "13h00 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,6 +136,13 @@
         "nom": "Abdos-Fessiers",
         "date": "19/03",
         "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Yin",
+        "date": "19/03",
+        "horaire": "19h00 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
