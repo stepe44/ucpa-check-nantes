@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "STEP Débutant",
+        "date": "19/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "19/03",
         "horaire": "17h30 - 18h15",
@@ -122,13 +129,6 @@
         "nom": "Body Pump",
         "date": "21/03",
         "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "22/03",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
