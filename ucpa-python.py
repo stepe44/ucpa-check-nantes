@@ -107,56 +107,47 @@ def fetch_api_week(date_cible):
 def extract_courses_from_api(json_data):
     found_courses = []
     
-    # ⚠️ NOTE IMPORTANTE : La structure du JSON de l'UCPA peut varier.
-    # Ici on fait une supposition de la structure. 
-    # S'il y a une erreur d'extraction, jette un oeil au fichier debug_ucpa.json généré !
-    
     try:
-        # On suppose souvent que le JSON contient une liste d'activités ou des jours
-        # Si le JSON est directement une liste ou un dico avec une clé 'sessions', on itère :
-        items = json_data.get('sessions', json_data) if isinstance(json_data, dict) else json_data
-        
-        # S'il y a une imbrication par jour :
-        if isinstance(items, dict) and 'days' in items:
-            items = [session for day in items['days'] for session in day.get('sessions', [])]
+        # On navigue dans l'arborescence du JSON de l'UCPA
+        planner = json_data.get('planner', {})
+        columns = planner.get('columns', [])
 
-        for item in items:
-            # === À ADAPTER SELON LE VRAI JSON DE L'UCPA ===
-            # Remplace 'name', 'availablePlaces', etc., par les vraies clés si elles sont différentes.
-            nom = item.get('title', item.get('name', 'Cours Inconnu'))
-            places_restantes = int(item.get('availablePlaces', item.get('places', 0)))
+        # Chaque "column" représente un jour de la semaine
+        for column in columns:
+            items = column.get('items', [])
             
-            # Extraction de la date et de l'heure (supposée format ISO 'YYYY-MM-DDTHH:MM:SS' ou autre)
-            # On va essayer de récupérer une heure de début et fin
-            date_debut_str = item.get('start', item.get('startDate', ''))
-            
-            if not date_debut_str:
-                continue
+            # Chaque "item" est un cours de fitness
+            for item in items:
+                nom = item.get('type', 'Cours Inconnu')
+                
+                # Formatage de l'heure : "17h15 - 18h00"
+                heure_debut = item.get('startTime', '??h??')
+                heure_fin = item.get('endTime', '??h??')
+                horaire = f"{heure_debut} - {heure_fin}"
+                
+                # Formatage de la date : "18/03/2026" devient "18/03"
+                start_date_raw = item.get('startDate', '')
+                if start_date_raw and '/' in start_date_raw:
+                    parts = start_date_raw.split('/')
+                    date_fr = f"{parts[0]}/{parts[1]}"
+                else:
+                    date_fr = "??/??"
 
-            # Conversion de la date (si c'est du ISO 8601 : 2026-03-23T18:00:00)
-            try:
-                dt_obj = datetime.fromisoformat(date_debut_str.replace('Z', '+00:00'))
-                date_fr = dt_obj.strftime("%d/%m")
-                horaire = dt_obj.strftime("%Hh%M")
-            except:
-                date_fr = "??/??"
-                horaire = "??h??"
-
-            statut = "LIBRE" if places_restantes > 0 else "COMPLET"
-            
-            found_courses.append({
-                "nom": nom,
-                "date": date_fr,
-                "horaire": horaire,
-                "places": places_restantes,
-                "statut": statut
-            })
+                places_restantes = int(item.get('stock', 0))
+                statut = "LIBRE" if places_restantes > 0 else "COMPLET"
+                
+                found_courses.append({
+                    "nom": nom,
+                    "date": date_fr,
+                    "horaire": horaire,
+                    "places": places_restantes,
+                    "statut": statut
+                })
 
     except Exception as e:
-        logging.error(f"⚠️ Erreur de parsing JSON : {e}. Regarde le fichier debug_ucpa.json")
+        logging.error(f"⚠️ Erreur d'extraction depuis le JSON : {e}")
         
     return found_courses
-
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
