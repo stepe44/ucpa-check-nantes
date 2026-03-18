@@ -1,12 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "19/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "19/03",
         "horaire": "12h15 - 13h00",
@@ -24,13 +17,6 @@
         "nom": "Body Sculpt",
         "date": "19/03",
         "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "19/03",
-        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -259,14 +245,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Pump",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Yoga Vinyasa",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
