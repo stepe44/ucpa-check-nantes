@@ -21,6 +21,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "20/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "20/03",
         "horaire": "18h30 - 19h15",
@@ -154,13 +161,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "24/03",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "24/03",
         "horaire": "08h15 - 09h00",
@@ -168,9 +168,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "24/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "24/03",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "24/03",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
