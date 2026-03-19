@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Body Attack",
-        "date": "19/03",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "19/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "19/03",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "20/03",
         "horaire": "12h15 - 13h00",
@@ -217,14 +196,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Pump",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Yoga Vinyasa",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
@@ -248,6 +227,13 @@
         "nom": "Cross Training Intensity",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "26/03",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
