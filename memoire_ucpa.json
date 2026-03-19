@@ -91,6 +91,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "21/03",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "21/03",
         "horaire": "11h30 - 12h15",
@@ -224,14 +231,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Yoga Vinyasa",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Pump",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
