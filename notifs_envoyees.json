@@ -1,21 +1,4 @@
 {
-    "2026-03-12": [
-        "RPM|12/03|12h15 - 13h00",
-        "Abdos-Fessiers|12/03|18h30 - 19h00",
-        "Body Pump|12/03|20h15 - 21h00",
-        "Cross Training Intensity|12/03|12h15 - 13h00",
-        "Body Attack|12/03|18h15 - 19h00",
-        "RPM|13/03|18h30 - 19h15",
-        "STEP Débutant|12/03|17h30 - 18h15",
-        "Yoga Yin|12/03|19h00 - 20h00",
-        "Body Sculpt|12/03|17h30 - 18h15",
-        "Body Pump|15/03|09h45 - 10h30",
-        "Stretching|15/03|11h30 - 12h15",
-        "Body Attack|13/03|12h15 - 13h00",
-        "Yoga Vinyasa|15/03|11h30 - 12h30",
-        "Cross Training Intensity|13/03|19h15 - 20h00",
-        "Cross Training Intensity|13/03|13h00 - 13h45"
-    ],
     "2026-03-13": [
         "Cross Training Intensity|13/03|17h30 - 18h15",
         "RPM|13/03|18h30 - 19h15",
@@ -141,5 +124,9 @@
         "Cross Training Intensity|24/03|07h30 - 08h15",
         "Body Attack|20/03|12h15 - 13h00",
         "RPM|26/03|12h15 - 13h00"
+    ],
+    "2026-03-20": [
+        "Body Attack|20/03|12h15 - 13h00",
+        "Body Attack|23/03|19h15 - 20h00"
     ]
 }
