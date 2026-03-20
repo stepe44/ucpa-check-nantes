@@ -1,12 +1,5 @@
 [
     {
-        "nom": "CAF",
-        "date": "20/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "21/03",
         "horaire": "09h15 - 10h15",
