@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Attack",
-        "date": "20/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "20/03",
         "horaire": "13h00 - 13h45",
@@ -17,6 +10,13 @@
         "nom": "CAF",
         "date": "20/03",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "20/03",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -266,14 +266,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Cross Training Intensity",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
