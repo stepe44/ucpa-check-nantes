@@ -56,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "23/03",
+        "horaire": "17h00 - 17h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "23/03",
         "horaire": "17h30 - 18h15",
@@ -133,6 +140,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "24/03",
+        "horaire": "17h30 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "24/03",
         "horaire": "17h30 - 18h15",
@@ -196,14 +210,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Yoga Vinyasa",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Pump",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
         "places": 0,
