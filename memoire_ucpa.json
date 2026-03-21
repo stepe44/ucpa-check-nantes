@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos Express",
+        "date": "23/03",
+        "horaire": "13h00 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "23/03",
         "horaire": "13h00 - 13h45",
@@ -99,6 +106,13 @@
     },
     {
         "nom": "Biking",
+        "date": "24/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "24/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -248,6 +262,13 @@
         "nom": "Pilates",
         "date": "27/03",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "28/03",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
