@@ -98,6 +98,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "23/03",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "23/03",
         "horaire": "20h00 - 20h45",
@@ -120,6 +127,13 @@
     },
     {
         "nom": "Biking",
+        "date": "24/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "24/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -171,6 +185,13 @@
         "nom": "RPM",
         "date": "24/03",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "24/03",
+        "horaire": "19h45 - 20h30",
         "places": 0,
         "statut": "COMPLET"
     },
