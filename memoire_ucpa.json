@@ -126,6 +126,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "24/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "24/03",
         "horaire": "17h45 - 18h30",
