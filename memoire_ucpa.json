@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Combat",
-        "date": "24/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "24/03",
         "horaire": "12h15 - 13h00",
@@ -224,13 +217,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
-        "date": "26/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "26/03",
         "horaire": "20h15 - 21h00",
@@ -259,23 +245,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "27/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "28/03",
         "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "28/03",
-        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -385,14 +357,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
