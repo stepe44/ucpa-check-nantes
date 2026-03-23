@@ -28,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "23/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "23/03",
         "horaire": "18h30 - 19h15",
@@ -45,6 +38,20 @@
         "nom": "Abdos-Fessiers",
         "date": "23/03",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "23/03",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "23/03",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -210,14 +217,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Cross Training Intensity",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -227,6 +234,13 @@
         "nom": "Body Sculpt",
         "date": "26/03",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "26/03",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
