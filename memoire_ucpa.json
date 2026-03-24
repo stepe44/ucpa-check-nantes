@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Hyrox",
-        "date": "24/03",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "24/03",
         "horaire": "19h45 - 20h30",
@@ -28,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "25/03",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "25/03",
         "horaire": "12h30 - 13h30",
@@ -42,9 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "Body Pump",
         "date": "25/03",
-        "horaire": "13h00 - 13h45",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -80,13 +66,6 @@
         "nom": "RPM",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "26/03",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -168,9 +147,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "27/03",
-        "horaire": "18h30 - 19h15",
+        "nom": "Yoga Vinyasa",
+        "date": "28/03",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -294,14 +273,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -339,13 +318,6 @@
         "nom": "Pilates",
         "date": "01/04",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "02/04",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
