@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
-        "date": "25/03",
-        "horaire": "18h00 - 18h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "STEP Intermédiaire",
         "date": "25/03",
         "horaire": "18h15 - 19h00",
@@ -45,20 +38,6 @@
         "nom": "Abdos-Fessiers",
         "date": "25/03",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "25/03",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "25/03",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -182,13 +161,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "28/03",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "28/03",
         "horaire": "11h30 - 12h15",
@@ -308,13 +280,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "31/03",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "01/04",
         "horaire": "07h30 - 08h15",
@@ -346,6 +311,13 @@
         "nom": "Pilates",
         "date": "01/04",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "02/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
