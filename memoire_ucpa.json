@@ -1,33 +1,5 @@
 [
     {
-        "nom": "CAF",
-        "date": "24/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "24/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "24/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "24/03",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "24/03",
         "horaire": "17h45 - 18h30",
@@ -49,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "CAF",
         "date": "24/03",
-        "horaire": "19h15 - 20h00",
+        "horaire": "19h45 - 20h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -119,21 +91,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
+        "nom": "Body Sculpt",
         "date": "25/03",
-        "horaire": "20h15 - 21h00",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Cross Training Intensity",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -206,6 +178,13 @@
         "nom": "Cross Training Intensity",
         "date": "27/03",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "27/03",
+        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -329,14 +308,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
