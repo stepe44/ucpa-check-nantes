@@ -69,9 +69,9 @@ def send_final_notification(liste_alertes):
     corps = ""
     for a in liste_alertes:
         date_rel = formater_date_relative(a['date'])
-        corps += (f"🏋️ *{a['nom']}*\n📅 {date_rel}\n⏰ {a['horaire']}\n🔥 {a['places']} place(s)!\n-------------------\n")
+        corps += (f"🏋️ *{a['nom']}* 📅 {date_rel} ⏰ {a['horaire']} (🔥 {a['places']} place(s))\n")
     
-    msg_whatsapp = f"{titre}\n\n{corps}🔗 {URL_UCPA}"
+    msg_whatsapp = f"{titre}\n{corps}🔗 {URL_UCPA}"
     
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
         try:
