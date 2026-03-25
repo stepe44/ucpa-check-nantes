@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Découverte plateau",
-        "date": "25/03",
-        "horaire": "15h15 - 16h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hiit",
         "date": "25/03",
         "horaire": "18h00 - 18h45",
@@ -31,13 +24,6 @@
         "nom": "STEP Intermédiaire",
         "date": "25/03",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "25/03",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -91,13 +77,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "26/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Yin",
         "date": "26/03",
         "horaire": "19h00 - 20h00",
@@ -143,13 +122,6 @@
         "nom": "Body Jam",
         "date": "27/03",
         "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "27/03",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -294,13 +266,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "31/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "31/03",
         "horaire": "17h45 - 18h30",
@@ -388,6 +353,13 @@
         "nom": "Pilates",
         "date": "03/04",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "04/04",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
