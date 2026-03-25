@@ -1,22 +1,15 @@
 [
     {
-        "nom": "Hiit",
-        "date": "25/03",
-        "horaire": "18h00 - 18h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Intermédiaire",
-        "date": "25/03",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "25/03",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "25/03",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -49,23 +42,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
-        "date": "26/03",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "26/03",
         "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Yin",
-        "date": "26/03",
-        "horaire": "19h00 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -136,13 +115,6 @@
         "nom": "Cross Training Intensity",
         "date": "28/03",
         "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "28/03",
-        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -234,13 +206,6 @@
         "nom": "Body Pump",
         "date": "30/03",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "30/03",
-        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
