@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "26/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "26/03",
         "horaire": "17h30 - 18h15",
@@ -28,9 +21,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "26/03",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "26/03",
         "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Yin",
+        "date": "26/03",
+        "horaire": "19h00 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -45,13 +52,6 @@
         "nom": "Body Pump",
         "date": "26/03",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "27/03",
-        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
