@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "25/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "25/03",
         "horaire": "20h15 - 21h00",
@@ -28,16 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "Cross Training Intensity",
         "date": "26/03",
-        "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "26/03",
-        "horaire": "17h30 - 18h15",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -115,6 +101,13 @@
         "nom": "Cross Training Intensity",
         "date": "28/03",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "28/03",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
