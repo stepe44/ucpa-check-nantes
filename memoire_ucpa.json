@@ -1,5 +1,12 @@
 [
     {
+        "nom": "RPM",
+        "date": "26/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "26/03",
         "horaire": "12h15 - 13h00",
@@ -7,9 +14,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Sculpt",
         "date": "26/03",
-        "horaire": "12h15 - 13h00",
+        "horaire": "13h00 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -304,6 +311,13 @@
         "nom": "Cross Training Intensity",
         "date": "01/04",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "01/04",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
