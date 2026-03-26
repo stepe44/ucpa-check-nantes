@@ -17,7 +17,7 @@ API_BASE_URL = 'https://www.ucpa.com/sport-station/api/areas-offers/weekly/alpha
 MEMO_FILE = 'memoire_ucpa.json'
 NOTIFS_HISTORY_FILE = 'notifs_envoyees.json'
 
-# Secrets
+# Secrets (Variables d'environnement)
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_CHAT_ID = os.getenv('WHATSAPP_CHAT_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
@@ -48,7 +48,7 @@ def get_course_emoji(nom_cours):
     for keyword, emoji in EMOJI_MAP.items():
         if keyword in nom_lower:
             return emoji
-    return "🏋️" # Emoji par défaut
+    return "🏋️"
 
 # --- OUTILS DE GESTION DE LA MÉMOIRE ---
 
@@ -91,70 +91,70 @@ def formater_date_relative(date_str):
         return date_str
 
 def est_semaine_prochaine(date_str):
-    """Vérifie si la date appartient à la semaine prochaine (Lundi suivant)."""
+    """Vérifie si la date appartient à la semaine prochaine."""
     maintenant = datetime.now()
     try:
         jour, mois = map(int, date_str.split('/'))
         annee = maintenant.year
         if mois == 1 and maintenant.month == 12: annee += 1
         date_objet = datetime(annee, mois, jour)
-        
-        # On calcule le début de la semaine prochaine (Lundi)
         debut_semaine_prochaine = maintenant + timedelta(days=(7 - maintenant.weekday()))
         return date_objet.date() >= debut_semaine_prochaine.date()
     except:
         return False
 
+# --- NOTIFICATIONS ---
+
 def send_final_notification(liste_alertes):
-    if not liste_alertes: return
+    if not liste_alertes:
+        return
     
     nb = len(liste_alertes)
     titre = "🚨 COURS LIBRE !" if nb == 1 else f"🚨 {nb} COURS LIBÉRÉS !"
     separateur = "─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─"
     
-    # Séparation par semaine
     cette_semaine = [a for a in liste_alertes if not est_semaine_prochaine(a['date'])]
     semaine_prochaine = [a for a in liste_alertes if est_semaine_prochaine(a['date'])]
     
     corps = f"{titre}\n\n"
     
-def formater_bloc(liste, label):
+    def formater_bloc(liste, label):
         nonlocal corps
-        if not liste: return
+        if not liste:
+            return
         corps += f"📅 *{label}*\n{separateur}\n"
         for a in liste:
             date_fmt = formater_date_relative(a['date'])
             emoji = get_course_emoji(a['nom'])
-            
-            # 1. Nom du cours en gras avec emoji (Première ligne)
             corps += f"{emoji} *{a['nom'].upper()}*\n"
-            
-            # 2. Détails techniques avec décalage/indentation (Deuxième ligne)
-            # On utilise un espace insécable ou des espaces simples pour le décalage
             corps += f"      └─ `{date_fmt} à {a['horaire']} ({a['places']} pl.)` \n\n"
-        
         corps += f"{separateur}\n\n"
 
     formater_bloc(cette_semaine, "Cette semaine")
     formater_bloc(semaine_prochaine, "Semaine prochaine")
     
-    msg_whatsapp = f"{corps}🔗 {URL_UCPA}"
+    msg_final = f"{corps}🔗 {URL_UCPA}"
     
-    # Envoi WhatsApp
+    # Envoi WhatsApp via Green API
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
         try:
-            requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg_whatsapp}, timeout=10)
+            requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg_final}, timeout=10)
             logging.info("✅ Notification WhatsApp envoyée")
         except Exception as e: 
             logging.error(f"❌ Erreur GreenAPI: {e}")
 
-    # Envoi Email
+    # Envoi Email via Gmail SMTP
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
             m = MIMEMultipart()
             m['Subject'] = titre
-            # On retire les backticks pour l'email pour une meilleure lisibilité
-            m.attach(MIMEText(msg_whatsapp.replace('`', '').replace('*', ''), 'plain'))
+            m['From'] = EMAIL_SENDER
+            m['To'] = ", ".join(EMAIL_RECEIVERS)
+            
+            # Nettoyage simple des tags Markdown pour l'email
+            texte_email = msg_final.replace('`', '').replace('*', '')
+            m.attach(MIMEText(texte_email, 'plain'))
+            
             with smtplib.SMTP("smtp.gmail.com", 587) as s:
                 s.starttls()
                 s.login(EMAIL_SENDER, EMAIL_PASSWORD)
@@ -163,7 +163,7 @@ def formater_bloc(liste, label):
         except Exception as e: 
             logging.error(f"❌ Erreur Email: {e}")
 
-# --- MOTEUR D'EXTRACTION VIA API (inchangé) ---
+# --- MOTEUR D'EXTRACTION ---
 
 def fetch_api_week(date_cible):
     params = {
@@ -231,14 +231,20 @@ def run():
     today_str = datetime.now().strftime("%Y-%m-%d")
     notifs_deja_faites_aujourdhui = history.get(today_str, [])
 
-    cours_suivis_actuels = [c for c in tous_les_cours if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)]
+    # Filtrage selon les noms de cours configurés
+    cours_suivis_actuels = [
+        c for c in tous_les_cours 
+        if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)
+    ]
 
+    # Chargement de la mémoire des états précédents (pour détecter le passage de complet -> libre)
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
             with open(MEMO_FILE, 'r', encoding='utf-8') as f:
                 anciens_complets = json.load(f)
-        except: pass
+        except: 
+            pass
 
     nouvelles_places_a_notifier = []
     for c in cours_suivis_actuels:
@@ -246,6 +252,7 @@ def run():
         if c['statut'] == "LIBRE":
             etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_unique for a in anciens_complets)
             pas_encore_notifie = id_unique not in notifs_deja_faites_aujourdhui
+            
             if etait_complet and pas_encore_notifie:
                 nouvelles_places_a_notifier.append(c)
                 notifs_deja_faites_aujourdhui.append(id_unique)
@@ -258,9 +265,13 @@ def run():
     else:
         logging.info("ℹ️ Pas de nouvelles places à notifier.")
 
+    # Sauvegarde des cours actuellement complets pour le prochain scan
     nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
-    with open(MEMO_FILE, 'w', encoding='utf-8') as f:
-        json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+    try:
+        with open(MEMO_FILE, 'w', encoding='utf-8') as f:
+            json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
+    except Exception as e:
+        logging.error(f"❌ Erreur lors de l'écriture du mémo : {e}")
 
 if __name__ == "__main__":
     run()
