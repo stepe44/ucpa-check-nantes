@@ -9,6 +9,13 @@
     {
         "nom": "Cross Training Intensity",
         "date": "27/03",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "27/03",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
@@ -262,6 +269,13 @@
         "nom": "Abdos-Fessiers",
         "date": "01/04",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "01/04",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
