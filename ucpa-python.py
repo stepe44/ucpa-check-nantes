@@ -118,17 +118,21 @@ def send_final_notification(liste_alertes):
     
     corps = f"{titre}\n\n"
     
-    def formater_bloc(liste, label):
+def formater_bloc(liste, label):
         nonlocal corps
         if not liste: return
-        corps += f"📅 **{label}**\n{separateur}\n"
+        corps += f"📅 *{label}*\n{separateur}\n"
         for a in liste:
             date_fmt = formater_date_relative(a['date'])
             emoji = get_course_emoji(a['nom'])
-            # Ligne technique en police fixe (backticks)
-            corps += f"`{date_fmt} | {a['horaire']} | {a['places']}pl` \n"
-            # Nom du cours en gras avec emoji au début
-            corps += f"{emoji} **{a['nom'].upper()}**\n\n"
+            
+            # 1. Nom du cours en gras avec emoji (Première ligne)
+            corps += f"{emoji} *{a['nom'].upper()}*\n"
+            
+            # 2. Détails techniques avec décalage/indentation (Deuxième ligne)
+            # On utilise un espace insécable ou des espaces simples pour le décalage
+            corps += f"      └─ `{date_fmt} à {a['horaire']} ({a['places']} pl.)` \n\n"
+        
         corps += f"{separateur}\n\n"
 
     formater_bloc(cette_semaine, "Cette semaine")
