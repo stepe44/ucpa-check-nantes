@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "26/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "26/03",
         "horaire": "17h30 - 18h15",
@@ -24,13 +17,6 @@
         "nom": "Yoga Yin",
         "date": "26/03",
         "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "26/03",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
