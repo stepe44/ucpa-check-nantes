@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Pilates",
+        "nom": "Body Attack",
         "date": "27/03",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "27/03",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -80,13 +73,6 @@
         "nom": "STEP",
         "date": "28/03",
         "horaire": "16h00 - 17h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "29/03",
-        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
