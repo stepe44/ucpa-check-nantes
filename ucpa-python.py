@@ -3,6 +3,7 @@ import json
 import requests
 import logging
 import smtplib
+from collections import defaultdict
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
@@ -26,6 +27,29 @@ EMAIL_RECEIVERS = [r.strip() for r in os.getenv('EMAIL_RECEIVER', '').split(',')
 raw_filter = os.getenv('COURS_SURVEILLES', '')
 COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
 
+# --- DICTIONNAIRE D'EMOJIS ---
+EMOJI_MAP = {
+    "biking": "🚴",
+    "yoga": "🧘",
+    "pilates": "🤸",
+    "zumba": "💃",
+    "danse": "💃",
+    "boxe": "🥊",
+    "caf": "💪",
+    "cuisses": "💪",
+    "cross": "🏋️",
+    "hiit": "🔥",
+    "body": "⚡",
+}
+
+def get_course_emoji(nom_cours):
+    """Retourne l'emoji correspondant au nom du cours."""
+    nom_lower = nom_cours.lower()
+    for keyword, emoji in EMOJI_MAP.items():
+        if keyword in nom_lower:
+            return emoji
+    return "🏋️" # Emoji par défaut
+
 # --- OUTILS DE GESTION DE LA MÉMOIRE ---
 
 def load_and_clean_history():
@@ -46,10 +70,9 @@ def save_history(history):
     except Exception as e:
         logging.error(f"❌ Erreur sauvegarde de l'historique : {e}")
 
-# --- FORMATAGE LISIBILITÉ ---
-
 def formater_date_relative(date_str):
-    jours_courts = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
+    """Transforme 'DD/MM' en 'Auj. (Jeu)' ou 'Jeu 27/03'."""
+    jours_semaine_court = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
     maintenant = datetime.now()
     try:
         jour, mois = map(int, date_str.split('/'))
@@ -57,85 +80,93 @@ def formater_date_relative(date_str):
         if mois == 1 and maintenant.month == 12: annee += 1
         date_objet = datetime(annee, mois, jour)
         diff = (date_objet.date() - maintenant.date()).days
-        nom_jour = jours_courts[date_objet.weekday()]
         
-        if diff == 0: return f"Auj. ({nom_jour})"
-        elif diff == 1: return f"Dem. ({nom_jour})"
-        else: return f"{nom_jour} {date_str}"
-    except: return date_str
+        nom_jour = jours_semaine_court[date_objet.weekday()]
+        
+        if diff == 0:
+            return f"Auj. ({nom_jour})"
+        else:
+            return f"{nom_jour} {date_str}"
+    except:
+        return date_str
+
+def est_semaine_prochaine(date_str):
+    """Vérifie si la date appartient à la semaine prochaine (Lundi suivant)."""
+    maintenant = datetime.now()
+    try:
+        jour, mois = map(int, date_str.split('/'))
+        annee = maintenant.year
+        if mois == 1 and maintenant.month == 12: annee += 1
+        date_objet = datetime(annee, mois, jour)
+        
+        # On calcule le début de la semaine prochaine (Lundi)
+        debut_semaine_prochaine = maintenant + timedelta(days=(7 - maintenant.weekday()))
+        return date_objet.date() >= debut_semaine_prochaine.date()
+    except:
+        return False
 
 def send_final_notification(liste_alertes):
     if not liste_alertes: return
     
-    # Tri et séparation par semaine
-    maintenant = datetime.now()
-    # Fin de semaine = Dimanche soir
-    fin_semaine = maintenant + timedelta(days=(6 - maintenant.weekday()))
-    
-    semaine_actuelle = []
-    semaine_prochaine = []
-    
-    for a in liste_alertes:
-        try:
-            j, m = map(int, a['date'].split('/'))
-            d_obj = datetime(maintenant.year, m, j)
-            if d_obj.date() <= fin_semaine.date():
-                semaine_actuelle.append(a)
-            else:
-                semaine_prochaine.append(a)
-        except:
-            semaine_actuelle.append(a)
-
     nb = len(liste_alertes)
-    titre = "🚨 *PLACE LIBRE !*" if nb == 1 else f"🚨 *{nb} PLACES LIBÉRÉES !*"
+    titre = "🚨 COURS LIBRE !" if nb == 1 else f"🚨 {nb} COURS LIBÉRÉS !"
+    separateur = "─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─"
     
-    def construire_bloc(liste, titre_semaine):
-        if not liste: return ""
-        separateur = "─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─\n"
-        bloc = f"\n📅 *{titre_semaine}*\n{separateur}"
+    # Séparation par semaine
+    cette_semaine = [a for a in liste_alertes if not est_semaine_prochaine(a['date'])]
+    semaine_prochaine = [a for a in liste_alertes if est_semaine_prochaine(a['date'])]
+    
+    corps = f"{titre}\n\n"
+    
+    def formater_bloc(liste, label):
+        nonlocal corps
+        if not liste: return
+        corps += f"📅 **{label}**\n{separateur}\n"
         for a in liste:
-            date_rel = formater_date_relative(a['date'])
-            nom_sport = a['nom'].upper()
-            # Alignement strict (Date 12 car | Horaire 13 car)
-            details = f"{date_rel:<12} | {a['horaire']:<13} | {a['places']}pl"
-            bloc += f"🏋️ *{nom_sport}*\n```{details}```\n{separateur}"
-        return bloc
+            date_fmt = formater_date_relative(a['date'])
+            emoji = get_course_emoji(a['nom'])
+            # Ligne technique en police fixe (backticks)
+            corps += f"`{date_fmt} | {a['horaire']} | {a['places']}pl` \n"
+            # Nom du cours en gras avec emoji au début
+            corps += f"{emoji} **{a['nom'].upper()}**\n\n"
+        corps += f"{separateur}\n\n"
 
-    corps_whatsapp = construire_bloc(semaine_actuelle, "Cette semaine")
-    corps_whatsapp += construire_bloc(semaine_prochaine, "Semaine prochaine")
+    formater_bloc(cette_semaine, "Cette semaine")
+    formater_bloc(semaine_prochaine, "Semaine prochaine")
     
-    msg_whatsapp = f"{titre}\n{corps_whatsapp}\n🔗 {URL_UCPA}"
+    msg_whatsapp = f"{corps}🔗 {URL_UCPA}"
     
-    # Envoi GreenAPI (WhatsApp)
+    # Envoi WhatsApp
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg_whatsapp}, timeout=10)
+            logging.info("✅ Notification WhatsApp envoyée")
         except Exception as e: 
             logging.error(f"❌ Erreur GreenAPI: {e}")
 
     # Envoi Email
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
-            # Nettoyage Markdown pour l'email
-            msg_email = msg_whatsapp.replace('*', '').replace('```', '').replace('─', '-')
             m = MIMEMultipart()
-            m['Subject'] = titre.replace('*', '')
-            m.attach(MIMEText(msg_email, 'plain'))
+            m['Subject'] = titre
+            # On retire les backticks pour l'email pour une meilleure lisibilité
+            m.attach(MIMEText(msg_whatsapp.replace('`', '').replace('*', ''), 'plain'))
             with smtplib.SMTP("smtp.gmail.com", 587) as s:
                 s.starttls()
                 s.login(EMAIL_SENDER, EMAIL_PASSWORD)
                 s.sendmail(EMAIL_SENDER, EMAIL_RECEIVERS, m.as_string())
+            logging.info("✅ Notification Email envoyée")
         except Exception as e: 
             logging.error(f"❌ Erreur Email: {e}")
 
-# --- MOTEUR D'EXTRACTION API ---
+# --- MOTEUR D'EXTRACTION VIA API (inchangé) ---
 
 def fetch_api_week(date_cible):
     params = {
         'reservationPeriod': '1',
         'espace': 'area_1680850484_13e5a1d0-d511-11ed-93bb-77fd2e78b8a9',
         'time': date_cible,
-        '__amp_source_origin': '[https://www.ucpa.com](https://www.ucpa.com)'
+        '__amp_source_origin': 'https://www.ucpa.com'
     }
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(API_BASE_URL, params=params, headers=headers, timeout=15)
@@ -151,43 +182,53 @@ def extract_courses_from_api(json_data):
             items = column.get('items', [])
             for item in items:
                 nom = item.get('type', 'Cours Inconnu')
-                horaire = f"{item.get('startTime', '??h??')} - {item.get('endTime', '??h??')}"
+                heure_debut = item.get('startTime', '??h??')
+                heure_fin = item.get('endTime', '??h??')
+                horaire = f"{heure_debut} - {heure_fin}"
                 start_date_raw = item.get('startDate', '')
-                date_fr = f"{start_date_raw.split('/')[0]}/{start_date_raw.split('/')[1]}" if '/' in start_date_raw else "??/??"
-                places = int(item.get('stock', 0))
-                
+                if start_date_raw and '/' in start_date_raw:
+                    parts = start_date_raw.split('/')
+                    date_fr = f"{parts[0]}/{parts[1]}"
+                else:
+                    date_fr = "??/??"
+                places_restantes = int(item.get('stock', 0))
+                statut = "LIBRE" if places_restantes > 0 else "COMPLET"
                 found_courses.append({
                     "nom": nom, "date": date_fr, "horaire": horaire,
-                    "places": places, "statut": "LIBRE" if places > 0 else "COMPLET"
+                    "places": places_restantes, "statut": statut
                 })
     except Exception as e:
-        logging.error(f"⚠️ Erreur extraction JSON : {e}")
+        logging.error(f"⚠️ Erreur d'extraction depuis le JSON : {e}")
     return found_courses
 
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
-    logging.info("🌐 Scan UCPA (Semaine en cours + suivante)...")
+    logging.info("🌐 Scan de l'API UCPA...")
     maintenant = datetime.now()
-    
+    date_s1 = maintenant.strftime("%d-%m-%Y")
+    date_s2 = (maintenant + timedelta(days=7)).strftime("%d-%m-%Y")
+
     tous_les_cours = []
     try:
-        json_s1 = fetch_api_week(maintenant.strftime("%d-%m-%Y"))
-        json_s2 = fetch_api_week((maintenant + timedelta(days=7)).strftime("%d-%m-%Y"))
+        json_s1 = fetch_api_week(date_s1)
+        json_s2 = fetch_api_week(date_s2)
         tous_les_cours.extend(extract_courses_from_api(json_s1))
         tous_les_cours.extend(extract_courses_from_api(json_s2))
     except Exception as e:
-        logging.error(f"❌ Erreur API : {e}")
+        logging.error(f"❌ Erreur réseau ou API : {e}")
+        return
+
+    if not tous_les_cours:
+        logging.warning("⚠️ Aucun cours extrait.")
         return
 
     history = load_and_clean_history()
-    today_str = maintenant.strftime("%Y-%m-%d")
-    notifs_faites = history.get(today_str, [])
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    notifs_deja_faites_aujourdhui = history.get(today_str, [])
 
-    # Filtrage selon COURS_SURVEILLES
-    cours_suivis = [c for c in tous_les_cours if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)]
+    cours_suivis_actuels = [c for c in tous_les_cours if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)]
 
-    # Mémoire des états précédents
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
@@ -195,22 +236,25 @@ def run():
                 anciens_complets = json.load(f)
         except: pass
 
-    alertes = []
-    for c in cours_suivis:
-        uid = f"{c['nom']}|{c['date']}|{c['horaire']}"
+    nouvelles_places_a_notifier = []
+    for c in cours_suivis_actuels:
+        id_unique = f"{c['nom']}|{c['date']}|{c['horaire']}"
         if c['statut'] == "LIBRE":
-            etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == uid for a in anciens_complets)
-            if etait_complet and uid not in notifs_faites:
-                alertes.append(c)
-                notifs_faites.append(uid)
+            etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_unique for a in anciens_complets)
+            pas_encore_notifie = id_unique not in notifs_deja_faites_aujourdhui
+            if etait_complet and pas_encore_notifie:
+                nouvelles_places_a_notifier.append(c)
+                notifs_deja_faites_aujourdhui.append(id_unique)
 
-    if alertes:
-        send_final_notification(alertes)
-        history[today_str] = notifs_faites
+    if nouvelles_places_a_notifier:
+        logging.info(f"🚀 {len(nouvelles_places_a_notifier)} alertes à envoyer.")
+        send_final_notification(nouvelles_places_a_notifier)
+        history[today_str] = notifs_deja_faites_aujourdhui
         save_history(history)
-    
-    # Mise à jour mémoire complets
-    nouveaux_complets = [c for c in cours_suivis if c['statut'] == "COMPLET"]
+    else:
+        logging.info("ℹ️ Pas de nouvelles places à notifier.")
+
+    nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
 
