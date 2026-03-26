@@ -3,7 +3,6 @@ import json
 import requests
 import logging
 import smtplib
-from collections import defaultdict
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
@@ -27,7 +26,7 @@ EMAIL_RECEIVERS = [r.strip() for r in os.getenv('EMAIL_RECEIVER', '').split(',')
 raw_filter = os.getenv('COURS_SURVEILLES', '')
 COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip()] if raw_filter else []
 
-# --- OUTILS DE GESTION DE LA MÉMOIRE (inchangés) ---
+# --- OUTILS DE GESTION DE LA MÉMOIRE ---
 
 def load_and_clean_history():
     if not os.path.exists(NOTIFS_HISTORY_FILE):
@@ -47,8 +46,10 @@ def save_history(history):
     except Exception as e:
         logging.error(f"❌ Erreur sauvegarde de l'historique : {e}")
 
+# --- FORMATAGE LISIBILITÉ ---
+
 def formater_date_relative(date_str):
-    jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    jours_courts = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
     maintenant = datetime.now()
     try:
         jour, mois = map(int, date_str.split('/'))
@@ -56,48 +57,85 @@ def formater_date_relative(date_str):
         if mois == 1 and maintenant.month == 12: annee += 1
         date_objet = datetime(annee, mois, jour)
         diff = (date_objet.date() - maintenant.date()).days
-        nom_jour = jours_semaine[date_objet.weekday()]
-        if diff == 0: return f"Aujourd'hui ({nom_jour}) {date_str}"
-        elif diff == 1: return f"Demain ({nom_jour}) {date_str}"
+        nom_jour = jours_courts[date_objet.weekday()]
+        
+        if diff == 0: return f"Auj. ({nom_jour})"
+        elif diff == 1: return f"Dem. ({nom_jour})"
         else: return f"{nom_jour} {date_str}"
     except: return date_str
 
 def send_final_notification(liste_alertes):
     if not liste_alertes: return
-    nb = len(liste_alertes)
-    titre = "🚨 PLACE LIBRE !" if nb == 1 else f"🚨 {nb} PLACES LIBÉRÉES !"
-    corps = ""
-    for a in liste_alertes:
-        date_rel = formater_date_relative(a['date'])
-        corps += (f"🏋️ *{a['nom']}*\n📅 {date_rel} ⏰ {a['horaire']} 💺 {a['places']} \n\n")
-    #   corps += (f"🏋️ *{a['nom']}*\n📅 {date_rel}\n⏰ {a['horaire']}\n🔥 {a['places']} place(s)!\n-------------------\n") #
-    msg_whatsapp = f"{titre}\n{corps}🔗 {URL_UCPA}"
     
+    # Tri et séparation par semaine
+    maintenant = datetime.now()
+    # Fin de semaine = Dimanche soir
+    fin_semaine = maintenant + timedelta(days=(6 - maintenant.weekday()))
+    
+    semaine_actuelle = []
+    semaine_prochaine = []
+    
+    for a in liste_alertes:
+        try:
+            j, m = map(int, a['date'].split('/'))
+            d_obj = datetime(maintenant.year, m, j)
+            if d_obj.date() <= fin_semaine.date():
+                semaine_actuelle.append(a)
+            else:
+                semaine_prochaine.append(a)
+        except:
+            semaine_actuelle.append(a)
+
+    nb = len(liste_alertes)
+    titre = "🚨 *PLACE LIBRE !*" if nb == 1 else f"🚨 *{nb} PLACES LIBÉRÉES !*"
+    
+    def construire_bloc(liste, titre_semaine):
+        if not liste: return ""
+        separateur = "─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─\n"
+        bloc = f"\n📅 *{titre_semaine}*\n{separateur}"
+        for a in liste:
+            date_rel = formater_date_relative(a['date'])
+            nom_sport = a['nom'].upper()
+            # Alignement strict (Date 12 car | Horaire 13 car)
+            details = f"{date_rel:<12} | {a['horaire']:<13} | {a['places']}pl"
+            bloc += f"🏋️ *{nom_sport}*\n```{details}```\n{separateur}"
+        return bloc
+
+    corps_whatsapp = construire_bloc(semaine_actuelle, "Cette semaine")
+    corps_whatsapp += construire_bloc(semaine_prochaine, "Semaine prochaine")
+    
+    msg_whatsapp = f"{titre}\n{corps_whatsapp}\n🔗 {URL_UCPA}"
+    
+    # Envoi GreenAPI (WhatsApp)
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg_whatsapp}, timeout=10)
-        except Exception as e: logging.error(f"❌ Erreur GreenAPI: {e}")
+        except Exception as e: 
+            logging.error(f"❌ Erreur GreenAPI: {e}")
 
+    # Envoi Email
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
+            # Nettoyage Markdown pour l'email
+            msg_email = msg_whatsapp.replace('*', '').replace('```', '').replace('─', '-')
             m = MIMEMultipart()
-            m['Subject'] = titre
-            m.attach(MIMEText(msg_whatsapp.replace('*', ''), 'plain'))
+            m['Subject'] = titre.replace('*', '')
+            m.attach(MIMEText(msg_email, 'plain'))
             with smtplib.SMTP("smtp.gmail.com", 587) as s:
                 s.starttls()
                 s.login(EMAIL_SENDER, EMAIL_PASSWORD)
                 s.sendmail(EMAIL_SENDER, EMAIL_RECEIVERS, m.as_string())
-        except Exception as e: logging.error(f"❌ Erreur Email: {e}")
+        except Exception as e: 
+            logging.error(f"❌ Erreur Email: {e}")
 
-# --- NOUVEAU MOTEUR D'EXTRACTION VIA API ---
+# --- MOTEUR D'EXTRACTION API ---
 
 def fetch_api_week(date_cible):
-    """Interroge l'API UCPA pour une date donnée (format JJ-MM-AAAA)."""
     params = {
         'reservationPeriod': '1',
         'espace': 'area_1680850484_13e5a1d0-d511-11ed-93bb-77fd2e78b8a9',
         'time': date_cible,
-        '__amp_source_origin': 'https://www.ucpa.com'
+        '__amp_source_origin': '[https://www.ucpa.com](https://www.ucpa.com)'
     }
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(API_BASE_URL, params=params, headers=headers, timeout=15)
@@ -106,87 +144,50 @@ def fetch_api_week(date_cible):
 
 def extract_courses_from_api(json_data):
     found_courses = []
-    
     try:
-        # On navigue dans l'arborescence du JSON de l'UCPA
         planner = json_data.get('planner', {})
         columns = planner.get('columns', [])
-
-        # Chaque "column" représente un jour de la semaine
         for column in columns:
             items = column.get('items', [])
-            
-            # Chaque "item" est un cours de fitness
             for item in items:
                 nom = item.get('type', 'Cours Inconnu')
-                
-                # Formatage de l'heure : "17h15 - 18h00"
-                heure_debut = item.get('startTime', '??h??')
-                heure_fin = item.get('endTime', '??h??')
-                horaire = f"{heure_debut} - {heure_fin}"
-                
-                # Formatage de la date : "18/03/2026" devient "18/03"
+                horaire = f"{item.get('startTime', '??h??')} - {item.get('endTime', '??h??')}"
                 start_date_raw = item.get('startDate', '')
-                if start_date_raw and '/' in start_date_raw:
-                    parts = start_date_raw.split('/')
-                    date_fr = f"{parts[0]}/{parts[1]}"
-                else:
-                    date_fr = "??/??"
-
-                places_restantes = int(item.get('stock', 0))
-                statut = "LIBRE" if places_restantes > 0 else "COMPLET"
+                date_fr = f"{start_date_raw.split('/')[0]}/{start_date_raw.split('/')[1]}" if '/' in start_date_raw else "??/??"
+                places = int(item.get('stock', 0))
                 
                 found_courses.append({
-                    "nom": nom,
-                    "date": date_fr,
-                    "horaire": horaire,
-                    "places": places_restantes,
-                    "statut": statut
+                    "nom": nom, "date": date_fr, "horaire": horaire,
+                    "places": places, "statut": "LIBRE" if places > 0 else "COMPLET"
                 })
-
     except Exception as e:
-        logging.error(f"⚠️ Erreur d'extraction depuis le JSON : {e}")
-        
+        logging.error(f"⚠️ Erreur extraction JSON : {e}")
     return found_courses
+
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
-    logging.info("🌐 Scan de l'API UCPA pour cette semaine et la semaine prochaine...")
-    
+    logging.info("🌐 Scan UCPA (Semaine en cours + suivante)...")
     maintenant = datetime.now()
-    date_semaine_1 = maintenant.strftime("%d-%m-%Y")
-    date_semaine_2 = (maintenant + timedelta(days=7)).strftime("%d-%m-%Y")
-
+    
     tous_les_cours = []
-
     try:
-        # Appel API Semaine 1
-        json_s1 = fetch_api_week(date_semaine_1)
-        # Appel API Semaine 2
-        json_s2 = fetch_api_week(date_semaine_2)
-
-        # 🛠️ DEBUG : On sauvegarde le brut pour que tu puisses voir la structure la 1ère fois
-        with open('debug_ucpa.json', 'w', encoding='utf-8') as f:
-            json.dump({"semaine1": json_s1}, f, indent=4, ensure_ascii=False)
-
+        json_s1 = fetch_api_week(maintenant.strftime("%d-%m-%Y"))
+        json_s2 = fetch_api_week((maintenant + timedelta(days=7)).strftime("%d-%m-%Y"))
         tous_les_cours.extend(extract_courses_from_api(json_s1))
         tous_les_cours.extend(extract_courses_from_api(json_s2))
-
     except Exception as e:
-        logging.error(f"❌ Erreur réseau ou API : {e}")
+        logging.error(f"❌ Erreur API : {e}")
         return
 
-    if not tous_les_cours:
-        logging.warning("⚠️ Aucun cours extrait du JSON. Ouvre 'debug_ucpa.json' pour vérifier les vrais noms des variables ! (ex: title, start, available...)")
-        return
-
-    # Suite habituelle de ton algorithme
     history = load_and_clean_history()
-    today_str = datetime.now().strftime("%Y-%m-%d")
-    notifs_deja_faites_aujourdhui = history.get(today_str, [])
+    today_str = maintenant.strftime("%Y-%m-%d")
+    notifs_faites = history.get(today_str, [])
 
-    cours_suivis_actuels = [c for c in tous_les_cours if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)]
+    # Filtrage selon COURS_SURVEILLES
+    cours_suivis = [c for c in tous_les_cours if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)]
 
+    # Mémoire des états précédents
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
@@ -194,28 +195,22 @@ def run():
                 anciens_complets = json.load(f)
         except: pass
 
-    nouvelles_places_a_notifier = []
-    
-    for c in cours_suivis_actuels:
-        id_unique = f"{c['nom']}|{c['date']}|{c['horaire']}"
-        
+    alertes = []
+    for c in cours_suivis:
+        uid = f"{c['nom']}|{c['date']}|{c['horaire']}"
         if c['statut'] == "LIBRE":
-            etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_unique for a in anciens_complets)
-            pas_encore_notifie = id_unique not in notifs_deja_faites_aujourdhui
+            etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == uid for a in anciens_complets)
+            if etait_complet and uid not in notifs_faites:
+                alertes.append(c)
+                notifs_faites.append(uid)
 
-            if etait_complet and pas_encore_notifie:
-                nouvelles_places_a_notifier.append(c)
-                notifs_deja_faites_aujourdhui.append(id_unique)
-
-    if nouvelles_places_a_notifier:
-        logging.info(f"🚀 {len(nouvelles_places_a_notifier)} alerte(s) à envoyer !")
-        send_final_notification(nouvelles_places_a_notifier)
-        history[today_str] = notifs_deja_faites_aujourdhui
+    if alertes:
+        send_final_notification(alertes)
+        history[today_str] = notifs_faites
         save_history(history)
-    else:
-        logging.info("ℹ️ Rien à notifier (déjà fait aujourd'hui ou pas de changement).")
-
-    nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
+    
+    # Mise à jour mémoire complets
+    nouveaux_complets = [c for c in cours_suivis if c['statut'] == "COMPLET"]
     with open(MEMO_FILE, 'w', encoding='utf-8') as f:
         json.dump(nouveaux_complets, f, indent=4, ensure_ascii=False)
 
