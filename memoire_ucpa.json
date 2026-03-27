@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "27/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "28/03",
         "horaire": "09h15 - 10h15",
@@ -21,14 +14,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Hyrox",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "CAF",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
         "places": 0,
@@ -154,13 +147,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "30/03",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
@@ -196,9 +182,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "31/03",
+        "horaire": "17h30 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "31/03",
         "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "31/03",
+        "horaire": "18h00 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -252,13 +252,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "01/04",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "01/04",
         "horaire": "19h15 - 20h00",
@@ -290,13 +283,6 @@
         "nom": "Yoga Vinyasa",
         "date": "02/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "02/04",
-        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
