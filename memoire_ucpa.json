@@ -1,12 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "27/03",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "27/03",
         "horaire": "19h15 - 20h00",
@@ -28,6 +21,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "28/03",
+        "horaire": "10h30 - 11h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
@@ -35,9 +35,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "RPM",
         "date": "28/03",
-        "horaire": "10h30 - 11h15",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -119,13 +119,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "30/03",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos Express",
         "date": "30/03",
         "horaire": "13h00 - 13h30",
@@ -168,14 +161,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
