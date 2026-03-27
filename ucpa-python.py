@@ -71,7 +71,7 @@ def save_history(history):
         logging.error(f"❌ Erreur sauvegarde de l'historique : {e}")
 
 def formater_date_relative(date_str):
-    """Transforme 'DD/MM' en 'Auj. (Jeu)' ou 'Jeu 27/03'."""
+    """Transforme 'DD/MM' en 'Auj. (Jeu)', 'Demain (Ven)' ou 'Jeu 27/03'."""
     jours_semaine_court = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
     maintenant = datetime.now()
     try:
@@ -85,6 +85,8 @@ def formater_date_relative(date_str):
         
         if diff == 0:
             return f"Auj. ({nom_jour})"
+        elif diff == 1:
+            return f"Demain ({nom_jour})"
         else:
             return f"{nom_jour} {date_str}"
     except:
@@ -110,8 +112,8 @@ def send_final_notification(liste_alertes):
         return
     
     nb = len(liste_alertes)
-    titre = "🚨 COURS LIBRE !" if nb == 1 else f"🚨 {nb} COURS LIBÉRÉS !"
-    separateur = "─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─"
+    titre = "🚨 *COURS LIBRE !*" if nb == 1 else f"🚨 *{nb} COURS LIBÉRÉS !*"
+    separateur = "━━━━━━━━━━━━━━━"
     
     cette_semaine = [a for a in liste_alertes if not est_semaine_prochaine(a['date'])]
     semaine_prochaine = [a for a in liste_alertes if est_semaine_prochaine(a['date'])]
@@ -122,18 +124,21 @@ def send_final_notification(liste_alertes):
         nonlocal corps
         if not liste:
             return
-        corps += f"📅 *{label}*\n{separateur}\n"
+        corps += f"📅 *{label.upper()}*\n{separateur}\n"
         for a in liste:
             date_fmt = formater_date_relative(a['date'])
             emoji = get_course_emoji(a['nom'])
+            # Nom du cours
             corps += f"{emoji} *{a['nom'].upper()}*\n"
-            corps += f"      └─ `{date_fmt} à {a['horaire']} ({a['places']} pl.)` \n\n"
+            # Ligne de détails avec 🔹 et l'heure en gras
+            corps += f"🔹 {date_fmt} à *{a['horaire']}* ({a['places']} pl.)\n\n"
         corps += f"{separateur}\n\n"
 
     formater_bloc(cette_semaine, "Cette semaine")
     formater_bloc(semaine_prochaine, "Semaine prochaine")
     
-    msg_final = f"{corps}🔗 {URL_UCPA}"
+    # Message final sans le lien UCPA
+    msg_final = f"{corps}"
     
     # Envoi WhatsApp via Green API
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
@@ -147,12 +152,11 @@ def send_final_notification(liste_alertes):
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
             m = MIMEMultipart()
-            m['Subject'] = titre
+            m['Subject'] = titre.replace('*', '')
             m['From'] = EMAIL_SENDER
             m['To'] = ", ".join(EMAIL_RECEIVERS)
             
-            # Nettoyage simple des tags Markdown pour l'email
-            texte_email = msg_final.replace('`', '').replace('*', '')
+            texte_email = msg_final.replace('*', '')
             m.attach(MIMEText(texte_email, 'plain'))
             
             with smtplib.SMTP("smtp.gmail.com", 587) as s:
@@ -231,13 +235,11 @@ def run():
     today_str = datetime.now().strftime("%Y-%m-%d")
     notifs_deja_faites_aujourdhui = history.get(today_str, [])
 
-    # Filtrage selon les noms de cours configurés
     cours_suivis_actuels = [
         c for c in tous_les_cours 
         if not COURS_SURVEILLES or any(m in c['nom'].lower() for m in COURS_SURVEILLES)
     ]
 
-    # Chargement de la mémoire des états précédents (pour détecter le passage de complet -> libre)
     anciens_complets = []
     if os.path.exists(MEMO_FILE):
         try:
@@ -265,7 +267,6 @@ def run():
     else:
         logging.info("ℹ️ Pas de nouvelles places à notifier.")
 
-    # Sauvegarde des cours actuellement complets pour le prochain scan
     nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
     try:
         with open(MEMO_FILE, 'w', encoding='utf-8') as f:
