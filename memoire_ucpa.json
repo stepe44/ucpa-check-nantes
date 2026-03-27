@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "27/03",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "28/03",
         "horaire": "09h15 - 10h15",
@@ -94,13 +101,6 @@
         "nom": "Yoga Vinyasa",
         "date": "29/03",
         "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Stretching",
-        "date": "29/03",
-        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
