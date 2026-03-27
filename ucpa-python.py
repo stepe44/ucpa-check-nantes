@@ -115,8 +115,18 @@ def send_final_notification(liste_alertes):
     titre = "🚨 *COURS LIBRE !*" if nb == 1 else f"🚨 *{nb} COURS LIBÉRÉS !*"
     separateur = "━━━━━━━━━━━━━━━"
     
-    cette_semaine = [a for a in liste_alertes if not est_semaine_prochaine(a['date'])]
-    semaine_prochaine = [a for a in liste_alertes if est_semaine_prochaine(a['date'])]
+    def tri_chronologique(cours):
+        try:
+            jour, mois = map(int, cours['date'].split('/'))
+            heure, minute = map(int, cours['horaire'].split(' - ')[0].replace('h', ':').split(':'))
+            return (mois, jour, heure, minute)
+        except:
+            return (99, 99, 99, 99)
+
+    liste_triee = sorted(liste_alertes, key=tri_chronologique)
+    
+    cette_semaine = [a for a in liste_triee if not est_semaine_prochaine(a['date'])]
+    semaine_prochaine = [a for a in liste_triee if est_semaine_prochaine(a['date'])]
     
     corps = f"{titre}\n\n"
     
@@ -127,20 +137,18 @@ def send_final_notification(liste_alertes):
         corps += f"📅 *{label.upper()}*\n{separateur}\n"
         for a in liste:
             date_fmt = formater_date_relative(a['date'])
+            prefixe_urgence = "⚡ " if "Auj." in date_fmt else ""
             emoji = get_course_emoji(a['nom'])
-            # Nom du cours
-            corps += f"{emoji} *{a['nom'].upper()}*\n"
-            # Ligne de détails avec 🔹 et l'heure en gras
+            
+            corps += f"{prefixe_urgence}{emoji} *{a['nom'].upper()}*\n"
             corps += f"🔹 {date_fmt} à *{a['horaire']}* ({a['places']} pl.)\n\n"
         corps += f"{separateur}\n\n"
 
     formater_bloc(cette_semaine, "Cette semaine")
     formater_bloc(semaine_prochaine, "Semaine prochaine")
     
-    # Message final sans le lien UCPA
     msg_final = f"{corps}"
     
-    # Envoi WhatsApp via Green API
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
         try:
             requests.post(GREEN_API_URL, json={"chatId": WHATSAPP_CHAT_ID, "message": msg_final}, timeout=10)
@@ -148,17 +156,14 @@ def send_final_notification(liste_alertes):
         except Exception as e: 
             logging.error(f"❌ Erreur GreenAPI: {e}")
 
-    # Envoi Email via Gmail SMTP
     if EMAIL_SENDER and EMAIL_PASSWORD and EMAIL_RECEIVERS:
         try:
             m = MIMEMultipart()
             m['Subject'] = titre.replace('*', '')
             m['From'] = EMAIL_SENDER
             m['To'] = ", ".join(EMAIL_RECEIVERS)
-            
             texte_email = msg_final.replace('*', '')
             m.attach(MIMEText(texte_email, 'plain'))
-            
             with smtplib.SMTP("smtp.gmail.com", 587) as s:
                 s.starttls()
                 s.login(EMAIL_SENDER, EMAIL_PASSWORD)
@@ -232,7 +237,7 @@ def run():
         return
 
     history = load_and_clean_history()
-    today_str = datetime.now().strftime("%Y-%m-%d")
+    today_str = maintenant.strftime("%Y-%m-%d")
     notifs_deja_faites_aujourdhui = history.get(today_str, [])
 
     cours_suivis_actuels = [
@@ -251,6 +256,21 @@ def run():
     nouvelles_places_a_notifier = []
     for c in cours_suivis_actuels:
         id_unique = f"{c['nom']}|{c['date']}|{c['horaire']}"
+        
+        # --- FILTRE TEMPOREL (30 min) ---
+        try:
+            jour, mois = map(int, c['date'].split('/'))
+            heure, minute = map(int, c['horaire'].split(' - ')[0].replace('h', ':').split(':'))
+            annee = maintenant.year
+            if mois == 1 and maintenant.month == 12: annee += 1
+            date_objet_cours = datetime(annee, mois, jour, heure, minute)
+            
+            # Si le cours est aujourd'hui et commence dans moins de 30 min (ou déjà commencé)
+            if date_objet_cours < (maintenant + timedelta(minutes=30)):
+                continue
+        except:
+            pass
+        
         if c['statut'] == "LIBRE":
             etait_complet = any(f"{a['nom']}|{a['date']}|{a['horaire']}" == id_unique for a in anciens_complets)
             pas_encore_notifie = id_unique not in notifs_deja_faites_aujourdhui
