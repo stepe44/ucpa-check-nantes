@@ -142,7 +142,7 @@ def send_final_notification(liste_alertes):
             
             corps += f"{prefixe_urgence}{emoji} *{a['nom'].upper()}*\n"
             corps += f"🔹 {date_fmt} à *{a['horaire']}* ({a['places']} pl.)\n\n"
-        corps += f"{separateur}\n\n"
+        
 
     formater_bloc(cette_semaine, "Cette semaine")
     formater_bloc(semaine_prochaine, "Semaine prochaine")
