@@ -21,21 +21,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "28/03",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
+        "nom": "CAF",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Hyrox",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
         "places": 0,
@@ -175,14 +168,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
