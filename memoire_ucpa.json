@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "27/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "27/03",
         "horaire": "17h30 - 18h15",
@@ -17,13 +10,6 @@
         "nom": "Body Jam",
         "date": "27/03",
         "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "27/03",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -42,14 +28,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Cross Training Intensity",
+        "date": "28/03",
+        "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "CAF",
         "date": "28/03",
         "horaire": "10h30 - 11h15",
         "places": 0,
@@ -339,13 +332,6 @@
         "nom": "Cross Training Intensity",
         "date": "03/04",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "04/04",
-        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
