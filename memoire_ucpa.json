@@ -7,9 +7,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
+        "nom": "RPM",
         "date": "27/03",
-        "horaire": "18h15 - 19h15",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,6 +105,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Stretching",
+        "date": "29/03",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga",
         "date": "29/03",
         "horaire": "14h00 - 16h00",
@@ -175,14 +182,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
