@@ -1,19 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "28/03",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "28/03",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "29/03",
         "horaire": "09h45 - 10h30",
