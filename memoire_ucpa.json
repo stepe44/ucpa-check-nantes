@@ -91,14 +91,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "30/03",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -185,6 +185,13 @@
         "nom": "Cross Training Intensity",
         "date": "01/04",
         "horaire": "07h30 - 08h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Découverte plateau",
+        "date": "01/04",
+        "horaire": "10h00 - 11h00",
         "places": 0,
         "statut": "COMPLET"
     },
