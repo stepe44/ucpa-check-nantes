@@ -161,6 +161,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "01/04",
+        "horaire": "09h00 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "01/04",
         "horaire": "12h30 - 13h30",
@@ -178,13 +185,6 @@
         "nom": "Hyrox",
         "date": "01/04",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "01/04",
-        "horaire": "17h15 - 18h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -476,6 +476,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "01/04",
+        "horaire": "09h00 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "01/04",
         "horaire": "12h30 - 13h30",
@@ -493,13 +500,6 @@
         "nom": "Hyrox",
         "date": "01/04",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "01/04",
-        "horaire": "17h15 - 18h00",
         "places": 0,
         "statut": "COMPLET"
     },
