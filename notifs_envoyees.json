@@ -1,17 +1,4 @@
 {
-    "2026-03-21": [
-        "Pilates|24/03|17h30 - 18h15",
-        "Cross Training Intensity|24/03|12h15 - 13h00",
-        "Body Pump|23/03|17h30 - 18h15",
-        "Body Sculpt|24/03|13h00 - 13h45",
-        "Cross Training Intensity|22/03|10h45 - 11h30",
-        "Yoga Vinyasa|23/03|18h15 - 19h15",
-        "Cross Training Intensity|23/03|17h00 - 17h45",
-        "Body Pump|22/03|09h45 - 10h30",
-        "Yoga Vinyasa|24/03|17h30 - 18h30",
-        "Yoga Vinyasa|28/03|09h15 - 10h15",
-        "Body Pump|26/03|20h15 - 21h00"
-    ],
     "2026-03-22": [
         "Body Attack|23/03|19h15 - 20h00",
         "Biking|25/03|12h15 - 13h00",
@@ -177,5 +164,8 @@
         "CAF|31/03|12h15 - 13h00",
         "Découverte plateau|01/04|10h00 - 11h00",
         "Cross Training Intensity|31/03|12h15 - 13h00"
+    ],
+    "2026-03-29": [
+        "Abdos Express|30/03|13h00 - 13h30"
     ]
 }
