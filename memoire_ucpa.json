@@ -91,6 +91,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "31/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "31/03",
         "horaire": "12h15 - 13h00",
@@ -175,6 +182,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "01/04",
+        "horaire": "17h15 - 18h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "01/04",
         "horaire": "19h00 - 19h45",
@@ -220,6 +234,13 @@
         "nom": "Yoga Vinyasa",
         "date": "02/04",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "02/04",
+        "horaire": "13h00 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -385,6 +406,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "31/03",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "31/03",
         "horaire": "12h15 - 13h00",
@@ -469,6 +497,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "01/04",
+        "horaire": "17h15 - 18h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "01/04",
         "horaire": "19h00 - 19h45",
@@ -514,6 +549,13 @@
         "nom": "Yoga Vinyasa",
         "date": "02/04",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "02/04",
+        "horaire": "13h00 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
