@@ -1,47 +1,4 @@
 {
-    "2026-03-23": [
-        "RPM|23/03|13h00 - 13h45",
-        "CAF|24/03|12h15 - 13h00",
-        "Pilates|24/03|17h30 - 18h15",
-        "Abdos Express|23/03|13h00 - 13h30",
-        "Yoga Vinyasa|23/03|18h15 - 19h15",
-        "Cross Training Intensity|24/03|07h30 - 08h15",
-        "Cross Training Intensity|23/03|18h30 - 19h15",
-        "RPM|23/03|19h15 - 20h00",
-        "CAF|23/03|20h00 - 20h45",
-        "Yoga Fit|23/03|20h00 - 21h00",
-        "Body Pump|26/03|20h15 - 21h00",
-        "Yoga Vinyasa|28/03|09h15 - 10h15",
-        "Body Attack|23/03|19h15 - 20h00",
-        "RPM|24/03|18h00 - 18h45",
-        "Body Pump|23/03|17h30 - 18h15",
-        "Cross Training Intensity|26/03|12h15 - 13h00",
-        "Abdos-Fessiers|23/03|19h00 - 19h45",
-        "Body Jam|24/03|18h30 - 19h30",
-        "Hyrox|25/03|13h00 - 13h45",
-        "Body Attack|26/03|18h15 - 19h00",
-        "Hiit|25/03|18h00 - 18h45",
-        "RPM|26/03|12h15 - 13h00",
-        "Body Jam|27/03|18h15 - 19h15",
-        "Cross Training Intensity|24/03|12h15 - 13h00",
-        "Body Sculpt|24/03|13h00 - 13h45",
-        "Biking|24/03|12h15 - 13h00",
-        "Body Sculpt|25/03|20h00 - 20h45",
-        "Pilates|27/03|12h15 - 13h00",
-        "Swiss Ball|24/03|18h45 - 19h30",
-        "Cross Training Intensity|29/03|10h45 - 11h30",
-        "Pilates|24/03|08h15 - 09h00",
-        "Body Combat|24/03|12h15 - 13h00",
-        "Hiit|26/03|19h15 - 20h00",
-        "Cross Training Intensity|27/03|19h15 - 20h00",
-        "Cross Training Intensity|28/03|09h45 - 10h30",
-        "Yoga Vinyasa|24/03|17h30 - 18h30",
-        "Cross Training Intensity|25/03|07h30 - 08h15",
-        "Yoga Vinyasa|24/03|08h00 - 09h00",
-        "Swiss Ball|25/03|19h00 - 19h45",
-        "Pilates|25/03|20h15 - 21h00",
-        "RPM|27/03|18h30 - 19h15"
-    ],
     "2026-03-24": [
         "Yoga Vinyasa|24/03|17h30 - 18h30",
         "RPM|24/03|19h15 - 20h00",
@@ -190,5 +147,8 @@
         "Body Attack|03/04|12h15 - 13h00",
         "Body Sculpt|02/04|13h00 - 13h30",
         "Yoga Vinyasa|02/04|12h30 - 13h30"
+    ],
+    "2026-03-31": [
+        "Swiss Ball|01/04|19h00 - 19h45"
     ]
 }
