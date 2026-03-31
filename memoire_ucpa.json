@@ -1,33 +1,5 @@
 [
     {
-        "nom": "CAF",
-        "date": "31/03",
-        "horaire": "19h45 - 20h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "31/03",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "01/04",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "01/04",
-        "horaire": "09h00 - 10h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "01/04",
         "horaire": "12h15 - 13h00",
@@ -168,6 +140,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "03/04",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "04/04",
         "horaire": "09h15 - 10h15",
@@ -190,6 +169,13 @@
     },
     {
         "nom": "RPM",
+        "date": "04/04",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "04/04",
         "horaire": "11h30 - 12h15",
         "places": 0,
@@ -241,6 +227,13 @@
         "nom": "Hyrox",
         "date": "07/04",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "07/04",
+        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
