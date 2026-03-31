@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Pilates",
+        "date": "31/03",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "31/03",
         "horaire": "17h45 - 18h30",
@@ -21,23 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "31/03",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "31/03",
         "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "31/03",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
