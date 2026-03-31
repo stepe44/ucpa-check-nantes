@@ -28,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "31/03",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Swiss Ball",
         "date": "31/03",
         "horaire": "18h45 - 19h30",
@@ -56,9 +49,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "STEP Débutant",
         "date": "31/03",
-        "horaire": "19h30 - 20h15",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,13 +98,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "01/04",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "01/04",
         "horaire": "19h15 - 20h00",
@@ -127,13 +113,6 @@
     },
     {
         "nom": "RPM",
-        "date": "02/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "02/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
