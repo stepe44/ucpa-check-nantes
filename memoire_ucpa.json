@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "31/03",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "31/03",
         "horaire": "17h30 - 18h30",
@@ -49,6 +42,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "31/03",
+        "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "STEP Débutant",
         "date": "31/03",
         "horaire": "20h15 - 21h00",
@@ -70,13 +70,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "01/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "01/04",
         "horaire": "12h30 - 13h30",
@@ -94,6 +87,13 @@
         "nom": "Hyrox",
         "date": "01/04",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "01/04",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
