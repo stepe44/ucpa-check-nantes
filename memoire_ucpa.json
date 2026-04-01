@@ -1,20 +1,13 @@
 [
     {
-        "nom": "Biking",
-        "date": "01/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "01/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
+        "date": "01/04",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
         "date": "01/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -31,6 +24,13 @@
         "nom": "Pilates",
         "date": "01/04",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "02/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -150,13 +150,6 @@
         "nom": "RPM",
         "date": "04/04",
         "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "05/04",
-        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
