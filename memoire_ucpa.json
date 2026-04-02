@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "TRX",
+        "date": "03/04",
+        "horaire": "16h45 - 17h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "03/04",
         "horaire": "17h30 - 18h15",
