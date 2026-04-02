@@ -126,6 +126,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Jam",
+        "date": "07/04",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "07/04",
         "horaire": "19h00 - 19h45",
