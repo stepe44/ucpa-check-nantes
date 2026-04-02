@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "02/04",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hiit",
         "date": "02/04",
         "horaire": "19h15 - 20h00",
@@ -56,23 +49,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "03/04",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "04/04",
         "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "04/04",
-        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -94,6 +73,13 @@
         "nom": "Yoga Vinyasa",
         "date": "05/04",
         "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "06/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
