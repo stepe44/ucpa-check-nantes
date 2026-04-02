@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Body Sculpt",
+        "nom": "STEP Débutant",
         "date": "02/04",
-        "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "02/04",
-        "horaire": "18h15 - 19h00",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,6 +136,13 @@
         "nom": "Pilates",
         "date": "08/04",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "09/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
