@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Body Sculpt",
+        "nom": "STEP Débutant",
         "date": "02/04",
-        "horaire": "13h00 - 13h30",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "STEP Débutant",
+        "nom": "Body Attack",
         "date": "02/04",
-        "horaire": "17h30 - 18h15",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -63,13 +63,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "04/04",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "04/04",
         "horaire": "10h30 - 11h15",
@@ -115,13 +108,6 @@
         "nom": "Yoga Vinyasa",
         "date": "06/04",
         "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "07/04",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
