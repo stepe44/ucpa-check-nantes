@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hiit",
+        "date": "02/04",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "03/04",
         "horaire": "08h00 - 08h45",
@@ -49,9 +56,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "03/04",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "04/04",
         "horaire": "09h15 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "04/04",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,6 +126,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "07/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "07/04",
         "horaire": "12h15 - 13h00",
@@ -143,6 +171,13 @@
         "nom": "Body Pump",
         "date": "08/04",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "08/04",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
