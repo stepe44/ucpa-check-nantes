@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Body Sculpt",
+        "date": "02/04",
+        "horaire": "13h00 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "STEP Débutant",
         "date": "02/04",
         "horaire": "17h30 - 18h15",
@@ -10,13 +17,6 @@
         "nom": "Body Attack",
         "date": "02/04",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "02/04",
-        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,13 +143,6 @@
         "nom": "Body Pump",
         "date": "08/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "08/04",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
