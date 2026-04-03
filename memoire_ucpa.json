@@ -28,7 +28,21 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "04/04",
+        "horaire": "10h30 - 11h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
+        "date": "04/04",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
         "date": "04/04",
         "horaire": "11h30 - 12h15",
         "places": 0,
@@ -80,6 +94,13 @@
         "nom": "Yoga Vinyasa",
         "date": "06/04",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "07/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
