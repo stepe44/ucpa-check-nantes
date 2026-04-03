@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "03/04",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "03/04",
         "horaire": "17h30 - 18h15",
@@ -78,13 +71,6 @@
     },
     {
         "nom": "Body Pump",
-        "date": "06/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "06/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
