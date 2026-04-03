@@ -14,14 +14,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Pump",
         "date": "04/04",
         "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "RPM",
         "date": "04/04",
         "horaire": "11h30 - 12h15",
         "places": 0,
@@ -91,13 +91,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "07/04",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hyrox",
         "date": "07/04",
         "horaire": "19h00 - 19h45",
@@ -108,6 +101,13 @@
         "nom": "Body Sculpt",
         "date": "07/04",
         "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "08/04",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
