@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "05/04",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "06/04",
         "horaire": "10h15 - 11h00",
