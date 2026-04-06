@@ -28,9 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
+        "nom": "RPM",
         "date": "07/04",
-        "horaire": "18h30 - 19h30",
+        "horaire": "18h00 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -128,6 +128,13 @@
     {
         "nom": "Body Sculpt",
         "date": "09/04",
+        "horaire": "13h00 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "09/04",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
@@ -213,6 +220,13 @@
         "nom": "Abdos-Fessiers",
         "date": "13/04",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "13/04",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
