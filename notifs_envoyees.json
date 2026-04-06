@@ -1,10 +1,4 @@
 {
-    "2026-03-29": [
-        "Abdos Express|30/03|13h00 - 13h30",
-        "Body Pump|30/03|12h15 - 13h00",
-        "Cross Training Intensity|31/03|17h45 - 18h30",
-        "CAF|01/04|17h15 - 18h00"
-    ],
     "2026-03-30": [
         "Yoga Vinyasa|30/03|18h15 - 19h15",
         "CAF|31/03|12h15 - 13h00",
@@ -154,5 +148,12 @@
         "Abdos-Fessiers|06/04|19h00 - 19h45",
         "Yoga Vinyasa|09/04|12h30 - 13h30",
         "Cross Training Intensity|10/04|17h30 - 18h15"
+    ],
+    "2026-04-06": [
+        "Body Pump|06/04|12h15 - 13h00",
+        "Cross Training Intensity|06/04|12h15 - 13h00",
+        "Yoga Vinyasa|06/04|18h15 - 19h15",
+        "Yoga Vinyasa|07/04|17h30 - 18h30",
+        "Body Pump|08/04|12h30 - 13h30"
     ]
 }
