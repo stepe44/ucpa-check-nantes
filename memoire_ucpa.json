@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "07/04",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "07/04",
         "horaire": "17h45 - 18h30",
