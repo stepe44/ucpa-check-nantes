@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Hyrox",
-        "date": "07/04",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "07/04",
-        "horaire": "19h30 - 20h15",
+        "nom": "Biking",
+        "date": "08/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -224,6 +217,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "15/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "15/04",
         "horaire": "19h15 - 20h00",
@@ -234,13 +234,6 @@
         "nom": "Pilates",
         "date": "15/04",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "17/04",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
