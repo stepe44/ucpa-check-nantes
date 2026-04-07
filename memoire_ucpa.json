@@ -56,16 +56,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
+        "nom": "Pilates",
         "date": "08/04",
-        "horaire": "19h15 - 20h00",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "08/04",
-        "horaire": "20h15 - 21h00",
+        "nom": "CAF Express",
+        "date": "09/04",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,9 +112,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "09/04",
-        "horaire": "18h30 - 19h00",
+        "nom": "Hyrox",
+        "date": "10/04",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
