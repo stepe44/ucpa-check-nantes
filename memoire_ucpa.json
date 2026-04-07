@@ -7,20 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
-        "date": "07/04",
-        "horaire": "18h45 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "07/04",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "08/04",
         "horaire": "07h30 - 08h15",
@@ -70,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "09/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "09/04",
         "horaire": "13h00 - 13h30",
@@ -94,6 +87,13 @@
         "nom": "Abdos-Fessiers",
         "date": "09/04",
         "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "10/04",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
