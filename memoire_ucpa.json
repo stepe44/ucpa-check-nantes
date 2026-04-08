@@ -1,19 +1,5 @@
 [
     {
-        "nom": "CAF Express",
-        "date": "09/04",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "09/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "STEP Débutant",
         "date": "09/04",
         "horaire": "17h30 - 18h15",
