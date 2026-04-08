@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "09/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "09/04",
         "horaire": "12h15 - 13h00",
@@ -21,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "10/04",
-        "horaire": "08h00 - 08h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "10/04",
         "horaire": "12h15 - 13h00",
@@ -38,6 +38,13 @@
         "nom": "Cross Training Intensity",
         "date": "10/04",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "10/04",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -157,13 +164,6 @@
         "nom": "Abdos-Fessiers",
         "date": "13/04",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "13/04",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
