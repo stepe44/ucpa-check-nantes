@@ -1,5 +1,12 @@
 [
     {
+        "nom": "CAF Express",
+        "date": "09/04",
+        "horaire": "12h15 - 12h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "09/04",
         "horaire": "12h15 - 13h00",
@@ -35,9 +42,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
+        "nom": "Hyrox",
         "date": "10/04",
-        "horaire": "12h15 - 13h00",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -161,6 +168,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "13/04",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "13/04",
         "horaire": "19h00 - 19h45",
@@ -189,7 +203,21 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "14/04",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
+        "date": "15/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "15/04",
         "horaire": "12h30 - 13h30",
         "places": 0,
