@@ -1,27 +1,6 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "09/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "09/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "STEP Débutant",
-        "date": "09/04",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
         "date": "09/04",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -91,13 +70,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "11/04",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "11/04",
         "horaire": "11h30 - 12h15",
@@ -115,13 +87,6 @@
         "nom": "Body Pump",
         "date": "12/04",
         "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "12/04",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -185,6 +150,20 @@
         "nom": "Abdos-Fessiers",
         "date": "13/04",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "13/04",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "14/04",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
