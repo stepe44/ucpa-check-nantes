@@ -1,12 +1,5 @@
 [
     {
-        "nom": "CAF",
-        "date": "10/04",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "10/04",
         "horaire": "17h30 - 18h15",
@@ -17,6 +10,13 @@
         "nom": "RPM",
         "date": "10/04",
         "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "11/04",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -147,16 +147,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Pilates",
         "date": "14/04",
-        "horaire": "17h30 - 18h30",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
+        "nom": "Yoga Vinyasa",
         "date": "14/04",
-        "horaire": "17h30 - 18h15",
+        "horaire": "17h30 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -196,6 +196,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "15/04",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "15/04",
         "horaire": "19h15 - 20h00",
@@ -213,13 +220,6 @@
         "nom": "Cross Training Intensity",
         "date": "16/04",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "16/04",
-        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
