@@ -1,33 +1,4 @@
 {
-    "2026-04-03": [
-        "Pilates|03/04|12h15 - 13h00",
-        "TRX|03/04|16h45 - 17h30",
-        "Cross Training Intensity|03/04|17h30 - 18h15",
-        "Cross Training Intensity|03/04|19h15 - 20h00",
-        "Cross Training Intensity|03/04|13h00 - 13h45",
-        "Cross Training Intensity|06/04|12h15 - 13h00",
-        "CAF|03/04|17h30 - 18h15",
-        "CAF|04/04|10h30 - 11h15",
-        "RPM|04/04|11h30 - 12h15",
-        "Body Pump|06/04|17h30 - 18h15",
-        "CAF|07/04|12h15 - 13h00",
-        "Yoga Vinyasa|04/04|09h15 - 10h15",
-        "Yoga Vinyasa|07/04|17h30 - 18h30",
-        "Body Jam|07/04|18h30 - 19h30",
-        "Yoga Vinyasa|05/04|11h30 - 12h30",
-        "Body Pump|06/04|12h15 - 13h00",
-        "Cross Training Intensity|07/04|17h45 - 18h30",
-        "Yoga Vinyasa|06/04|12h30 - 13h30",
-        "Body Sculpt|07/04|13h00 - 13h45",
-        "Yoga Vinyasa|09/04|12h30 - 13h30",
-        "Yoga Vinyasa|06/04|18h15 - 19h15",
-        "Yoga Vinyasa|08/04|12h30 - 13h30",
-        "Body Attack|09/04|18h15 - 19h00",
-        "Cross Training Intensity|04/04|09h45 - 10h30",
-        "Body Pump|05/04|09h45 - 10h30",
-        "Body Sculpt|09/04|17h30 - 18h15",
-        "Body Pump|04/04|11h30 - 12h15"
-    ],
     "2026-04-04": [
         "Cross Training Intensity|05/04|10h45 - 11h30",
         "Yoga Vinyasa|06/04|12h30 - 13h30",
@@ -150,5 +121,9 @@
         "Cross Training Intensity|13/04|18h30 - 19h15",
         "CAF|11/04|10h45 - 11h30",
         "Cross Training Intensity|17/04|13h00 - 13h45"
+    ],
+    "2026-04-11": [
+        "RPM|11/04|11h30 - 12h15",
+        "Body Pump|11/04|11h30 - 12h15"
     ]
 }
