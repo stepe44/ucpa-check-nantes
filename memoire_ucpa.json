@@ -14,14 +14,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Combat",
+        "nom": "Biking",
         "date": "14/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Body Combat",
         "date": "14/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -59,6 +59,13 @@
         "nom": "Body Jam",
         "date": "14/04",
         "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "14/04",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,6 +119,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "15/04",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "15/04",
         "horaire": "20h15 - 21h00",
@@ -122,6 +136,20 @@
         "nom": "Cross Training Intensity",
         "date": "16/04",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "16/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "16/04",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
