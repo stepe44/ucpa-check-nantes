@@ -1,12 +1,5 @@
 [
     {
-        "nom": "CAF",
-        "date": "13/04",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "14/04",
         "horaire": "07h30 - 08h15",
@@ -28,9 +21,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "14/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "14/04",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "14/04",
+        "horaire": "17h30 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -87,6 +94,13 @@
         "nom": "Body Pump",
         "date": "15/04",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "15/04",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -213,13 +227,6 @@
         "nom": "Yoga Vinyasa",
         "date": "22/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "22/04",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
