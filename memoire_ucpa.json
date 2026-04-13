@@ -21,6 +21,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "13/04",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "13/04",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "14/04",
         "horaire": "07h30 - 08h15",
@@ -147,7 +161,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "Pilates",
         "date": "17/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
