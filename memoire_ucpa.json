@@ -196,8 +196,8 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Stretching",
-        "date": "19/04",
+        "nom": "RPM",
+        "date": "18/04",
         "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
@@ -206,6 +206,13 @@
         "nom": "Yoga Vinyasa",
         "date": "19/04",
         "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Stretching",
+        "date": "19/04",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
