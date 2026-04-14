@@ -42,13 +42,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "15/04",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "16/04",
         "horaire": "12h15 - 13h00",
@@ -248,13 +241,6 @@
         "nom": "Yoga Vinyasa",
         "date": "23/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "23/04",
-        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
