@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "14/04",
+        "horaire": "17h30 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "14/04",
         "horaire": "17h45 - 18h30",
@@ -42,9 +49,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "14/04",
+        "horaire": "19h45 - 20h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "15/04",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF Express",
+        "date": "15/04",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -66,20 +87,6 @@
         "nom": "Hyrox",
         "date": "15/04",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "15/04",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "15/04",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -108,13 +115,6 @@
         "nom": "Yoga Vinyasa",
         "date": "16/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "16/04",
-        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -171,6 +171,13 @@
         "nom": "CAF",
         "date": "18/04",
         "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "18/04",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
