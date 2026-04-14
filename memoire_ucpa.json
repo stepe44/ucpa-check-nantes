@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Jam",
-        "date": "14/04",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "15/04",
         "horaire": "07h30 - 08h15",
@@ -70,16 +63,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "RPM",
         "date": "16/04",
-        "horaire": "12h30 - 13h30",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "Yoga Vinyasa",
         "date": "16/04",
-        "horaire": "18h15 - 19h00",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
