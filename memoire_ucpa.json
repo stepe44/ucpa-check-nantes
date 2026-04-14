@@ -35,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "15/04",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "15/04",
         "horaire": "19h15 - 20h00",
@@ -80,6 +73,13 @@
         "nom": "Hyrox",
         "date": "17/04",
         "horaire": "08h00 - 08h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "17/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,6 +143,13 @@
         "nom": "Stretching",
         "date": "19/04",
         "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "20/04",
+        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -224,6 +231,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "22/04",
+        "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "23/04",
         "horaire": "12h15 - 13h00",
@@ -234,6 +248,13 @@
         "nom": "Yoga Vinyasa",
         "date": "23/04",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "23/04",
+        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
