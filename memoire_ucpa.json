@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "14/04",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "14/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "14/04",
         "horaire": "17h30 - 18h15",
@@ -24,13 +10,6 @@
         "nom": "Cross Training Intensity",
         "date": "14/04",
         "horaire": "17h45 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "14/04",
-        "horaire": "18h00 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -161,6 +140,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "17/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "17/04",
         "horaire": "13h00 - 13h45",
@@ -189,13 +175,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Stretching",
-        "date": "19/04",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "19/04",
         "horaire": "11h30 - 12h30",
@@ -203,14 +182,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Stretching",
+        "date": "19/04",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Pump",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
