@@ -189,13 +189,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "19/04",
-        "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Stretching",
         "date": "19/04",
         "horaire": "11h30 - 12h15",
@@ -203,14 +196,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Yoga Vinyasa",
+        "date": "19/04",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Cross Training Intensity",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
