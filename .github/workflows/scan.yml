@@ -3,9 +3,9 @@ name: UCPA WhatsApp Scanner
 on:
   schedule:
 # Du lundi au samedi : toutes les heures de 5h à 23h GMT
-    - cron: '*/15 5-23 * * 1-6'
+    - cron: '*/20 4-22 * * 1-6'
 # Le dimanche : toutes les heures de 5h à 11h GMT
-    - cron: '*/15 5-11 * * 0'
+    - cron: '*/20 4-11 * * 0'
   
   workflow_dispatch:
 
