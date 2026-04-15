@@ -262,6 +262,7 @@ def run():
             jour, mois = map(int, c['date'].split('/'))
             heure, minute = map(int, c['horaire'].split(' - ')[0].replace('h', ':').split(':'))
             annee = maintenant.year
+            logging.info(f"🕒 {c['nom']} | Heure système : {maintenant.strftime('%H:%M')} | Heure cours : {date_objet_cours.strftime('%H:%M')}")
             if mois == 1 and maintenant.month == 12: annee += 1
             date_objet_cours = datetime(annee, mois, jour, heure, minute)
             
