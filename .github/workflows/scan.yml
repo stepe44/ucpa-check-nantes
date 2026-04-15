@@ -13,6 +13,9 @@ jobs:
   run-scanner:
     runs-on: ubuntu-latest
     environment: GEMINI_API_KEY # Lien avec tes secrets
+    env:
+      TZ: "Europe/Paris"
+    
     permissions:
       contents: write
 
