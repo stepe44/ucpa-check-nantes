@@ -264,10 +264,8 @@ def run():
             annee = maintenant.year
             if mois == 1 and maintenant.month == 12: annee += 1
             date_objet_cours = datetime(annee, mois, jour, heure, minute)
-
-            logging.info(f"🕒 {c['nom']} | Heure système : {maintenant.strftime('%H:%M')} | Heure cours : {date_objet_cours.strftime('%H:%M')}")
             
-            # Si le cours est aujourd'hui et commence dans moins de 30 min (ou déjà commencé)
+            # Si le cours est aujourd'hui et commence dans moins de 60 min (ou déjà commencé)
             if date_objet_cours < (maintenant + timedelta(minutes=60)):
                 continue
         except:
