@@ -257,17 +257,18 @@ def run():
     for c in cours_suivis_actuels:
         id_unique = f"{c['nom']}|{c['date']}|{c['horaire']}"
         
-        # --- FILTRE TEMPOREL (30 min) ---
+        # --- FILTRE TEMPOREL (60 min) ---
         try:
             jour, mois = map(int, c['date'].split('/'))
             heure, minute = map(int, c['horaire'].split(' - ')[0].replace('h', ':').split(':'))
             annee = maintenant.year
-            logging.info(f"🕒 {c['nom']} | Heure système : {maintenant.strftime('%H:%M')} | Heure cours : {date_objet_cours.strftime('%H:%M')}")
             if mois == 1 and maintenant.month == 12: annee += 1
             date_objet_cours = datetime(annee, mois, jour, heure, minute)
+
+            logging.info(f"🕒 {c['nom']} | Heure système : {maintenant.strftime('%H:%M')} | Heure cours : {date_objet_cours.strftime('%H:%M')}")
             
             # Si le cours est aujourd'hui et commence dans moins de 30 min (ou déjà commencé)
-            if date_objet_cours < (maintenant + timedelta(minutes=30)):
+            if date_objet_cours < (maintenant + timedelta(minutes=60)):
                 continue
         except:
             pass
