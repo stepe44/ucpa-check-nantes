@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "16/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "16/04",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "16/04",
         "horaire": "20h15 - 21h00",
@@ -52,6 +38,13 @@
         "nom": "Cross Training Intensity",
         "date": "17/04",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "17/04",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -140,14 +133,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -234,13 +227,6 @@
         "nom": "Yoga Vinyasa",
         "date": "23/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "23/04",
-        "horaire": "18h30 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
