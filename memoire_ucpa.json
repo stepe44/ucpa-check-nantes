@@ -7,20 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "18/04",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "18/04",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "19/04",
         "horaire": "09h45 - 10h30",
@@ -35,16 +21,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Stretching",
         "date": "19/04",
-        "horaire": "11h30 - 12h30",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Stretching",
+        "nom": "Yoga Vinyasa",
         "date": "19/04",
-        "horaire": "11h30 - 12h15",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -98,14 +84,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -162,13 +148,6 @@
     },
     {
         "nom": "Body Pump",
-        "date": "22/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
         "date": "22/04",
         "horaire": "12h30 - 13h30",
         "places": 0,
