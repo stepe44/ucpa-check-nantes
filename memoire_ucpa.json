@@ -7,20 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "17/04",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "17/04",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "18/04",
         "horaire": "09h15 - 10h15",
@@ -38,13 +24,6 @@
         "nom": "CAF",
         "date": "18/04",
         "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "18/04",
-        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
