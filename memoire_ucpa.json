@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "20/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
@@ -108,13 +115,6 @@
         "nom": "Body Jam",
         "date": "21/04",
         "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "21/04",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -231,6 +231,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "20/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
@@ -332,13 +339,6 @@
         "nom": "Body Jam",
         "date": "21/04",
         "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "21/04",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
