@@ -7,16 +7,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Pump",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "CAF Express",
         "date": "20/04",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -56,14 +56,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -108,6 +108,13 @@
         "nom": "Body Jam",
         "date": "21/04",
         "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "21/04",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -224,16 +231,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Pump",
         "date": "20/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "CAF Express",
         "date": "20/04",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -273,14 +280,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "20/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -325,6 +332,13 @@
         "nom": "Body Jam",
         "date": "21/04",
         "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "21/04",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
