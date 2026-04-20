@@ -70,6 +70,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos Express",
+        "date": "21/04",
+        "horaire": "18h15 - 18h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Jam",
         "date": "21/04",
         "horaire": "18h30 - 19h30",
@@ -178,6 +185,13 @@
         "nom": "Abdos-Fessiers",
         "date": "23/04",
         "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "24/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
