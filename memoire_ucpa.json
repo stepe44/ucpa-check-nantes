@@ -1,22 +1,8 @@
 [
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "RPM",
         "date": "20/04",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "20/04",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "20/04",
-        "horaire": "19h00 - 19h45",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -28,9 +14,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "CAF",
         "date": "20/04",
-        "horaire": "19h15 - 20h00",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -43,13 +29,6 @@
     },
     {
         "nom": "Biking",
-        "date": "21/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
         "date": "21/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -133,21 +112,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "22/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Swiss Ball",
+        "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Swiss Ball",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -269,6 +241,13 @@
         "nom": "Yoga Vinyasa",
         "date": "28/04",
         "horaire": "17h30 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "28/04",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
