@@ -1,34 +1,4 @@
 {
-    "2026-04-13": [
-        "Pilates|13/04|09h30 - 10h15",
-        "RPM|13/04|13h00 - 13h45",
-        "RPM|13/04|19h15 - 20h00",
-        "RPM|16/04|12h15 - 13h00",
-        "Pilates|17/04|12h15 - 13h00",
-        "Body Pump|13/04|17h30 - 18h15",
-        "Yoga Fit|13/04|20h00 - 21h00",
-        "Body Pump|15/04|12h30 - 13h30",
-        "Yoga Vinyasa|16/04|12h30 - 13h30",
-        "Pilates|14/04|08h15 - 09h00",
-        "Biking|14/04|12h15 - 13h00",
-        "Yoga Vinyasa|26/04|11h30 - 12h30",
-        "Body Attack|13/04|19h15 - 20h00",
-        "Yoga Vinyasa|14/04|17h30 - 18h30",
-        "Swiss Ball|14/04|18h45 - 19h30",
-        "Hyrox|14/04|19h00 - 19h45",
-        "CAF|14/04|19h45 - 20h30",
-        "CAF Express|15/04|12h15 - 12h45",
-        "Hyrox|15/04|13h00 - 13h45",
-        "Body Attack|17/04|12h15 - 13h00",
-        "Abdos-Fessiers|15/04|19h15 - 20h00",
-        "Pilates|22/04|20h15 - 21h00",
-        "Body Combat|14/04|12h15 - 13h00",
-        "Body Sculpt|14/04|19h30 - 20h15",
-        "Body Jam|14/04|18h30 - 19h30",
-        "Cross Training Intensity|15/04|07h30 - 08h15",
-        "RPM|18/04|11h30 - 12h15",
-        "CAF|14/04|12h15 - 13h00"
-    ],
     "2026-04-14": [
         "Biking|14/04|12h15 - 13h00",
         "RPM|14/04|18h00 - 18h45",
@@ -163,5 +133,8 @@
         "Cross Training Intensity|23/04|12h15 - 13h00",
         "Cross Training Intensity|30/04|12h15 - 13h00",
         "Pilates|21/04|08h15 - 09h00"
+    ],
+    "2026-04-21": [
+        "CAF|21/04|19h45 - 20h30"
     ]
 }
