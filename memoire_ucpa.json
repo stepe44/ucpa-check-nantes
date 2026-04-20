@@ -91,14 +91,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Yoga Vinyasa",
+        "date": "22/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Swiss Ball",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -122,13 +129,6 @@
         "nom": "RPM",
         "date": "23/04",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "23/04",
-        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
