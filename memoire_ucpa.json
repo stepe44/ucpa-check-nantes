@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "21/04",
-        "horaire": "08h15 - 09h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "21/04",
         "horaire": "12h15 - 13h00",
@@ -98,14 +91,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Swiss Ball",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
