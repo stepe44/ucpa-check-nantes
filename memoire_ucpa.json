@@ -63,6 +63,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "21/04",
+        "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "21/04",
         "horaire": "19h45 - 20h30",
@@ -255,13 +262,6 @@
         "nom": "Pilates",
         "date": "29/04",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "30/04",
-        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
