@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Sculpt",
-        "date": "21/04",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "07h30 - 08h15",
@@ -24,13 +17,6 @@
         "nom": "Yoga Vinyasa",
         "date": "22/04",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Swiss Ball",
-        "date": "22/04",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -84,13 +70,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
-        "date": "23/04",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "23/04",
         "horaire": "20h15 - 21h00",
@@ -119,16 +98,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Cross Training Intensity",
         "date": "25/04",
-        "horaire": "10h45 - 11h30",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "CAF",
         "date": "25/04",
-        "horaire": "11h30 - 12h15",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -185,6 +164,13 @@
         "nom": "Pilates",
         "date": "28/04",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
+        "date": "28/04",
+        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
