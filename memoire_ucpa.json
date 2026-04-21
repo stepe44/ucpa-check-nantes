@@ -1,13 +1,13 @@
 [
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Biking",
         "date": "21/04",
-        "horaire": "08h00 - 09h00",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "21/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -49,6 +49,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Swiss Ball",
+        "date": "21/04",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "21/04",
         "horaire": "19h00 - 19h45",
@@ -70,6 +77,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "21/04",
+        "horaire": "19h45 - 20h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "07h30 - 08h15",
@@ -84,6 +98,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "22/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "22/04",
         "horaire": "12h30 - 13h30",
@@ -91,14 +112,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Swiss Ball",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -192,6 +213,13 @@
         "nom": "Body Pump",
         "date": "27/04",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "27/04",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
