@@ -1,8 +1,8 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Abdos Express",
         "date": "21/04",
-        "horaire": "17h45 - 18h30",
+        "horaire": "18h15 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -10,13 +10,6 @@
         "nom": "Body Jam",
         "date": "21/04",
         "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "21/04",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -38,6 +31,20 @@
         "nom": "Body Pump",
         "date": "22/04",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "22/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
+        "date": "22/04",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -64,13 +71,6 @@
     },
     {
         "nom": "Cross Training Intensity",
-        "date": "23/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
         "date": "23/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
