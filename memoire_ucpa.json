@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "21/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "21/04",
         "horaire": "17h30 - 18h30",
@@ -70,13 +63,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "21/04",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "21/04",
         "horaire": "19h45 - 20h30",
@@ -87,13 +73,6 @@
         "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "22/04",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,14 +91,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Swiss Ball",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Cross Training Intensity",
         "date": "22/04",
         "horaire": "19h00 - 19h45",
         "places": 0,
@@ -143,6 +122,13 @@
         "nom": "RPM",
         "date": "23/04",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "23/04",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -224,6 +210,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "27/04",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "27/04",
         "horaire": "18h15 - 19h15",
@@ -262,6 +255,13 @@
         "nom": "Pilates",
         "date": "29/04",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "30/04",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
