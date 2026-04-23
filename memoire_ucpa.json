@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "23/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "23/04",
         "horaire": "17h30 - 18h15",
@@ -28,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "24/04",
-        "horaire": "12h15 - 13h00",
+        "nom": "Hiit",
+        "date": "23/04",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -73,6 +66,13 @@
         "nom": "Body Pump",
         "date": "26/04",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "26/04",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
