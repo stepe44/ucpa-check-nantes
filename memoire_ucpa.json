@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "25/04",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "26/04",
         "horaire": "09h45 - 10h30",
@@ -164,13 +171,6 @@
         "nom": "Pilates",
         "date": "29/04",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "30/04",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
