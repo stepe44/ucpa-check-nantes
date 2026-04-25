@@ -98,13 +98,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "28/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "28/04",
         "horaire": "12h15 - 13h00",
@@ -141,6 +134,13 @@
     },
     {
         "nom": "Yoga Vinyasa",
+        "date": "29/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "29/04",
         "horaire": "12h30 - 13h30",
         "places": 0,
