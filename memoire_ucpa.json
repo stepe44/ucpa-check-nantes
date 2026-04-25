@@ -49,6 +49,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "27/04",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "27/04",
         "horaire": "12h30 - 13h30",
@@ -73,13 +80,6 @@
         "nom": "Cross Training Intensity",
         "date": "27/04",
         "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "27/04",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,6 +112,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Jam",
+        "date": "28/04",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Swiss Ball",
         "date": "28/04",
         "horaire": "18h45 - 19h30",
@@ -127,13 +134,6 @@
     },
     {
         "nom": "Yoga Vinyasa",
-        "date": "29/04",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
         "date": "29/04",
         "horaire": "12h30 - 13h30",
         "places": 0,
