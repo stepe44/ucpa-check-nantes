@@ -7,16 +7,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "CAF Express",
         "date": "27/04",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
+        "nom": "Body Pump",
         "date": "27/04",
-        "horaire": "12h15 - 12h45",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -56,14 +56,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "27/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "27/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -196,16 +196,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "CAF Express",
         "date": "27/04",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
+        "nom": "Body Pump",
         "date": "27/04",
-        "horaire": "12h15 - 12h45",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -245,14 +245,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Attack",
         "date": "27/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "27/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
