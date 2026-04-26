@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "26/04",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "27/04",
         "horaire": "12h15 - 13h00",
@@ -66,6 +73,13 @@
         "nom": "Body Attack",
         "date": "27/04",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "28/04",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
