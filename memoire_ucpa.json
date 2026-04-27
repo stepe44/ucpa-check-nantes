@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "27/04",
-        "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "27/04",
         "horaire": "12h15 - 13h00",
@@ -14,9 +7,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Body Pump",
         "date": "27/04",
-        "horaire": "12h30 - 13h30",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -57,13 +50,6 @@
     },
     {
         "nom": "RPM",
-        "date": "27/04",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
         "date": "27/04",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -126,6 +112,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "29/04",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "29/04",
         "horaire": "12h30 - 13h30",
@@ -161,13 +154,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "30/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "30/04",
         "horaire": "12h30 - 13h30",
@@ -192,6 +178,20 @@
         "nom": "CAF",
         "date": "02/05",
         "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "02/05",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "03/05",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -241,13 +241,6 @@
         "nom": "Pilates",
         "date": "06/05",
         "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "10/05",
-        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     }
