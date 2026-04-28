@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "28/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "28/04",
         "horaire": "12h15 - 13h00",
@@ -35,9 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
+        "nom": "Swiss Ball",
         "date": "28/04",
-        "horaire": "18h30 - 19h30",
+        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -45,13 +38,6 @@
         "nom": "Hyrox",
         "date": "28/04",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "28/04",
-        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -98,13 +84,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "29/04",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "29/04",
         "horaire": "20h15 - 21h00",
@@ -115,13 +94,6 @@
         "nom": "RPM",
         "date": "30/04",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF Express",
-        "date": "30/04",
-        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,13 +115,6 @@
         "nom": "Abdos-Fessiers",
         "date": "30/04",
         "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "01/05",
-        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -203,6 +168,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "03/05",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "04/05",
         "horaire": "12h15 - 13h00",
@@ -246,6 +218,13 @@
     },
     {
         "nom": "Yoga Vinyasa",
+        "date": "06/05",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "06/05",
         "horaire": "12h30 - 13h30",
         "places": 0,
