@@ -1,12 +1,5 @@
 [
     {
-        "nom": "CAF Express",
-        "date": "30/04",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "30/04",
         "horaire": "12h15 - 13h00",
@@ -73,13 +66,6 @@
         "nom": "Cross Training Intensity",
         "date": "01/05",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "02/05",
-        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -161,6 +147,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "04/05",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "05/05",
         "horaire": "12h15 - 13h00",
@@ -192,6 +185,13 @@
         "nom": "Cross Training Intensity",
         "date": "06/05",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "06/05",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
