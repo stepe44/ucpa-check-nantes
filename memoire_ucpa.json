@@ -7,9 +7,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "Body Pump",
         "date": "29/04",
-        "horaire": "13h00 - 13h45",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -35,7 +35,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Cross Training Intensity",
         "date": "30/04",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -112,13 +112,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "02/05",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "03/05",
         "horaire": "09h45 - 10h30",
@@ -189,6 +182,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "05/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "05/05",
         "horaire": "17h30 - 18h30",
@@ -199,6 +199,13 @@
         "nom": "Yoga Vinyasa",
         "date": "06/05",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "06/05",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
