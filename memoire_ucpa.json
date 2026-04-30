@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "30/04",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "30/04",
         "horaire": "17h30 - 18h15",
@@ -143,6 +136,13 @@
         "nom": "Abdos-Fessiers",
         "date": "04/05",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "04/05",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
