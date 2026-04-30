@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "30/04",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "01/05",
         "horaire": "09h30 - 10h15",
@@ -24,13 +17,6 @@
         "nom": "Body Sculpt",
         "date": "01/05",
         "horaire": "10h15 - 11h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "01/05",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -150,6 +136,20 @@
         "nom": "Yoga Vinyasa",
         "date": "05/05",
         "horaire": "17h30 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "05/05",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "05/05",
+        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
