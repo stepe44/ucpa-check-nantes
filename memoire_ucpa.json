@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "01/05",
-        "horaire": "13h00 - 13h45",
+        "nom": "Yoga Vinyasa",
+        "date": "02/05",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "CAF",
         "date": "02/05",
-        "horaire": "09h15 - 10h15",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,7 +105,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
+        "nom": "RPM",
         "date": "04/05",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -203,9 +203,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "10/05",
-        "horaire": "11h30 - 12h30",
+        "nom": "CAF",
+        "date": "09/05",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     }
