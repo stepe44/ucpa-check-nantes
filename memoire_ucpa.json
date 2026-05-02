@@ -1,22 +1,8 @@
 [
     {
-        "nom": "CAF",
-        "date": "02/05",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "03/05",
         "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "03/05",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -80,13 +66,6 @@
         "nom": "Abdos-Fessiers",
         "date": "04/05",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "04/05",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
