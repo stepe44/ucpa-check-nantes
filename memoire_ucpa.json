@@ -21,6 +21,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "04/05",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "04/05",
         "horaire": "17h30 - 18h15",
@@ -171,6 +178,13 @@
         "nom": "CAF",
         "date": "09/05",
         "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "10/05",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -203,6 +217,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "04/05",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "04/05",
         "horaire": "17h30 - 18h15",
@@ -353,6 +374,13 @@
         "nom": "CAF",
         "date": "09/05",
         "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "10/05",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
