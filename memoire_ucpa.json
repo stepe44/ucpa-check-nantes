@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
-        "date": "04/05",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "04/05",
         "horaire": "12h30 - 13h30",
@@ -227,13 +220,6 @@
         "nom": "Body Pump",
         "date": "04/05",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF Express",
-        "date": "04/05",
-        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
