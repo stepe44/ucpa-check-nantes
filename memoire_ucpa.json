@@ -1,33 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "04/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF Express",
-        "date": "04/05",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "04/05",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "04/05",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "04/05",
         "horaire": "17h30 - 18h15",
@@ -84,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "05/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "05/05",
         "horaire": "17h30 - 18h30",
@@ -98,9 +77,23 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Swiss Ball",
+        "nom": "Cross Training Intensity",
         "date": "05/05",
-        "horaire": "18h45 - 19h30",
+        "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "05/05",
+        "horaire": "18h00 - 18h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "05/05",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -175,13 +168,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "07/05",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "08/05",
         "horaire": "09h30 - 10h15",
@@ -220,13 +206,6 @@
         "nom": "Yoga Vinyasa",
         "date": "10/05",
         "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "11/05",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
