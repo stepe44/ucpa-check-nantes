@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "06/05",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "06/05",
         "horaire": "09h00 - 10h00",
@@ -31,13 +24,6 @@
         "nom": "Body Pump",
         "date": "06/05",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "06/05",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -147,6 +133,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "10/05",
+        "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "10/05",
         "horaire": "11h30 - 12h30",
@@ -196,6 +189,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "11/05",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "11/05",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Attack",
         "date": "11/05",
         "horaire": "19h15 - 20h00",
@@ -203,9 +210,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "CAF",
         "date": "12/05",
-        "horaire": "17h30 - 18h30",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
