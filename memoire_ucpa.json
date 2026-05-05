@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "05/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "05/05",
         "horaire": "17h30 - 18h15",
@@ -35,16 +28,30 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "06/05",
-        "horaire": "07h30 - 08h15",
+        "nom": "RPM",
+        "date": "05/05",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
+        "nom": "Body Sculpt",
+        "date": "05/05",
+        "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "05/05",
+        "horaire": "19h45 - 20h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "06/05",
-        "horaire": "12h15 - 12h45",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,14 +112,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Cross Training Intensity",
         "date": "07/05",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "07/05",
         "horaire": "12h15 - 13h00",
         "places": 0,
