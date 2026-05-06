@@ -1,5 +1,19 @@
 [
     {
+        "nom": "Cross Training Intensity",
+        "date": "06/05",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "06/05",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "06/05",
         "horaire": "20h15 - 21h00",
@@ -63,6 +77,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "08/05",
+        "horaire": "10h15 - 11h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "08/05",
         "horaire": "12h15 - 13h00",
@@ -80,6 +101,13 @@
         "nom": "Yoga Vinyasa",
         "date": "09/05",
         "horaire": "09h15 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "09/05",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
