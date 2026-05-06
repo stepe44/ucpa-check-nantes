@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "07/05",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "07/05",
         "horaire": "18h30 - 19h00",
@@ -192,6 +199,13 @@
         "nom": "Body Pump",
         "date": "13/05",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "13/05",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
