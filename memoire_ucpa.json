@@ -1,5 +1,19 @@
 [
     {
+        "nom": "CAF Express",
+        "date": "06/05",
+        "horaire": "12h15 - 12h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "06/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "06/05",
         "horaire": "12h30 - 13h30",
@@ -10,13 +24,6 @@
         "nom": "Body Pump",
         "date": "06/05",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "06/05",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -49,13 +56,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "07/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "07/05",
         "horaire": "12h15 - 13h00",
@@ -73,6 +73,13 @@
         "nom": "Body Sculpt",
         "date": "07/05",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "07/05",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,13 +150,6 @@
         "nom": "Pilates",
         "date": "11/05",
         "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "11/05",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
