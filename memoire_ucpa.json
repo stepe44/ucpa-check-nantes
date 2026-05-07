@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Sculpt",
         "date": "08/05",
-        "horaire": "09h30 - 10h15",
+        "horaire": "10h15 - 11h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "RPM",
         "date": "08/05",
-        "horaire": "10h15 - 11h00",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
