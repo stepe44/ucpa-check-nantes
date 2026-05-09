@@ -56,13 +56,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
-        "date": "11/05",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "12/05",
         "horaire": "12h15 - 13h00",
@@ -218,13 +211,6 @@
     },
     {
         "nom": "RPM",
-        "date": "11/05",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
         "date": "11/05",
         "horaire": "19h15 - 20h00",
         "places": 0,
