@@ -1,12 +1,4 @@
 {
-    "2026-05-02": [
-        "Body Jam|05/05|18h30 - 19h30",
-        "RPM|02/05|11h30 - 12h15",
-        "Cross Training Intensity|03/05|10h45 - 11h30",
-        "RPM|04/05|19h15 - 20h00",
-        "RPM|04/05|13h00 - 13h45",
-        "Stretching|03/05|11h30 - 12h15"
-    ],
     "2026-05-03": [
         "Body Pump|04/05|17h30 - 18h15",
         "Cross Training Intensity|05/05|12h15 - 13h00",
@@ -119,5 +111,10 @@
         "Body Attack|11/05|19h15 - 20h00",
         "CAF|12/05|12h15 - 13h00",
         "Body Sculpt|12/05|19h30 - 20h15"
+    ],
+    "2026-05-10": [
+        "Pilates|11/05|09h30 - 10h15",
+        "CAF Express|11/05|12h15 - 12h45",
+        "Body Jam|12/05|18h30 - 19h30"
     ]
 }
