@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Pilates",
+        "date": "11/05",
+        "horaire": "09h30 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "11/05",
         "horaire": "12h15 - 13h00",
@@ -164,6 +171,13 @@
         "nom": "Yoga Vinyasa",
         "date": "17/05",
         "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "11/05",
+        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
