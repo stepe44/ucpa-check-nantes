@@ -1,11 +1,4 @@
 {
-    "2026-05-03": [
-        "Body Pump|04/05|17h30 - 18h15",
-        "Cross Training Intensity|05/05|12h15 - 13h00",
-        "CAF Express|04/05|12h15 - 12h45",
-        "Body Jam|05/05|18h30 - 19h30",
-        "Body Sculpt|05/05|19h30 - 20h15"
-    ],
     "2026-05-04": [
         "Cross Training Intensity|04/05|12h15 - 13h00",
         "Body Pump|04/05|12h15 - 13h00",
@@ -117,5 +110,9 @@
         "CAF Express|11/05|12h15 - 12h45",
         "Body Jam|12/05|18h30 - 19h30",
         "Cross Training Intensity|11/05|12h15 - 13h00"
+    ],
+    "2026-05-11": [
+        "Yoga Vinyasa|11/05|12h30 - 13h30",
+        "Cross Training Intensity|12/05|12h15 - 13h00"
     ]
 }
