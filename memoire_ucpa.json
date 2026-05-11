@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "12/05",
-        "horaire": "17h30 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "12/05",
         "horaire": "17h30 - 18h15",
@@ -66,13 +59,6 @@
         "nom": "CAF",
         "date": "12/05",
         "horaire": "19h45 - 20h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "12/05",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
