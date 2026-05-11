@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Combat",
-        "date": "12/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "12/05",
         "horaire": "12h15 - 13h00",
@@ -63,23 +56,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "12/05",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "12/05",
         "horaire": "19h45 - 20h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "13/05",
-        "horaire": "09h00 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -133,6 +112,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "14/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "14/05",
         "horaire": "12h30 - 13h30",
@@ -143,13 +129,6 @@
         "nom": "Cross Training Intensity",
         "date": "14/05",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "15/05",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
