@@ -2,27 +2,6 @@
     {
         "nom": "Body Pump",
         "date": "11/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "11/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "11/05",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "11/05",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
@@ -35,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "11/05",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "11/05",
         "horaire": "19h15 - 20h00",
@@ -49,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
-        "date": "11/05",
-        "horaire": "19h15 - 20h00",
+        "nom": "Cross Training Intensity",
+        "date": "12/05",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -66,6 +38,13 @@
         "nom": "CAF",
         "date": "12/05",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "12/05",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,9 +91,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "CAF",
         "date": "12/05",
-        "horaire": "19h30 - 20h15",
+        "horaire": "19h45 - 20h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -133,13 +112,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "13/05",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "13/05",
         "horaire": "19h15 - 20h00",
@@ -150,6 +122,13 @@
         "nom": "Pilates",
         "date": "13/05",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "14/05",
+        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -175,13 +154,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "15/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "16/05",
         "horaire": "09h15 - 10h15",
@@ -189,9 +161,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "17/05",
+        "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "17/05",
         "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "18/05",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -227,6 +213,13 @@
         "nom": "Body Pump",
         "date": "20/05",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "20/05",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
