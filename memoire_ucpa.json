@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "12/05",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "12/05",
-        "horaire": "17h45 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "12/05",
         "horaire": "18h00 - 18h45",
@@ -31,6 +17,20 @@
         "nom": "CAF",
         "date": "12/05",
         "horaire": "19h45 - 20h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "13/05",
+        "horaire": "09h00 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "13/05",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
