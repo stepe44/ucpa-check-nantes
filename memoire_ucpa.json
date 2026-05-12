@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "13/05",
-        "horaire": "09h00 - 10h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "13/05",
         "horaire": "12h15 - 13h00",
@@ -73,13 +66,6 @@
         "nom": "Cross Training Intensity",
         "date": "14/05",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "15/05",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
