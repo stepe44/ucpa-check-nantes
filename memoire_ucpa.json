@@ -56,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "18/05",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "18/05",
         "horaire": "17h30 - 18h15",
