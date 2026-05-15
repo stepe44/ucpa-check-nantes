@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "16/05",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "17/05",
         "horaire": "09h45 - 10h30",
@@ -85,6 +78,13 @@
     },
     {
         "nom": "RPM",
+        "date": "18/05",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
         "date": "18/05",
         "horaire": "19h15 - 20h00",
         "places": 0,
