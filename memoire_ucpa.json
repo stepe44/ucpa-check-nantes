@@ -35,6 +35,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "18/05",
+        "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "18/05",
         "horaire": "18h30 - 19h15",
@@ -43,6 +50,13 @@
     },
     {
         "nom": "RPM",
+        "date": "18/05",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
         "date": "18/05",
         "horaire": "19h15 - 20h00",
         "places": 0,
@@ -161,6 +175,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "18/05",
+        "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "18/05",
         "horaire": "18h30 - 19h15",
@@ -169,6 +190,13 @@
     },
     {
         "nom": "RPM",
+        "date": "18/05",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
         "date": "18/05",
         "horaire": "19h15 - 20h00",
         "places": 0,
