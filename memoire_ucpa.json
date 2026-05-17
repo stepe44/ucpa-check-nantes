@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "18/05",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "18/05",
         "horaire": "17h30 - 18h15",
@@ -63,9 +70,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "Cross Training Intensity",
         "date": "19/05",
-        "horaire": "13h00 - 13h45",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "19/05",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -133,9 +147,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "21/05",
+        "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "22/05",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "23/05",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -175,6 +203,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "18/05",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "18/05",
         "horaire": "17h30 - 18h15",
@@ -210,9 +245,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
+        "nom": "Cross Training Intensity",
         "date": "19/05",
-        "horaire": "13h00 - 13h45",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "19/05",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -280,9 +322,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "21/05",
+        "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "22/05",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "23/05",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
