@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "19/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "19/05",
         "horaire": "12h15 - 13h00",
@@ -21,7 +14,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Cross Training Intensity",
         "date": "19/05",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -59,13 +52,6 @@
         "nom": "CAF",
         "date": "19/05",
         "horaire": "19h45 - 20h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "20/05",
-        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
