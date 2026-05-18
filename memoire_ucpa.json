@@ -1,19 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "19/05",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "19/05",
-        "horaire": "08h15 - 09h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Combat",
         "date": "19/05",
         "horaire": "12h15 - 13h00",
@@ -77,9 +63,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF Express",
+        "nom": "Cross Training Intensity",
         "date": "20/05",
-        "horaire": "12h15 - 12h45",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -122,6 +108,13 @@
         "nom": "Pilates",
         "date": "20/05",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "21/05",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
