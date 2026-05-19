@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "20/05",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF Express",
         "date": "20/05",
         "horaire": "12h15 - 12h45",
@@ -22,6 +15,13 @@
     },
     {
         "nom": "Body Pump",
+        "date": "20/05",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
         "date": "20/05",
         "horaire": "12h30 - 13h30",
         "places": 0,

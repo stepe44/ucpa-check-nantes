@@ -1,14 +1,4 @@
 {
-    "2026-05-12": [
-        "Yoga Vinyasa|12/05|17h30 - 18h30",
-        "STEP Débutant|12/05|20h15 - 21h00",
-        "Body Sculpt|12/05|13h00 - 13h45",
-        "Hyrox|12/05|19h00 - 19h45",
-        "Body Sculpt|12/05|19h30 - 20h15",
-        "Biking|13/05|12h15 - 13h00",
-        "Pilates|13/05|09h00 - 10h00",
-        "Pilates|15/05|12h15 - 13h00"
-    ],
     "2026-05-13": [
         "Yoga Vinyasa|16/05|09h15 - 10h15",
         "Biking|13/05|12h15 - 13h00",
@@ -98,5 +88,8 @@
         "CAF Express|20/05|12h15 - 12h45",
         "Body Pump|20/05|12h30 - 13h30",
         "Pilates|22/05|12h15 - 13h00"
+    ],
+    "2026-05-20": [
+        "Cross Training Intensity|20/05|07h30 - 08h15"
     ]
 }
