@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Sculpt",
-        "date": "21/05",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "22/05",
         "horaire": "12h15 - 13h00",
@@ -21,14 +14,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Cross Training Intensity",
         "date": "22/05",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "CAF",
         "date": "22/05",
         "horaire": "17h30 - 18h15",
         "places": 0,
