@@ -9,13 +9,6 @@
     {
         "nom": "Cross Training Intensity",
         "date": "22/05",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "22/05",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
@@ -24,6 +17,13 @@
         "nom": "CAF",
         "date": "22/05",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "23/05",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -38,13 +38,6 @@
         "nom": "Cross Training Intensity",
         "date": "24/05",
         "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "24/05",
-        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -101,6 +94,13 @@
         "nom": "Hyrox",
         "date": "26/05",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "27/05",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
