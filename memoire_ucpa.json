@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "21/05",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "22/05",
         "horaire": "12h15 - 13h00",
@@ -28,14 +21,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "CAF",
         "date": "22/05",
         "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Cross Training Intensity",
         "date": "22/05",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -84,6 +77,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "26/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
@@ -101,6 +101,13 @@
         "nom": "Cross Training Intensity",
         "date": "26/05",
         "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "26/05",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
