@@ -35,16 +35,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Stretching",
+        "nom": "Yoga Vinyasa",
         "date": "24/05",
-        "horaire": "11h30 - 12h15",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Stretching",
         "date": "24/05",
-        "horaire": "11h30 - 12h30",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -63,9 +63,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "26/05",
-        "horaire": "12h15 - 13h00",
+        "nom": "RPM",
+        "date": "25/05",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
