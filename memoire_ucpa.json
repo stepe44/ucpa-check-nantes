@@ -35,14 +35,21 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "RPM",
+        "date": "25/05",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -129,6 +136,13 @@
         "nom": "Abdos-Fessiers",
         "date": "28/05",
         "horaire": "18h30 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "29/05",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
