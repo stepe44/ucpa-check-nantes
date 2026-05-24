@@ -21,6 +21,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "25/05",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
@@ -31,6 +38,13 @@
         "nom": "Biking",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "26/05",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -149,41 +163,6 @@
     {
         "nom": "Yoga Vinyasa",
         "date": "31/05",
-        "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "01/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "01/06",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "03/06",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "03/06",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "07/06",
         "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
