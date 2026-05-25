@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "26/05",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
@@ -15,6 +8,13 @@
     },
     {
         "nom": "Cross Training Intensity",
+        "date": "26/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
         "date": "26/05",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -63,23 +63,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "26/05",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "26/05",
         "horaire": "19h45 - 20h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "27/05",
-        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
