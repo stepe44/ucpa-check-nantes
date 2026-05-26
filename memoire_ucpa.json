@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "27/05",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "27/05",
         "horaire": "12h30 - 13h30",
@@ -31,20 +38,6 @@
         "nom": "Abdos-Fessiers",
         "date": "27/05",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "27/05",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "27/05",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -171,6 +164,13 @@
         "nom": "Abdos-Fessiers",
         "date": "03/06",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "05/06",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
