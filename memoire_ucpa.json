@@ -1,15 +1,8 @@
 [
     {
-        "nom": "CAF",
+        "nom": "Yoga Vinyasa",
         "date": "30/05",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "30/05",
-        "horaire": "11h30 - 12h15",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
