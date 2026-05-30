@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "31/05",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "31/05",
         "horaire": "10h45 - 11h30",
@@ -14,16 +7,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Stretching",
+        "nom": "Yoga Vinyasa",
         "date": "31/05",
-        "horaire": "11h30 - 12h15",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "31/05",
-        "horaire": "11h30 - 12h30",
+        "nom": "CAF Express",
+        "date": "01/06",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
