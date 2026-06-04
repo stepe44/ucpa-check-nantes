@@ -1,33 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "04/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "04/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "04/06",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "04/06",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hyrox",
         "date": "05/06",
         "horaire": "08h00 - 08h45",
@@ -98,7 +70,28 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "07/06",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Stretching",
+        "date": "07/06",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
+        "date": "08/06",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "08/06",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -140,9 +133,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "09/06",
+        "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "09/06",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "09/06",
+        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -171,13 +178,6 @@
         "nom": "Abdos-Fessiers",
         "date": "10/06",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "10/06",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
