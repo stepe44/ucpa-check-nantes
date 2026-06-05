@@ -1,5 +1,12 @@
 [
     {
+        "nom": "CAF",
+        "date": "06/06",
+        "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "07/06",
         "horaire": "09h45 - 10h30",
@@ -129,13 +136,6 @@
         "nom": "Abdos-Fessiers",
         "date": "10/06",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "10/06",
-        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
