@@ -105,6 +105,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Swiss Ball",
+        "date": "09/06",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "09/06",
         "horaire": "19h00 - 19h45",
