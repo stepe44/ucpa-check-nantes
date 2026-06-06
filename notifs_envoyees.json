@@ -1,13 +1,4 @@
 {
-    "2026-05-29": [
-        "Cross Training Intensity|01/06|18h30 - 19h15",
-        "Yoga Vinyasa|01/06|12h30 - 13h30",
-        "Cross Training Intensity|29/05|17h30 - 18h15",
-        "CAF|30/05|10h45 - 11h30",
-        "Body Pump|01/06|17h30 - 18h15",
-        "Yoga Vinyasa|30/05|09h15 - 10h15",
-        "Abdos-Fessiers|03/06|19h15 - 20h00"
-    ],
     "2026-05-30": [
         "CAF|30/05|10h45 - 11h30",
         "Body Pump|30/05|11h30 - 12h15",
@@ -88,6 +79,9 @@
         "Yoga Vinyasa|09/06|17h30 - 18h30",
         "Pilates|10/06|20h15 - 21h00",
         "Yoga Vinyasa|07/06|11h30 - 12h30",
+        "Yoga Vinyasa|08/06|18h15 - 19h15"
+    ],
+    "2026-06-06": [
         "Yoga Vinyasa|08/06|18h15 - 19h15"
     ]
 }
