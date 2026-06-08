@@ -1,9 +1,4 @@
 {
-    "2026-05-31": [
-        "Abdos-Fessiers|03/06|19h15 - 20h00",
-        "Yoga Vinyasa|01/06|18h15 - 19h15",
-        "RPM|01/06|19h15 - 20h00"
-    ],
     "2026-06-01": [
         "Abdos-Fessiers|01/06|19h00 - 19h45",
         "Yoga Vinyasa|07/06|11h30 - 12h30",
@@ -77,5 +72,9 @@
         "Cross Training Intensity|09/06|17h45 - 18h30",
         "Abdos-Fessiers|08/06|19h00 - 19h45",
         "Abdos-Fessiers|10/06|19h15 - 20h00"
+    ],
+    "2026-06-08": [
+        "RPM|09/06|18h00 - 18h45",
+        "Biking|11/06|18h30 - 19h15"
     ]
 }
