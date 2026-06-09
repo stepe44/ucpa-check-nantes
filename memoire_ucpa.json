@@ -1,8 +1,22 @@
 [
     {
+        "nom": "Body Sculpt",
+        "date": "09/06",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "09/06",
         "horaire": "18h00 - 18h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "09/06",
+        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -21,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "09/06",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "10/06",
         "horaire": "12h30 - 13h30",
@@ -38,6 +45,13 @@
         "nom": "Body Pump",
         "date": "10/06",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "10/06",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -87,13 +101,6 @@
         "nom": "Yoga Vinyasa",
         "date": "11/06",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "11/06",
-        "horaire": "13h00 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -176,6 +183,13 @@
     },
     {
         "nom": "Yoga Vinyasa",
+        "date": "17/06",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "17/06",
         "horaire": "12h30 - 13h30",
         "places": 0,
