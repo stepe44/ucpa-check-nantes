@@ -1,36 +1,8 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "09/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "09/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "09/06",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "09/06",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Jam",
-        "date": "09/06",
-        "horaire": "18h30 - 19h30",
+        "horaire": "18h00 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -66,13 +38,6 @@
         "nom": "Body Pump",
         "date": "10/06",
         "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "10/06",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -136,6 +101,13 @@
         "nom": "STEP Débutant",
         "date": "11/06",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "11/06",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
