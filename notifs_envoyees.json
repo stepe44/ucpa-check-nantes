@@ -1,14 +1,4 @@
 {
-    "2026-06-01": [
-        "Abdos-Fessiers|01/06|19h00 - 19h45",
-        "Yoga Vinyasa|07/06|11h30 - 12h30",
-        "Hyrox|02/06|19h00 - 19h45",
-        "Hyrox|03/06|13h00 - 13h45",
-        "Yoga Vinyasa|06/06|09h15 - 10h15",
-        "Body Jam|02/06|18h30 - 19h30",
-        "Body Sculpt|02/06|19h30 - 20h15",
-        "Cross Training Intensity|05/06|13h00 - 13h45"
-    ],
     "2026-06-02": [
         "Cross Training Intensity|02/06|12h15 - 13h00",
         "Body Sculpt|02/06|13h00 - 13h45",
@@ -82,5 +72,8 @@
         "Cross Training Intensity|11/06|12h15 - 13h00",
         "CAF|13/06|10h45 - 11h30",
         "Yoga Vinyasa|09/06|17h30 - 18h30"
+    ],
+    "2026-06-09": [
+        "Body Pump|17/06|12h30 - 13h30"
     ]
 }
