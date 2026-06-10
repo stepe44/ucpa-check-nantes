@@ -1,11 +1,4 @@
 {
-    "2026-06-03": [
-        "Abdos-Fessiers|03/06|19h15 - 20h00",
-        "Abdos-Fessiers|10/06|19h15 - 20h00",
-        "Body Attack|04/06|18h15 - 19h00",
-        "Body Pump|08/06|12h15 - 13h00",
-        "Body Pump|06/06|11h30 - 12h15"
-    ],
     "2026-06-04": [
         "Yoga Vinyasa|08/06|18h15 - 19h15",
         "Abdos-Fessiers|04/06|18h30 - 19h00",
@@ -69,5 +62,8 @@
         "Yoga Vinyasa|14/06|11h30 - 12h30",
         "Pilates|17/06|20h15 - 21h00",
         "Yoga Vinyasa|13/06|09h15 - 10h15"
+    ],
+    "2026-06-11": [
+        "Body Pump|15/06|12h15 - 13h00"
     ]
 }
