@@ -1,8 +1,8 @@
 [
     {
-        "nom": "Hyrox",
+        "nom": "Body Attack",
         "date": "12/06",
-        "horaire": "08h00 - 08h45",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -21,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "13/06",
-        "horaire": "09h15 - 10h15",
+        "nom": "RPM",
+        "date": "12/06",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -31,13 +31,6 @@
         "nom": "Cross Training Intensity",
         "date": "13/06",
         "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "13/06",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -94,6 +87,13 @@
         "nom": "Abdos-Fessiers",
         "date": "15/06",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "16/06",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
