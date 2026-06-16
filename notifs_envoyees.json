@@ -1,14 +1,4 @@
 {
-    "2026-06-08": [
-        "RPM|09/06|18h00 - 18h45",
-        "Biking|11/06|18h30 - 19h15",
-        "Cross Training Intensity|09/06|07h30 - 08h15",
-        "Cross Training Intensity|09/06|12h15 - 13h00",
-        "Biking|09/06|12h15 - 13h00",
-        "Cross Training Intensity|11/06|12h15 - 13h00",
-        "CAF|13/06|10h45 - 11h30",
-        "Yoga Vinyasa|09/06|17h30 - 18h30"
-    ],
     "2026-06-09": [
         "Body Pump|17/06|12h30 - 13h30",
         "Body Sculpt|09/06|17h30 - 18h15",
@@ -74,5 +64,10 @@
         "Yoga Vinyasa|18/06|12h30 - 13h30",
         "CAF|16/06|12h15 - 13h00",
         "Body Sculpt|16/06|13h00 - 13h45"
+    ],
+    "2026-06-16": [
+        "Hyrox|16/06|19h00 - 19h45",
+        "Body Sculpt|16/06|19h30 - 20h15",
+        "Cross Training Intensity|19/06|13h00 - 13h45"
     ]
 }
