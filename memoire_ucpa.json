@@ -1,22 +1,8 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "16/06",
-        "horaire": "17h30 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "16/06",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "16/06",
-        "horaire": "17h45 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -35,9 +21,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Body Sculpt",
         "date": "16/06",
-        "horaire": "19h45 - 20h30",
+        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -122,6 +108,13 @@
         "nom": "Pilates",
         "date": "19/06",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "19/06",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
