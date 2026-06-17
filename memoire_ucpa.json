@@ -1,35 +1,7 @@
 [
     {
-        "nom": "RPM",
-        "date": "18/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "18/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "18/06",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "18/06",
-        "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "19/06",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
