@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Olympiades",
+        "date": "18/06",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "19/06",
         "horaire": "12h15 - 13h00",
@@ -71,13 +78,6 @@
     },
     {
         "nom": "Cross Training Intensity",
-        "date": "22/06",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
         "date": "22/06",
         "horaire": "12h15 - 13h00",
         "places": 0,
