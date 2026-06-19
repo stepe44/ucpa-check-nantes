@@ -15,13 +15,6 @@
     },
     {
         "nom": "Body Pump",
-        "date": "20/06",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
         "date": "21/06",
         "horaire": "09h45 - 10h30",
         "places": 0,
@@ -45,6 +38,13 @@
         "nom": "Body Pump",
         "date": "22/06",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "22/06",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
