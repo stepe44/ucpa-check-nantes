@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "19/06",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "20/06",
         "horaire": "09h15 - 10h15",
@@ -56,13 +49,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "22/06",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "22/06",
         "horaire": "18h30 - 19h15",
@@ -73,6 +59,13 @@
         "nom": "Abdos-Fessiers",
         "date": "22/06",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
+        "date": "23/06",
+        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,6 +98,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "24/06",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "24/06",
         "horaire": "20h15 - 21h00",
@@ -122,6 +122,13 @@
         "nom": "Pilates",
         "date": "26/06",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "26/06",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
