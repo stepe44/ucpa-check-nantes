@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "21/06",
-        "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Stretching",
         "date": "21/06",
         "horaire": "11h30 - 12h15",
@@ -24,6 +17,13 @@
         "nom": "Pilates",
         "date": "22/06",
         "horaire": "09h30 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "22/06",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -52,6 +52,13 @@
         "nom": "Abdos-Fessiers",
         "date": "22/06",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "23/06",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
