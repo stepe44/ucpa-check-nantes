@@ -1,12 +1,5 @@
 [
     {
-        "nom": "CAF",
-        "date": "20/06",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "21/06",
         "horaire": "09h45 - 10h30",
@@ -42,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "22/06",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "22/06",
         "horaire": "18h30 - 19h15",
@@ -59,13 +45,6 @@
         "nom": "Abdos-Fessiers",
         "date": "22/06",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "23/06",
-        "horaire": "17h30 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
