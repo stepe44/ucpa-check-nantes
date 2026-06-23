@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "24/06",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hiit",
         "date": "24/06",
         "horaire": "18h00 - 18h45",
@@ -31,6 +24,13 @@
         "nom": "Pilates",
         "date": "24/06",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "25/06",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -66,13 +66,6 @@
         "nom": "Yoga Vinyasa",
         "date": "27/06",
         "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "27/06",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
