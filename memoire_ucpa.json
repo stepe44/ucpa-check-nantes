@@ -1,5 +1,26 @@
 [
     {
+        "nom": "Cross Training Intensity",
+        "date": "22/06",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "22/06",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "23/06",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hiit",
         "date": "24/06",
         "horaire": "18h00 - 18h45",
@@ -115,6 +136,13 @@
         "nom": "Body Pump",
         "date": "01/07",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "02/07",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
