@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Yin",
+        "date": "25/06",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "26/06",
         "horaire": "13h00 - 13h45",
