@@ -28,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "27/06",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "28/06",
         "horaire": "09h45 - 10h30",
@@ -77,6 +70,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "29/06",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "29/06",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "29/06",
         "horaire": "19h00 - 19h45",
@@ -108,6 +115,13 @@
         "nom": "Cross Training Intensity",
         "date": "01/07",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "02/07",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
