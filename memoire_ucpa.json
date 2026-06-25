@@ -1,20 +1,6 @@
 [
     {
         "nom": "Cross Training Intensity",
-        "date": "25/06",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "25/06",
-        "horaire": "13h00 - 13h30",
-        "places": -7,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "26/06",
         "horaire": "13h00 - 13h45",
         "places": 0,
@@ -38,6 +24,13 @@
         "nom": "CAF",
         "date": "27/06",
         "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "27/06",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -129,6 +122,13 @@
         "nom": "Yoga Vinyasa",
         "date": "02/07",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "03/07",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
