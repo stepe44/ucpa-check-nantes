@@ -1,14 +1,4 @@
 {
-    "2026-06-17": [
-        "Yoga Vinyasa|22/06|12h30 - 13h30",
-        "Cross Training Intensity|17/06|19h00 - 19h45",
-        "Cross Training Intensity|18/06|12h15 - 13h00",
-        "Cross Training Intensity|22/06|12h15 - 13h00",
-        "RPM|18/06|12h15 - 13h00",
-        "Yoga Vinyasa|18/06|12h30 - 13h30",
-        "Body Sculpt|18/06|13h00 - 13h30",
-        "Body Attack|19/06|12h15 - 13h00"
-    ],
     "2026-06-18": [
         "Body Pump|22/06|12h15 - 13h00",
         "Pilates|19/06|12h15 - 13h00",
@@ -87,5 +77,10 @@
         "Yoga Vinyasa|27/06|09h15 - 10h15",
         "Yoga Vinyasa|28/06|11h30 - 12h30",
         "Pilates|26/06|12h15 - 13h00"
+    ],
+    "2026-06-25": [
+        "RPM|25/06|12h15 - 13h00",
+        "Cross Training Intensity|02/07|12h15 - 13h00",
+        "Yoga Vinyasa|02/07|12h30 - 13h30"
     ]
 }
