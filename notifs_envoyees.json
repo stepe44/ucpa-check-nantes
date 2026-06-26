@@ -1,10 +1,4 @@
 {
-    "2026-06-18": [
-        "Body Pump|22/06|12h15 - 13h00",
-        "Pilates|19/06|12h15 - 13h00",
-        "Body Pump|20/06|11h30 - 12h15",
-        "Cross Training Intensity|19/06|19h15 - 20h00"
-    ],
     "2026-06-19": [
         "Cross Training Intensity|22/06|12h15 - 13h00",
         "Abdos-Fessiers|24/06|19h15 - 20h00",
@@ -86,5 +80,9 @@
         "RPM|27/06|11h30 - 12h15",
         "Yoga Vinyasa|28/06|11h30 - 12h30",
         "Body Pump|29/06|17h30 - 18h15"
+    ],
+    "2026-06-26": [
+        "Cross Training Intensity|26/06|13h00 - 13h45",
+        "Cross Training Intensity|26/06|17h30 - 18h15"
     ]
 }
