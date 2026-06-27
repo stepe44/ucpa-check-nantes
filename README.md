@@ -14,7 +14,7 @@ Fonctions principales :
 
 🔄 Automatisation : Exécution récurrente via une tâche CRON.
 
-📱 Alertes : Notification push via WhatsApp dès qu'une place se libère email ou notification push sur mobile via le service https://ntfy.sh/
+📱 Alertes : Notification push via WhatsApp dès qu'une place se libère email ou notification push sur mobile via le service https://ntfy.sh/ ...
 
 🛠️ Fonctionnement Technique
 
