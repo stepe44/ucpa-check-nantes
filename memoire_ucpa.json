@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "STEP Débutant",
+        "date": "30/06",
+        "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "01/07",
         "horaire": "07h30 - 08h15",
@@ -49,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "01/07",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "01/07",
         "horaire": "17h30 - 18h15",
@@ -59,13 +73,6 @@
         "nom": "Cross Training Intensity",
         "date": "01/07",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "01/07",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -87,6 +94,20 @@
         "nom": "Cross Training Intensity",
         "date": "02/07",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "02/07",
+        "horaire": "13h00 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "02/07",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
