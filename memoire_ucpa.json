@@ -70,13 +70,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "04/07",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "04/07",
         "horaire": "10h45 - 11h30",
@@ -94,6 +87,13 @@
         "nom": "Yoga Vinyasa",
         "date": "05/07",
         "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "06/07",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
