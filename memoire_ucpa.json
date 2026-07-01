@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "01/07",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "02/07",
         "horaire": "12h15 - 13h00",
@@ -38,6 +31,13 @@
         "nom": "Body Attack",
         "date": "02/07",
         "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "02/07",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -91,9 +91,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "05/07",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "06/07",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Découverte plateau",
+        "date": "06/07",
+        "horaire": "18h00 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
