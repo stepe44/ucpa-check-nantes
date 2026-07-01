@@ -1,96 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "02/07",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "02/07",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "02/07",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "02/07",
-        "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "02/07",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "02/07",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "02/07",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "03/07",
-        "horaire": "08h00 - 08h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "03/07",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "03/07",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "04/07",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "05/07",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "05/07",
-        "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "06/07",
         "horaire": "12h15 - 13h00",
@@ -101,6 +10,13 @@
         "nom": "Body Pump",
         "date": "06/07",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "06/07",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -154,9 +70,114 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "08/07",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "08/07",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "09/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "06/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "06/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "06/07",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Découverte plateau",
+        "date": "06/07",
+        "horaire": "18h00 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "06/07",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "06/07",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "07/07",
+        "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "07/07",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "08/07",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "08/07",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "08/07",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "08/07",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "09/07",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     }
