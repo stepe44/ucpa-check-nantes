@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Yin",
+        "date": "02/07",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "03/07",
         "horaire": "08h00 - 08h45",
