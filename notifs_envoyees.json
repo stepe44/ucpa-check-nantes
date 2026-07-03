@@ -1,13 +1,4 @@
 {
-    "2026-06-25": [
-        "RPM|25/06|12h15 - 13h00",
-        "Cross Training Intensity|02/07|12h15 - 13h00",
-        "Yoga Vinyasa|02/07|12h30 - 13h30",
-        "Pilates|26/06|12h15 - 13h00",
-        "RPM|27/06|11h30 - 12h15",
-        "Yoga Vinyasa|28/06|11h30 - 12h30",
-        "Body Pump|29/06|17h30 - 18h15"
-    ],
     "2026-06-26": [
         "Cross Training Intensity|26/06|13h00 - 13h45",
         "Cross Training Intensity|26/06|17h30 - 18h15",
@@ -79,5 +70,8 @@
         "Cross Training Intensity|09/07|12h15 - 13h00",
         "Hyrox|03/07|08h00 - 08h45",
         "Cross Training Intensity|06/07|12h15 - 13h00"
+    ],
+    "2026-07-03": [
+        "Cross Training Intensity|06/07|18h30 - 19h15"
     ]
 }
