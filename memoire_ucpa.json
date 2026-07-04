@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "05/07",
-        "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF Express",
         "date": "06/07",
         "horaire": "12h15 - 12h45",
@@ -80,6 +73,13 @@
         "nom": "Abdos-Fessiers",
         "date": "06/07",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Attack",
+        "date": "06/07",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
