@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "05/07",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "05/07",
         "horaire": "10h45 - 11h30",
@@ -108,13 +101,6 @@
         "nom": "Cross Training Intensity",
         "date": "07/07",
         "horaire": "17h45 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "07/07",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
