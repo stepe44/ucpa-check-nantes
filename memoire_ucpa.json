@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "07/07",
+        "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Combat",
         "date": "07/07",
         "horaire": "18h30 - 19h15",
@@ -24,6 +31,27 @@
         "nom": "RPM",
         "date": "07/07",
         "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "07/07",
+        "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "08/07",
+        "horaire": "07h30 - 08h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "08/07",
+        "horaire": "09h00 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -52,13 +80,6 @@
         "nom": "Cross Training Intensity",
         "date": "08/07",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "08/07",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -105,21 +126,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "10/07",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
-        "date": "15/07",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
         "date": "15/07",
         "horaire": "12h30 - 13h30",
         "places": 0,
@@ -129,6 +136,13 @@
         "nom": "RPM",
         "date": "16/07",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "19/07",
+        "horaire": "11h00 - 12h00",
         "places": 0,
         "statut": "COMPLET"
     }
