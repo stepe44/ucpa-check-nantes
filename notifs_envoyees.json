@@ -1,13 +1,4 @@
 {
-    "2026-07-01": [
-        "Yoga Vinyasa|06/07|12h30 - 13h30",
-        "Abdos-Fessiers|01/07|19h15 - 20h00",
-        "Pilates|01/07|20h15 - 21h00",
-        "Cross Training Intensity|01/07|19h00 - 19h45",
-        "Yoga Vinyasa|05/07|11h30 - 12h30",
-        "Cross Training Intensity|06/07|12h15 - 13h00",
-        "Yoga Vinyasa|04/07|09h15 - 10h15"
-    ],
     "2026-07-02": [
         "Biking|02/07|18h30 - 19h15",
         "Body Pump|06/07|12h15 - 13h00",
@@ -86,5 +77,9 @@
         "Abdos-Fessiers|08/07|19h15 - 20h00",
         "Yoga Vinyasa|11/07|09h30 - 10h30",
         "Yoga Vinyasa|09/07|12h30 - 13h30"
+    ],
+    "2026-07-09": [
+        "Abdos-Fessiers|15/07|19h15 - 20h00",
+        "RPM|16/07|12h15 - 13h00"
     ]
 }
