@@ -1,10 +1,4 @@
 {
-    "2026-07-03": [
-        "Cross Training Intensity|06/07|18h30 - 19h15",
-        "Yoga Vinyasa|04/07|09h15 - 10h15",
-        "Cross Training Intensity|04/07|09h45 - 10h30",
-        "Yoga Vinyasa|08/07|12h30 - 13h30"
-    ],
     "2026-07-04": [
         "Yoga Vinyasa|09/07|12h30 - 13h30",
         "Body Attack|06/07|19h15 - 20h00",
@@ -82,5 +76,8 @@
         "Hyrox|15/07|13h00 - 13h45",
         "Pilates|17/07|12h15 - 13h00",
         "Body Pump|13/07|17h30 - 18h15"
+    ],
+    "2026-07-11": [
+        "Abdos-Fessiers|13/07|18h45 - 19h30"
     ]
 }
