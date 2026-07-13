@@ -2,21 +2,7 @@
     {
         "nom": "Cross Training Intensity",
         "date": "14/07",
-        "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "14/07",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "15/07",
-        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
