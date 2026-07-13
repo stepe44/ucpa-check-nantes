@@ -63,6 +63,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "STEP Débutant",
+        "date": "16/07",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Attack",
         "date": "16/07",
         "horaire": "18h15 - 19h00",
@@ -87,6 +94,13 @@
         "nom": "Yoga Vinyasa",
         "date": "18/07",
         "horaire": "09h30 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "19/07",
+        "horaire": "11h00 - 12h00",
         "places": 0,
         "statut": "COMPLET"
     },
