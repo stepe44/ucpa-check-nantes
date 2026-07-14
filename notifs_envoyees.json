@@ -1,22 +1,4 @@
 {
-    "2026-07-07": [
-        "Cross Training Intensity|07/07|07h30 - 08h15",
-        "Body Combat|07/07|18h30 - 19h15",
-        "Body Sculpt|08/07|17h30 - 18h15",
-        "STEP Débutant|09/07|17h30 - 18h15",
-        "Cross Training Intensity|07/07|17h45 - 18h30",
-        "RPM|07/07|19h30 - 20h15",
-        "Cross Training Intensity|08/07|07h30 - 08h15",
-        "Abdos-Fessiers|08/07|19h15 - 20h00",
-        "Cross Training Intensity|10/07|17h30 - 18h15",
-        "Body Pump|15/07|12h30 - 13h30",
-        "Yoga Vinyasa|07/07|17h30 - 18h30",
-        "RPM|07/07|18h30 - 19h15",
-        "Body Pump|08/07|12h30 - 13h30",
-        "Hiit|09/07|19h15 - 20h00",
-        "Pilates|10/07|12h15 - 13h00",
-        "Pilates|08/07|09h00 - 10h00"
-    ],
     "2026-07-08": [
         "Hyrox|08/07|13h00 - 13h45",
         "Cross Training Intensity|08/07|19h00 - 19h45",
@@ -77,5 +59,8 @@
         "Cross Training Intensity|16/07|12h15 - 13h00",
         "Yoga Vinyasa|19/07|11h00 - 12h00",
         "Cross Training Intensity|15/07|19h15 - 20h00"
+    ],
+    "2026-07-15": [
+        "Yoga Vinyasa|19/07|11h00 - 12h00"
     ]
 }
