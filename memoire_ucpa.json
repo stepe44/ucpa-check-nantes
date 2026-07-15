@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "15/07",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hiit",
         "date": "15/07",
         "horaire": "18h30 - 19h00",
