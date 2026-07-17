@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "18/07",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "18/07",
         "horaire": "10h45 - 11h30",
@@ -59,6 +52,13 @@
         "nom": "Yoga Vinyasa",
         "date": "20/07",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "20/07",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
