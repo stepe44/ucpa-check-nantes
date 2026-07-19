@@ -1,13 +1,6 @@
 [
     {
         "nom": "Cross Training Intensity",
-        "date": "19/07",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "20/07",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -59,6 +52,13 @@
         "nom": "Cross Training Intensity",
         "date": "21/07",
         "horaire": "07h30 - 08h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "21/07",
+        "horaire": "18h00 - 18h45",
         "places": 0,
         "statut": "COMPLET"
     },
