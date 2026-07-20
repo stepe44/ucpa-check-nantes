@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Sculpt",
-        "date": "21/07",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "21/07",
         "horaire": "17h45 - 18h30",
@@ -70,6 +63,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "22/07",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hiit",
         "date": "22/07",
         "horaire": "18h30 - 19h00",
@@ -127,6 +127,13 @@
     },
     {
         "nom": "Cross Training Intensity",
+        "date": "27/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
         "date": "27/07",
         "horaire": "12h15 - 13h00",
         "places": 0,
