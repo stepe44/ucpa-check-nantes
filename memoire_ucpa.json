@@ -21,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "21/07",
-        "horaire": "19h45 - 20h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "22/07",
         "horaire": "07h30 - 08h15",
@@ -126,6 +119,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "26/07",
+        "horaire": "11h00 - 12h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "27/07",
         "horaire": "12h15 - 13h00",
@@ -142,6 +142,20 @@
     {
         "nom": "Yoga Vinyasa",
         "date": "27/07",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "27/07",
+        "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "29/07",
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
