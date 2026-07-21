@@ -14,13 +14,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "21/07",
-        "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "22/07",
         "horaire": "07h30 - 08h15",
@@ -84,6 +77,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "23/07",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hiit",
         "date": "23/07",
         "horaire": "19h15 - 20h00",
@@ -108,7 +108,7 @@
         "nom": "CAF",
         "date": "25/07",
         "horaire": "10h45 - 11h30",
-        "places": 0,
+        "places": -1,
         "statut": "COMPLET"
     },
     {
@@ -142,15 +142,8 @@
     {
         "nom": "Yoga Vinyasa",
         "date": "27/07",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "27/07",
         "horaire": "18h15 - 19h15",
-        "places": 0,
+        "places": -1,
         "statut": "COMPLET"
     },
     {
