@@ -1,29 +1,8 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "27/07",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "27/07",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hiit",
         "date": "27/07",
         "horaire": "17h30 - 18h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "27/07",
-        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,6 +91,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "30/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "30/07",
         "horaire": "12h30 - 13h30",
@@ -129,6 +115,13 @@
         "nom": "Pilates",
         "date": "31/07",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "02/08",
+        "horaire": "11h00 - 12h00",
         "places": 0,
         "statut": "COMPLET"
     },
