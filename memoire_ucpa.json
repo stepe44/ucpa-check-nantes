@@ -35,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "29/07",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "29/07",
         "horaire": "12h30 - 13h30",
@@ -59,6 +52,13 @@
         "nom": "Body Sculpt",
         "date": "29/07",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "30/07",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -106,8 +106,22 @@
     },
     {
         "nom": "Yoga Vinyasa",
+        "date": "03/08",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
         "date": "05/08",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "09/08",
+        "horaire": "11h00 - 12h00",
         "places": 0,
         "statut": "COMPLET"
     }
