@@ -1,18 +1,4 @@
 {
-    "2026-07-21": [
-        "Body Jam|21/07|18h30 - 19h30",
-        "Swiss Ball|21/07|18h45 - 19h30",
-        "Body Sculpt|21/07|13h00 - 13h45",
-        "Hyrox|21/07|19h00 - 19h45",
-        "RPM|21/07|18h00 - 18h45",
-        "Yoga Vinyasa|27/07|12h30 - 13h30",
-        "Body Sculpt|22/07|17h30 - 18h15",
-        "Cross Training Intensity|22/07|19h15 - 20h00",
-        "Cross Training Intensity|24/07|17h30 - 18h15",
-        "Hiit|22/07|18h30 - 19h00",
-        "STEP Débutant|23/07|17h30 - 18h15",
-        "Body Sculpt|23/07|13h00 - 13h30"
-    ],
     "2026-07-22": [
         "Yoga Vinyasa|23/07|12h30 - 13h30",
         "Yoga Vinyasa|22/07|12h30 - 13h30",
@@ -87,5 +73,8 @@
         "Pilates|31/07|12h15 - 13h00",
         "Cross Training Intensity|29/07|07h30 - 08h15",
         "Hyrox|29/07|13h00 - 13h45"
+    ],
+    "2026-07-29": [
+        "Yoga Vinyasa|30/07|12h30 - 13h30"
     ]
 }
