@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "29/07",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "29/07",
         "horaire": "12h30 - 13h30",
@@ -56,9 +63,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "STEP Débutant",
-        "date": "30/07",
-        "horaire": "17h30 - 18h15",
+        "nom": "Pilates",
+        "date": "31/07",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -73,6 +80,13 @@
         "nom": "Yoga Vinyasa",
         "date": "01/08",
         "horaire": "09h30 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "02/08",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
