@@ -1,15 +1,4 @@
 {
-    "2026-07-22": [
-        "Yoga Vinyasa|23/07|12h30 - 13h30",
-        "Yoga Vinyasa|22/07|12h30 - 13h30",
-        "RPM|23/07|12h15 - 13h00",
-        "Hiit|23/07|19h15 - 20h00",
-        "Body Sculpt|22/07|17h30 - 18h15",
-        "STEP Débutant|23/07|17h30 - 18h15",
-        "Hiit|22/07|18h30 - 19h00",
-        "Body Attack|23/07|18h15 - 19h00",
-        "Biking|23/07|18h30 - 19h15"
-    ],
     "2026-07-23": [
         "Yoga Vinyasa|23/07|12h30 - 13h30",
         "RPM|23/07|12h15 - 13h00",
@@ -86,5 +75,9 @@
         "Cross Training Intensity|30/07|12h15 - 13h00",
         "Yoga Vinyasa|01/08|09h30 - 10h30",
         "Body Sculpt|30/07|13h00 - 13h30"
+    ],
+    "2026-07-30": [
+        "STEP Débutant|30/07|17h30 - 18h15",
+        "Pilates|31/07|12h15 - 13h00"
     ]
 }
