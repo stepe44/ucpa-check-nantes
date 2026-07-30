@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Pilates",
+        "date": "31/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "31/07",
         "horaire": "13h00 - 13h45",
@@ -24,13 +31,6 @@
         "nom": "Yoga Vinyasa",
         "date": "01/08",
         "horaire": "09h30 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "02/08",
-        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
