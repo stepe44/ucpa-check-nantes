@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Body Attack",
+        "date": "31/07",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "31/07",
         "horaire": "12h15 - 13h00",
@@ -24,6 +31,13 @@
         "nom": "RPM",
         "date": "31/07",
         "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "31/07",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
