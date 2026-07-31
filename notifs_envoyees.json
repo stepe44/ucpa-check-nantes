@@ -1,18 +1,4 @@
 {
-    "2026-07-23": [
-        "Yoga Vinyasa|23/07|12h30 - 13h30",
-        "RPM|23/07|12h15 - 13h00",
-        "Body Sculpt|23/07|13h00 - 13h30",
-        "Body Attack|23/07|18h15 - 19h00",
-        "Hiit|23/07|19h15 - 20h00",
-        "Pilates|24/07|12h15 - 13h00",
-        "Découverte plateau|23/07|19h15 - 20h15",
-        "Cross Training Intensity|24/07|17h30 - 18h15",
-        "CAF|25/07|10h45 - 11h30",
-        "Yoga Vinyasa|29/07|12h30 - 13h30",
-        "RPM|24/07|18h30 - 19h15",
-        "Body Pump|26/07|09h45 - 10h30"
-    ],
     "2026-07-24": [
         "Cross Training Intensity|25/07|09h45 - 10h30",
         "Cross Training Intensity|24/07|17h30 - 18h15",
@@ -86,5 +72,10 @@
         "Yoga Vinyasa|01/08|09h30 - 10h30",
         "Body Sculpt|31/07|13h00 - 13h45",
         "Body Pump|02/08|09h45 - 10h30"
+    ],
+    "2026-07-31": [
+        "Pilates|31/07|12h15 - 13h00",
+        "Cross Training Intensity|31/07|17h30 - 18h15",
+        "Cross Training Intensity|31/07|19h15 - 20h00"
     ]
 }
