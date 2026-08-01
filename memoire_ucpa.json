@@ -1,78 +1,22 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "03/08",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
-        "date": "03/08",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "03/08",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "03/08",
-        "horaire": "18h15 - 19h15",
+        "date": "02/08",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
         "nom": "Cross Training Intensity",
-        "date": "03/08",
-        "horaire": "18h30 - 19h15",
+        "date": "02/08",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "04/08",
-        "horaire": "17h45 - 18h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "04/08",
-        "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "05/08",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "05/08",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "06/08",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "09/08",
-        "horaire": "11h00 - 12h00",
+        "nom": "Stretching",
+        "date": "02/08",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
