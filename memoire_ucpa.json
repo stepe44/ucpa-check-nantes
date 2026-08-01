@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Stretching",
-        "date": "02/08",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "03/08",
         "horaire": "12h15 - 13h00",
