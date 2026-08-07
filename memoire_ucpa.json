@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "08/08",
+        "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "09/08",
         "horaire": "09h45 - 10h30",
@@ -17,7 +24,7 @@
         "nom": "Body Pump",
         "date": "10/08",
         "horaire": "12h15 - 13h00",
-        "places": 0,
+        "places": -1,
         "statut": "COMPLET"
     },
     {
