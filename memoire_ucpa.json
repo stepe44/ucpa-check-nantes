@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Stretching",
+        "date": "09/08",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "10/08",
         "horaire": "12h15 - 13h00",
