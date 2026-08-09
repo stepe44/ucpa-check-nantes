@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Stretching",
+        "date": "09/08",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "10/08",
         "horaire": "12h15 - 13h00",
@@ -17,6 +24,13 @@
         "nom": "Cross Training Intensity",
         "date": "10/08",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "10/08",
+        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -53,13 +67,6 @@
         "date": "14/08",
         "horaire": "12h15 - 13h00",
         "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "17/08",
-        "horaire": "12h30 - 13h30",
-        "places": -1,
         "statut": "COMPLET"
     }
 ]
