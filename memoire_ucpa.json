@@ -2,20 +2,6 @@
     {
         "nom": "Yoga Vinyasa",
         "date": "10/08",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "10/08",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "10/08",
         "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
