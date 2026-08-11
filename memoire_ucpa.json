@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Jam",
         "date": "11/08",
-        "horaire": "17h45 - 18h30",
+        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Hyrox",
         "date": "11/08",
-        "horaire": "18h00 - 18h45",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -49,10 +49,24 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "14/08",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "17/08",
         "horaire": "12h30 - 13h30",
         "places": -1,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "17/08",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
         "statut": "COMPLET"
     }
 ]
