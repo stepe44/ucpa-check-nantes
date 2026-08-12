@@ -1,13 +1,4 @@
 {
-    "2026-08-05": [
-        "RPM|05/08|12h15 - 13h00",
-        "Cross Training Intensity|05/08|17h30 - 18h15",
-        "Pilates|05/08|19h15 - 20h00",
-        "Cross Training Intensity|06/08|12h15 - 13h00",
-        "RPM|06/08|12h15 - 13h00",
-        "STEP Débutant|06/08|17h30 - 18h15",
-        "Body Sculpt|06/08|13h00 - 13h30"
-    ],
     "2026-08-06": [
         "RPM|06/08|12h15 - 13h00",
         "Yoga Vinyasa|10/08|12h30 - 13h30",
@@ -49,6 +40,9 @@
         "Body Pump|12/08|12h30 - 13h30",
         "Cross Training Intensity|14/08|17h30 - 18h15",
         "Cross Training Intensity|17/08|12h15 - 13h00",
+        "RPM|13/08|12h15 - 13h00"
+    ],
+    "2026-08-13": [
         "RPM|13/08|12h15 - 13h00"
     ]
 }
