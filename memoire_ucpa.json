@@ -1,5 +1,19 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "15/08",
+        "horaire": "09h30 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "15/08",
+        "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "17/08",
         "horaire": "12h15 - 13h00",
