@@ -47,5 +47,12 @@
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "19/08",
+        "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
     }
 ]
