@@ -54,5 +54,12 @@
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "22/08",
+        "horaire": "09h30 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
     }
 ]
