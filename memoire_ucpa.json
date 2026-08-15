@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "16/08",
-        "horaire": "11h00 - 12h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "17/08",
         "horaire": "12h15 - 13h00",
@@ -66,6 +59,13 @@
         "nom": "Yoga Vinyasa",
         "date": "22/08",
         "horaire": "09h30 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "26/08",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     }
