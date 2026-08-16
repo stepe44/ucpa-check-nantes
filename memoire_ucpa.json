@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Yoga Vinyasa",
+        "date": "16/08",
+        "horaire": "11h00 - 12h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "17/08",
         "horaire": "12h15 - 13h00",
@@ -10,7 +17,7 @@
         "nom": "Yoga Vinyasa",
         "date": "17/08",
         "horaire": "12h30 - 13h30",
-        "places": 0,
+        "places": -1,
         "statut": "COMPLET"
     },
     {
