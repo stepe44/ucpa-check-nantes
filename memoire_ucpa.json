@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "17/08",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "17/08",
         "horaire": "19h15 - 20h00",
