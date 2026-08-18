@@ -7,6 +7,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "19/08",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "19/08",
         "horaire": "12h30 - 13h30",
@@ -17,6 +24,13 @@
         "nom": "Hyrox",
         "date": "19/08",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "19/08",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
