@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "19/08",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "19/08",
         "horaire": "12h30 - 13h30",
