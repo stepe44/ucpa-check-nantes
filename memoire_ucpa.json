@@ -28,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "STEP Débutant",
+        "date": "20/08",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "21/08",
         "horaire": "12h15 - 13h00",
