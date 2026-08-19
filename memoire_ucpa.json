@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Hiit",
-        "date": "19/08",
-        "horaire": "18h30 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "20/08",
         "horaire": "12h15 - 13h00",
@@ -45,13 +38,6 @@
         "nom": "Pilates",
         "date": "21/08",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "21/08",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
