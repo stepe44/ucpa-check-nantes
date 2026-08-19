@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "19/08",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "20/08",
         "horaire": "12h15 - 13h00",
