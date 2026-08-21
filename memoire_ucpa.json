@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Pilates",
+        "date": "21/08",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "21/08",
         "horaire": "13h00 - 13h45",
@@ -7,23 +14,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "21/08",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "22/08",
         "horaire": "09h30 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "22/08",
-        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -108,6 +101,13 @@
         "nom": "Hyrox",
         "date": "26/08",
         "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "26/08",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
