@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "22/08",
-        "horaire": "09h30 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "22/08",
         "horaire": "10h45 - 11h30",
@@ -25,6 +18,13 @@
         "date": "23/08",
         "horaire": "10h45 - 11h30",
         "places": -1,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Stretching",
+        "date": "23/08",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
         "statut": "COMPLET"
     },
     {
