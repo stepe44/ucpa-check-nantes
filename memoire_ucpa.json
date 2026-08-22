@@ -14,6 +14,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Stretching",
+        "date": "23/08",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "24/08",
         "horaire": "12h15 - 13h00",
