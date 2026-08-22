@@ -1,13 +1,4 @@
 {
-    "2026-08-14": [
-        "Body Sculpt|14/08|13h00 - 13h45",
-        "Cross Training Intensity|14/08|17h30 - 18h15",
-        "Body Pump|17/08|12h15 - 13h00",
-        "Body Sculpt|16/08|09h45 - 10h30",
-        "CAF|15/08|10h45 - 11h30",
-        "Yoga Vinyasa|15/08|09h30 - 10h30",
-        "Body Pump|19/08|12h30 - 13h30"
-    ],
     "2026-08-15": [
         "Cross Training Intensity|18/08|17h45 - 18h30",
         "Cross Training Intensity|16/08|10h45 - 11h30",
@@ -87,5 +78,8 @@
         "Yoga Vinyasa|24/08|12h30 - 13h30",
         "Yoga Vinyasa|22/08|09h30 - 10h30",
         "Stretching|23/08|11h30 - 12h15"
+    ],
+    "2026-08-22": [
+        "Yoga Vinyasa|22/08|09h30 - 10h30"
     ]
 }
