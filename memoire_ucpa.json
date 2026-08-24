@@ -1,5 +1,12 @@
 [
     {
+        "nom": "Cross Training Intensity",
+        "date": "24/08",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "24/08",
         "horaire": "12h15 - 13h00",
@@ -24,13 +31,6 @@
         "nom": "Yoga Vinyasa",
         "date": "24/08",
         "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "24/08",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
