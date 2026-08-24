@@ -1,12 +1,5 @@
 [
     {
-        "nom": "TRX",
-        "date": "24/08",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "25/08",
         "horaire": "07h30 - 08h15",
@@ -108,6 +101,13 @@
         "nom": "Hyrox",
         "date": "26/08",
         "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "26/08",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
