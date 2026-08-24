@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "24/08",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "24/08",
         "horaire": "18h15 - 19h15",
@@ -38,13 +31,6 @@
         "nom": "Body Sculpt",
         "date": "25/08",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "25/08",
-        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -98,13 +84,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "26/08",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hyrox",
         "date": "26/08",
         "horaire": "13h00 - 13h45",
@@ -150,6 +129,13 @@
         "nom": "Yoga Vinyasa",
         "date": "27/08",
         "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Découverte plateau",
+        "date": "27/08",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
