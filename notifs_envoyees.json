@@ -1,8 +1,4 @@
 {
-    "2026-08-16": [
-        "CAF|17/08|18h30 - 19h15",
-        "Cross Training Intensity|17/08|12h15 - 13h00"
-    ],
     "2026-08-17": [
         "Cross Training Intensity|17/08|12h15 - 13h00",
         "Body Pump|17/08|12h15 - 13h00",
@@ -82,5 +78,11 @@
     "2026-08-23": [
         "Body Sculpt|25/08|13h00 - 13h45",
         "Yoga Vinyasa|26/08|12h30 - 13h30"
+    ],
+    "2026-08-24": [
+        "Cross Training Intensity|24/08|12h15 - 13h00",
+        "Cross Training Intensity|24/08|18h30 - 19h15",
+        "Body Jam|25/08|18h30 - 19h30",
+        "Hyrox|26/08|18h30 - 19h15"
     ]
 }
