@@ -1,141 +1,50 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "26/08",
-        "horaire": "07h30 - 08h15",
+        "nom": "Body Pump",
+        "date": "31/08",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
         "nom": "Yoga Vinyasa",
-        "date": "26/08",
+        "date": "31/08",
         "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "26/08",
-        "horaire": "12h30 - 13h30",
+        "nom": "Yoga Vinyasa",
+        "date": "31/08",
+        "horaire": "19h15 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "26/08",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "26/08",
+        "nom": "Pilates",
+        "date": "01/09",
         "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "26/08",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Stretching",
-        "date": "26/08",
+        "nom": "CAF",
+        "date": "02/09",
         "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
         "nom": "Pilates",
-        "date": "26/08",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "27/08",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "27/08",
+        "date": "04/09",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
         "nom": "Yoga Vinyasa",
-        "date": "27/08",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "27/08",
-        "horaire": "13h00 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "27/08",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Découverte plateau",
-        "date": "27/08",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "28/08",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "28/08",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Jam",
-        "date": "28/08",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "30/08",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "30/08",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "30/08",
-        "horaire": "11h00 - 12h00",
+        "date": "06/09",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
