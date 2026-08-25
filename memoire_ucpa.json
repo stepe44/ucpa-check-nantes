@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "25/08",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "25/08",
         "horaire": "17h45 - 18h30",
@@ -31,6 +24,13 @@
         "nom": "Body Jam",
         "date": "25/08",
         "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "26/08",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
