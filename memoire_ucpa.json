@@ -35,6 +35,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "26/08",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Stretching",
         "date": "26/08",
         "horaire": "19h15 - 20h00",
@@ -63,6 +70,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "27/08",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "27/08",
         "horaire": "13h00 - 13h30",
@@ -87,13 +101,6 @@
         "nom": "Pilates",
         "date": "28/08",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "28/08",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
