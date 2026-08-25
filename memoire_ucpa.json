@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "25/08",
-        "horaire": "12h15 - 13h00",
-        "places": -1,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Sculpt",
         "date": "25/08",
         "horaire": "13h00 - 13h45",
@@ -38,13 +31,6 @@
         "nom": "Hyrox",
         "date": "25/08",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Swiss Ball",
-        "date": "26/08",
-        "horaire": "08h15 - 09h00",
         "places": 0,
         "statut": "COMPLET"
     },
