@@ -14,16 +14,23 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Jam",
         "date": "25/08",
-        "horaire": "18h00 - 18h45",
+        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
+        "nom": "Swiss Ball",
         "date": "25/08",
-        "horaire": "18h30 - 19h30",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Swiss Ball",
+        "date": "26/08",
+        "horaire": "08h15 - 09h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,6 +150,13 @@
         "nom": "Body Sculpt",
         "date": "28/08",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "28/08",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
