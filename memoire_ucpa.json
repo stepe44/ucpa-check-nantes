@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Découverte plateau",
-        "date": "27/08",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "28/08",
         "horaire": "12h15 - 13h00",
@@ -28,20 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "28/08",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "28/08",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "29/08",
         "horaire": "10h45 - 11h30",
@@ -49,9 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "30/08",
-        "horaire": "10h45 - 11h30",
+        "nom": "RPM",
+        "date": "29/08",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -66,6 +45,13 @@
         "nom": "Stretching",
         "date": "30/08",
         "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "31/08",
+        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -133,9 +119,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Self défense",
+        "date": "02/09",
+        "horaire": "12h15 - 13h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "02/09",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "02/09",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -157,13 +157,6 @@
         "nom": "Cross Training Intensity",
         "date": "04/09",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "06/09",
-        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     }
