@@ -28,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "07/09",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Strong",
         "date": "07/09",
         "horaire": "19h30 - 20h15",
@@ -94,13 +87,6 @@
         "nom": "Cross Training Intensity",
         "date": "07/09",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "07/09",
-        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
