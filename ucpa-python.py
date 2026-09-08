@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import requests
 import logging
@@ -7,17 +8,16 @@ from collections import defaultdict
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
+from bs4 import BeautifulSoup
 
 # --- CONFIGURATION ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 URL_UCPA = 'https://www.ucpa.com/sport-station/nantes/fitness'
-API_BASE_URL = 'https://www.ucpa.com/sport-station/api/areas-offers/weekly/alpha_nan'
-
 MEMO_FILE = 'memoire_ucpa.json'
 NOTIFS_HISTORY_FILE = 'notifs_envoyees.json'
 
-# Secrets (Variables d'environnement)
+# Variables d'environnement
 GREEN_API_URL = os.getenv('GREEN_API_URL')
 WHATSAPP_CHAT_ID = os.getenv('WHATSAPP_CHAT_ID')
 EMAIL_SENDER = os.getenv('EMAIL_SENDER')
@@ -30,6 +30,7 @@ COURS_SURVEILLES = [c.strip().lower() for c in raw_filter.split(',') if c.strip(
 # --- DICTIONNAIRE D'EMOJIS ---
 EMOJI_MAP = {
     "biking": "🚴",
+    "rpm": "🚴",
     "yoga": "🧘",
     "pilates": "🤸",
     "zumba": "💃",
@@ -40,17 +41,18 @@ EMOJI_MAP = {
     "cross": "🏋️",
     "hiit": "🔥",
     "body": "⚡",
+    "hyrox": "🏃",
+    "stretching": "🧘"
 }
 
 def get_course_emoji(nom_cours):
-    """Retourne l'emoji correspondant au nom du cours."""
     nom_lower = nom_cours.lower()
     for keyword, emoji in EMOJI_MAP.items():
         if keyword in nom_lower:
             return emoji
     return "🏋️"
 
-# --- OUTILS DE GESTION DE LA MÉMOIRE ---
+# --- GESTION HISTORIQUE & FORMATAGE ---
 
 def load_and_clean_history():
     if not os.path.exists(NOTIFS_HISTORY_FILE):
@@ -58,7 +60,7 @@ def load_and_clean_history():
     try:
         with open(NOTIFS_HISTORY_FILE, 'r', encoding='utf-8') as f:
             history = json.load(f)
-    except:
+    except Exception:
         return {}
     date_limite = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
     return {date: ids for date, ids in history.items() if date >= date_limite}
@@ -71,16 +73,15 @@ def save_history(history):
         logging.error(f"❌ Erreur sauvegarde de l'historique : {e}")
 
 def formater_date_relative(date_str):
-    """Transforme 'DD/MM' en 'Auj. (Jeu)', 'Demain (Ven)' ou 'Jeu 27/03'."""
     jours_semaine_court = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
     maintenant = datetime.now()
     try:
         jour, mois = map(int, date_str.split('/'))
         annee = maintenant.year
-        if mois == 1 and maintenant.month == 12: annee += 1
+        if mois == 1 and maintenant.month == 12:
+            annee += 1
         date_objet = datetime(annee, mois, jour)
         diff = (date_objet.date() - maintenant.date()).days
-        
         nom_jour = jours_semaine_court[date_objet.weekday()]
         
         if diff == 0:
@@ -89,20 +90,20 @@ def formater_date_relative(date_str):
             return f"Demain ({nom_jour})"
         else:
             return f"{nom_jour} {date_str}"
-    except:
+    except Exception:
         return date_str
 
 def est_semaine_prochaine(date_str):
-    """Vérifie si la date appartient à la semaine prochaine."""
     maintenant = datetime.now()
     try:
         jour, mois = map(int, date_str.split('/'))
         annee = maintenant.year
-        if mois == 1 and maintenant.month == 12: annee += 1
+        if mois == 1 and maintenant.month == 12:
+            annee += 1
         date_objet = datetime(annee, mois, jour)
         debut_semaine_prochaine = maintenant + timedelta(days=(7 - maintenant.weekday()))
         return date_objet.date() >= debut_semaine_prochaine.date()
-    except:
+    except Exception:
         return False
 
 # --- NOTIFICATIONS ---
@@ -120,11 +121,10 @@ def send_final_notification(liste_alertes):
             jour, mois = map(int, cours['date'].split('/'))
             heure, minute = map(int, cours['horaire'].split(' - ')[0].replace('h', ':').split(':'))
             return (mois, jour, heure, minute)
-        except:
+        except Exception:
             return (99, 99, 99, 99)
 
     liste_triee = sorted(liste_alertes, key=tri_chronologique)
-    
     cette_semaine = [a for a in liste_triee if not est_semaine_prochaine(a['date'])]
     semaine_prochaine = [a for a in liste_triee if est_semaine_prochaine(a['date'])]
     
@@ -139,15 +139,13 @@ def send_final_notification(liste_alertes):
             date_fmt = formater_date_relative(a['date'])
             prefixe_urgence = "⚡ " if "Auj." in date_fmt else ""
             emoji = get_course_emoji(a['nom'])
-            
             corps += f"{prefixe_urgence}{emoji} *{a['nom'].upper()}*\n"
             corps += f"🔹 {date_fmt} à *{a['horaire']}* ({a['places']} pl.)\n\n"
-        
 
     formater_bloc(cette_semaine, "Cette semaine")
     formater_bloc(semaine_prochaine, "Semaine prochaine")
     
-    msg_final = f"{corps}"
+    msg_final = corps
     
     if GREEN_API_URL and WHATSAPP_CHAT_ID:
         try:
@@ -162,8 +160,7 @@ def send_final_notification(liste_alertes):
             m['Subject'] = titre.replace('*', '')
             m['From'] = EMAIL_SENDER
             m['To'] = ", ".join(EMAIL_RECEIVERS)
-            texte_email = msg_final.replace('*', '')
-            m.attach(MIMEText(texte_email, 'plain'))
+            m.attach(MIMEText(msg_final.replace('*', ''), 'plain'))
             with smtplib.SMTP("smtp.gmail.com", 587) as s:
                 s.starttls()
                 s.login(EMAIL_SENDER, EMAIL_PASSWORD)
@@ -172,71 +169,107 @@ def send_final_notification(liste_alertes):
         except Exception as e: 
             logging.error(f"❌ Erreur Email: {e}")
 
-# --- MOTEUR D'EXTRACTION ---
+# --- EXTRACTION DIRECTE HTML ---
 
-def fetch_api_week(date_cible):
-    params = {
-        'reservationPeriod': '1',
-        'espace': 'area_1680850484_13e5a1d0-d511-11ed-93bb-77fd2e78b8a9',
-        'time': date_cible,
-        '__amp_source_origin': 'https://www.ucpa.com'
+def fetch_and_extract_courses():
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
-    headers = {"User-Agent": "Mozilla/5.0"}
-    response = requests.get(API_BASE_URL, params=params, headers=headers, timeout=15)
+    response = requests.get(URL_UCPA, headers=headers, timeout=15)
     response.raise_for_status()
-    return response.json()
-
-def extract_courses_from_api(json_data):
+    
+    soup = BeautifulSoup(response.text, 'html.parser')
+    texte = soup.get_text("\n")
+    lignes = [l.strip() for l in texte.split("\n") if l.strip()]
+    
     found_courses = []
-    try:
-        planner = json_data.get('planner', {})
-        columns = planner.get('columns', [])
-        for column in columns:
-            items = column.get('items', [])
-            for item in items:
-                nom = item.get('type', 'Cours Inconnu')
-                heure_debut = item.get('startTime', '??h??')
-                heure_fin = item.get('endTime', '??h??')
-                horaire = f"{heure_debut} - {heure_fin}"
-                start_date_raw = item.get('startDate', '')
-                if start_date_raw and '/' in start_date_raw:
-                    parts = start_date_raw.split('/')
-                    date_fr = f"{parts[0]}/{parts[1]}"
-                else:
-                    date_fr = "??/??"
-                places_restantes = int(item.get('stock', 0))
-                statut = "LIBRE" if places_restantes > 0 else "COMPLET"
-                found_courses.append({
-                    "nom": nom, "date": date_fr, "horaire": horaire,
-                    "places": places_restantes, "statut": statut
-                })
-    except Exception as e:
-        logging.error(f"⚠️ Erreur d'extraction depuis le JSON : {e}")
+    
+    # Repérage du mois affiché dans l'intervalle de semaine (ex: "Semaine du 07 septembre au 13 septembre08/09 - 13/09")
+    mois_courant = datetime.now().strftime("%m")
+    for l in lignes:
+        match_intervalle = re.search(r"\d{2}/(\d{2})\s*-\s*\d{2}/(\d{2})", l)
+        if match_intervalle:
+            mois_courant = match_intervalle.group(1)
+            break
+
+    regex_jour = re.compile(r"^(\d{2})\s+(lun|mar|mer|jeu|ven|sam|dim)\.?", re.IGNORECASE)
+    regex_horaire = re.compile(r"^\d{2}h\d{2}\s*-\s*\d{2}h\d{2}$")
+
+    date_courante = f"{datetime.now().strftime('%d')}/{mois_courant}"
+    
+    i = 0
+    n = len(lignes)
+    while i < n:
+        ligne = lignes[i]
+        
+        # 1. Détection d'en-tête de jour (ex: "08 mar.")
+        m_jour = regex_jour.match(ligne)
+        if m_jour:
+            jour_num = m_jour.group(1)
+            date_courante = f"{jour_num}/{mois_courant}"
+            i += 1
+            continue
+            
+        # 2. Détection d'un bloc de cours via l'horaire
+        if regex_horaire.match(ligne):
+            horaire = ligne
+            nom_cours = "Cours Inconnu"
+            statut = "COMPLET"
+            places = 0
+            
+            # On lit les 3 lignes suivantes pour isoler le nom et le stock
+            j = i + 1
+            while j < min(i + 5, n):
+                val = lignes[j]
+                # Si on tombe sur un nouvel horaire ou un jour, fin du bloc
+                if regex_horaire.match(val) or regex_jour.match(val):
+                    break
+                if val.upper() in ["RÉSERVER", "RESERVER"]:
+                    j += 1
+                    continue
+                if "places restantes" in val.lower() or "place restante" in val.lower():
+                    chiffres = re.findall(r"\d+", val)
+                    places = int(chiffres[0]) if chiffres else 1
+                    statut = "LIBRE"
+                elif val.lower() == "complet":
+                    statut = "COMPLET"
+                    places = 0
+                elif nom_cours == "Cours Inconnu":
+                    nom_cours = val
+                j += 1
+                
+            found_courses.append({
+                "nom": nom_cours,
+                "date": date_courante,
+                "horaire": horaire,
+                "places": places,
+                "statut": statut
+            })
+            i = j
+            continue
+            
+        i += 1
+
     return found_courses
 
 # --- LOGIQUE PRINCIPALE ---
 
 def run():
-    logging.info("🌐 Scan de l'API UCPA...")
-    maintenant = datetime.now()
-    date_s1 = maintenant.strftime("%d-%m-%Y")
-    date_s2 = (maintenant + timedelta(days=7)).strftime("%d-%m-%Y")
-
-    tous_les_cours = []
+    logging.info("🌐 Analyse du planning sur la page UCPA...")
     try:
-        json_s1 = fetch_api_week(date_s1)
-        json_s2 = fetch_api_week(date_s2)
-        tous_les_cours.extend(extract_courses_from_api(json_s1))
-        tous_les_cours.extend(extract_courses_from_api(json_s2))
+        tous_les_cours = fetch_and_extract_courses()
     except Exception as e:
-        logging.error(f"❌ Erreur réseau ou API : {e}")
+        logging.error(f"❌ Erreur lors de l'extraction : {e}")
         return
 
     if not tous_les_cours:
-        logging.warning("⚠️ Aucun cours extrait.")
+        logging.warning("⚠️ Aucun cours extrait de la page.")
         return
 
+    logging.info(f"✅ {len(tous_les_cours)} cours récupérés sur le planning.")
+
     history = load_and_clean_history()
+    maintenant = datetime.now()
     today_str = maintenant.strftime("%Y-%m-%d")
     notifs_deja_faites_aujourdhui = history.get(today_str, [])
 
@@ -250,25 +283,24 @@ def run():
         try:
             with open(MEMO_FILE, 'r', encoding='utf-8') as f:
                 anciens_complets = json.load(f)
-        except: 
+        except Exception:
             pass
 
     nouvelles_places_a_notifier = []
     for c in cours_suivis_actuels:
         id_unique = f"{c['nom']}|{c['date']}|{c['horaire']}"
         
-        # --- FILTRE TEMPOREL (60 min) ---
+        # Filtre temporel : ignorer les cours commençant dans moins de 60 min
         try:
             jour, mois = map(int, c['date'].split('/'))
             heure, minute = map(int, c['horaire'].split(' - ')[0].replace('h', ':').split(':'))
             annee = maintenant.year
-            if mois == 1 and maintenant.month == 12: annee += 1
+            if mois == 1 and maintenant.month == 12:
+                annee += 1
             date_objet_cours = datetime(annee, mois, jour, heure, minute)
-            
-            # Si le cours est aujourd'hui et commence dans moins de 60 min (ou déjà commencé)
             if date_objet_cours < (maintenant + timedelta(minutes=60)):
                 continue
-        except:
+        except Exception:
             pass
         
         if c['statut'] == "LIBRE":
@@ -287,6 +319,7 @@ def run():
     else:
         logging.info("ℹ️ Pas de nouvelles places à notifier.")
 
+    # Sauvegarde des cours complets pour comparaison au tour suivant
     nouveaux_complets = [c for c in cours_suivis_actuels if c['statut'] == "COMPLET"]
     try:
         with open(MEMO_FILE, 'w', encoding='utf-8') as f:
