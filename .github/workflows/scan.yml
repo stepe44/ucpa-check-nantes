@@ -2,20 +2,20 @@ name: UCPA WhatsApp Scanner
 
 on:
   schedule:
-# Du lundi au samedi : toutes les heures de 5h à 23h GMT
+    # Du lundi au samedi : toutes les heures de 5h à 23h GMT
     - cron: '*/20 4-22 * * 1-6'
-# Le dimanche : toutes les heures de 5h à 11h GMT
+    # Le dimanche : toutes les heures de 5h à 11h GMT
     - cron: '*/20 4-11 * * 0'
-  
+
   workflow_dispatch:
 
 jobs:
   run-scanner:
     runs-on: ubuntu-latest
-    environment: GEMINI_API_KEY # Lien avec tes secrets
+    environment: GEMINI_API_KEY
     env:
       TZ: "Europe/Paris"
-    
+
     permissions:
       contents: write
 
@@ -30,32 +30,31 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests selenium webdriver-manager
-     
+          pip install requests selenium webdriver-manager beautifulsoup4
+
       - name: Run script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GREEN_API_URL: ${{ secrets.GREEN_API_URL }}
           WHATSAPP_ID: ${{ vars.WHATSAPP_ID }}
           WHATSAPP_CHAT_ID: ${{ vars.WHATSAPP_CHAT_ID }}
-          COURS_SURVEILLES: ${{ vars.COURS_SURVEILLES }} # <-- Utilise 'vars' si c'est une variable, 'secrets' si c'est un secret          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          COURS_SURVEILLES: ${{ vars.COURS_SURVEILLES }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ vars.EMAIL_PASSWORD }}
           EMAIL_RECEIVER: ${{ vars.EMAIL_RECEIVER }}
-          EMAIL_SENDER: ${{ vars.EMAIL_SENDER }}
           SMTP_SERVER: ${{ vars.SMTP_SERVER }}
-          FREE_SMS_USER: ${{ vars.FREE_SMS_USER }} # <--- ICI
-          FREE_SMS_PASS: ${{ vars.FREE_SMS_PASS }} # <--- ICI
-                  
+          FREE_SMS_USER: ${{ vars.FREE_SMS_USER }}
+          FREE_SMS_PASS: ${{ vars.FREE_SMS_PASS }}
         run: python ucpa-python.py
 
       - name: Save memory
         run: |
           git config --global user.name 'Bot UCPA'
           git config --global user.email 'bot@ucpa.com'
-          
+
           # Ajout des deux fichiers de mémoire
           git add memoire_ucpa.json notifs_envoyees.json 2>/dev/null || true
-          
+
           # On commit seulement s'il y a des changements
           if ! git diff --cached --quiet; then
             git commit -m "Update memory & history [skip ci]"
@@ -63,8 +62,8 @@ jobs:
           else
             echo "Aucun changement à sauvegarder."
           fi
-      # 6. Sauvegarde les logs et le HTML pour debug (visible dans l'onglet Actions)
-      
+
+      # Sauvegarde des logs et artefacts pour debug
       - name: Upload Debug Log
         if: always()
         uses: actions/upload-artifact@v5
@@ -75,8 +74,5 @@ jobs:
             execution.log
             memoire_ucpa.json
             debug_page.html
-            memoire_ucpa.json
             debug_ucpa.json
           retention-days: 2
-
-          
