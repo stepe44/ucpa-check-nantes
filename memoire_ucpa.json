@@ -1,40 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "09/09",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Intermédiaire",
-        "date": "09/09",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "09/09",
-        "horaire": "18h45 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "09/09",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "09/09",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "10/09",
         "horaire": "08h30 - 09h15",
@@ -45,13 +10,6 @@
         "nom": "CAF",
         "date": "10/09",
         "horaire": "09h15 - 10h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "10/09",
-        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -73,6 +31,20 @@
         "nom": "Body Sculpt",
         "date": "10/09",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "10/09",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Strong",
+        "date": "10/09",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -136,6 +108,13 @@
         "nom": "Cross Training Intensity",
         "date": "11/09",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "11/09",
+        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -273,13 +252,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "14/09",
-        "horaire": "19h15 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "14/09",
         "horaire": "19h30 - 20h15",
@@ -343,13 +315,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "16/09",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "16/09",
         "horaire": "19h15 - 20h00",
@@ -367,6 +332,13 @@
         "nom": "Yoga Vinyasa",
         "date": "17/09",
         "horaire": "12h15 - 13h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "17/09",
+        "horaire": "19h00 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
