@@ -1,8 +1,8 @@
 [
     {
-        "nom": "Biking",
+        "nom": "Body Pump",
         "date": "09/09",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -10,6 +10,13 @@
         "nom": "Hyrox",
         "date": "09/09",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "09/09",
+        "horaire": "17h30 - 18h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -22,6 +29,13 @@
     },
     {
         "nom": "Biking",
+        "date": "09/09",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "STEP Intermédiaire",
         "date": "09/09",
         "horaire": "18h15 - 19h00",
         "places": 0,
@@ -42,16 +56,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "09/09",
-        "horaire": "20h00 - 20h45",
+        "nom": "CAF",
+        "date": "10/09",
+        "horaire": "09h15 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Hyrox",
         "date": "10/09",
-        "horaire": "09h15 - 10h00",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -78,13 +92,6 @@
     },
     {
         "nom": "Pilates",
-        "date": "10/09",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
         "date": "10/09",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -143,13 +150,6 @@
         "nom": "Cross Training Intensity",
         "date": "11/09",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "11/09",
-        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -329,6 +329,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Strong",
+        "date": "15/09",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "16/09",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa Niveau 2",
         "date": "16/09",
         "horaire": "12h30 - 13h30",
@@ -346,6 +360,13 @@
         "nom": "CAF",
         "date": "16/09",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "16/09",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
