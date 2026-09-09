@@ -14,7 +14,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Hyrox",
         "date": "10/09",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -24,13 +24,6 @@
         "nom": "Yoga Vinyasa",
         "date": "10/09",
         "horaire": "12h15 - 13h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "10/09",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -290,13 +283,6 @@
         "nom": "Pilates",
         "date": "15/09",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
-        "date": "15/09",
-        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
