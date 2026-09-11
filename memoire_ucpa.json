@@ -1,19 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "11/09",
-        "horaire": "12h45 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "11/09",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "12/09",
         "horaire": "09h15 - 10h15",
@@ -77,13 +63,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "14/09",
-        "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "14/09",
         "horaire": "12h15 - 13h00",
@@ -140,6 +119,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "14/09",
+        "horaire": "19h15 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "14/09",
         "horaire": "19h30 - 20h15",
@@ -150,6 +136,13 @@
         "nom": "Strong",
         "date": "14/09",
         "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "15/09",
+        "horaire": "08h00 - 09h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -189,6 +182,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "15/09",
+        "horaire": "17h30 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "15/09",
         "horaire": "18h15 - 19h00",
@@ -217,13 +217,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "16/09",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa Niveau 2",
         "date": "16/09",
         "horaire": "12h30 - 13h30",
@@ -231,9 +224,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "16/09",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "16/09",
         "horaire": "17h30 - 18h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "16/09",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -325,6 +332,13 @@
         "nom": "CAF",
         "date": "19/09",
         "horaire": "10h30 - 11h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "19/09",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
