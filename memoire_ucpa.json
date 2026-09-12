@@ -350,6 +350,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa Niveau 2",
+        "date": "20/09",
+        "horaire": "10h30 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "14/09",
         "horaire": "09h30 - 10h15",
@@ -696,6 +703,13 @@
         "nom": "Body Pump",
         "date": "20/09",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa Niveau 2",
+        "date": "20/09",
+        "horaire": "10h30 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     }
