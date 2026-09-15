@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "16/09",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Swiss Ball",
-        "date": "16/09",
-        "horaire": "08h30 - 09h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "16/09",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "16/09",
         "horaire": "12h15 - 13h00",
@@ -56,16 +35,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Abdos-Fessiers",
         "date": "16/09",
-        "horaire": "17h30 - 18h15",
+        "horaire": "17h30 - 18h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Hiit",
+        "nom": "Cross Training Intensity",
         "date": "16/09",
-        "horaire": "18h00 - 18h30",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -101,13 +80,6 @@
         "nom": "CAF",
         "date": "16/09",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "16/09",
-        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -175,6 +147,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "17/09",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "17/09",
+        "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "18/09",
         "horaire": "12h15 - 12h45",
@@ -192,6 +178,13 @@
         "nom": "RPM",
         "date": "18/09",
         "horaire": "12h45 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "18/09",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -315,6 +308,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "21/09",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa Niveau 2",
         "date": "21/09",
         "horaire": "18h00 - 19h00",
@@ -350,6 +350,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "22/09",
+        "horaire": "09h15 - 10h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "22/09",
         "horaire": "12h15 - 13h15",
@@ -364,6 +371,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "22/09",
+        "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "22/09",
         "horaire": "18h15 - 19h00",
@@ -374,6 +388,20 @@
         "nom": "Body Jam",
         "date": "22/09",
         "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Strong",
+        "date": "22/09",
+        "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "23/09",
+        "horaire": "12h30 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -427,9 +455,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "24/09",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "25/09",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "26/09",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     }
