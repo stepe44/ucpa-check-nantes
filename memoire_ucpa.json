@@ -1,40 +1,5 @@
 [
     {
-        "nom": "Biking",
-        "date": "15/09",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "15/09",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "15/09",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Découverte plateau",
-        "date": "15/09",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "15/09",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "15/09",
         "horaire": "18h15 - 19h00",
@@ -45,13 +10,6 @@
         "nom": "Body Jam",
         "date": "15/09",
         "horaire": "18h30 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Combat",
-        "date": "15/09",
-        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -70,6 +28,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Swiss Ball",
+        "date": "16/09",
+        "horaire": "08h30 - 09h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "16/09",
         "horaire": "09h15 - 10h15",
@@ -84,14 +49,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Self défense",
         "date": "16/09",
-        "horaire": "12h30 - 13h30",
+        "horaire": "12h15 - 13h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa Niveau 2",
+        "nom": "Body Pump",
         "date": "16/09",
         "horaire": "12h30 - 13h30",
         "places": 0,
@@ -136,6 +101,13 @@
         "nom": "STEP Intermédiaire",
         "date": "16/09",
         "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "16/09",
+        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -210,13 +182,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Strong",
-        "date": "17/09",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "17/09",
         "horaire": "17h30 - 18h15",
@@ -241,13 +206,6 @@
         "nom": "Body Pump",
         "date": "17/09",
         "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "17/09",
-        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -406,6 +364,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "21/09",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "21/09",
         "horaire": "19h15 - 20h00",
@@ -427,9 +392,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "22/09",
+        "horaire": "12h15 - 13h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "22/09",
         "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "22/09",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -451,6 +430,13 @@
         "nom": "CAF",
         "date": "23/09",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "23/09",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
