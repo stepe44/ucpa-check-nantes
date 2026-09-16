@@ -1,26 +1,4 @@
 {
-    "2026-09-09": [
-        "Swiss Ball|09/09|08h30 - 09h15",
-        "Pilates|09/09|09h15 - 10h15",
-        "Yoga Vinyasa|09/09|19h00 - 20h00",
-        "Pilates|09/09|20h00 - 20h45",
-        "Pilates|10/09|08h30 - 09h15",
-        "Biking|09/09|12h15 - 13h00",
-        "Body Sculpt|09/09|20h00 - 20h45",
-        "Strong|10/09|17h30 - 18h15",
-        "Cross Training Intensity|11/09|17h30 - 18h15",
-        "Abdos-Fessiers|09/09|17h30 - 18h00",
-        "Cross Training Intensity|09/09|17h30 - 18h15",
-        "Pilates|10/09|17h30 - 18h15",
-        "Body Jam|11/09|18h15 - 19h15",
-        "Body Pump|17/09|19h00 - 20h00",
-        "Hyrox|10/09|12h15 - 13h00",
-        "Yoga Vinyasa|14/09|19h15 - 20h15",
-        "Yoga Vinyasa|16/09|19h00 - 20h00",
-        "RPM|10/09|12h15 - 13h00",
-        "Body Sculpt|10/09|13h00 - 13h45",
-        "Strong|15/09|18h45 - 19h30"
-    ],
     "2026-09-10": [
         "Pilates|10/09|08h30 - 09h15",
         "CAF|10/09|09h15 - 10h00",
@@ -155,5 +133,8 @@
         "CAF|17/09|09h15 - 10h00",
         "Body Sculpt|17/09|13h00 - 13h45",
         "Strong|17/09|13h00 - 13h45"
+    ],
+    "2026-09-17": [
+        "CAF|23/09|19h15 - 20h00"
     ]
 }
