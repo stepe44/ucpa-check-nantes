@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "18/09",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "18/09",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "18/09",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "18/09",
         "horaire": "17h30 - 18h15",
@@ -28,16 +7,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
+        "nom": "RPM",
         "date": "18/09",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "18/09",
-        "horaire": "19h30 - 20h15",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -98,9 +70,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "21/09",
-        "horaire": "09h30 - 10h15",
+        "nom": "Yoga Vinyasa",
+        "date": "20/09",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -150,13 +122,6 @@
         "nom": "Body Attack",
         "date": "21/09",
         "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "21/09",
-        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -336,9 +301,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "24/09",
-        "horaire": "12h15 - 13h00",
+        "nom": "Pilates",
+        "date": "23/09",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -346,13 +311,6 @@
         "nom": "RPM",
         "date": "24/09",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "24/09",
-        "horaire": "12h15 - 13h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -406,16 +364,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "CAF",
         "date": "26/09",
-        "horaire": "09h15 - 10h15",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "26/09",
-        "horaire": "10h30 - 11h15",
+        "nom": "Body Pump",
+        "date": "27/09",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
