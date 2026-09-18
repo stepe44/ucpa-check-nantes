@@ -224,6 +224,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Strong",
+        "date": "22/09",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "22/09",
         "horaire": "13h00 - 13h45",
@@ -388,6 +395,13 @@
         "nom": "RPM",
         "date": "25/09",
         "horaire": "12h45 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "26/09",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
