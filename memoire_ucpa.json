@@ -1,22 +1,8 @@
 [
     {
-        "nom": "Yoga Vinyasa Niveau 2",
+        "nom": "Yoga Vinyasa",
         "date": "20/09",
-        "horaire": "10h30 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "20/09",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Stretching",
-        "date": "20/09",
-        "horaire": "11h30 - 12h15",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -106,13 +92,6 @@
     },
     {
         "nom": "Pilates",
-        "date": "21/09",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
         "date": "21/09",
         "horaire": "19h30 - 20h15",
         "places": 0,
@@ -378,23 +357,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "24/09",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "24/09",
         "horaire": "19h00 - 19h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "24/09",
-        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
