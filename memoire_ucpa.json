@@ -1,8 +1,8 @@
 [
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Stretching",
         "date": "20/09",
-        "horaire": "11h30 - 12h30",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -178,13 +178,6 @@
         "nom": "Pilates",
         "date": "22/09",
         "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Jam",
-        "date": "22/09",
-        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
