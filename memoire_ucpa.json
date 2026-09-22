@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "23/09",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Self défense",
         "date": "23/09",
         "horaire": "12h15 - 13h15",
@@ -157,6 +150,13 @@
         "nom": "Body Pump",
         "date": "24/09",
         "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "24/09",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
