@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Self défense",
-        "date": "23/09",
-        "horaire": "12h15 - 13h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "23/09",
         "horaire": "17h30 - 18h00",
@@ -17,13 +10,6 @@
         "nom": "Cross Training Intensity",
         "date": "23/09",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "23/09",
-        "horaire": "18h00 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -49,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "23/09",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "23/09",
         "horaire": "19h15 - 20h00",
@@ -70,9 +49,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "Pilates",
         "date": "24/09",
-        "horaire": "07h30 - 08h15",
+        "horaire": "08h30 - 09h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -112,6 +91,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "24/09",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "24/09",
         "horaire": "18h30 - 19h15",
@@ -129,6 +115,13 @@
         "nom": "Body Pump",
         "date": "24/09",
         "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "24/09",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -185,13 +178,6 @@
         "nom": "RPM",
         "date": "25/09",
         "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "25/09",
-        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -259,6 +245,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "28/09",
+        "horaire": "12h15 - 12h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "28/09",
         "horaire": "12h15 - 13h00",
@@ -269,6 +262,27 @@
         "nom": "Cross Training Intensity",
         "date": "28/09",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "28/09",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "28/09",
+        "horaire": "12h45 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "28/09",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -329,6 +343,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "29/09",
+        "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "29/09",
         "horaire": "18h15 - 19h00",
@@ -371,13 +392,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "30/09",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "30/09",
         "horaire": "19h15 - 20h00",
@@ -402,6 +416,20 @@
         "nom": "Yoga Vinyasa",
         "date": "01/10",
         "horaire": "12h15 - 13h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "01/10",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "02/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
