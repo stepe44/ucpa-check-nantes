@@ -1,54 +1,5 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "23/09",
-        "horaire": "17h30 - 18h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "23/09",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
-        "date": "23/09",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Intermédiaire",
-        "date": "23/09",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "23/09",
-        "horaire": "18h45 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "23/09",
-        "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "23/09",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "24/09",
         "horaire": "08h30 - 09h15",
@@ -78,13 +29,6 @@
     },
     {
         "nom": "Body Sculpt",
-        "date": "24/09",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
         "date": "24/09",
         "horaire": "13h00 - 13h45",
         "places": 0,
@@ -129,6 +73,13 @@
         "nom": "STEP Débutant",
         "date": "24/09",
         "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "25/09",
+        "horaire": "08h00 - 08h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -199,13 +150,6 @@
         "nom": "CAF",
         "date": "26/09",
         "horaire": "10h30 - 11h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "26/09",
-        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -343,6 +287,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "29/09",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "29/09",
         "horaire": "17h45 - 18h30",
@@ -392,6 +343,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Biking",
+        "date": "30/09",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "30/09",
         "horaire": "19h15 - 20h00",
@@ -400,6 +358,13 @@
     },
     {
         "nom": "Body Sculpt",
+        "date": "30/09",
+        "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
         "date": "30/09",
         "horaire": "20h00 - 20h45",
         "places": 0,
@@ -430,6 +395,13 @@
         "nom": "Pilates",
         "date": "02/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "02/10",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
