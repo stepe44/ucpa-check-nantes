@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "24/09",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "24/09",
-        "horaire": "19h00 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "24/09",
-        "horaire": "20h00 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hyrox",
         "date": "25/09",
         "horaire": "08h00 - 08h45",
@@ -63,6 +42,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Jam",
+        "date": "25/09",
+        "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "25/09",
         "horaire": "18h30 - 19h15",
@@ -101,13 +87,6 @@
         "nom": "RPM",
         "date": "26/09",
         "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "27/09",
-        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -245,9 +224,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Strong",
+        "date": "29/09",
+        "horaire": "07h30 - 08h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "29/09",
         "horaire": "08h00 - 09h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "29/09",
+        "horaire": "09h15 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -287,6 +280,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "29/09",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "29/09",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Strong",
         "date": "29/09",
         "horaire": "18h45 - 19h30",
@@ -315,9 +322,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Abdos-Fessiers",
         "date": "30/09",
-        "horaire": "17h30 - 18h15",
+        "horaire": "17h30 - 18h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -332,6 +339,13 @@
         "nom": "STEP Intermédiaire",
         "date": "30/09",
         "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "30/09",
+        "horaire": "18h45 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -385,6 +399,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "01/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "01/10",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "01/10",
         "horaire": "19h00 - 20h00",
@@ -395,6 +423,13 @@
         "nom": "STEP Débutant",
         "date": "01/10",
         "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "02/10",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
