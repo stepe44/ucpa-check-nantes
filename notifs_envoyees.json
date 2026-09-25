@@ -1,29 +1,4 @@
 {
-    "2026-09-17": [
-        "CAF|23/09|19h15 - 20h00",
-        "Pilates|17/09|17h30 - 18h15",
-        "Pilates|18/09|12h15 - 13h00",
-        "Yoga Vinyasa|20/09|11h30 - 12h30",
-        "Body Pump|24/09|19h00 - 20h00",
-        "Abdos-Fessiers|17/09|17h30 - 18h00",
-        "Body Attack|17/09|18h00 - 19h00",
-        "Yoga Yin|17/09|18h30 - 19h30",
-        "Body Pump|17/09|19h00 - 20h00",
-        "Yoga Vinyasa Niveau 2|20/09|10h30 - 11h30",
-        "Pilates|21/09|09h30 - 10h15",
-        "Body Pump|21/09|12h15 - 13h00",
-        "Biking|22/09|12h15 - 13h15",
-        "Strong|22/09|18h45 - 19h30",
-        "Body Pump|23/09|12h30 - 13h30",
-        "Yoga Vinyasa|21/09|12h30 - 13h30",
-        "Yoga Vinyasa Niveau 2|21/09|18h00 - 19h00",
-        "Cross Training Intensity|21/09|18h15 - 19h00",
-        "Pilates|24/09|17h30 - 18h15",
-        "STEP Débutant|24/09|20h00 - 20h45",
-        "Hyrox|18/09|08h00 - 08h45",
-        "Body Jam|18/09|18h15 - 19h15",
-        "Hyrox|23/09|18h45 - 19h30"
-    ],
     "2026-09-18": [
         "RPM|18/09|12h45 - 13h30",
         "RPM|18/09|18h30 - 19h15",
@@ -156,5 +131,8 @@
         "Cross Training Intensity|25/09|17h30 - 18h15",
         "RPM|26/09|11h30 - 12h15",
         "RPM|28/09|12h45 - 13h30"
+    ],
+    "2026-09-25": [
+        "Hyrox|25/09|19h30 - 20h15"
     ]
 }
