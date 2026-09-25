@@ -182,13 +182,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "29/09",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Strong",
         "date": "29/09",
         "horaire": "12h15 - 13h00",
@@ -199,13 +192,6 @@
         "nom": "Body Sculpt",
         "date": "29/09",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "29/09",
-        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -255,6 +241,13 @@
         "nom": "Body Pump",
         "date": "29/09",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "30/09",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -402,6 +395,13 @@
         "nom": "STEP Débutant",
         "date": "01/10",
         "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "02/10",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
