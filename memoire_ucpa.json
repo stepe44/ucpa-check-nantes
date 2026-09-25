@@ -1,27 +1,6 @@
 [
     {
         "nom": "Cross Training Intensity",
-        "date": "25/09",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "25/09",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "26/09",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "26/09",
         "horaire": "09h45 - 10h30",
         "places": 0,
@@ -49,13 +28,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa Niveau 2",
-        "date": "27/09",
-        "horaire": "10h30 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "27/09",
         "horaire": "10h45 - 11h30",
@@ -73,13 +45,6 @@
         "nom": "Yoga Vinyasa",
         "date": "27/09",
         "horaire": "11h30 - 12h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "28/09",
-        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -217,6 +182,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "29/09",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Strong",
         "date": "29/09",
         "horaire": "12h15 - 13h00",
@@ -231,6 +203,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "29/09",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "29/09",
         "horaire": "17h45 - 18h30",
@@ -241,6 +220,13 @@
         "nom": "RPM",
         "date": "29/09",
         "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "29/09",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -262,6 +248,13 @@
         "nom": "Body Combat",
         "date": "29/09",
         "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "29/09",
+        "horaire": "20h15 - 21h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -379,6 +372,13 @@
     },
     {
         "nom": "Body Sculpt",
+        "date": "01/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Strong",
         "date": "01/10",
         "horaire": "13h00 - 13h45",
         "places": 0,
