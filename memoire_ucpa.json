@@ -56,13 +56,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa Niveau 2",
-        "date": "28/09",
-        "horaire": "18h00 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Attack",
         "date": "28/09",
         "horaire": "18h15 - 19h15",
@@ -141,13 +134,6 @@
     },
     {
         "nom": "Biking",
-        "date": "29/09",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
         "date": "29/09",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -483,13 +469,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa Niveau 2",
-        "date": "28/09",
-        "horaire": "18h00 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Attack",
         "date": "28/09",
         "horaire": "18h15 - 19h15",
@@ -568,13 +547,6 @@
     },
     {
         "nom": "Biking",
-        "date": "29/09",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
         "date": "29/09",
         "horaire": "12h15 - 13h00",
         "places": 0,
