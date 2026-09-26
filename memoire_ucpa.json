@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "26/09",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "CAF",
         "date": "26/09",
         "horaire": "10h30 - 11h15",
@@ -176,6 +169,13 @@
     },
     {
         "nom": "Biking",
+        "date": "29/09",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
         "date": "29/09",
         "horaire": "12h15 - 13h00",
         "places": 0,
