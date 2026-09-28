@@ -1,54 +1,5 @@
 [
     {
-        "nom": "Hyrox",
-        "date": "28/09",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "28/09",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "28/09",
-        "horaire": "17h30 - 18h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "28/09",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Découverte plateau",
-        "date": "28/09",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "28/09",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
-        "date": "28/09",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Strong",
         "date": "29/09",
         "horaire": "07h30 - 08h15",
@@ -70,14 +21,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Biking",
         "date": "29/09",
-        "horaire": "09h15 - 10h00",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "29/09",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -182,13 +133,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "30/09",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Biking",
         "date": "30/09",
         "horaire": "12h15 - 13h00",
@@ -238,6 +182,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hiit",
+        "date": "30/09",
+        "horaire": "18h00 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "30/09",
         "horaire": "18h15 - 19h00",
@@ -281,8 +232,22 @@
     },
     {
         "nom": "Pilates",
-        "date": "30/09",
-        "horaire": "20h00 - 20h45",
+        "date": "01/10",
+        "horaire": "08h30 - 09h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "01/10",
+        "horaire": "09h30 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "01/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -318,13 +283,6 @@
         "nom": "Pilates",
         "date": "01/10",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "01/10",
-        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -371,6 +329,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "RPM",
+        "date": "02/10",
+        "horaire": "12h45 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "02/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "02/10",
         "horaire": "17h30 - 18h15",
@@ -381,6 +353,13 @@
         "nom": "Body Jam",
         "date": "02/10",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "02/10",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -434,6 +413,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "04/10",
+        "horaire": "11h30 - 12h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Abdos-Fessiers",
         "date": "05/10",
         "horaire": "12h15 - 12h45",
@@ -462,6 +448,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "05/10",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa Niveau 2",
         "date": "05/10",
         "horaire": "18h00 - 19h00",
@@ -472,6 +465,13 @@
         "nom": "Cross Training Intensity",
         "date": "05/10",
         "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "05/10",
+        "horaire": "19h15 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -493,6 +493,13 @@
         "nom": "Strong",
         "date": "05/10",
         "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "06/10",
+        "horaire": "17h30 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -521,6 +528,13 @@
         "nom": "CAF",
         "date": "07/10",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "08/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
