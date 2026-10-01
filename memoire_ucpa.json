@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Pilates",
-        "date": "01/10",
-        "horaire": "08h30 - 09h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "01/10",
-        "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "01/10",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "01/10",
         "horaire": "12h15 - 13h15",
@@ -353,6 +332,13 @@
         "nom": "Body Pump",
         "date": "06/10",
         "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Biking",
+        "date": "07/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
