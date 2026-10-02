@@ -1,23 +1,4 @@
 {
-    "2026-09-24": [
-        "RPM|24/09|12h15 - 13h00",
-        "Pilates|24/09|17h30 - 18h15",
-        "Body Jam|25/09|18h15 - 19h15",
-        "RPM|01/10|12h15 - 13h00",
-        "RPM|24/09|18h30 - 19h15",
-        "Yoga Yin|24/09|18h30 - 19h30",
-        "Cross Training Intensity|24/09|19h00 - 19h45",
-        "Biking|29/09|12h15 - 13h00",
-        "Pilates|29/09|18h15 - 19h00",
-        "Body Jam|29/09|18h30 - 19h30",
-        "Body Pump|27/09|09h45 - 10h30",
-        "Cross Training Intensity|30/09|17h30 - 18h15",
-        "Hyrox|25/09|08h00 - 08h45",
-        "RPM|25/09|12h45 - 13h30",
-        "Cross Training Intensity|25/09|17h30 - 18h15",
-        "RPM|26/09|11h30 - 12h15",
-        "RPM|28/09|12h45 - 13h30"
-    ],
     "2026-09-25": [
         "Hyrox|25/09|19h30 - 20h15",
         "RPM|25/09|12h45 - 13h30",
@@ -123,5 +104,8 @@
         "Body Combat|02/10|17h30 - 18h15",
         "Cross Training Intensity|02/10|17h30 - 18h15",
         "Hyrox|02/10|19h30 - 20h15"
+    ],
+    "2026-10-02": [
+        "Pilates|02/10|12h15 - 13h00"
     ]
 }
