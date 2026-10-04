@@ -91,13 +91,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "05/10",
-        "horaire": "19h15 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "05/10",
         "horaire": "19h30 - 20h15",
@@ -112,16 +105,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Strong",
-        "date": "06/10",
-        "horaire": "07h30 - 08h15",
+        "nom": "Abdos-Fessiers",
+        "date": "05/10",
+        "horaire": "20h15 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Strong",
         "date": "06/10",
-        "horaire": "08h00 - 09h00",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -217,6 +210,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "06/10",
+        "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "07/10",
         "horaire": "12h15 - 13h00",
@@ -232,6 +232,13 @@
     },
     {
         "nom": "Body Pump",
+        "date": "07/10",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa Niveau 2",
         "date": "07/10",
         "horaire": "12h30 - 13h30",
         "places": 0,
@@ -255,6 +262,13 @@
         "nom": "Cross Training Intensity",
         "date": "07/10",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hiit",
+        "date": "07/10",
+        "horaire": "18h00 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -553,13 +567,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "05/10",
-        "horaire": "19h15 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "05/10",
         "horaire": "19h30 - 20h15",
@@ -574,16 +581,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Strong",
-        "date": "06/10",
-        "horaire": "07h30 - 08h15",
+        "nom": "Abdos-Fessiers",
+        "date": "05/10",
+        "horaire": "20h15 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Strong",
         "date": "06/10",
-        "horaire": "08h00 - 09h00",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -679,6 +686,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "06/10",
+        "horaire": "20h15 - 21h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Biking",
         "date": "07/10",
         "horaire": "12h15 - 13h00",
@@ -694,6 +708,13 @@
     },
     {
         "nom": "Body Pump",
+        "date": "07/10",
+        "horaire": "12h30 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa Niveau 2",
         "date": "07/10",
         "horaire": "12h30 - 13h30",
         "places": 0,
@@ -717,6 +738,13 @@
         "nom": "Cross Training Intensity",
         "date": "07/10",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hiit",
+        "date": "07/10",
+        "horaire": "18h00 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
