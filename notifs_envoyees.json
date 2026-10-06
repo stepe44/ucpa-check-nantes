@@ -1,18 +1,4 @@
 {
-    "2026-09-28": [
-        "Yoga Vinyasa Niveau 2|28/09|18h00 - 19h00",
-        "Body Attack|28/09|18h15 - 19h15",
-        "RPM|28/09|19h15 - 20h00",
-        "Yoga Vinyasa|28/09|19h15 - 20h15",
-        "CAF|29/09|12h15 - 13h00",
-        "Hiit|30/09|18h00 - 18h30",
-        "Hyrox|01/10|12h15 - 13h00",
-        "RPM|02/10|12h45 - 13h30",
-        "CAF|29/09|09h15 - 10h00",
-        "Pilates|30/09|09h15 - 10h15",
-        "Pilates|30/09|20h00 - 20h45",
-        "RPM|01/10|18h30 - 19h15"
-    ],
     "2026-09-29": [
         "Strong|29/09|07h30 - 08h15",
         "Yoga Vinyasa|29/09|08h00 - 09h00",
@@ -113,5 +99,15 @@
         "Abdos-Fessiers|08/10|17h30 - 18h00",
         "Cross Training Intensity|09/10|13h00 - 13h45",
         "Body Jam|09/10|18h15 - 19h15"
+    ],
+    "2026-10-06": [
+        "Strong|06/10|07h30 - 08h15",
+        "Yoga Vinyasa|06/10|08h00 - 09h00",
+        "CAF|06/10|09h15 - 10h00",
+        "CAF|06/10|12h15 - 13h00",
+        "Strong|06/10|12h15 - 13h00",
+        "Découverte plateau|06/10|13h00 - 13h45",
+        "STEP Intermédiaire|07/10|18h15 - 19h00",
+        "Cross Training Intensity|10/10|09h45 - 10h30"
     ]
 }
