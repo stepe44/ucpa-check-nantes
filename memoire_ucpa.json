@@ -1,48 +1,6 @@
 [
     {
-        "nom": "Biking",
-        "date": "07/10",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "07/10",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa Niveau 2",
-        "date": "07/10",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hyrox",
-        "date": "07/10",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "07/10",
-        "horaire": "17h30 - 18h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
-        "date": "07/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "LIA",
         "date": "07/10",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -57,6 +15,13 @@
     },
     {
         "nom": "Biking",
+        "date": "07/10",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "STEP Intermédiaire",
         "date": "07/10",
         "horaire": "18h15 - 19h00",
         "places": 0,
@@ -101,13 +66,6 @@
         "nom": "Pilates",
         "date": "08/10",
         "horaire": "08h30 - 09h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "08/10",
-        "horaire": "09h30 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -161,9 +119,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Yin",
+        "date": "08/10",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Pump",
         "date": "08/10",
         "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "08/10",
+        "horaire": "19h00 - 19h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -266,13 +238,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Sculpt",
-        "date": "10/10",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "10/10",
         "horaire": "11h30 - 12h15",
@@ -357,6 +322,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Hyrox",
+        "date": "12/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "12/10",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa Niveau 2",
         "date": "12/10",
         "horaire": "18h00 - 19h00",
@@ -379,6 +358,13 @@
     },
     {
         "nom": "Pilates",
+        "date": "12/10",
+        "horaire": "19h30 - 20h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Strong",
         "date": "12/10",
         "horaire": "19h30 - 20h15",
         "places": 0,
@@ -420,9 +406,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Jam",
+        "date": "13/10",
+        "horaire": "18h30 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Strong",
         "date": "13/10",
         "horaire": "18h45 - 19h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "14/10",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -514,6 +514,13 @@
         "nom": "Body Pump",
         "date": "15/10",
         "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "STEP Débutant",
+        "date": "15/10",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
