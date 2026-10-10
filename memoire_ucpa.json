@@ -42,13 +42,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Abdos-Fessiers",
-        "date": "12/10",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "12/10",
         "horaire": "12h15 - 13h00",
@@ -112,6 +105,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Découverte plateau",
+        "date": "12/10",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "12/10",
         "horaire": "19h15 - 20h00",
@@ -157,6 +157,13 @@
         "nom": "Pilates",
         "date": "13/10",
         "horaire": "08h15 - 09h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "CAF",
+        "date": "13/10",
+        "horaire": "09h15 - 10h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -308,6 +315,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "STEP Intermédiaire",
+        "date": "14/10",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "14/10",
         "horaire": "18h45 - 19h30",
@@ -330,6 +344,13 @@
     },
     {
         "nom": "Body Sculpt",
+        "date": "14/10",
+        "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
         "date": "14/10",
         "horaire": "20h00 - 20h45",
         "places": 0,
@@ -360,6 +381,13 @@
         "nom": "Yoga Vinyasa",
         "date": "15/10",
         "horaire": "12h15 - 13h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "15/10",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -465,6 +493,13 @@
         "nom": "Body Pump",
         "date": "18/10",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa Niveau 2",
+        "date": "18/10",
+        "horaire": "10h30 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
