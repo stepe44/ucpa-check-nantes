@@ -1,29 +1,8 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "11/10",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "11/10",
-        "horaire": "10h45 - 11h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Stretching",
         "date": "11/10",
         "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "11/10",
-        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -392,6 +371,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Strong",
+        "date": "15/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
         "date": "15/10",
         "horaire": "17h30 - 18h15",
@@ -457,7 +443,28 @@
     {
         "nom": "Cross Training Intensity",
         "date": "16/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "16/10",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Jam",
+        "date": "16/10",
+        "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "16/10",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
