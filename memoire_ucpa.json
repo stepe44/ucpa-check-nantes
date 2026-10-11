@@ -35,13 +35,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "12/10",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "12/10",
         "horaire": "12h45 - 13h30",
@@ -133,6 +126,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "12/10",
+        "horaire": "20h15 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Strong",
         "date": "13/10",
         "horaire": "07h30 - 08h15",
@@ -171,6 +171,13 @@
         "nom": "Strong",
         "date": "13/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "13/10",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -220,20 +227,6 @@
         "nom": "Strong",
         "date": "13/10",
         "horaire": "18h45 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "13/10",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "14/10",
-        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -378,13 +371,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "15/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "15/10",
         "horaire": "18h30 - 19h15",
@@ -444,13 +430,6 @@
         "nom": "Cross Training Intensity",
         "date": "16/10",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "16/10",
-        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -560,13 +539,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
-        "date": "12/10",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "12/10",
         "horaire": "12h45 - 13h30",
@@ -658,6 +630,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Abdos-Fessiers",
+        "date": "12/10",
+        "horaire": "20h15 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Strong",
         "date": "13/10",
         "horaire": "07h30 - 08h15",
@@ -696,6 +675,13 @@
         "nom": "Strong",
         "date": "13/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "13/10",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -745,20 +731,6 @@
         "nom": "Strong",
         "date": "13/10",
         "horaire": "18h45 - 19h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "13/10",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "14/10",
-        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -903,13 +875,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "15/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "15/10",
         "horaire": "18h30 - 19h15",
@@ -969,13 +934,6 @@
         "nom": "Cross Training Intensity",
         "date": "16/10",
         "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "16/10",
-        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
