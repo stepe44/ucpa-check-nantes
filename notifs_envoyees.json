@@ -1,12 +1,4 @@
 {
-    "2026-10-04": [
-        "Abdos-Fessiers|05/10|20h15 - 20h45",
-        "Body Pump|06/10|20h15 - 21h00",
-        "Pilates|07/10|09h15 - 10h15",
-        "Yoga Vinyasa Niveau 2|07/10|12h30 - 13h30",
-        "Yoga Vinyasa|05/10|19h15 - 20h15",
-        "Yoga Vinyasa|06/10|08h00 - 09h00"
-    ],
     "2026-10-05": [
         "Hyrox|05/10|17h30 - 18h15",
         "Yoga Vinyasa Niveau 2|05/10|18h00 - 19h00",
@@ -132,5 +124,15 @@
         "Pilates|14/10|09h15 - 10h15",
         "Pilates|15/10|17h30 - 18h15",
         "Cross Training Intensity|16/10|17h30 - 18h15"
+    ],
+    "2026-10-12": [
+        "Body Attack|12/10|18h15 - 19h15",
+        "Yoga Vinyasa|12/10|19h15 - 20h15",
+        "Abdos-Fessiers|12/10|20h15 - 20h45",
+        "Pilates|13/10|08h15 - 09h00",
+        "Strong|13/10|12h15 - 13h00",
+        "Pilates|14/10|20h00 - 20h45",
+        "Hyrox|15/10|12h15 - 13h00",
+        "RPM|15/10|18h30 - 19h15"
     ]
 }
