@@ -1,8 +1,8 @@
 [
     {
-        "nom": "Strong",
+        "nom": "Biking",
         "date": "13/10",
-        "horaire": "07h30 - 08h15",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -10,13 +10,6 @@
         "nom": "Strong",
         "date": "13/10",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "13/10",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -45,6 +38,13 @@
         "nom": "RPM",
         "date": "13/10",
         "horaire": "17h45 - 18h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "13/10",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -143,6 +143,13 @@
         "nom": "LIA",
         "date": "14/10",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hiit",
+        "date": "14/10",
+        "horaire": "18h00 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
