@@ -1,20 +1,6 @@
 [
     {
         "nom": "Cross Training Intensity",
-        "date": "16/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "17/10",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "17/10",
         "horaire": "09h45 - 10h30",
         "places": 0,
@@ -294,13 +280,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Self défense",
-        "date": "21/10",
-        "horaire": "12h15 - 13h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "21/10",
         "horaire": "12h30 - 13h30",
@@ -378,14 +357,14 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
-        "date": "21/10",
-        "horaire": "20h00 - 20h45",
+        "nom": "Hyrox",
+        "date": "22/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
+        "nom": "RPM",
         "date": "22/10",
         "horaire": "12h15 - 13h00",
         "places": 0,
