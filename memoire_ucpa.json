@@ -1,78 +1,8 @@
 [
     {
-        "nom": "Abdos-Fessiers",
-        "date": "19/10",
-        "horaire": "12h15 - 12h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "19/10",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "19/10",
-        "horaire": "12h30 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "19/10",
-        "horaire": "12h45 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Pump",
-        "date": "19/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "19/10",
-        "horaire": "17h30 - 18h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa Niveau 2",
-        "date": "19/10",
-        "horaire": "18h00 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "19/10",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "19/10",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "19/10",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "19/10",
-        "horaire": "19h15 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -98,9 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Strong",
+        "nom": "Yoga Vinyasa",
         "date": "20/10",
-        "horaire": "07h30 - 08h15",
+        "horaire": "08h00 - 09h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -126,6 +56,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "20/10",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Strong",
         "date": "20/10",
         "horaire": "12h15 - 13h00",
@@ -134,6 +71,13 @@
     },
     {
         "nom": "Body Sculpt",
+        "date": "20/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
         "date": "20/10",
         "horaire": "13h00 - 13h45",
         "places": 0,
@@ -203,16 +147,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "Cross Training Intensity",
         "date": "21/10",
-        "horaire": "12h15 - 13h00",
+        "horaire": "07h30 - 08h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Self défense",
+        "nom": "Biking",
         "date": "21/10",
-        "horaire": "12h15 - 13h15",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -231,13 +175,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "21/10",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "21/10",
         "horaire": "17h30 - 18h00",
@@ -248,13 +185,6 @@
         "nom": "Cross Training Intensity",
         "date": "21/10",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Hiit",
-        "date": "21/10",
-        "horaire": "18h00 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -560,13 +490,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "STEP Intermédiaire",
-        "date": "28/10",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "28/10",
         "horaire": "19h00 - 20h00",
@@ -577,6 +500,13 @@
         "nom": "CAF",
         "date": "28/10",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "29/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
