@@ -1,15 +1,4 @@
 {
-    "2026-10-11": [
-        "Stretching|11/10|11h30 - 12h15",
-        "Abdos-Fessiers|12/10|20h15 - 20h45",
-        "Body Sculpt|13/10|13h00 - 13h45",
-        "Body Sculpt|15/10|13h00 - 13h45",
-        "Yoga Vinyasa|12/10|12h30 - 13h30",
-        "Body Pump|13/10|20h15 - 21h00",
-        "Pilates|14/10|09h15 - 10h15",
-        "Pilates|15/10|17h30 - 18h15",
-        "Cross Training Intensity|16/10|17h30 - 18h15"
-    ],
     "2026-10-12": [
         "Body Attack|12/10|18h15 - 19h15",
         "Yoga Vinyasa|12/10|19h15 - 20h15",
@@ -126,5 +115,9 @@
         "Stretching|18/10|11h30 - 12h15",
         "Yoga Vinyasa|18/10|11h30 - 12h30",
         "Cross Training Intensity|22/10|19h00 - 19h45"
+    ],
+    "2026-10-19": [
+        "Hyrox|19/10|17h30 - 18h15",
+        "CAF|20/10|12h15 - 13h00"
     ]
 }
