@@ -1,26 +1,5 @@
 [
     {
-        "nom": "Hyrox",
-        "date": "22/10",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "22/10",
-        "horaire": "08h30 - 09h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "22/10",
-        "horaire": "09h30 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "22/10",
         "horaire": "12h15 - 13h00",
@@ -49,16 +28,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Pilates",
+        "nom": "RPM",
         "date": "22/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
-        "date": "22/10",
-        "horaire": "17h30 - 18h15",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -129,6 +101,13 @@
         "nom": "Body Jam",
         "date": "23/10",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "23/10",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -287,13 +266,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
-        "date": "27/10",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "27/10",
         "horaire": "17h30 - 18h30",
@@ -416,6 +388,13 @@
         "nom": "Pilates",
         "date": "29/10",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Pump",
+        "date": "29/10",
+        "horaire": "19h00 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
