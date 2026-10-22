@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Hyrox",
-        "date": "23/10",
-        "horaire": "08h00 - 08h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Abdos-Fessiers",
         "date": "23/10",
         "horaire": "12h15 - 12h45",
@@ -17,6 +10,13 @@
         "nom": "Pilates",
         "date": "23/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "23/10",
+        "horaire": "12h45 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -38,6 +38,20 @@
         "nom": "Body Jam",
         "date": "23/10",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "23/10",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "23/10",
+        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -276,6 +290,13 @@
         "nom": "Biking",
         "date": "28/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Self défense",
+        "date": "28/10",
+        "horaire": "12h15 - 13h15",
         "places": 0,
         "statut": "COMPLET"
     },
