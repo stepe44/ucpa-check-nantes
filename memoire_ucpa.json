@@ -1,12 +1,5 @@
 [
     {
-        "nom": "RPM",
-        "date": "22/10",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Hyrox",
         "date": "23/10",
         "horaire": "08h00 - 08h45",
@@ -28,13 +21,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "23/10",
-        "horaire": "12h45 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "23/10",
         "horaire": "13h00 - 13h45",
@@ -49,16 +35,23 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "Body Jam",
         "date": "23/10",
-        "horaire": "18h30 - 19h15",
+        "horaire": "18h15 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Hyrox",
-        "date": "23/10",
-        "horaire": "19h30 - 20h15",
+        "nom": "Yoga Vinyasa",
+        "date": "24/10",
+        "horaire": "09h15 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "24/10",
+        "horaire": "09h45 - 10h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -147,6 +140,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "26/10",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "26/10",
         "horaire": "17h30 - 18h15",
@@ -217,6 +217,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "27/10",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa",
         "date": "27/10",
         "horaire": "17h30 - 18h30",
@@ -269,13 +276,6 @@
         "nom": "Biking",
         "date": "28/10",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Self défense",
-        "date": "28/10",
-        "horaire": "12h15 - 13h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -336,6 +336,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Pilates",
+        "date": "28/10",
+        "horaire": "20h00 - 20h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Hyrox",
         "date": "29/10",
         "horaire": "12h15 - 13h00",
@@ -353,6 +360,13 @@
         "nom": "Pilates",
         "date": "29/10",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "29/10",
+        "horaire": "18h30 - 19h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -388,6 +402,13 @@
         "nom": "Pilates",
         "date": "30/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "30/10",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
