@@ -1,13 +1,6 @@
 [
     {
         "nom": "Cross Training Intensity",
-        "date": "23/10",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
         "date": "24/10",
         "horaire": "09h45 - 10h30",
         "places": 0,
@@ -115,6 +108,13 @@
         "nom": "Body Attack",
         "date": "26/10",
         "horaire": "18h15 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "26/10",
+        "horaire": "18h15 - 19h00",
         "places": 0,
         "statut": "COMPLET"
     },
