@@ -168,6 +168,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "CAF",
+        "date": "27/10",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Body Sculpt",
         "date": "27/10",
         "horaire": "13h00 - 13h45",
@@ -381,13 +388,6 @@
         "nom": "Pilates",
         "date": "30/10",
         "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "30/10",
-        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
