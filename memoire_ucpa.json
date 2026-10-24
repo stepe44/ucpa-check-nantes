@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "RPM",
         "date": "24/10",
-        "horaire": "09h45 - 10h30",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
+        "nom": "Yoga Vinyasa Niveau 2",
         "date": "25/10",
-        "horaire": "09h45 - 10h30",
+        "horaire": "10h30 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -381,6 +381,13 @@
         "nom": "RPM",
         "date": "30/10",
         "horaire": "12h45 - 13h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "30/10",
+        "horaire": "13h00 - 13h45",
         "places": 0,
         "statut": "COMPLET"
     },
