@@ -7,20 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
-        "date": "24/10",
-        "horaire": "10h30 - 11h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "24/10",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "25/10",
         "horaire": "09h45 - 10h30",
@@ -388,6 +374,13 @@
         "nom": "Pilates",
         "date": "30/10",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "RPM",
+        "date": "30/10",
+        "horaire": "12h45 - 13h30",
         "places": 0,
         "statut": "COMPLET"
     },
