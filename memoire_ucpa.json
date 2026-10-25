@@ -7,13 +7,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Stretching",
-        "date": "25/10",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "26/10",
         "horaire": "09h30 - 10h15",
@@ -409,6 +402,13 @@
         "nom": "CAF",
         "date": "31/10",
         "horaire": "10h30 - 11h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa Niveau 2",
+        "date": "01/11",
+        "horaire": "10h30 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
