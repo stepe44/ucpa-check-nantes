@@ -1,15 +1,22 @@
 [
     {
-        "nom": "Strong",
+        "nom": "Yoga Vinyasa",
         "date": "27/10",
-        "horaire": "07h30 - 08h15",
+        "horaire": "08h00 - 09h00",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "Biking",
         "date": "27/10",
-        "horaire": "08h00 - 09h00",
+        "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Strong",
+        "date": "27/10",
+        "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -224,13 +231,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Attack",
-        "date": "29/10",
-        "horaire": "18h00 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "RPM",
         "date": "29/10",
         "horaire": "18h30 - 19h15",
@@ -245,9 +245,23 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "29/10",
+        "horaire": "19h00 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Cross Training Intensity",
         "date": "29/10",
         "horaire": "19h00 - 19h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Stretching",
+        "date": "29/10",
+        "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -287,13 +301,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Jam",
-        "date": "30/10",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Yoga Vinyasa",
         "date": "31/10",
         "horaire": "09h15 - 10h15",
@@ -308,9 +315,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "01/11",
-        "horaire": "09h45 - 10h30",
+        "nom": "RPM",
+        "date": "31/10",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -378,6 +385,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Pump",
+        "date": "02/11",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Yoga Vinyasa Niveau 2",
         "date": "02/11",
         "horaire": "18h00 - 19h00",
@@ -407,13 +421,6 @@
     },
     {
         "nom": "Pilates",
-        "date": "02/11",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
         "date": "02/11",
         "horaire": "19h30 - 20h15",
         "places": 0,
