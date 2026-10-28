@@ -93,6 +93,13 @@
     {
         "nom": "Hyrox",
         "date": "29/10",
+        "horaire": "07h30 - 08h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Hyrox",
+        "date": "29/10",
         "horaire": "12h15 - 13h00",
         "places": 0,
         "statut": "COMPLET"
@@ -112,6 +119,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Attack",
+        "date": "29/10",
+        "horaire": "18h00 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "29/10",
         "horaire": "18h30 - 19h15",
@@ -126,9 +140,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Body Pump",
         "date": "29/10",
-        "horaire": "19h00 - 19h45",
+        "horaire": "19h00 - 20h00",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -315,6 +329,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Découverte plateau",
+        "date": "02/11",
+        "horaire": "18h30 - 19h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "02/11",
         "horaire": "19h15 - 20h00",
@@ -458,13 +479,6 @@
         "nom": "CAF",
         "date": "04/11",
         "horaire": "19h15 - 20h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "04/11",
-        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
