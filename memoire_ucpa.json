@@ -126,6 +126,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "31/10",
+        "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "31/10",
         "horaire": "10h30 - 11h15",
@@ -283,6 +290,13 @@
         "nom": "CAF",
         "date": "03/11",
         "horaire": "12h15 - 13h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "03/11",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
