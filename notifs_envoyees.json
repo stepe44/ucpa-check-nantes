@@ -1,14 +1,4 @@
 {
-    "2026-10-24": [
-        "CAF|24/10|10h30 - 11h15",
-        "RPM|24/10|11h30 - 12h15",
-        "Body Pump|25/10|09h45 - 10h30",
-        "CAF|27/10|12h15 - 13h00",
-        "Yoga Vinyasa|26/10|19h15 - 20h15",
-        "RPM|26/10|19h15 - 20h00",
-        "Yoga Vinyasa|27/10|17h30 - 18h30",
-        "Yoga Vinyasa Niveau 2|25/10|10h30 - 11h30"
-    ],
     "2026-10-25": [
         "Stretching|25/10|11h30 - 12h15",
         "Pilates|26/10|09h30 - 10h15",
@@ -101,5 +91,11 @@
         "RPM|31/10|11h30 - 12h15",
         "Yoga Vinyasa|01/11|11h30 - 12h30",
         "Cross Training Intensity|03/11|17h45 - 18h30"
+    ],
+    "2026-11-01": [
+        "Body Pump|01/11|09h45 - 10h30",
+        "Yoga Vinyasa Niveau 2|01/11|10h30 - 11h30",
+        "Yoga Vinyasa|01/11|11h30 - 12h30",
+        "Body Sculpt|03/11|17h30 - 18h15"
     ]
 }
