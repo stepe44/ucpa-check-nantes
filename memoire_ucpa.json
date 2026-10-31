@@ -1,15 +1,15 @@
 [
     {
-        "nom": "Cross Training Intensity",
+        "nom": "Yoga Vinyasa",
         "date": "31/10",
-        "horaire": "09h45 - 10h30",
+        "horaire": "09h15 - 10h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
+        "nom": "CAF",
         "date": "31/10",
-        "horaire": "11h30 - 12h15",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
