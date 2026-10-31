@@ -1,15 +1,8 @@
 [
     {
-        "nom": "Yoga Vinyasa",
+        "nom": "RPM",
         "date": "31/10",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "31/10",
-        "horaire": "10h30 - 11h15",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -38,13 +31,6 @@
         "nom": "Stretching",
         "date": "01/11",
         "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "01/11",
-        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
