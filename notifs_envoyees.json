@@ -1,11 +1,4 @@
 {
-    "2026-10-25": [
-        "Stretching|25/10|11h30 - 12h15",
-        "Pilates|26/10|09h30 - 10h15",
-        "Cross Training Intensity|26/10|12h15 - 13h00",
-        "RPM|27/10|17h45 - 18h30",
-        "Body Jam|27/10|18h30 - 19h30"
-    ],
     "2026-10-26": [
         "RPM|26/10|12h45 - 13h30",
         "Hyrox|26/10|13h00 - 13h45",
@@ -104,5 +97,12 @@
         "Hyrox|04/11|13h00 - 13h45",
         "Yoga Vinyasa|04/11|19h00 - 20h00",
         "Cross Training Intensity|06/11|17h30 - 18h15"
+    ],
+    "2026-11-02": [
+        "RPM|02/11|19h15 - 20h00",
+        "Yoga Vinyasa|02/11|19h15 - 20h15",
+        "CAF|03/11|12h15 - 13h00",
+        "Cross Training Intensity|03/11|13h00 - 13h45",
+        "Stretching|08/11|11h30 - 12h15"
     ]
 }
