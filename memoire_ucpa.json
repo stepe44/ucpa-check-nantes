@@ -1,68 +1,5 @@
 [
     {
-        "nom": "Body Pump",
-        "date": "02/11",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa Niveau 2",
-        "date": "02/11",
-        "horaire": "18h00 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Attack",
-        "date": "02/11",
-        "horaire": "18h15 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "02/11",
-        "horaire": "18h15 - 19h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Découverte plateau",
-        "date": "02/11",
-        "horaire": "18h30 - 19h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Pilates",
-        "date": "02/11",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
-        "date": "02/11",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Abdos-Fessiers",
-        "date": "02/11",
-        "horaire": "20h15 - 20h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
-        "date": "03/11",
-        "horaire": "07h30 - 08h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Pilates",
         "date": "03/11",
         "horaire": "08h15 - 09h00",
@@ -77,7 +14,7 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Biking",
+        "nom": "CAF",
         "date": "03/11",
         "horaire": "12h15 - 13h00",
         "places": 0,
@@ -108,13 +45,6 @@
         "nom": "Body Sculpt",
         "date": "03/11",
         "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Yoga Vinyasa",
-        "date": "03/11",
-        "horaire": "17h30 - 18h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -154,23 +84,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Combat",
+        "nom": "Stretching",
         "date": "03/11",
         "horaire": "19h30 - 20h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "Body Pump",
-        "date": "03/11",
-        "horaire": "20h15 - 21h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Biking",
+        "nom": "Self défense",
         "date": "04/11",
-        "horaire": "12h15 - 13h00",
+        "horaire": "12h15 - 13h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -204,6 +127,13 @@
     },
     {
         "nom": "Cross Training Intensity",
+        "date": "04/11",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "LIA",
         "date": "04/11",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -287,7 +217,21 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Strong",
+        "date": "05/11",
+        "horaire": "13h00 - 13h45",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "Pilates",
+        "date": "05/11",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Strong",
         "date": "05/11",
         "horaire": "17h30 - 18h15",
         "places": 0,
@@ -343,20 +287,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "RPM",
-        "date": "06/11",
-        "horaire": "12h45 - 13h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Cross Training Intensity",
-        "date": "06/11",
-        "horaire": "13h00 - 13h45",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Jam",
         "date": "06/11",
         "horaire": "18h15 - 19h15",
@@ -392,6 +322,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Body Sculpt",
+        "date": "07/11",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "07/11",
         "horaire": "11h30 - 12h15",
@@ -402,6 +339,27 @@
         "nom": "Body Pump",
         "date": "08/11",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "08/11",
+        "horaire": "10h45 - 11h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Stretching",
+        "date": "08/11",
+        "horaire": "11h30 - 12h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa",
+        "date": "08/11",
+        "horaire": "11h30 - 12h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -462,6 +420,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "09/11",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "RPM",
         "date": "09/11",
         "horaire": "19h15 - 20h00",
@@ -476,9 +441,9 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Strong",
-        "date": "09/11",
-        "horaire": "19h30 - 20h15",
+        "nom": "Body Sculpt",
+        "date": "10/11",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -518,6 +483,20 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "11/11",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "STEP Intermédiaire",
+        "date": "11/11",
+        "horaire": "18h15 - 19h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "11/11",
         "horaire": "19h15 - 20h00",
@@ -535,6 +514,13 @@
         "nom": "Yoga Vinyasa",
         "date": "12/11",
         "horaire": "12h15 - 13h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Pilates",
+        "date": "12/11",
+        "horaire": "17h30 - 18h15",
         "places": 0,
         "statut": "COMPLET"
     },
