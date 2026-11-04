@@ -1,21 +1,4 @@
 {
-    "2026-10-27": [
-        "Strong|27/10|07h30 - 08h15",
-        "Body Attack|29/10|18h00 - 19h00",
-        "Body Jam|30/10|18h15 - 19h15",
-        "Body Pump|01/11|09h45 - 10h30",
-        "Strong|02/11|19h30 - 20h15",
-        "Biking|27/10|12h15 - 13h00",
-        "Body Sculpt|27/10|13h00 - 13h45",
-        "Cross Training Intensity|27/10|13h00 - 13h45",
-        "Body Pump|02/11|17h30 - 18h15",
-        "Body Pump|04/11|12h30 - 13h30",
-        "Yoga Vinyasa|28/10|19h00 - 20h00",
-        "Pilates|28/10|20h00 - 20h45",
-        "Cross Training Intensity|29/10|19h00 - 19h45",
-        "Cross Training Intensity|30/10|17h30 - 18h15",
-        "Body Sculpt|03/11|17h30 - 18h15"
-    ],
     "2026-10-28": [
         "Cross Training Intensity|28/10|07h30 - 08h15",
         "Pilates|28/10|09h15 - 10h15",
@@ -114,5 +97,17 @@
         "Yoga Vinyasa Niveau 2|09/11|18h00 - 19h00",
         "Cross Training Intensity|09/11|18h15 - 19h00",
         "Body Jam|10/11|18h30 - 19h30"
+    ],
+    "2026-11-04": [
+        "Yoga Vinyasa Niveau 2|04/11|12h30 - 13h30",
+        "Hyrox|04/11|18h45 - 19h30",
+        "Yoga Vinyasa|04/11|19h00 - 20h00",
+        "RPM|05/11|12h15 - 13h00",
+        "Yoga Vinyasa|05/11|12h15 - 13h15",
+        "Strong|05/11|13h00 - 13h45",
+        "Yoga Vinyasa|07/11|09h15 - 10h15",
+        "RPM|07/11|11h30 - 12h15",
+        "RPM|09/11|12h45 - 13h30",
+        "Cross Training Intensity|11/11|17h30 - 18h15"
     ]
 }
