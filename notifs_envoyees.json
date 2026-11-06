@@ -1,18 +1,4 @@
 {
-    "2026-10-29": [
-        "Body Sculpt|29/10|13h00 - 13h45",
-        "Pilates|29/10|17h30 - 18h15",
-        "RPM|29/10|18h30 - 19h15",
-        "Body Pump|29/10|19h00 - 20h00",
-        "STEP Débutant|29/10|20h00 - 20h45",
-        "Cross Training Intensity|30/10|17h30 - 18h15",
-        "CAF|03/11|12h15 - 13h00",
-        "Cross Training Intensity|03/11|17h45 - 18h30",
-        "Pilates|05/11|17h30 - 18h15",
-        "Hyrox|30/10|08h00 - 08h45",
-        "Yoga Vinyasa Niveau 2|01/11|10h30 - 11h30",
-        "Yoga Vinyasa|05/11|12h15 - 13h15"
-    ],
     "2026-10-30": [
         "Body Combat|30/10|17h30 - 18h15",
         "Cross Training Intensity|30/10|17h30 - 18h15",
@@ -114,5 +100,12 @@
         "Body Combat|10/11|19h30 - 20h15",
         "Hyrox|12/11|12h15 - 13h00",
         "Cross Training Intensity|09/11|12h15 - 13h00"
+    ],
+    "2026-11-06": [
+        "Body Combat|06/11|17h30 - 18h15",
+        "Hyrox|06/11|19h30 - 20h15",
+        "Pilates|10/11|18h15 - 19h00",
+        "Cross Training Intensity|11/11|17h30 - 18h15",
+        "Pilates|12/11|17h30 - 18h15"
     ]
 }
