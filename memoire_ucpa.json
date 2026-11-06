@@ -1,12 +1,5 @@
 [
     {
-        "nom": "Yoga Vinyasa",
-        "date": "07/11",
-        "horaire": "09h15 - 10h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Cross Training Intensity",
         "date": "07/11",
         "horaire": "09h45 - 10h30",
@@ -14,16 +7,16 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Yoga Yin",
+        "nom": "CAF",
         "date": "07/11",
-        "horaire": "10h15 - 11h15",
+        "horaire": "10h30 - 11h15",
         "places": 0,
         "statut": "COMPLET"
     },
     {
-        "nom": "CAF",
+        "nom": "Body Sculpt",
         "date": "07/11",
-        "horaire": "10h30 - 11h15",
+        "horaire": "11h30 - 12h15",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -308,13 +301,6 @@
         "statut": "COMPLET"
     },
     {
-        "nom": "Cross Training Intensity",
-        "date": "11/11",
-        "horaire": "17h30 - 18h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "STEP Intermédiaire",
         "date": "11/11",
         "horaire": "18h15 - 19h00",
@@ -339,6 +325,13 @@
         "nom": "CAF",
         "date": "11/11",
         "horaire": "19h15 - 20h00",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Body Sculpt",
+        "date": "11/11",
+        "horaire": "20h00 - 20h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -420,6 +413,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Yoga Vinyasa",
+        "date": "14/11",
+        "horaire": "09h15 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "CAF",
         "date": "14/11",
         "horaire": "10h30 - 11h15",
@@ -430,6 +430,13 @@
         "nom": "Body Pump",
         "date": "15/11",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Cross Training Intensity",
+        "date": "15/11",
+        "horaire": "10h45 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     }
