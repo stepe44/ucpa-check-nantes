@@ -1,40 +1,5 @@
 [
     {
-        "nom": "Cross Training Intensity",
-        "date": "07/11",
-        "horaire": "09h45 - 10h30",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "CAF",
-        "date": "07/11",
-        "horaire": "10h30 - 11h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Body Sculpt",
-        "date": "07/11",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "RPM",
-        "date": "07/11",
-        "horaire": "11h30 - 12h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "STEP Débutant",
-        "date": "07/11",
-        "horaire": "12h15 - 13h00",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
         "nom": "Body Pump",
         "date": "08/11",
         "horaire": "09h45 - 10h30",
@@ -66,6 +31,13 @@
         "nom": "Pilates",
         "date": "09/11",
         "horaire": "09h30 - 10h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Abdos-Fessiers",
+        "date": "09/11",
+        "horaire": "12h15 - 12h45",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -134,13 +106,6 @@
     },
     {
         "nom": "Pilates",
-        "date": "09/11",
-        "horaire": "19h30 - 20h15",
-        "places": 0,
-        "statut": "COMPLET"
-    },
-    {
-        "nom": "Strong",
         "date": "09/11",
         "horaire": "19h30 - 20h15",
         "places": 0,
@@ -301,6 +266,13 @@
         "statut": "COMPLET"
     },
     {
+        "nom": "Cross Training Intensity",
+        "date": "11/11",
+        "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
         "nom": "STEP Intermédiaire",
         "date": "11/11",
         "horaire": "18h15 - 19h00",
@@ -360,6 +332,13 @@
         "nom": "Pilates",
         "date": "12/11",
         "horaire": "17h30 - 18h15",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Yin",
+        "date": "12/11",
+        "horaire": "18h30 - 19h30",
         "places": 0,
         "statut": "COMPLET"
     },
@@ -430,6 +409,13 @@
         "nom": "Body Pump",
         "date": "15/11",
         "horaire": "09h45 - 10h30",
+        "places": 0,
+        "statut": "COMPLET"
+    },
+    {
+        "nom": "Yoga Vinyasa Niveau 2",
+        "date": "15/11",
+        "horaire": "10h30 - 11h30",
         "places": 0,
         "statut": "COMPLET"
     },
